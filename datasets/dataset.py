@@ -37,6 +37,4 @@ class Dataset:
             prompt[:, t] = np.vstack([cur_input, cur_label])
         
         return torch.from_numpy(prompt)
-    
-        
 
