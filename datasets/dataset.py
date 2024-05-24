@@ -5,13 +5,22 @@ import numpy as np
 def uniform_class(n_classes):
     return np.random.randint(n_classes)
 
+def custom_class_dist(n_classes, dist_array):
+    
+    if sum(dist_array) != 1:
+        raise Exception("Probabilities must sum to 1.")
+    
+    if len(dist_array) != n_classes:
+        raise Exception("Distribution array length must match number of classes.")
+    
+    return np.random.choice(n_classes, 1, p = dist_array)
+
 class Dataset:
     
-    def __init__(self, input_dim, n_classes, prompt_length, n_prompts, class_generator = uniform_class):
+    def __init__(self, input_dim, n_classes, prompt_length, class_generator = uniform_class):
         self.input_dim = input_dim
         self.n_classes = n_classes
         self.prompt_length = prompt_length
-        self.n_prompts = n_prompts
         self.class_generator = class_generator
         
         # Create class means
@@ -28,13 +37,13 @@ class Dataset:
         for t in range(self.prompt_length):
             cur_class = self.class_generator(self.n_classes)
                     
-            cur_mean = self.class_means[:, cur_class]
+            cur_mean = self.class_means[:, cur_class].reshape(1, -1)
             cur_noise = np.random.multivariate_normal(self.noise_mean[:, cur_class], self.noise_cov[cur_class])
             
             cur_input = cur_mean + cur_noise
-            cur_label = self.labels[cur_class]
-        
-            prompt[:, t] = np.vstack([cur_input, cur_label])
+            cur_label = self.labels[cur_class].reshape(1, -1)
+
+            prompt[:, t] = np.concatenate([cur_input, cur_label], axis = 1)
         
         return torch.from_numpy(prompt)
 
