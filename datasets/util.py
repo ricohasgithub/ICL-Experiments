@@ -19,7 +19,7 @@ def generate_label_vis(prompt, title = "Label Visualiation"):
     
     plt.show()
 
-def generate_input_vis(prompt, title = "Input Visualization")
+def generate_input_vis(prompt, title = "Input Visualization"):
 
     prompt_np = prompt.detach().numpy()
     
