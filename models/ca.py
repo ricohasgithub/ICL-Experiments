@@ -73,7 +73,10 @@ class CausalAttention(Attention):
         t = torch.arange(seq_len)
         causal_mask = (t[:, None] >= t[None, :])[None, None, :, :]
         if mask is None:
-            mask = torch.broadcast
+            mask = torch.broadcast_to(causal_mask, (batch_size, 1, seq_len, seq_len))
+        else:
+            mask = torch.matmul(mask, causal_mask)
+        return super(CausalAttention, self)(x, y, mask)
 
 class TransformerBlock(nn.Module):
 
