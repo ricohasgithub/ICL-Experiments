@@ -42,6 +42,9 @@ class Attention(nn.Module):
         if mask is not None:
             mask = mask.unsqueeze(1)
 
+        if y is None:
+            y = x
+
         Q = self.W_Q(x).view(batch_size, -1, self.n_heads, self.d_hidden // self.n_heads)
         K = self.W_K(x).view(batch_size, -1, self.n_heads, self.d_hidden // self.n_heads)
         V = self.W_V(x).view(batch_size, -1, self.n_heads, self.d_hidden // self.n_heads)
