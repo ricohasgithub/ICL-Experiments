@@ -50,9 +50,10 @@ class InputEmbedder(nn.Module):
   """Input embedder."""
 
   def __init__(self,
+               examples,
                num_classes=1623,
                emb_dim=64,
-               example_encoding='embedding',
+               example_encoding='linear',
                flatten_superpixels=False,
                example_dropout_prob=0.0,
                concatenate_labels=False,
@@ -79,7 +80,7 @@ class InputEmbedder(nn.Module):
       positional_dropout_prob: Positional dropout probability.
       name: Optional name for the module.
     """
-    super(InputEmbedder, self).__init__(name=name)
+    super(InputEmbedder, self).__init__()
     self._num_classes = num_classes
     self._emb_dim = emb_dim
     self._example_encoding = example_encoding
@@ -88,6 +89,17 @@ class InputEmbedder(nn.Module):
     self._concatenate_labels = concatenate_labels
     self._use_positional_encodings = use_positional_encodings
     self._positional_dropout_prob = positional_dropout_prob
+
+    if (self._example_encoding == 'linear'):
+      h_example = examples.flatten(start_dim=2)
+      self.linear = nn.Linear(h_example.shape[-1], self._emb_dim)
+    elif (self._example_encoding == 'embedding'):
+      self.embedding_layer = nn.Embedding(self._num_classes, self._emb_dim)
+
+    self.example_dropout_layer = nn.Dropout(self._example_dropout_prob)
+    self.positional_dropout_layer = nn.Dropout(self._positional_dropout_prob)
+       
+
 
   def forward(self, examples, labels, is_training=True):
     """Call to the input embedder.
@@ -117,10 +129,10 @@ class InputEmbedder(nn.Module):
     #   batch_apply = BatchApply(example_encoding_with_is_training)
     #   h_example = batch_apply(examples)
     if self._example_encoding == 'linear':
-      h_example = nn.Flatten(preserve_dims=2)(examples)
-      h_example = nn.Linear(self._emb_dim)(h_example)
+      h_example = examples.flatten(start_dim=2)
+      h_example = self.linear(h_example)
     elif self._example_encoding == 'embedding':
-      h_example = nn.Embed(self._num_classes, self._emb_dim)(examples)
+      h_example = self.embedding_layer(examples)
     else:
       raise ValueError('Invalid example_encoding: %s' % self._example_encoding)
 
@@ -128,7 +140,7 @@ class InputEmbedder(nn.Module):
     # Note that this is not restricted to training, because the purpose is to
     # add noise to the examples, not for regularization.
     if self._example_dropout_prob:
-      h_example = nn.Dropout(self._example_dropout_prob)(h_example)
+      h_example = self.example_dropout_layer(h_example)
 
     # Embed the labels.
     n_emb_classes = self._num_classes
@@ -137,7 +149,7 @@ class InputEmbedder(nn.Module):
       # Dummy label for final position, where we don't want the label
       # information to be available.
       n_emb_classes += 1
-      labels_to_embed = labels_to_embed.at[:, -1].set(n_emb_classes - 1)
+      labels_to_embed[:, -1] = n_emb_classes - 1
 
     embs = torch.nn.init.normal_(torch.empty(n_emb_classes, self._emb_dim), std=0.02) 
     # embs = hk.get_parameter(
@@ -153,15 +165,15 @@ class InputEmbedder(nn.Module):
       hh = torch.empty(
           (h_example.shape[0], h_example.shape[1] * 2 - 1, h_example.shape[2]),
           dtype=h_example.dtype)
-      hh = hh.at[:, 0::2].set(h_example)
-      hh = hh.at[:, 1::2].set(h_label[:, :-1])
+      hh[:, 0::2] = h_example
+      hh[:, 1::2] = h_label[:, :-1]
       # hh is (B,S,E) where S=SS*2-1
 
     # Create positional encodings.
     if self._use_positional_encodings:
       positional_encodings = _create_positional_encodings(hh)
       if is_training:
-        positional_encodings = nn.Dropout(self._positional_dropout_prob)(positional_encodings)
+        positional_encodings = self.positional_dropout_layer(positional_encodings)
       # Add on the positional encoding.
       hh += positional_encodings
 
@@ -169,5 +181,11 @@ class InputEmbedder(nn.Module):
   
 
 
+if __name__=='__main__':
+    examples = torch.randn(2, 3, 32, 32, 3)
+    emb = InputEmbedder(examples)
+    labels = torch.randint(0, 1623, (2, 3))
+    out = emb(examples, labels)
+    print(out.shape)
 
   
