@@ -1,6 +1,5 @@
 import torch
 import torch.nn as nn
-import resnet
 import torch.nn.functional as F
 from functools import partial
 
@@ -53,7 +52,7 @@ class InputEmbedder(nn.Module):
   def __init__(self,
                num_classes=1623,
                emb_dim=64,
-               example_encoding='resnet',
+               example_encoding='embedding',
                flatten_superpixels=False,
                example_dropout_prob=0.0,
                concatenate_labels=False,
@@ -104,20 +103,20 @@ class InputEmbedder(nn.Module):
         of shape [batch_size, seq_len, channels].
     """
     # Encode the example inputs into shape (B, SS, E)
-    if self._example_encoding == 'resnet':
-      if self._flatten_superpixels:
-        resnet_emb_dim = int(self._emb_dim / 16)
-      else:
-        resnet_emb_dim = self._emb_dim
-      example_encoding = resnet.SimpleResNet(
-          blocks_per_group=(2, 2, 2, 2),
-          channels_per_group=(16, 32, 32, resnet_emb_dim),
-          flatten_superpixels=self._flatten_superpixels,
-      )
-      example_encoding_with_is_training = partial(example_encoding, is_training=is_training)
-      batch_apply = BatchApply(example_encoding_with_is_training)
-      h_example = batch_apply(examples)
-    elif self._example_encoding == 'linear':
+    # if self._example_encoding == 'resnet':
+    #   if self._flatten_superpixels:
+    #     resnet_emb_dim = int(self._emb_dim / 16)
+    #   else:
+    #     resnet_emb_dim = self._emb_dim
+    #   example_encoding = resnet.SimpleResNet(
+    #       blocks_per_group=(2, 2, 2, 2),
+    #       channels_per_group=(16, 32, 32, resnet_emb_dim),
+    #       flatten_superpixels=self._flatten_superpixels,
+    #   )
+    #   example_encoding_with_is_training = partial(example_encoding, is_training=is_training)
+    #   batch_apply = BatchApply(example_encoding_with_is_training)
+    #   h_example = batch_apply(examples)
+    if self._example_encoding == 'linear':
       h_example = nn.Flatten(preserve_dims=2)(examples)
       h_example = nn.Linear(self._emb_dim)(h_example)
     elif self._example_encoding == 'embedding':
