@@ -1,8 +1,10 @@
 
 import math
+from typing import Any, Optional, Callable
 
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 
 class LayerNorm(nn.Module):
     "Code from: https://nlp.seas.harvard.edu/annotated-transformer/"
@@ -78,10 +80,50 @@ class CausalAttention(Attention):
             mask = mask * causal_mask
         return super(CausalAttention, self)(x=x, y=y, mask=mask)
 
-class TransformerBlock(nn.Module):
 
-    def __init__(self):
-        pass
+class Dense(nn.Module):
+    def __init__(self, in_features, widening_factor=4, p_dropout=0.1, init_scale=1.0):
+        super(Dense, self).__init__()
+        out_features = widening_factor * in_features
+        self.linear1 = nn.Linear(in_features, out_features)
+        self.linear2 = nn.Linear(out_features, in_features)
+        self.p_dropout = p_dropout
+        
+        # Initialize weights
+        nn.init.kaiming_uniform_(self.linear1.weight, a=0, mode='fan_in', nonlinearity='linear')
+        nn.init.zeros_(self.linear1.bias)
+        nn.init.kaiming_uniform_(self.linear2.weight, a=0, mode='fan_in', nonlinearity='linear')
+        nn.init.zeros_(self.linear2.bias)
+
+    def forward(self, x):
+        x = F.gelu(self.linear1(x))
+        x = self.linear2(x)
+        x = F.dropout(x, p=self.p_dropout, training=self.training)
+        return x
+
+class TransformerBlock(nn.Module):
+    def __init__(self, causal, widening_factor=4, n_heads=8, d_hidden=64, p_dropout=0.0, scaling=1.0, bias=True):
+        super(TransformerBlock, self).__init__()
+
+        self.causal = causal
+        self.widening_factor = widening_factor
+        self.n_heads = n_heads
+        self.p_dropout = p_dropout
+        self.scaling = scaling
+        self.bias = bias
+
+        self.layer_norm = LayerNorm(d_hidden)
+        self.causal_block = CausalAttention(self.n_heads, self.d_hidden, self.p_dropout, self.scaling, self.bias)
+        self.attention_block = Attention(self.n_heads, self.d_hidden, self.p_dropout, self.scaling, self.bias)
+        self.dense_block = Dense(in_features=self.d_hidden, widening_factor=self.widening_factor, p_dropout=self.p_dropout)
+
+    def forward(self, x, y=None, mask=None):
+        if (self.causal):
+            x += self.causal_block(x, y, mask)
+        else:
+            x += self.attention_block(x, y, mask)
+        x += self.dense_block(x)
+        return x
 
 class Transformer(nn.Module):
     
