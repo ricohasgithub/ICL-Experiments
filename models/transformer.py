@@ -102,7 +102,7 @@ class Dense(nn.Module):
         return x
 
 class TransformerBlock(nn.Module):
-    def __init__(self, causal, widening_factor=4, n_heads=8, d_hidden=64, p_dropout=0.0, scaling=1.0, bias=True):
+    def __init__(self, causal, widening_factor=4, n_heads=8, d_hidden=64, p_dropout=0.1, scaling=1.0, bias=True):
         super(TransformerBlock, self).__init__()
 
         self.causal = causal
@@ -127,5 +127,39 @@ class TransformerBlock(nn.Module):
 
 class Transformer(nn.Module):
     
-    def __init__(self):
-        pass
+    def __init__(self, input_embedder, n_classes=1623, n_layers=8, n_heads=8, p_dropout=0.1, d_hidden=64):
+        super(Transformer, self).__init__()
+        self.input_embedder = input_embedder
+        self.n_classes = n_classes
+        self.n_layers = n_layers
+        self.n_heads = n_heads
+        self.p_dropout = p_dropout
+        self.d_hidden = d_hidden
+
+        self.layer_norm = LayerNorm(self.d_hidden)
+        for i in range(self.n_layers):
+            setattr(self, f'transformer_block_{i}', TransformerBlock(causal=True, widening_factor=4, n_heads=self.n_heads, d_hidden=self.d_hidden, p_dropout=self.p_dropout))
+        self.linear = nn.Linear(self.d_hidden, self.n_classes)
+
+        nn.init.kaiming_uniform_(self.linear.weight, a=0, mode='fan_in', nonlinearity='linear')
+
+
+    def forward(self, examples, labels, mask=None, is_training=True):
+        x = self.input_embedder(examples, labels, is_training)
+
+        if mask is not None:
+            attention_mask = mask[:, None, None, :]
+        else:
+            attention_mask = None
+
+        for i in range(self.n_layers):
+            if mask is not None:
+                x *= mask[:, :, None]
+            x = getattr(self, f'transformer_block_{i}')(x, mask=attention_mask)
+
+        x = self.layer_norm(x)
+        if mask is not None:
+            x *= mask[:, :, None]
+        
+        return self.linear(x)
+        

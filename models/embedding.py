@@ -51,7 +51,7 @@ class InputEmbedder(nn.Module):
 
   def __init__(self,
                examples,
-               num_classes=1623,
+               n_classes=1623,
                emb_dim=64,
                example_encoding='linear',
                flatten_superpixels=False,
@@ -63,7 +63,7 @@ class InputEmbedder(nn.Module):
     """Initialize the input embedder.
 
     Args:
-      num_classes: Total number of output classes.
+      n_classes: Total nber of output classes.
       emb_dim: Dimensionality of example and label embeddings.
       example_encoding: How to encode example inputs.
         'resnet': simple resnet encoding
@@ -81,7 +81,7 @@ class InputEmbedder(nn.Module):
       name: Optional name for the module.
     """
     super(InputEmbedder, self).__init__()
-    self._num_classes = num_classes
+    self._n_classes = n_classes
     self._emb_dim = emb_dim
     self._example_encoding = example_encoding
     self._flatten_superpixels = flatten_superpixels
@@ -94,7 +94,7 @@ class InputEmbedder(nn.Module):
       h_example = examples.flatten(start_dim=2)
       self.linear = nn.Linear(h_example.shape[-1], self._emb_dim)
     elif (self._example_encoding == 'embedding'):
-      self.embedding_layer = nn.Embedding(self._num_classes, self._emb_dim)
+      self.embedding_layer = nn.Embedding(self._n_classes, self._emb_dim)
 
     self.example_dropout_layer = nn.Dropout(self._example_dropout_prob)
     self.positional_dropout_layer = nn.Dropout(self._positional_dropout_prob)
@@ -143,7 +143,7 @@ class InputEmbedder(nn.Module):
       h_example = self.example_dropout_layer(h_example)
 
     # Embed the labels.
-    n_emb_classes = self._num_classes
+    n_emb_classes = self._n_classes
     labels_to_embed = labels
     if self._concatenate_labels:
       # Dummy label for final position, where we don't want the label
