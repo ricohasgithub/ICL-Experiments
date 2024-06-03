@@ -147,6 +147,12 @@ class SymbolicDatasetForSampling:
         self.example_type = "symbolic"
 
 
+class GaussianSeqGenerator:
+
+    def __init__(self):
+        pass
+
+
 class SeqGenerator:
     """Generates sequences of 'common', 'rare', or Zipf-distributed classes."""
 
@@ -932,3 +938,40 @@ def _bytes2str(x):
     if isinstance(x, bytes):
         x = x.decode("utf-8")
     return x
+
+
+def _convert_dict(
+    example, use_constant_labels=False, interleave_targets=True, downsample=False
+):
+    # (dims: B:batch, SS:original seqlen, H:height, W:width, C:channels)
+    is_image = len(example["example"].shape) == 5
+
+    # Cast the examples into the correct shape and tf datatype.
+    if is_image:
+        examples = example["example"].type(torch.float)  # (B,SS,H,W,C)
+        # if downsample:
+        #     examples = tf.map_fn(
+        #         lambda batch: tf.image.resize(batch, [28, 28]), examples
+        #     )
+    else:
+        examples = example["example"].type(torch.int32)  # (B, SS)
+
+    # Cast the labels into the correct tf datatype.
+    if use_constant_labels:
+        labels = torch.ones_like(example["label"], dtype=torch.int32)
+    else:
+        labels = example["label"].type(torch.int32)  # (B,SS)
+    seq_len = labels.shape[-1]
+
+    # Create the target sequence.
+    if interleave_targets:
+        # Alternating labels with zeros, e.g. [label, 0, label, 0, ...].
+        zeros = torch.zeros_like(labels)
+        target = torch.stack((labels[..., None], zeros[..., None]), axis=-1)
+        target = torch.reshape(target, [-1, seq_len * 2])[:, :-1]  # (B,SS*2-1)
+    else:
+        # Just use the original sequence of labels, e.g. [label, label, ...]
+        target = labels  # (B,SS)
+
+    ret_dict = {"examples": examples, "labels": labels, "target": target}
+    return ret_dict
