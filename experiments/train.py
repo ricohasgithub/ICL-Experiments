@@ -58,5 +58,5 @@ class Trainer:
             total_loss += curr_loss.item()
             if i % eval_after == 0:
                 avg_loss = running_loss / eval_after
-                print(f"Batch {i}, avg loss after {eval_after} batches:", avg_loss)
+                print(f"Global batch {i}, avg loss after {eval_after} batches:", avg_loss)
                 running_loss = 0
