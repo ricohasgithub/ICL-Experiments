@@ -7,10 +7,45 @@ from torchvision.datasets import Omniglot
 from torch.utils.data import DataLoader
 import numpy as np
 from collections import defaultdict
+from torch.utils.data import Dataset
 
 IMAGE_SIZE = 105
 N_CHARACTER_CLASSES = 1623
 N_EXEMPLARS_PER_CLASS = 20
+
+
+class GaussianVectorDataset(Dataset):
+    def __init__(self, num_classes=1623, input_dim=105, dsize=3500):
+
+        # Generate ranodm c
+        self.class_mean = np.stack(
+            [np.random.rand(1, input_dim) for _ in range(num_classes)], axis=0
+        )
+        self.class_covariance = np.stack(
+            [np.identity(input_dim) for _ in range(num_classes)], axis=0
+        )
+
+        self.vectors = []
+        self.labels = []
+
+        for i in range(dsize):
+            cur_class = np.random.randint(num_classes)
+
+            cur_mean = self.class_mean[cur_class]
+            cur_covariance = self.class_covariance[cur_class]
+
+            sample = np.random.multivariate_normal(cur_mean, cur_covariance)
+
+            self.vectors.append(sample)
+            self.labels.append(cur_class)
+
+    def __len__(self):
+        return len(self.labels)
+
+    def __getitem__(self, idx):
+        input = self.vectors[idx]
+        label = self.labels[idx]
+        return input, label
 
 
 class OmniglotDatasetForSampling:
