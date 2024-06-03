@@ -1,4 +1,6 @@
 
+import sys
+
 from train import Trainer
 from datasets.dataset import SeqGenerator
 
@@ -15,3 +17,13 @@ def experiment_base():
 
     trainer = Trainer(model, data_generator)
     trainer.train()
+
+if __name__ == "__main__":
+
+    # Read command line inputs to decide which experiment to run
+    experiment_id = sys.argv[1]
+
+    if experiment_id == "base":
+        experiment_base()
+    elif experiment_id == "mixed":
+        pass
