@@ -7,11 +7,11 @@ Given a function class $\mathcal{H}$ with distribution $\mathcal{D}_H$ and data 
 
 $$ S=(x_1, h(x_1), x_2, h(x_2), ..., x_n, h(x_n), x_{query}) $$
 
-where $h \sim \mathcal{D}_{H}$, and $x_1, ..., x_n, x_{query} \sim \mathcal{D}_{X}$.
+where $h \sim \mathcal{D}_H$, and $x_1, ..., x_n, x_{query} \sim \mathcal{D}_X$.
 
 A model $f$ in-context learns the function class $\mathcal{H}$ up to $\epsilon$ if the population loss
 
-$$ \mathbb{E}_{x_i, x_query, h}\left[(f(S)-h(x_{query}))^2\right] \leq \epsilon $$
+$$ \mathbb{E}_ {x_i, x_query, h}\left[(f(S)-h(x_{query}))^2\right] \leq \epsilon $$
 
 for large enough $n$ (from [Garg et al. 2022](https://arxiv.org/pdf/2208.01066)).
 
