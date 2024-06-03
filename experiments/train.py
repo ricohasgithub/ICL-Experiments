@@ -47,7 +47,7 @@ class Trainer:
         running_loss = 0
         for i, batch in enumerate(self.train_loader):
 
-            x, labels = batch["example"].to(self.device), batch["label"].to(self.device)
+            x, labels = batch["example"].to(self.device), batch["target"].to(self.device)
             optim.zero_grad()
 
             preds = self.model(x)
