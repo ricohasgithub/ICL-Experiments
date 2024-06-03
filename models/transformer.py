@@ -102,7 +102,7 @@ class Dense(nn.Module):
         return x
 
 class TransformerBlock(nn.Module):
-    def __init__(self, causal, widening_factor=4, n_heads=8, d_hidden=64, p_dropout=0.1, scaling=1.0, bias=True):
+    def __init__(self, causal=True, widening_factor=4, n_heads=8, d_hidden=64, p_dropout=0.1, scaling=1.0, bias=True):
         super(TransformerBlock, self).__init__()
 
         self.causal = causal
