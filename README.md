@@ -3,7 +3,7 @@ This repository contains experiments to evaluate when transformers exhibit in-co
 
 ## About ICL
 
-Given a function class $\mathcal{H}$ with distribution $\mathcal{D}_{H}$ and data space $\mathcal{X}$ with distribution $\mathcal{D}_{X}$, in-context learning describes the process of learning to predict $h(x_{query})$ given the prompt
+Given a function class $\mathcal{H}$ with distribution $\mathcal{D}_H$ and data space $\mathcal{X}$ with distribution $\mathcal{D}_X$, in-context learning describes the process of learning to predict $h(x_{query})$ given the prompt
 
 $$ S=(x_1, h(x_1), x_2, h(x_2), ..., x_n, h(x_n), x_{query}) $$
 
