@@ -11,7 +11,7 @@ where $h \sim \mathcal{D}_ \mathcal{H}$, and $x_1, ..., x_n, x_{query} \sim \mat
 
 A model $f$ in-context learns the function class $\mathcal{H}$ up to $\epsilon$ if the population loss
 
-$$ \mathbb{E}_ {x_i, x_query, h}\left[(f(S)-h(x_{query}))^2\right] \leq \epsilon $$
+$$ \mathbb{E}_ {x_i, x_{query}, h}\left[(f(S)-h(x_{query}))^2\right] \leq \epsilon $$
 
 for large enough $n$ (from [Garg et al. 2022](https://arxiv.org/pdf/2208.01066)).
 
@@ -19,9 +19,9 @@ for large enough $n$ (from [Garg et al. 2022](https://arxiv.org/pdf/2208.01066))
 To run experiments, use the following command line arguments
 
     chmod +x experiments.sh
-    experiments.sh EXPERIMENT_ID
+    experiments.sh EXPERIMENT
 
-where `EXPERIMENT_ID` is one of the following:
+where `EXPERIMENT` is one of the following:
  - `base`: ResNet embedder for the omniglot image dataset with bursty sequences.
  - `mixed`: TODO implement this and other experiments.
 
@@ -29,7 +29,7 @@ To create a custom experiment, you can add an experiment under `./experiments/ex
 
 ## TODO:
 
- - [ ] Complete `prepare_seqs_for_transformer` (from [this file](https://github.com/google-deepmind/emergent_in_context_learning/blob/main/datasets/utils.py))
+ - [ ] Implement `prepare_seqs_for_transformer` (from [this file](https://github.com/google-deepmind/emergent_in_context_learning/blob/main/datasets/utils.py))
  - [ ] Complete torch ResNet embedder implementation under `embedding.py`
  - [ ] Add more experiments under `experiment.py`, replicating the full results of the original DeepMind paper
  - [ ] Add support to generate sequences in `./datasets/dataset.py` using a general state space model
