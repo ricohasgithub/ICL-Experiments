@@ -1,3 +1,4 @@
+
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -7,7 +8,6 @@ from models.embedding import InputEmbedder
 
 from datasets.dataset import SeqGenerator
 
-
 class IterDataset(torch.utils.data.IterableDataset):
 
     def __init__(self, generator):
@@ -16,7 +16,6 @@ class IterDataset(torch.utils.data.IterableDataset):
 
     def __iter__(self):
         return iter(self.generator())
-
 
 class Trainer:
 
@@ -30,9 +29,7 @@ class Trainer:
         # Data generator here refers to something like SeqGenerator().get_random_seq
         self.data_generator = data_generator
         self.train_dataset = IterDataset(self.data_generator)
-        self.train_loader = torch.utils.data.DataLoader(
-            self.train_dataset, batch_size=self.batch_size
-        )
+        self.train_loader = torch.utils.data.DataLoader(self.train_dataset, batch_size=self.batch_size)
 
         # Training loop parameters
         self.loss_fn = loss_fn
@@ -51,7 +48,7 @@ class Trainer:
         running_loss = 0
         for i, batch in enumerate(self.train_loader):
 
-            x, labels = batch["example"].to(self.device), batch["target"].to(self.device)
+            x, labels = batch["example"].to(self.device), batch["label"].to(self.device)
             optim.zero_grad()
 
             preds = self.model(x)
@@ -72,7 +69,5 @@ class Trainer:
             total_loss += loss.item()
             if i % eval_after == 0:
                 avg_loss = running_loss / eval_after
-                print(
-                    f"Global batch {i}, avg loss after {eval_after} batches:", avg_loss
-                )
+                print(f"Global batch {i}, avg loss after {eval_after} batches:", avg_loss)
                 running_loss = 0
