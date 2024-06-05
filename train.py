@@ -1,9 +1,9 @@
-
 import torch
 import torch.nn as nn
 import torch.optim as optim
 
 from datasets.dataset import SeqGenerator, _convert_dict
+
 
 class IterDataset(torch.utils.data.IterableDataset):
 
@@ -12,11 +12,20 @@ class IterDataset(torch.utils.data.IterableDataset):
         self.generator = generator
 
     def __iter__(self):
-        return iter(self.generator(seq_len=9, shots=3, ways=2, p_bursty=0.9))
+        return iter(self.generator())
+
 
 class Trainer:
 
-    def __init__(self, model, data_generator, loss_fn=nn.CrossEntropyLoss, optimizer=optim.Adam, num_classes=1623, batch_size=16):
+    def __init__(
+        self,
+        model,
+        data_generator,
+        loss_fn=nn.CrossEntropyLoss,
+        optimizer=optim.Adam,
+        num_classes=1623,
+        batch_size=16,
+    ):
 
         # Instance of model
         self.model = model
@@ -26,7 +35,9 @@ class Trainer:
         # Data generator here refers to something like SeqGenerator().get_random_seq
         self.data_generator = data_generator
         self.train_dataset = IterDataset(self.data_generator)
-        self.train_loader = torch.utils.data.DataLoader(self.train_dataset, batch_size=self.batch_size)
+        self.train_loader = torch.utils.data.DataLoader(
+            self.train_dataset, batch_size=self.batch_size
+        )
 
         # Training loop parameters
         self.loss_fn = loss_fn
@@ -46,7 +57,9 @@ class Trainer:
         for i, batch in enumerate(self.train_loader):
 
             batch = _convert_dict(batch)
-            x, labels = batch["example"].to(self.device), batch["label"].to(self.device)
+            x, labels = batch["examples"].to(self.device), batch["labels"].to(
+                self.device
+            )
             optim.zero_grad()
 
             preds = self.model(x)
@@ -63,9 +76,11 @@ class Trainer:
             loss.backward()
 
             optim.step()
-            
+
             total_loss += loss.item()
             if i % eval_after == 0:
                 avg_loss = running_loss / eval_after
-                print(f"Global batch {i}, avg loss after {eval_after} batches:", avg_loss)
+                print(
+                    f"Global batch {i}, avg loss after {eval_after} batches:", avg_loss
+                )
                 running_loss = 0
