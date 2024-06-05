@@ -24,12 +24,12 @@ def experiment_base():
         preserve_ordering_every_n=None,
     )
     data_generator = lambda: seq_generator_factory.get_bursty_seq(
-        9,
-        3,
-        2,
-        0.9,
-        0,
-        1,
+        seq_len=9,
+        shots=3,
+        ways=2,
+        p_bursty=0.9,
+        p_bursty_common=0,
+        p_bursty_zipfian=1,
         non_bursty_type="zipfian",
         labeling_common="ordered",
         labeling_rare="ordered",
