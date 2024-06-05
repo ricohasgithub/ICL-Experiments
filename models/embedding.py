@@ -51,7 +51,7 @@ class InputEmbedder(nn.Module):
   """Input embedder."""
 
   def __init__(self,
-               examps,
+               examples,
                n_classes=1623,
                emb_dim=64,
                seq_shape=11025,
