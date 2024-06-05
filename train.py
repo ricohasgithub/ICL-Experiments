@@ -12,7 +12,7 @@ class IterDataset(torch.utils.data.IterableDataset):
         self.generator = generator
 
     def __iter__(self):
-        return iter(self.generator())
+        return iter(self.generator(seq_len=9, shots=3, ways=2, p_bursty=0.9))
 
 class Trainer:
 
