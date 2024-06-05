@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from functools import partial
+from resnet import CustomResNet
 
 
 class BatchApply(nn.Module):
@@ -50,6 +51,7 @@ class InputEmbedder(nn.Module):
   """Input embedder."""
 
   def __init__(self,
+               exampls,
                n_classes=1623,
                emb_dim=64,
                seq_shape=11025,
@@ -90,10 +92,11 @@ class InputEmbedder(nn.Module):
     self._use_positional_encodings = use_positional_encodings
     self._positional_dropout_prob = positional_dropout_prob
 
-    if (self._example_encoding == 'linear'):
-      self.linear = nn.Linear(seq_shape, self._emb_dim)
-    elif (self._example_encoding == 'embedding'):
-      self.embedding_layer = nn.Embedding(self._n_classes, self._emb_dim)
+    self._linear_input_dim = examples.shape[2] * examples.shape[3] * examples.shape[4]
+
+    self.linear = nn.Linear(self._linear_input_dim, self._emb_dim)
+    self.embedding_layer = nn.Embedding(self._n_classes, self._emb_dim)
+    self.resnet = CustomResNet((2,2,2,2), (16, 32, 32, self._emb_dim), flatten_superpixels=False)
 
     self.example_dropout_layer = nn.Dropout(self._example_dropout_prob)
     self.positional_dropout_layer = nn.Dropout(self._positional_dropout_prob)
@@ -132,6 +135,8 @@ class InputEmbedder(nn.Module):
       h_example = self.linear(h_example)
     elif self._example_encoding == 'embedding':
       h_example = self.embedding_layer(examples)
+    elif self._example_encoding == 'resnet':
+       h_example = self.resnet(examples)
     else:
       raise ValueError('Invalid example_encoding: %s' % self._example_encoding)
 
@@ -174,7 +179,7 @@ class InputEmbedder(nn.Module):
       if is_training:
         positional_encodings = self.positional_dropout_layer(positional_encodings)
       # Add on the positional encoding.
-      hh += positional_encodings
+      hh = hh + positional_encodings
 
     return hh
   
@@ -182,7 +187,7 @@ class InputEmbedder(nn.Module):
 
 if __name__=='__main__':
     examples = torch.randn(2, 3, 32, 32, 3)
-    emb = InputEmbedder(examples)
+    emb = InputEmbedder(examples, n_classes=1623)
     labels = torch.randint(0, 1623, (2, 3))
     out = emb(examples, labels)
     print(out.shape)
