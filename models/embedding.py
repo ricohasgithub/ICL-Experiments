@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from functools import partial
-from resnet import CustomResNet
+from models.resnet import CustomResNet
 
 
 class BatchApply(nn.Module):
@@ -51,7 +51,7 @@ class InputEmbedder(nn.Module):
   """Input embedder."""
 
   def __init__(self,
-               examples,
+               linear_input_dim,
                n_classes=1623,
                emb_dim=64,
                seq_shape=11025,
@@ -93,7 +93,8 @@ class InputEmbedder(nn.Module):
     self._positional_dropout_prob = positional_dropout_prob
 
     print(examples)
-    self._linear_input_dim = examples.shape[2] * examples.shape[3] * examples.shape[4]
+    # self._linear_input_dim = examples.shape[2] * examples.shape[3] * examples.shape[4]
+    self._linear_input_dim = linear_input_dim
 
     self.linear = nn.Linear(self._linear_input_dim, self._emb_dim)
     self.embedding_layer = nn.Embedding(self._n_classes, self._emb_dim)
