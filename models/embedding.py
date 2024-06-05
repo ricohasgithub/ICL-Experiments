@@ -51,7 +51,7 @@ class InputEmbedder(nn.Module):
   """Input embedder."""
 
   def __init__(self,
-               exampls,
+               examps,
                n_classes=1623,
                emb_dim=64,
                seq_shape=11025,
@@ -92,6 +92,7 @@ class InputEmbedder(nn.Module):
     self._use_positional_encodings = use_positional_encodings
     self._positional_dropout_prob = positional_dropout_prob
 
+    print(examples)
     self._linear_input_dim = examples.shape[2] * examples.shape[3] * examples.shape[4]
 
     self.linear = nn.Linear(self._linear_input_dim, self._emb_dim)

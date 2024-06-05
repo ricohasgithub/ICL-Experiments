@@ -45,20 +45,26 @@ class Attention(nn.Module):
         batch_size, seq_len = x.shape[0], x.shape[1]
 
         # If a mask is given, add an extra dimension so the same mask can be applied over all heads
-        if mask is not None:
-            mask = mask.unsqueeze(1)
+        # if mask is not None:
+        #     mask = mask.unsqueeze(1)
 
         if y is None:
             y = x
 
-        Q = self.W_Q(x).view(
-            batch_size, -1, self.n_heads, self.d_hidden // self.n_heads
+        Q = (
+            self.W_Q(x)
+            .view(batch_size, -1, self.n_heads, self.d_hidden // self.n_heads)
+            .transpose(1, 2)
         )
-        K = self.W_K(x).view(
-            batch_size, -1, self.n_heads, self.d_hidden // self.n_heads
+        K = (
+            self.W_K(x)
+            .view(batch_size, -1, self.n_heads, self.d_hidden // self.n_heads)
+            .transpose(1, 2)
         )
-        V = self.W_V(x).view(
-            batch_size, -1, self.n_heads, self.d_hidden // self.n_heads
+        V = (
+            self.W_V(x)
+            .view(batch_size, -1, self.n_heads, self.d_hidden // self.n_heads)
+            .transpose(1, 2)
         )
 
         x, att_dist = self.attention(Q, K, V, mask)
@@ -68,9 +74,12 @@ class Attention(nn.Module):
     def attention(self, Q, K, V, mask=None):
         d_K = Q.size(-1)
         att_scores = torch.matmul(Q, K.transpose(-2, -1)) / math.sqrt(d_K)
+
         if mask is not None:
             att_scores = att_scores.masked_fill(mask == 0, -1e9)
+
         att_dist = att_scores.softmax(dim=-1)
+
         return torch.matmul(att_dist, V), att_dist
 
 
@@ -153,10 +162,10 @@ class TransformerBlock(nn.Module):
 
     def forward(self, x, y=None, mask=None):
         if self.causal:
-            x += self.causal_block(x, y, mask)
+            x = x + self.causal_block(x, y, mask)
         else:
-            x += self.attention_block(x, y, mask)
-        x += self.dense_block(x)
+            x = x + self.attention_block(x, y, mask)
+        x = x + self.dense_block(x)
         return x
 
 
@@ -172,7 +181,8 @@ class Transformer(nn.Module):
         d_hidden=64,
     ):
         super(Transformer, self).__init__()
-        self.input_embedder = input_embedder
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.input_embedder = input_embedder.to(device=self.device)
         self.n_classes = n_classes
         self.n_layers = n_layers
         self.n_heads = n_heads
