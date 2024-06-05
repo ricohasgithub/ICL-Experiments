@@ -51,7 +51,7 @@ class InputEmbedder(nn.Module):
 
     def __init__(
         self,
-        examples,
+        linear_input_dim,
         n_classes=1623,
         emb_dim=64,
         seq_shape=11025,
@@ -93,22 +93,8 @@ class InputEmbedder(nn.Module):
         self._use_positional_encodings = use_positional_encodings
         self._positional_dropout_prob = positional_dropout_prob
 
-        self.device = torch.device(
-            "cuda"
-            if torch.cuda.is_available()
-            else "mps" if torch.backends.mps.is_available() else "cpu"
-        )
-
-        if self._example_encoding == "linear":
-            self.linear = nn.Linear(seq_shape, self._emb_dim).to(device=self.device)
-        elif self._example_encoding == "embedding":
-            self.embedding_layer = nn.Embedding(self._n_classes, self._emb_dim).to(
-                device=self.device
-            )
-        print(examples)
-        self._linear_input_dim = (
-            examples.shape[2] * examples.shape[3] * examples.shape[4]
-        )
+        # self._linear_input_dim = examples.shape[2] * examples.shape[3] * examples.shape[4]
+        self._linear_input_dim = linear_input_dim
 
         self.linear = nn.Linear(self._linear_input_dim, self._emb_dim)
         self.embedding_layer = nn.Embedding(self._n_classes, self._emb_dim)
