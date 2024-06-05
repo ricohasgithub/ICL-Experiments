@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import torchvision.models.resnet as resnet
 
+
 class CustomResNet(nn.Module):
     def __init__(self, blocks_per_group, channels_per_group, flatten_superpixels=False):
         super(CustomResNet, self).__init__()
@@ -11,19 +12,35 @@ class CustomResNet(nn.Module):
         self.relu = nn.ReLU(inplace=True)
         self.maxpool = nn.MaxPool2d(kernel_size=3, stride=2, padding=1)
 
-        self.layer1 = self._make_layer(resnet.BasicBlock, channels_per_group[0], blocks_per_group[0])
-        self.layer2 = self._make_layer(resnet.BasicBlock, channels_per_group[1], blocks_per_group[1], stride=2)
-        self.layer3 = self._make_layer(resnet.BasicBlock, channels_per_group[2], blocks_per_group[2], stride=2)
-        self.layer4 = self._make_layer(resnet.BasicBlock, channels_per_group[3], blocks_per_group[3], stride=2)
-        
+        self.layer1 = self._make_layer(
+            resnet.BasicBlock, channels_per_group[0], blocks_per_group[0]
+        )
+        self.layer2 = self._make_layer(
+            resnet.BasicBlock, channels_per_group[1], blocks_per_group[1], stride=2
+        )
+        self.layer3 = self._make_layer(
+            resnet.BasicBlock, channels_per_group[2], blocks_per_group[2], stride=2
+        )
+        self.layer4 = self._make_layer(
+            resnet.BasicBlock, channels_per_group[3], blocks_per_group[3], stride=2
+        )
+
         self.avgpool = nn.AdaptiveAvgPool2d((1, 1))
-        self.fc = nn.Linear(channels_per_group[3] * resnet.BasicBlock.expansion, channels_per_group[3])
+        self.fc = nn.Linear(
+            channels_per_group[3] * resnet.BasicBlock.expansion, channels_per_group[3]
+        )
 
     def _make_layer(self, block, planes, blocks, stride=1):
         downsample = None
         if stride != 1 or self.inplanes != planes * block.expansion:
             downsample = nn.Sequential(
-                nn.Conv2d(self.inplanes, planes * block.expansion, kernel_size=1, stride=stride, bias=False),
+                nn.Conv2d(
+                    self.inplanes,
+                    planes * block.expansion,
+                    kernel_size=1,
+                    stride=stride,
+                    bias=False,
+                ),
                 nn.BatchNorm2d(planes * block.expansion),
             )
 
@@ -52,19 +69,16 @@ class CustomResNet(nn.Module):
 
         return x
 
-if __name__ == '__main__':
-  blocks_per_group = [2, 2, 2, 2]
-  channels_per_group = [16, 32, 32, 27]
-  custom_resnet = CustomResNet(blocks_per_group, channels_per_group)
 
-  input_tensor = torch.randn(1, 3, 224, 224)
+if __name__ == "__main__":
+    blocks_per_group = [2, 2, 2, 2]
+    channels_per_group = [16, 32, 32, 27]
+    custom_resnet = CustomResNet(blocks_per_group, channels_per_group)
 
-  output = custom_resnet(input_tensor)
-  print("Output shape:", output.shape)
+    input_tensor = torch.randn(1, 3, 224, 224)
 
-
-
-
+    output = custom_resnet(input_tensor)
+    print("Output shape:", output.shape)
 
 
 # # Copyright 2022 DeepMind Technologies Limited
