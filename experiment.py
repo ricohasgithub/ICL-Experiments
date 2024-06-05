@@ -9,7 +9,7 @@ from models.embedding import InputEmbedder
 
 def experiment_base():
 
-    input_embedding = InputEmbedder(example="resnet")
+    input_embedding = InputEmbedder(example="linear")
     model = Transformer(input_embedder=input_embedding)
     
     seq_generator_factory = SeqGenerator()

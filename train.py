@@ -3,10 +3,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-from models.transformer import Transformer
-from models.embedding import InputEmbedder
-
-from datasets.dataset import SeqGenerator
+from datasets.dataset import SeqGenerator, _convert_dict
 
 class IterDataset(torch.utils.data.IterableDataset):
 
@@ -48,6 +45,7 @@ class Trainer:
         running_loss = 0
         for i, batch in enumerate(self.train_loader):
 
+            batch = _convert_dict(batch)
             x, labels = batch["example"].to(self.device), batch["label"].to(self.device)
             optim.zero_grad()
 
@@ -59,8 +57,8 @@ class Trainer:
             # Compute query mask on loss to only retain loss for the query entry (last column)
             query_mask = torch.full_like(losses_all, False)
             query_mask[:, -1] = True
-            losses_weighted = torch.matmul(losses_all, query_mask)
 
+            losses_weighted = torch.matmul(losses_all, query_mask)
             loss = torch.sum(losses_weighted) / torch.sum(query_mask)
             loss.backward()
 

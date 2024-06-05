@@ -1,2 +1,2 @@
 #!/bin/sh
-python3 ./experiments/experiment.py $1
+python3 ./experiment.py $1
