@@ -29,16 +29,22 @@ class Attention(nn.Module):
 
         super(Attention, self).__init__()
 
+        self.device = torch.device(
+            "cuda"
+            if torch.cuda.is_available()
+            else "mps" if torch.backends.mps.is_available() else "cpu"
+        )
+
         self.n_heads = n_heads
         self.d_hidden = d_hidden
         self.p_dropout = p_dropout
         self.scaling = scaling
         self.bias = bias
 
-        self.W_Q = nn.Linear(d_hidden, d_hidden)
-        self.W_K = nn.Linear(d_hidden, d_hidden)
-        self.W_V = nn.Linear(d_hidden, d_hidden)
-        self.W_O = nn.Linear(d_hidden, d_hidden)
+        self.W_Q = nn.Linear(d_hidden, d_hidden).to(self.device)
+        self.W_K = nn.Linear(d_hidden, d_hidden).to(self.device)
+        self.W_V = nn.Linear(d_hidden, d_hidden).to(self.device)
+        self.W_O = nn.Linear(d_hidden, d_hidden).to(self.device)
 
     def forward(self, x, y=None, mask=None):
 
@@ -92,7 +98,7 @@ class CausalAttention(Attention):
 
     def forward(self, x, y=None, mask=None):
         batch_size, seq_len = x.shape[0], x.shape[1]
-        t = torch.arange(seq_len)
+        t = torch.arange(seq_len).to(self.device)
         causal_mask = (t[:, None] >= t[None, :])[None, None, :, :]
         if mask is None:
             mask = torch.broadcast_to(causal_mask, (batch_size, 1, seq_len, seq_len))
@@ -139,6 +145,12 @@ class TransformerBlock(nn.Module):
     ):
         super(TransformerBlock, self).__init__()
 
+        self.device = torch.device(
+            "cuda"
+            if torch.cuda.is_available()
+            else "mps" if torch.backends.mps.is_available() else "cpu"
+        )
+
         self.causal = causal
         self.widening_factor = widening_factor
         self.n_heads = n_heads
@@ -147,18 +159,18 @@ class TransformerBlock(nn.Module):
         self.scaling = scaling
         self.bias = bias
 
-        self.layer_norm = LayerNorm(self.d_hidden)
+        self.layer_norm = LayerNorm(self.d_hidden).to(self.device)
         self.causal_block = CausalAttention(
             self.n_heads, self.d_hidden, self.p_dropout, self.scaling, self.bias
-        )
+        ).to(self.device)
         self.attention_block = Attention(
             self.n_heads, self.d_hidden, self.p_dropout, self.scaling, self.bias
-        )
+        ).to(self.device)
         self.dense_block = Dense(
             in_features=self.d_hidden,
             widening_factor=self.widening_factor,
             p_dropout=self.p_dropout,
-        )
+        ).to(self.device)
 
     def forward(self, x, y=None, mask=None):
         if self.causal:
@@ -181,7 +193,11 @@ class Transformer(nn.Module):
         d_hidden=64,
     ):
         super(Transformer, self).__init__()
-        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.device = torch.device(
+            "cuda"
+            if torch.cuda.is_available()
+            else "mps" if torch.backends.mps.is_available() else "cpu"
+        )
         self.input_embedder = input_embedder.to(device=self.device)
         self.n_classes = n_classes
         self.n_layers = n_layers
@@ -200,16 +216,16 @@ class Transformer(nn.Module):
                     n_heads=self.n_heads,
                     d_hidden=self.d_hidden,
                     p_dropout=self.p_dropout,
-                ),
+                ).to(self.device),
             )
-        self.linear = nn.Linear(self.d_hidden, self.n_classes)
+        self.linear = nn.Linear(self.d_hidden, self.n_classes).to(self.device)
 
         nn.init.kaiming_uniform_(
             self.linear.weight, a=0, mode="fan_in", nonlinearity="linear"
-        )
+        ).to(self.device)
 
     def forward(self, examples, labels, mask=None, is_training=True):
-        x = self.input_embedder(examples, labels, is_training)
+        x = self.input_embedder(examples, labels, is_training).to(self.device)
 
         if mask is not None:
             attention_mask = mask[:, None, None, :]

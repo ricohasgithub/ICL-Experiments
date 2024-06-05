@@ -91,7 +91,11 @@ class InputEmbedder(nn.Module):
         self._use_positional_encodings = use_positional_encodings
         self._positional_dropout_prob = positional_dropout_prob
 
-        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.device = torch.device(
+            "cuda"
+            if torch.cuda.is_available()
+            else "mps" if torch.backends.mps.is_available() else "cpu"
+        )
 
         if self._example_encoding == "linear":
             self.linear = nn.Linear(seq_shape, self._emb_dim).to(device=self.device)

@@ -43,7 +43,11 @@ class Trainer:
         self.loss_fn = loss_fn
         self.optimizer = optimizer
 
-        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.device = torch.device(
+            "cuda"
+            if torch.cuda.is_available()
+            else "mps" if torch.backends.mps.is_available() else "cpu"
+        )
 
     def train(self, lr=1e-5, eval_after=5):
 
@@ -111,11 +115,20 @@ class Trainer:
             if i % eval_after == 0:
                 avg_loss = running_loss / eval_after
                 avg_accuracy = running_accuracy / eval_after
-                print(
-                    f"Global batch {i}, avg loss after {eval_after} batches:", avg_loss
-                )
-                print(
-                    f"Global batch {i}, avg accuracy after {eval_after} batches:",
-                    avg_accuracy,
-                )
+
+                if i % (eval_after * 20) == 0:
+                    print(
+                        f"Global batch {i}, avg loss after {eval_after} batches:",
+                        avg_loss,
+                    )
+                else:
+                    print(
+                        f"Global batch {i}, avg loss after {eval_after} batches:",
+                        avg_loss,
+                        end="\r",
+                    )
+                # print(
+                #     f"Global batch {i}, avg accuracy after {eval_after} batches:",
+                #     avg_accuracy,
+                # )
                 running_loss = 0
