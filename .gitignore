@@ -1,2 +1,4 @@
 .DS_STORE
 /data
+.gitignore
+/__pycache__
