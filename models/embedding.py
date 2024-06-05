@@ -84,6 +84,12 @@ class InputEmbedder(nn.Module):
           name: Optional name for the module.
         """
         super(InputEmbedder, self).__init__()
+
+        self.device = torch.device(
+            "cuda"
+            if torch.cuda.is_available()
+            else "mps" if torch.backends.mps.is_available() else "cpu"
+        )
         self._n_classes = n_classes
         self._emb_dim = emb_dim
         self._example_encoding = example_encoding
@@ -96,11 +102,13 @@ class InputEmbedder(nn.Module):
         # self._linear_input_dim = examples.shape[2] * examples.shape[3] * examples.shape[4]
         self._linear_input_dim = linear_input_dim
 
-        self.linear = nn.Linear(self._linear_input_dim, self._emb_dim)
-        self.embedding_layer = nn.Embedding(self._n_classes, self._emb_dim)
+        self.linear = nn.Linear(self._linear_input_dim, self._emb_dim).to(self.device)
+        self.embedding_layer = nn.Embedding(self._n_classes, self._emb_dim).to(
+            self.device
+        )
         self.resnet = CustomResNet(
             (2, 2, 2, 2), (16, 32, 32, self._emb_dim), flatten_superpixels=False
-        )
+        ).to(self.device)
 
         self.example_dropout_layer = nn.Dropout(self._example_dropout_prob)
         self.positional_dropout_layer = nn.Dropout(self._positional_dropout_prob)
@@ -159,7 +167,7 @@ class InputEmbedder(nn.Module):
 
         embs = torch.nn.init.normal_(
             torch.empty(n_emb_classes, self._emb_dim), std=0.02
-        )
+        ).to(self.device)
         # embs = hk.get_parameter(
         #     'embs', [n_emb_classes, self._emb_dim],
         #     init=init.TruncatedNormal(stddev=0.02))
