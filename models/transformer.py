@@ -1,10 +1,10 @@
-
 import math
 from typing import Any, Optional, Callable
 
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+
 
 class LayerNorm(nn.Module):
     "Code from: https://nlp.seas.harvard.edu/annotated-transformer/"
@@ -19,6 +19,7 @@ class LayerNorm(nn.Module):
         mean = x.mean(-1, keepdim=True)
         std = x.std(-1, keepdim=True)
         return self.a_2 * (x - mean) / (std + self.eps) + self.b_2
+
 
 class Attention(nn.Module):
 
@@ -49,12 +50,18 @@ class Attention(nn.Module):
         if y is None:
             y = x
 
-        Q = self.W_Q(x).view(batch_size, -1, self.n_heads, self.d_hidden // self.n_heads)
-        K = self.W_K(x).view(batch_size, -1, self.n_heads, self.d_hidden // self.n_heads)
-        V = self.W_V(x).view(batch_size, -1, self.n_heads, self.d_hidden // self.n_heads)
+        Q = self.W_Q(x).view(
+            batch_size, -1, self.n_heads, self.d_hidden // self.n_heads
+        )
+        K = self.W_K(x).view(
+            batch_size, -1, self.n_heads, self.d_hidden // self.n_heads
+        )
+        V = self.W_V(x).view(
+            batch_size, -1, self.n_heads, self.d_hidden // self.n_heads
+        )
 
         x, att_dist = self.attention(Q, K, V, mask)
-        x = (x.transpose(1, 2).contiguous().view(batch_size, -1, self.d_hidden))
+        x = x.transpose(1, 2).contiguous().view(batch_size, -1, self.d_hidden)
         return self.W_O(x)
 
     def attention(self, Q, K, V, mask=None):
@@ -65,17 +72,20 @@ class Attention(nn.Module):
         att_dist = att_scores.softmax(dim=-1)
         return torch.matmul(att_dist, V), att_dist
 
+
 class CausalAttention(Attention):
-    
+
     def __init__(self, n_heads=8, d_hidden=64, p_dropout=0.0, scaling=1.0, bias=True):
-        super(CausalAttention, self).__init__(n_heads, d_hidden, p_dropout, scaling, bias)
+        super(CausalAttention, self).__init__(
+            n_heads, d_hidden, p_dropout, scaling, bias
+        )
 
     def forward(self, x, y=None, mask=None):
         batch_size, seq_len = x.shape[0], x.shape[1]
         t = torch.arange(seq_len)
         causal_mask = (t[:, None] >= t[None, :])[None, None, :, :]
         if mask is None:
-            mask = torch.broadcast(causal_mask, (batch_size, 1, seq_len, seq_len))
+            mask = torch.broadcast_to(causal_mask, (batch_size, 1, seq_len, seq_len))
         else:
             mask = mask * causal_mask
         return super(CausalAttention, self)(x=x, y=y, mask=mask)
@@ -88,11 +98,15 @@ class Dense(nn.Module):
         self.linear1 = nn.Linear(in_features, out_features)
         self.linear2 = nn.Linear(out_features, in_features)
         self.p_dropout = p_dropout
-        
+
         # Initialize weights
-        nn.init.kaiming_uniform_(self.linear1.weight, a=0, mode='fan_in', nonlinearity='linear')
+        nn.init.kaiming_uniform_(
+            self.linear1.weight, a=0, mode="fan_in", nonlinearity="linear"
+        )
         nn.init.zeros_(self.linear1.bias)
-        nn.init.kaiming_uniform_(self.linear2.weight, a=0, mode='fan_in', nonlinearity='linear')
+        nn.init.kaiming_uniform_(
+            self.linear2.weight, a=0, mode="fan_in", nonlinearity="linear"
+        )
         nn.init.zeros_(self.linear2.bias)
 
     def forward(self, x):
@@ -101,8 +115,18 @@ class Dense(nn.Module):
         x = F.dropout(x, p=self.p_dropout, training=self.training)
         return x
 
+
 class TransformerBlock(nn.Module):
-    def __init__(self, causal=True, widening_factor=4, n_heads=8, d_hidden=64, p_dropout=0.1, scaling=1.0, bias=True):
+    def __init__(
+        self,
+        causal=True,
+        widening_factor=4,
+        n_heads=8,
+        d_hidden=64,
+        p_dropout=0.1,
+        scaling=1.0,
+        bias=True,
+    ):
         super(TransformerBlock, self).__init__()
 
         self.causal = causal
@@ -114,21 +138,38 @@ class TransformerBlock(nn.Module):
         self.bias = bias
 
         self.layer_norm = LayerNorm(self.d_hidden)
-        self.causal_block = CausalAttention(self.n_heads, self.d_hidden, self.p_dropout, self.scaling, self.bias)
-        self.attention_block = Attention(self.n_heads, self.d_hidden, self.p_dropout, self.scaling, self.bias)
-        self.dense_block = Dense(in_features=self.d_hidden, widening_factor=self.widening_factor, p_dropout=self.p_dropout)
+        self.causal_block = CausalAttention(
+            self.n_heads, self.d_hidden, self.p_dropout, self.scaling, self.bias
+        )
+        self.attention_block = Attention(
+            self.n_heads, self.d_hidden, self.p_dropout, self.scaling, self.bias
+        )
+        self.dense_block = Dense(
+            in_features=self.d_hidden,
+            widening_factor=self.widening_factor,
+            p_dropout=self.p_dropout,
+        )
 
     def forward(self, x, y=None, mask=None):
-        if (self.causal):
+        if self.causal:
             x += self.causal_block(x, y, mask)
         else:
             x += self.attention_block(x, y, mask)
         x += self.dense_block(x)
         return x
 
+
 class Transformer(nn.Module):
-    
-    def __init__(self, input_embedder, n_classes=1623, n_layers=8, n_heads=8, p_dropout=0.1, d_hidden=64):
+
+    def __init__(
+        self,
+        input_embedder,
+        n_classes=1623,
+        n_layers=8,
+        n_heads=8,
+        p_dropout=0.1,
+        d_hidden=64,
+    ):
         super(Transformer, self).__init__()
         self.input_embedder = input_embedder
         self.n_classes = n_classes
@@ -139,11 +180,22 @@ class Transformer(nn.Module):
 
         self.layer_norm = LayerNorm(self.d_hidden)
         for i in range(self.n_layers):
-            setattr(self, f'transformer_block_{i}', TransformerBlock(causal=True, widening_factor=4, n_heads=self.n_heads, d_hidden=self.d_hidden, p_dropout=self.p_dropout))
+            setattr(
+                self,
+                f"transformer_block_{i}",
+                TransformerBlock(
+                    causal=True,
+                    widening_factor=4,
+                    n_heads=self.n_heads,
+                    d_hidden=self.d_hidden,
+                    p_dropout=self.p_dropout,
+                ),
+            )
         self.linear = nn.Linear(self.d_hidden, self.n_classes)
 
-        nn.init.kaiming_uniform_(self.linear.weight, a=0, mode='fan_in', nonlinearity='linear')
-
+        nn.init.kaiming_uniform_(
+            self.linear.weight, a=0, mode="fan_in", nonlinearity="linear"
+        )
 
     def forward(self, examples, labels, mask=None, is_training=True):
         x = self.input_embedder(examples, labels, is_training)
@@ -156,11 +208,10 @@ class Transformer(nn.Module):
         for i in range(self.n_layers):
             if mask is not None:
                 x *= mask[:, :, None]
-            x = getattr(self, f'transformer_block_{i}')(x, mask=attention_mask)
+            x = getattr(self, f"transformer_block_{i}")(x, mask=attention_mask)
 
         x = self.layer_norm(x)
         if mask is not None:
             x *= mask[:, :, None]
-        
+
         return self.linear(x)
-        
