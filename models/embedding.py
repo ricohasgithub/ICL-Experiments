@@ -50,9 +50,9 @@ class InputEmbedder(nn.Module):
   """Input embedder."""
 
   def __init__(self,
-               examples,
                n_classes=1623,
                emb_dim=64,
+               seq_shape=11025,
                example_encoding='linear',
                flatten_superpixels=False,
                example_dropout_prob=0.0,
@@ -91,8 +91,7 @@ class InputEmbedder(nn.Module):
     self._positional_dropout_prob = positional_dropout_prob
 
     if (self._example_encoding == 'linear'):
-      h_example = examples.flatten(start_dim=2)
-      self.linear = nn.Linear(h_example.shape[-1], self._emb_dim)
+      self.linear = nn.Linear(seq_shape, self._emb_dim)
     elif (self._example_encoding == 'embedding'):
       self.embedding_layer = nn.Embedding(self._n_classes, self._emb_dim)
 

@@ -108,11 +108,12 @@ class TransformerBlock(nn.Module):
         self.causal = causal
         self.widening_factor = widening_factor
         self.n_heads = n_heads
+        self.d_hidden = d_hidden
         self.p_dropout = p_dropout
         self.scaling = scaling
         self.bias = bias
 
-        self.layer_norm = LayerNorm(d_hidden)
+        self.layer_norm = LayerNorm(self.d_hidden)
         self.causal_block = CausalAttention(self.n_heads, self.d_hidden, self.p_dropout, self.scaling, self.bias)
         self.attention_block = Attention(self.n_heads, self.d_hidden, self.p_dropout, self.scaling, self.bias)
         self.dense_block = Dense(in_features=self.d_hidden, widening_factor=self.widening_factor, p_dropout=self.p_dropout)
