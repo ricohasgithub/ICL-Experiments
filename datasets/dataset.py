@@ -330,7 +330,9 @@ class SeqGenerator:
                     images[classes == c] = np.array(self.data[c])[c_samples]
             else:
                 # Just select the single exemplar associated with each class.
-                images = np.array([self.data[c] for c in classes])
+                images = np.array(
+                    [np.transpose(self.data[c], axes=[1, 2, 0]) for c in classes]
+                )
 
         # Add pixel noise to the images.
         if self.noise_scale:
@@ -564,7 +566,10 @@ class SeqGenerator:
                     "is_rare": is_rare,
                 }
 
-            yield record
+            try:
+                yield record
+            except StopIteration:
+                return
 
     def get_no_support_seq(
         self,
@@ -608,7 +613,10 @@ class SeqGenerator:
             )
             while True:
                 record = next(all_unique_generator)
-                yield record
+                try:
+                    yield record
+                except StopIteration:
+                    return
 
         # Generator that first samples query, then support:
         while True:
@@ -671,7 +679,10 @@ class SeqGenerator:
                 "label": seq_labels,
                 "is_rare": is_rare,
             }
-            yield record
+            try:
+                yield record
+            except StopIteration:
+                return
 
     def get_random_seq(
         self,
@@ -758,7 +769,10 @@ class SeqGenerator:
                 "label": seq_labels,
                 "is_rare": is_rare,
             }
-            yield record
+            try:
+                yield record
+            except StopIteration:
+                return
 
     def get_fewshot_seq(
         self,
@@ -890,7 +904,10 @@ class SeqGenerator:
                 "label": seq_labels,
                 "is_rare": is_rare,
             }
-            yield record
+            try:
+                yield record
+            except StopIteration:
+                return
 
     def get_mixed_seq(self, shots, ways, p_fewshot):
         """Generate either a few-shot or supervised sequence.
@@ -930,7 +947,10 @@ class SeqGenerator:
                 record = next(fewshot_generator)
             else:
                 record = next(supervised_generator)
-            yield record
+            try:
+                yield record
+            except StopIteration:
+                return
 
     def _get_classes_to_sample(self, class_type):
         """Given a class type, returns a list of classes and their weights."""
