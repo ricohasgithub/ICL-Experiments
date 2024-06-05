@@ -162,11 +162,10 @@ class TransformerBlock(nn.Module):
 
     def forward(self, x, y=None, mask=None):
         if self.causal:
-            cb = self.causal_block(x, y, mask)
-            x += self.causal_block(x, y, mask)
+            x = x + self.causal_block(x, y, mask)
         else:
-            x += self.attention_block(x, y, mask)
-        x += self.dense_block(x)
+            x = x + self.attention_block(x, y, mask)
+        x = x + self.dense_block(x)
         return x
 
 

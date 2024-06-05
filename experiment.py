@@ -7,6 +7,8 @@ from models.transformer import Transformer
 from models.embedding import InputEmbedder
 from datasets.dataset import OmniglotDatasetForSampling
 
+import torch
+
 
 def experiment_base():
 
@@ -38,6 +40,7 @@ def experiment_base():
     )
 
     trainer = Trainer(model, data_generator)
+    torch.autograd.set_detect_anomaly(True)
     trainer.train()
 
 

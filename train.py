@@ -75,8 +75,8 @@ class Trainer:
 
             target = (
                 nn.functional.one_hot(target.to(torch.int64), self.num_classes)
-                .to(torch.float32)
                 .transpose(1, 2)
+                .to(torch.float32)
             )
             losses_all = criterion(preds, target)
 
@@ -86,18 +86,19 @@ class Trainer:
             query_mask[:, -1] = True
 
             losses_weighted = losses_all * query_mask
+            print(losses_weighted.shape, target.shape, preds.shape)
             loss = torch.sum(losses_weighted) / torch.sum(query_mask)
             loss.backward()
 
             optim.step()
 
-            total_loss += loss.item()
+            running_loss += loss.item()
 
             # Compute accuracy
 
             predicted_labels = torch.argmax(preds, axis=-1)
 
-            correct = torch.equal(predicted_labels, labels).type(torch.float32)
+            correct = torch.equal(predicted_labels, labels).to(torch.float32)
 
             accuracy_query = _apply_masks(correct)
 
