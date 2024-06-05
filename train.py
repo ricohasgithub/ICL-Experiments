@@ -57,14 +57,13 @@ class Trainer:
         for i, batch in enumerate(self.train_loader):
 
             batch = _convert_dict(batch)
-            x, labels = batch["examples"].to(self.device), batch["labels"].to(
-                self.device
-            )
+            print(batch.keys())
+            examples, labels, target = batch["examples"].to(self.device), batch["labels"].to(self.device), batch["target"].to(self.device)
             optim.zero_grad()
 
-            preds = self.model(x)
+            preds = self.model(examples, labels)
 
-            target = nn.functional.one_hot(labels, self.num_classes)
+            target = nn.functional.one_hot(target, self.num_classes)
             losses_all = criterion(preds, target)
 
             # Compute query mask on loss to only retain loss for the query entry (last column)
