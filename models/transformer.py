@@ -181,7 +181,8 @@ class Transformer(nn.Module):
         d_hidden=64,
     ):
         super(Transformer, self).__init__()
-        self.input_embedder = input_embedder
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.input_embedder = input_embedder.to(device=self.device)
         self.n_classes = n_classes
         self.n_layers = n_layers
         self.n_heads = n_heads

@@ -86,7 +86,7 @@ class Trainer:
             query_mask[:, -1] = True
 
             losses_weighted = losses_all * query_mask
-            print(losses_weighted.shape, target.shape, preds.shape)
+            # print(losses_weighted.shape, target.shape, preds.shape)
             loss = torch.sum(losses_weighted) / torch.sum(query_mask)
             loss.backward()
 
@@ -95,14 +95,18 @@ class Trainer:
             running_loss += loss.item()
 
             # Compute accuracy
+            # with torch.no_grad():
 
-            predicted_labels = torch.argmax(preds, axis=-1)
+            #     predicted_labels = torch.argmax(preds, axis=-1)
 
-            correct = torch.equal(predicted_labels, labels).to(torch.float32)
+            #     print(predicted_labels.shape, target.shape)
 
-            accuracy_query = _apply_masks(correct)
+            #     correct = predicted_labels == labels
+            #     correct = correct.to(torch.float32)
 
-            running_accuracy += accuracy_query.item()
+            #     accuracy_query = _apply_masks(correct)
+
+            #     running_accuracy += accuracy_query.item()
 
             if i % eval_after == 0:
                 avg_loss = running_loss / eval_after
