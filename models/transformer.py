@@ -30,6 +30,7 @@ class Attention(nn.Module):
         super(Attention, self).__init__()
 
         self.n_heads = n_heads
+        self.d_hidden = d_hidden
         self.p_dropout = p_dropout
         self.scaling = scaling
         self.bias = bias
@@ -66,7 +67,7 @@ class Attention(nn.Module):
 
     def attention(self, Q, K, V, mask=None):
         d_K = Q.size(-1)
-        att_scores = torch.matmul(Q, K.tranpose(-2, -1)) / math.sqrt(d_K)
+        att_scores = torch.matmul(Q, K.transpose(-2, -1)) / math.sqrt(d_K)
         if mask is not None:
             att_scores = att_scores.masked_fill(mask == 0, -1e9)
         att_dist = att_scores.softmax(dim=-1)
@@ -88,7 +89,7 @@ class CausalAttention(Attention):
             mask = torch.broadcast_to(causal_mask, (batch_size, 1, seq_len, seq_len))
         else:
             mask = mask * causal_mask
-        return super(CausalAttention, self)(x=x, y=y, mask=mask)
+        return super(CausalAttention, self).forward(x=x, y=y, mask=mask)
 
 
 class Dense(nn.Module):
