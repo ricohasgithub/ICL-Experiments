@@ -47,6 +47,12 @@ class Trainer:
 
     def train(self, lr=1e-5, eval_after=5):
 
+        def _apply_masks(values):
+            query_mask = torch.full_like(losses_all, False)
+            query_mask[:, -1] = True
+            values_query = torch.sum(query_mask * values) / torch.sum(query_mask)
+            return values_query
+
         optim = self.optimizer(self.model.parameters(), lr=lr)
         criterion = self.loss_fn()
 
@@ -54,11 +60,15 @@ class Trainer:
         self.model.train()
 
         running_loss = 0
+        running_accuracy = 0
         for i, batch in enumerate(self.train_loader):
 
             batch = _convert_dict(batch)
-            print(batch.keys())
-            examples, labels, target = batch["examples"].to(self.device), batch["labels"].to(self.device), batch["target"].to(self.device)
+            examples, labels, target = (
+                batch["examples"].to(self.device),
+                batch["labels"].to(self.device),
+                batch["target"].to(self.device),
+            )
             optim.zero_grad()
 
             preds = self.model(examples, labels)
@@ -77,9 +87,25 @@ class Trainer:
             optim.step()
 
             total_loss += loss.item()
+
+            # Compute accuracy
+
+            predicted_labels = torch.argmax(preds, axis=-1)
+
+            correct = torch.equal(predicted_labels, labels).type(torch.float32)
+
+            accuracy_query = _apply_masks(correct)
+
+            running_accuracy += accuracy_query.item()
+
             if i % eval_after == 0:
                 avg_loss = running_loss / eval_after
+                avg_accuracy = running_accuracy / eval_after
                 print(
                     f"Global batch {i}, avg loss after {eval_after} batches:", avg_loss
+                )
+                print(
+                    f"Global batch {i}, avg accuracy after {eval_after} batches:",
+                    avg_accuracy,
                 )
                 running_loss = 0
