@@ -54,7 +54,7 @@ class Trainer:
             return values_query
 
         optim = self.optimizer(self.model.parameters(), lr=lr)
-        criterion = self.loss_fn()
+        criterion = self.loss_fn(reduction="none")
 
         self.model.to(self.device)
         self.model.train()
@@ -71,16 +71,21 @@ class Trainer:
             )
             optim.zero_grad()
 
-            preds = self.model(examples, labels)
+            preds = self.model(examples, labels).transpose(1, 2)
 
-            target = nn.functional.one_hot(target, self.num_classes)
+            target = (
+                nn.functional.one_hot(target.to(torch.int64), self.num_classes)
+                .to(torch.float32)
+                .transpose(1, 2)
+            )
             losses_all = criterion(preds, target)
 
             # Compute query mask on loss to only retain loss for the query entry (last column)
             query_mask = torch.full_like(losses_all, False)
+            # print(preds.shape, target.shape, losses_all.shape, query_mask.shape)
             query_mask[:, -1] = True
 
-            losses_weighted = torch.matmul(losses_all, query_mask)
+            losses_weighted = losses_all * query_mask
             loss = torch.sum(losses_weighted) / torch.sum(query_mask)
             loss.backward()
 
