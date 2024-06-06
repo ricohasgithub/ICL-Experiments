@@ -13,7 +13,15 @@ import torch
 
 def experiment_base():
 
-    input_embedding = InputEmbedder(linear_input_dim=64, example_encoding="linear")
+    data_type = "synthetic"  # "omniglot"
+
+    if data_type == "synthetic":
+        input_embedding = InputEmbedder(linear_input_dim=64, example_encoding="linear")
+    elif data_type == "omniglot":
+        input_embedding = InputEmbedder(
+            linear_input_dim=11025, example_encoding="resnet"
+        )
+
     model = Transformer(input_embedder=input_embedding)
 
     seq_generator_factory = SeqGenerator(
