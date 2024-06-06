@@ -53,28 +53,23 @@ class CustomResNet(nn.Module):
         return nn.Sequential(*layers)
 
     def forward(self, x):
-        
-        seq_len = x.size(0)
-        embedded_seq = []
-        for i in range(seq_len):
 
-            # Torch nn.conv2D expects input of shape (batch_size, channels, height, width)
-            z = self.conv1(torch.permute(x[i], (2, 0, 1)))
-            z = self.bn1(z)
-            z = self.relu(z)
-            z = self.maxpool(z)
+        # Torch nn.conv2D expects input of shape (batch_size, channels, height, width)
+        z = self.conv1(x)
+        z = self.bn1(z)
+        z = self.relu(z)
+        z = self.maxpool(z)
 
-            z = self.layer1(z)
-            z = self.layer2(z)
-            z = self.layer3(z)
-            z = self.layer4(z)
+        z = self.layer1(z)
+        z = self.layer2(z)
+        z = self.layer3(z)
+        z = self.layer4(z)
 
-            z = self.avgpool(z)
-            z = torch.flatten(z, 1)
-            z = self.fc(z)
-            embedded_seq.append(z)
+        z = self.avgpool(z)
+        z = torch.flatten(z, 1)
+        z = self.fc(z)
 
-        return torch.stack([embedded_seq])
+        return z
 
 
 if __name__ == "__main__":
@@ -82,7 +77,7 @@ if __name__ == "__main__":
     channels_per_group = [16, 32, 32, 27]
     custom_resnet = CustomResNet(blocks_per_group, channels_per_group)
 
-    input_tensor = torch.randn(1, 3, 224, 224)
+    input_tensor = torch.randn(2, 1, 224, 224)
 
     output = custom_resnet(input_tensor)
     print("Output shape:", output.shape)
