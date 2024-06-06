@@ -12,7 +12,7 @@ import torch
 
 def experiment_base():
 
-    input_embedding = InputEmbedder(linear_input_dim=11025,example_encoding="linear")
+    input_embedding = InputEmbedder(linear_input_dim=11025,example_encoding="resnet")
     model = Transformer(input_embedder=input_embedding)
 
     seq_generator_factory = SeqGenerator(
