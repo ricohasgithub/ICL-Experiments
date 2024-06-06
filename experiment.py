@@ -13,7 +13,7 @@ import torch
 
 def experiment_base():
 
-    data_type = "synthetic"  # "omniglot"
+    data_type = "omniglot"  # "omniglot"
 
     if data_type == "synthetic":
         input_embedding = InputEmbedder(linear_input_dim=64, example_encoding="linear")

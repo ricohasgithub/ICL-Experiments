@@ -147,7 +147,7 @@ class InputEmbedder(nn.Module):
             h_example = self.embedding_layer(examples)
         elif self._example_encoding == "resnet":
             (B, SS, H, W, C) = examples.shape
-            input_tensor_reshaped = examples.permute(0, 1, 4, 2, 3).reshape(-1, C, H, W)
+            input_tensor_reshaped = examples.reshape(-1, C, H, W)
             h_example = self.resnet(input_tensor_reshaped)
             h_example = h_example.reshape(B, SS, self._emb_dim)
         else:
