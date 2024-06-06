@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from functools import partial
-from models.resnet import CustomResNet
+from resnet import CustomResNet
 
 
 class BatchApply(nn.Module):
@@ -149,9 +149,14 @@ class InputEmbedder(nn.Module):
             h_example = self.embedding_layer(examples)
         elif self._example_encoding == "resnet":
             (B, SS, H, W, C) = examples.shape
-            input_tensor_reshaped = examples.reshape(-1, C, H, W)
-            h_example = self.resnet(input_tensor_reshaped)
-            h_example = h_example.reshape(B, SS, self._emb_dim)
+            h_batch = []
+            for i in range(B):
+              input_tensor_reshaped = examples[i].reshape(-1, C, H, W)
+              h = self.resnet(input_tensor_reshaped)
+              h_batch.append(h)
+            # h_example = self.resnet(input_tensor_reshaped)
+            # h_example = h_example.reshape(B, SS, self._emb_dim)
+            h_example = torch.stack([h_batch]).to(self.device)
         else:
             raise ValueError("Invalid example_encoding: %s" % self._example_encoding)
 
@@ -205,7 +210,7 @@ class InputEmbedder(nn.Module):
 
 
 if __name__ == "__main__":
-    examples = torch.randn(2, 3, 105, 105, 3)
+    examples = torch.randn(2, 3, 105, 105, 1)
     emb = InputEmbedder(11025, n_classes=1623, example_encoding="resnet")
     labels = torch.randint(0, 1623, (2, 3))
     out = emb(examples, labels)

@@ -54,27 +54,28 @@ class CustomResNet(nn.Module):
 
     def forward(self, x):
         
-        seq_len = x.size(0)
-        embedded_seq = []
-        for i in range(seq_len):
+        # seq_len = x.size(0)
+        # embedded_seq = []
+        # for i in range(seq_len):
 
-            # Torch nn.conv2D expects input of shape (batch_size, channels, height, width)
-            z = self.conv1(torch.permute(x[i], (2, 0, 1)))
-            z = self.bn1(z)
-            z = self.relu(z)
-            z = self.maxpool(z)
+        # Torch nn.conv2D expects input of shape (batch_size, channels, height, width)
+        z = self.conv1(x)
+        z = self.bn1(z)
+        z = self.relu(z)
+        z = self.maxpool(z)
 
-            z = self.layer1(z)
-            z = self.layer2(z)
-            z = self.layer3(z)
-            z = self.layer4(z)
+        z = self.layer1(z)
+        z = self.layer2(z)
+        z = self.layer3(z)
+        z = self.layer4(z)
 
-            z = self.avgpool(z)
-            z = torch.flatten(z, 1)
-            z = self.fc(z)
-            embedded_seq.append(z)
+        z = self.avgpool(z)
+        z = torch.flatten(z, 1)
+        z = self.fc(z)
+        #     embedded_seq.append(z)
 
-        return torch.stack([embedded_seq])
+        # return torch.stack([embedded_seq])
+        return z
 
 
 if __name__ == "__main__":
