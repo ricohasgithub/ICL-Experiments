@@ -1,0 +1,114 @@
+
+Files already downloaded and verified
+Global batch 0, avg loss after 100 batches: 0.07980277061462403
+
+
+Global batch 300, avg loss after 100 batches: 7.776048407554627
+Traceback (most recent call last):
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 72, in <module>
+    experiment_base(dataset)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 62, in experiment_base
+    trainer.train()
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 86, in train
+    preds = self.model(examples, labels).transpose(1, 2)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/transformer.py", line 228, in forward
+    x = self.input_embedder(examples, labels, is_training).to(self.device)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/embedding.py", line 152, in forward
+    h_example = self.resnet(examples)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/embedding.py", line 16, in forward
+    return torch.stack([self.function(x[i]) for i in range(batch_size)])
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/embedding.py", line 16, in <listcomp>
+    return torch.stack([self.function(x[i]) for i in range(batch_size)])
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/resnet.py", line 66, in forward
+    z = self.layer4(z)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torchvision/models/resnet.py", line 94, in forward
+    out = self.relu(out)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/activation.py", line 101, in forward
+    return F.relu(input, inplace=self.inplace)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/functional.py", line 1471, in relu
+    result = torch.relu_(input)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 72, in <module>
+    experiment_base(dataset)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 62, in experiment_base
+    trainer.train()
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 86, in train
+    preds = self.model(examples, labels).transpose(1, 2)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/transformer.py", line 228, in forward
+    x = self.input_embedder(examples, labels, is_training).to(self.device)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/embedding.py", line 152, in forward
+    h_example = self.resnet(examples)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/embedding.py", line 16, in forward
+    return torch.stack([self.function(x[i]) for i in range(batch_size)])
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/embedding.py", line 16, in <listcomp>
+    return torch.stack([self.function(x[i]) for i in range(batch_size)])
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/resnet.py", line 66, in forward
+    z = self.layer4(z)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torchvision/models/resnet.py", line 94, in forward
+    out = self.relu(out)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/activation.py", line 101, in forward
+    return F.relu(input, inplace=self.inplace)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/functional.py", line 1471, in relu
+    result = torch.relu_(input)
+KeyboardInterrupt

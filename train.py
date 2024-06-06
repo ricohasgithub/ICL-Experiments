@@ -1,9 +1,17 @@
+
+import wandb
+
 import torch
 import torch.nn as nn
 import torch.optim as optim
 
 from datasets.dataset import SeqGenerator, _convert_dict
 
+# start a new wandb run to track this script
+wandb.init(
+    # set the wandb project where this run will be logged
+    project="icl-omniglot"
+)
 
 class IterDataset(torch.utils.data.IterableDataset):
 
@@ -49,7 +57,7 @@ class Trainer:
             else "mps" if torch.backends.mps.is_available() else "cpu"
         )
 
-    def train(self, lr=1e-5, eval_after=5):
+    def train(self, lr=1e-5, eval_after=100):
 
         def _apply_masks(values):
             query_mask = torch.full_like(losses_all, False)
@@ -115,6 +123,8 @@ class Trainer:
             if i % eval_after == 0:
                 avg_loss = running_loss / eval_after
                 avg_accuracy = running_accuracy / eval_after
+                
+                wandb.log({"global_step": i, "loss": avg_loss})
 
                 if i % (eval_after * 20) == 0:
                     print(
