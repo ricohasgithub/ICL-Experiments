@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from functools import partial
-from resnet import CustomResNet
+from models.resnet import CustomResNet
 
 
 class BatchApply(nn.Module):
@@ -106,9 +106,11 @@ class InputEmbedder(nn.Module):
         self.embedding_layer = nn.Embedding(self._n_classes, self._emb_dim).to(
             self.device
         )
-        self.resnet = BatchApply(CustomResNet(
-            (2, 2, 2, 2), (16, 32, 32, self._emb_dim), flatten_superpixels=False
-        ).to(self.device))
+        self.resnet = BatchApply(
+            CustomResNet(
+                (2, 2, 2, 2), (16, 32, 32, self._emb_dim), flatten_superpixels=False
+            ).to(self.device)
+        )
 
         self.example_dropout_layer = nn.Dropout(self._example_dropout_prob)
         self.positional_dropout_layer = nn.Dropout(self._positional_dropout_prob)
@@ -204,7 +206,7 @@ class InputEmbedder(nn.Module):
 
 if __name__ == "__main__":
     examples = torch.randn(2, 3, 105, 105, 3)
-    emb = InputEmbedder(11025, n_classes=1623, example_encoding='resnet')
+    emb = InputEmbedder(11025, n_classes=1623, example_encoding="resnet")
     labels = torch.randint(0, 1623, (2, 3))
     out = emb(examples, labels)
     print(out.shape)
