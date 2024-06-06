@@ -151,7 +151,9 @@ class InputEmbedder(nn.Module):
             (B, SS, H, W, C) = examples.shape
             h_batch = []
             for i in range(B):
-                input_tensor_reshaped = examples[i].reshape(-1, C, H, W)
+                print(f'examples[i]: {examples[i].shape}')
+                input_tensor_reshaped = examples[i].reshape(SS, C, H, W)
+                print(f'input_tensor_reshaped: {examples[i].shape}')
                 h = self.resnet(input_tensor_reshaped)
                 h_batch.append(h)
             h_example = torch.stack([h_batch]).to(self.device)
