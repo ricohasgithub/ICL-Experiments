@@ -1,4 +1,6 @@
 .DS_STORE
 /data
 .gitignore
-/__pycache__
+/__pycache__/*
+/models/__pycache__/*
+/datasets/__pycache__/*
