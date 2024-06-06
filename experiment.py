@@ -42,7 +42,6 @@ def experiment_base(dataset):
 
     model = Transformer(input_embedder=input_embedding)
 
-    
     data_generator = lambda: seq_generator_factory.get_bursty_seq(
         seq_len=9,
         shots=3,
