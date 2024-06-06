@@ -53,13 +53,10 @@ class CustomResNet(nn.Module):
         return nn.Sequential(*layers)
 
     def forward(self, x):
-        
-        # seq_len = x.size(0)
-        # embedded_seq = []
-        # for i in range(seq_len):
 
         # Torch nn.conv2D expects input of shape (batch_size, channels, height, width)
         z = self.conv1(x)
+        print(x.shape, z.shape)
         z = self.bn1(z)
         z = self.relu(z)
         z = self.maxpool(z)
@@ -72,9 +69,7 @@ class CustomResNet(nn.Module):
         z = self.avgpool(z)
         z = torch.flatten(z, 1)
         z = self.fc(z)
-        #     embedded_seq.append(z)
 
-        # return torch.stack([embedded_seq])
         return z
 
 
