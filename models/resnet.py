@@ -7,7 +7,7 @@ class CustomResNet(nn.Module):
     def __init__(self, blocks_per_group, channels_per_group, flatten_superpixels=False):
         super(CustomResNet, self).__init__()
         self.inplanes = 64
-        self.conv1 = nn.Conv2d(3, 64, kernel_size=7, stride=2, padding=3, bias=False)
+        self.conv1 = nn.Conv2d(1, 64, kernel_size=7, stride=2, padding=3, bias=False)
         self.bn1 = nn.BatchNorm2d(64)
         self.relu = nn.ReLU(inplace=True)
         self.maxpool = nn.MaxPool2d(kernel_size=3, stride=2, padding=1)
@@ -53,21 +53,28 @@ class CustomResNet(nn.Module):
         return nn.Sequential(*layers)
 
     def forward(self, x):
-        x = self.conv1(x)
-        x = self.bn1(x)
-        x = self.relu(x)
-        x = self.maxpool(x)
+        
+        seq_len = x.size(0)
+        embedded_seq = []
+        for i in range(seq_len):
 
-        x = self.layer1(x)
-        x = self.layer2(x)
-        x = self.layer3(x)
-        x = self.layer4(x)
+            # Torch nn.conv2D expects input of shape (batch_size, channels, height, width)
+            z = self.conv1(torch.permute(x[i], (2, 0, 1)))
+            z = self.bn1(z)
+            z = self.relu(z)
+            z = self.maxpool(z)
 
-        x = self.avgpool(x)
-        x = torch.flatten(x, 1)
-        x = self.fc(x)
+            z = self.layer1(z)
+            z = self.layer2(z)
+            z = self.layer3(z)
+            z = self.layer4(z)
 
-        return x
+            z = self.avgpool(z)
+            z = torch.flatten(z, 1)
+            z = self.fc(z)
+            embedded_seq.append(z)
+
+        return torch.stack([embedded_seq])
 
 
 if __name__ == "__main__":

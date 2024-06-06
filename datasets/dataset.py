@@ -15,7 +15,12 @@ N_EXEMPLARS_PER_CLASS = 20
 
 
 class GaussianVectorDataset(Dataset):
-    def __init__(self, num_classes=1623, input_dim=105, dsize=3500):
+    def __init__(
+        self,
+        num_classes=1623,
+        input_dim=64,
+        dsize=N_CHARACTER_CLASSES * N_EXEMPLARS_PER_CLASS,
+    ):
 
         # Generate ranodm c
         self.class_mean = np.stack(
@@ -24,6 +29,7 @@ class GaussianVectorDataset(Dataset):
         self.class_covariance = np.stack(
             [np.identity(input_dim) for _ in range(num_classes)], axis=0
         )
+        self.input_dim = input_dim
 
         self.vectors = []
         self.labels = []
@@ -31,10 +37,12 @@ class GaussianVectorDataset(Dataset):
         for i in range(dsize):
             cur_class = np.random.randint(num_classes)
 
-            cur_mean = self.class_mean[cur_class]
+            cur_mean = np.squeeze(self.class_mean[cur_class])
             cur_covariance = self.class_covariance[cur_class]
 
-            sample = np.random.multivariate_normal(cur_mean, cur_covariance)
+            sample = np.random.multivariate_normal(cur_mean, cur_covariance).astype(
+                np.float32
+            )
 
             self.vectors.append(sample)
             self.labels.append(cur_class)
@@ -46,6 +54,30 @@ class GaussianVectorDataset(Dataset):
         input = self.vectors[idx]
         label = self.labels[idx]
         return input, label
+
+
+class GaussianVectorDatasetForSampling:
+
+    def __init__(self):
+        self.example_type = "gaussian"
+
+        self.data, self.input_dim = self._load_dataset()
+
+    def _load_dataset(self):
+        gaussianDataset = GaussianVectorDataset()
+
+        dataloader = DataLoader(gaussianDataset, batch_size=1, shuffle=False)
+
+        data = {}
+
+        for vector, label in dataloader:
+            label = label.item()  # Convert label tensor to int
+
+            if label not in data:
+                data[label] = []
+            data[label].append(vector)
+
+        return data, gaussianDataset.input_dim
 
 
 class OmniglotDatasetForSampling:
@@ -224,6 +256,11 @@ class SeqGenerator:
           random_seed: seed for random generator.
         """
         self.example_type = dataset_for_sampling.example_type
+        self.input_dim = -1
+
+        if self.example_type == "gaussian":
+            self.input_dim = dataset_for_sampling.input_dim
+
         self.data = dataset_for_sampling.data
         self.classes = sorted(self.data.keys())
         n_classes_orig = len(self.classes)
@@ -322,6 +359,10 @@ class SeqGenerator:
             if isinstance(self.data[classes[0]], list):
                 # Randomly sample from the exemplars for each class, without replacement
                 images = np.zeros((len(classes), IMAGE_SIZE, IMAGE_SIZE, 1))
+
+                if self.example_type == "gaussian":
+                    images = np.zeros((len(classes), 1, self.input_dim))
+
                 unique_classes = np.unique(classes)
                 for c in unique_classes:
                     c_samples = np.random.choice(
@@ -627,6 +668,10 @@ class SeqGenerator:
                 )
             elif self.example_type == "symbolic":
                 seq_examples = np.zeros(shape=(seq_len,), dtype=np.float32)
+            elif self.example_type == "gaussian":
+                seq_examples = np.zeros(
+                    shape=(seq_len, 1, self.input_dim), dtype=np.float32
+                )
 
             # Determine which classes we can sample from, and create is_rare sequence.
             classes_to_sample, class_weights = self._get_classes_to_sample(class_type)
@@ -722,6 +767,10 @@ class SeqGenerator:
                 )
             elif self.example_type == "symbolic":
                 seq_examples = np.zeros(shape=(seq_len,), dtype=np.float32)
+            elif self.example_type == "gaussian":
+                seq_examples = np.zeros(
+                    shape=(seq_len, 1, self.input_dim), dtype=np.float32
+                )
 
             # Determine which classes we can sample from, and create is_rare sequence.
             classes_to_sample, class_weights = self._get_classes_to_sample(class_type)
@@ -769,6 +818,7 @@ class SeqGenerator:
                 "label": seq_labels,
                 "is_rare": is_rare,
             }
+
             try:
                 yield record
             except StopIteration:
@@ -821,6 +871,10 @@ class SeqGenerator:
                 )
             elif self.example_type == "symbolic":
                 seq_examples = np.zeros(shape=(seq_len,), dtype=np.float32)
+            elif self.example_type == "gaussian":
+                seq_examples = np.zeros(
+                    shape=(seq_len, 1, self.input_dim), dtype=np.float32
+                )
 
             # Determine which classes we can sample from, and create is_rare sequence.
             classes_to_sample, class_weights = self._get_classes_to_sample(class_type)
@@ -904,6 +958,7 @@ class SeqGenerator:
                 "label": seq_labels,
                 "is_rare": is_rare,
             }
+
             try:
                 yield record
             except StopIteration:
@@ -948,6 +1003,7 @@ class SeqGenerator:
             else:
                 record = next(supervised_generator)
             try:
+
                 yield record
             except StopIteration:
                 return
@@ -1000,9 +1056,10 @@ def _convert_dict(
 ):
     # (dims: B:batch, SS:original seqlen, H:height, W:width, C:channels)
     is_image = len(example["example"].shape) == 5
+    is_vector = len(example["example"].shape) == 4
 
     # Cast the examples into the correct shape and tf datatype.
-    if is_image:
+    if is_image or is_vector:
         examples = example["example"].type(torch.float)  # (B,SS,H,W,C)
         # if downsample:
         #     examples = tf.map_fn(

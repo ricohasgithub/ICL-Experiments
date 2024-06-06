@@ -106,9 +106,9 @@ class InputEmbedder(nn.Module):
         self.embedding_layer = nn.Embedding(self._n_classes, self._emb_dim).to(
             self.device
         )
-        self.resnet = CustomResNet(
+        self.resnet = BatchApply(CustomResNet(
             (2, 2, 2, 2), (16, 32, 32, self._emb_dim), flatten_superpixels=False
-        ).to(self.device)
+        ).to(self.device))
 
         self.example_dropout_layer = nn.Dropout(self._example_dropout_prob)
         self.positional_dropout_layer = nn.Dropout(self._positional_dropout_prob)
