@@ -1,4 +1,3 @@
-
 import wandb
 
 import torch
@@ -12,6 +11,7 @@ wandb.init(
     # set the wandb project where this run will be logged
     project="icl-omniglot"
 )
+
 
 class IterDataset(torch.utils.data.IterableDataset):
 
@@ -29,6 +29,7 @@ class Trainer:
         self,
         model,
         data_generator,
+        data_generator_factory,
         loss_fn=nn.CrossEntropyLoss,
         optimizer=optim.Adam,
         num_classes=1623,
@@ -42,6 +43,7 @@ class Trainer:
 
         # Data generator here refers to something like SeqGenerator().get_random_seq
         self.data_generator = data_generator
+        self.data_generator_factory = data_generator_factory
         self.train_dataset = IterDataset(self.data_generator)
         self.train_loader = torch.utils.data.DataLoader(
             self.train_dataset, batch_size=self.batch_size
@@ -74,7 +76,15 @@ class Trainer:
 
         running_loss = 0
         running_accuracy = 0
+        running_common_accuracy = 0
+        running_rare_accuracy = 0
+        running_fewshot_accuracy = 0
+
         running_support_accuracy = 0
+        running_support_common_accuracy = 0
+        running_support_rare_accuracy = 0
+        running_support_fewshot_accuracy = 0
+
         for i, batch in enumerate(self.train_loader):
 
             batch = _convert_dict(batch)
@@ -120,6 +130,35 @@ class Trainer:
 
                 running_accuracy += accuracy_query.item()
 
+                n_rare_classes = self.data_generator_factory.n_rare_classes
+                n_holdout_classes = self.data_generator_factory.n_holdout_classes
+                n_classes = self.data_generator_factory.n_classes
+
+                # For labeling_common = "ordered" and labeling_rare = "ordered"
+                common_start_idx = n_rare_classes
+                common_labels = range(common_start_idx, n_classes - n_holdout_classes)
+                rare_labels = range(n_rare_classes)
+
+                # Compute whether query predictions were from common or rare classes.
+                from_common_all = torch.isin(
+                    predicted_labels, torch.tensor(common_labels)
+                )
+                from_rare_all = torch.isin(predicted_labels, torch.tensor(rare_labels))
+                from_common = _apply_masks(from_common_all)  # average for query only
+                from_rare = _apply_masks(from_rare_all)
+
+                running_common_accuracy += from_common.item()
+                running_rare_accuracy += from_rare.item()
+
+                # Compute whether query predictions were from the fewshot classes.
+                fewshot_ways = 2
+                from_fewshot_all = torch.isin(
+                    predicted_labels, torch.arange(fewshot_ways)
+                )
+                from_fewshot = _apply_masks(from_fewshot_all)  # for query only
+
+                running_fewshot_accuracy += from_fewshot.item()
+
                 # Compute whether query predictions were from common or rare classes.
                 support_labels = target[:, :-2:2]
                 batch_size, seq_len = predicted_labels.shape
@@ -133,15 +172,44 @@ class Trainer:
                 from_support_all = predicted_labels_reshaped == support_labels_reshaped
                 from_support_all = from_support_all.sum(-1).type(torch.bool)
                 from_support = _apply_masks(from_support_all)  # avg for query only
+                from_support_common = _apply_masks(from_support_all * from_common_all)
+                from_support_rare = _apply_masks(from_support_all * from_rare_all)
+                from_support_fewshot = _apply_masks(from_support_all * from_fewshot_all)
 
                 running_support_accuracy += from_support.item()
+                running_support_common_accuracy += from_support_common.item()
+                running_support_rare_accuracy += from_support_rare.item()
+                running_support_fewshot_accuracy += from_support_fewshot.item()
 
             if i % eval_after == 0:
                 avg_loss = running_loss / eval_after
                 avg_accuracy = running_accuracy / eval_after
+                avg_common_accuracy = running_common_accuracy / eval_after
+                avg_rare_accuracy = running_rare_accuracy / eval_after
+                avg_fewshot_accuracy = running_fewshot_accuracy / eval_after
                 avg_support_accuracy = running_support_accuracy / eval_after
+                avg_support_common_accuracy = (
+                    running_support_common_accuracy / eval_after
+                )
+                avg_support_rare_accuracy = running_support_rare_accuracy / eval_after
+                avg_support_fewshot_accuracy = (
+                    running_support_fewshot_accuracy / eval_after
+                )
 
-                wandb.log({"global_step": i, "loss": avg_loss, "acc": avg_accuracy, "support_acc": avg_support_accuracy})
+                wandb.log(
+                    {
+                        "global_step": i,
+                        "loss": avg_loss,
+                        "acc": avg_accuracy,
+                        "common_acc": avg_common_accuracy,
+                        "rare_acc": avg_rare_accuracy,
+                        "fewshot_acc": avg_fewshot_accuracy,
+                        "support_acc": avg_support_accuracy,
+                        "support_common_acc": avg_support_common_accuracy,
+                        "support_rare_acc": avg_support_rare_accuracy,
+                        "support_fewshot_acc": avg_support_fewshot_accuracy,
+                    }
+                )
 
                 if i % (eval_after * 20) == 0:
                     print(

@@ -56,7 +56,7 @@ def experiment_base(dataset):
         grouped=False,
     )
 
-    trainer = Trainer(model, data_generator)
+    trainer = Trainer(model, data_generator, seq_generator_factory)
     torch.autograd.set_detect_anomaly(True)
     trainer.train()
 
