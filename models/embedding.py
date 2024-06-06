@@ -148,15 +148,8 @@ class InputEmbedder(nn.Module):
         elif self._example_encoding == "embedding":
             h_example = self.embedding_layer(examples)
         elif self._example_encoding == "resnet":
-            (B, SS, H, W, C) = examples.shape
-            h_batch = []
-            for i in range(B):
-                print(f'examples[i]: {examples[i].shape}')
-                input_tensor_reshaped = examples[i].reshape(SS, C, H, W)
-                print(f'input_tensor_reshaped: {examples[i].shape}')
-                h = self.resnet(input_tensor_reshaped)
-                h_batch.append(h)
-            h_example = torch.stack([h_batch]).to(self.device)
+            examples = torch.permute(examples, (0, 1, 4, 2, 3))
+            h_example = self.resnet(examples)
         else:
             raise ValueError("Invalid example_encoding: %s" % self._example_encoding)
 

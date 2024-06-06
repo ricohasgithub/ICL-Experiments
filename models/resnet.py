@@ -56,7 +56,6 @@ class CustomResNet(nn.Module):
 
         # Torch nn.conv2D expects input of shape (batch_size, channels, height, width)
         z = self.conv1(x)
-        print(x.shape, z.shape)
         z = self.bn1(z)
         z = self.relu(z)
         z = self.maxpool(z)
@@ -78,7 +77,7 @@ if __name__ == "__main__":
     channels_per_group = [16, 32, 32, 27]
     custom_resnet = CustomResNet(blocks_per_group, channels_per_group)
 
-    input_tensor = torch.randn(1, 3, 224, 224)
+    input_tensor = torch.randn(2, 1, 224, 224)
 
     output = custom_resnet(input_tensor)
     print("Output shape:", output.shape)
