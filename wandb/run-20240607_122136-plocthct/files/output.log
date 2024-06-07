@@ -1,0 +1,18 @@
+
+Files already downloaded and verified
+Traceback (most recent call last):
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 71, in <module>
+    experiment_base(dataset)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 61, in experiment_base
+    trainer.train()
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 143, in train
+    from_common_all = torch.isin(
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu! (when checking argument for argument test_elements in method wrapper_CUDA_isin_Tensor_Tensor)
+Traceback (most recent call last):
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 71, in <module>
+    experiment_base(dataset)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 61, in experiment_base
+    trainer.train()
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 143, in train
+    from_common_all = torch.isin(
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu! (when checking argument for argument test_elements in method wrapper_CUDA_isin_Tensor_Tensor)

@@ -141,9 +141,9 @@ class Trainer:
 
                 # Compute whether query predictions were from common or rare classes.
                 from_common_all = torch.isin(
-                    predicted_labels, torch.tensor(common_labels)
+                    predicted_labels, torch.tensor(common_labels).to(self.device)
                 )
-                from_rare_all = torch.isin(predicted_labels, torch.tensor(rare_labels))
+                from_rare_all = torch.isin(predicted_labels, torch.tensor(rare_labels).to(self.device))
                 from_common = _apply_masks(from_common_all)  # average for query only
                 from_rare = _apply_masks(from_rare_all)
 
@@ -153,7 +153,7 @@ class Trainer:
                 # Compute whether query predictions were from the fewshot classes.
                 fewshot_ways = 2
                 from_fewshot_all = torch.isin(
-                    predicted_labels, torch.arange(fewshot_ways)
+                    predicted_labels, torch.arange(fewshot_ways).to(self.device)
                 )
                 from_fewshot = _apply_masks(from_fewshot_all)  # for query only
 
@@ -170,7 +170,7 @@ class Trainer:
                     batch_size, 1, support_len
                 )
                 from_support_all = predicted_labels_reshaped == support_labels_reshaped
-                from_support_all = from_support_all.sum(-1).type(torch.bool)
+                from_support_all = from_support_all.sum(-1).type(torch.bool).to(self.device)
                 from_support = _apply_masks(from_support_all)  # avg for query only
                 from_support_common = _apply_masks(from_support_all * from_common_all)
                 from_support_rare = _apply_masks(from_support_all * from_rare_all)

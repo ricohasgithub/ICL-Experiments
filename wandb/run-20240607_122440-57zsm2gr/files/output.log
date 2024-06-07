@@ -1,0 +1,194 @@
+
+Files already downloaded and verified
+Global batch 0, avg loss after 100 batches: 0.078  | Global batch 0, avg accuracy after 100 batches: 0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 2000, avg loss after 100 batches: 7.422  | Global batch 2000, avg accuracy after 100 batches: 2.31.25 8.55
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 4000, avg loss after 100 batches: 6.692  | Global batch 4000, avg accuracy after 100 batches: 13.0.88 21.068
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 6000, avg loss after 100 batches: 6.285  | Global batch 6000, avg accuracy after 100 batches: 41.38.75 49.94
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 8000, avg loss after 100 batches: 5.976  | Global batch 8000, avg accuracy after 100 batches: 94.1275 96.819
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 10000, avg loss after 100 batches: 5.684  | Global batch 10000, avg accuracy after 100 batches: 186.812 177.02
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 12000, avg loss after 100 batches: 5.436  | Global batch 12000, avg accuracy after 100 batches: 323.3888 293.81
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 14000, avg loss after 100 batches: 5.235  | Global batch 14000, avg accuracy after 100 batches: 518.810 462.814
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 15900, avg loss after 100 batches: 5.036  | avg accuracy (total, from_support) after 100 batches: 754.69 677.19
+Traceback (most recent call last):
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 71, in <module>
+    experiment_base(dataset)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 61, in experiment_base
+    trainer.train()
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 88, in train
+    for i, batch in enumerate(self.train_loader):
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 32, in fetch
+    data.append(next(self.dataset_iter))
+  File "/usr/project/xtmp/yz705/ICL-Experiments/datasets/dataset.py", line 567, in get_bursty_seq
+    bursty_record = next(bursty_zipfian_generator)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 71, in <module>
+    experiment_base(dataset)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 61, in experiment_base
+    trainer.train()
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 88, in train
+    for i, batch in enumerate(self.train_loader):
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 32, in fetch
+    data.append(next(self.dataset_iter))
+  File "/usr/project/xtmp/yz705/ICL-Experiments/datasets/dataset.py", line 567, in get_bursty_seq
+    bursty_record = next(bursty_zipfian_generator)
+KeyboardInterrupt

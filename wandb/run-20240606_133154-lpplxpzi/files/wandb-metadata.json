@@ -1,0 +1,171 @@
+{
+    "os": "Linux-5.15.0-86-generic-x86_64-with-glibc2.35",
+    "python": "3.10.12",
+    "heartbeatAt": "2024-06-06T17:31:55.173816",
+    "startedAt": "2024-06-06T17:31:54.551737",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "base",
+        "omniglot"
+    ],
+    "state": "running",
+    "program": "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py",
+    "codePathLocal": "experiment.py",
+    "codePath": "experiment.py",
+    "git": {
+        "remote": "git@github.com:ricohasgithub/ICL-Experiments.git",
+        "commit": "34c67df3f3f231dc838a34c2ad9132d0db7210fd"
+    },
+    "email": "ricozhu2003@gmail.com",
+    "root": "/usr/project/xtmp/yz705/ICL-Experiments",
+    "host": "linux58",
+    "username": "yz705",
+    "executable": "/bin/python3",
+    "cpu_count": 24,
+    "cpu_count_logical": 24,
+    "cpu_freq": {
+        "current": 2.7751666666666677,
+        "min": 1200.0,
+        "max": 3700.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2.7,
+            "min": 1200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3.5,
+            "min": 1200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3.5,
+            "min": 1200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3.5,
+            "min": 1200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.7,
+            "min": 1200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3.5,
+            "min": 1200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.7,
+            "min": 1200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.7,
+            "min": 1200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.7,
+            "min": 1200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.7,
+            "min": 1200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.7,
+            "min": 1200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.7,
+            "min": 1200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.7,
+            "min": 1200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.7,
+            "min": 1200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.7,
+            "min": 1200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.7,
+            "min": 1200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.7,
+            "min": 1200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.7,
+            "min": 1200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.7,
+            "min": 1200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.7,
+            "min": 1200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.7,
+            "min": 1200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.7,
+            "min": 1200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.7,
+            "min": 1200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 1.304,
+            "min": 1200.0,
+            "max": 3700.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 878.6589317321777,
+            "used": 70.99079132080078
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 2080 Ti",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 2080 Ti",
+            "memory_total": 11811160064
+        }
+    ],
+    "memory": {
+        "total": 754.5294952392578
+    }
+}
