@@ -56,7 +56,8 @@ class Trainer:
         self.device = torch.device(
             "cuda"
             if torch.cuda.is_available()
-            else "mps" if torch.backends.mps.is_available() else "cpu"
+            else "cpu"
+            # else "mps" if torch.backends.mps.is_available() else "cpu"
         )
 
     def train(self, lr=1e-5, eval_after=100):
@@ -64,6 +65,9 @@ class Trainer:
         def _apply_masks(values):
             query_mask = torch.full_like(losses_all, False)
             query_mask[:, -1] = True
+
+            print("Value * mask: ", torch.sum(query_mask * values))
+            print("Mask: ", torch.sum(query_mask))
 
             values_query = torch.sum(query_mask * values) / torch.sum(query_mask)
             return values_query
@@ -124,6 +128,7 @@ class Trainer:
                 predicted_labels = torch.argmax(preds, axis=1)
 
                 correct = predicted_labels == target
+
                 correct = correct.to(torch.float32)
 
                 accuracy_query = _apply_masks(correct)
@@ -229,3 +234,12 @@ class Trainer:
                     )
 
                 running_loss = 0
+                running_accuracy = 0
+                running_common_accuracy = 0
+                running_rare_accuracy = 0
+                running_fewshot_accuracy = 0
+
+                running_support_accuracy = 0
+                running_support_common_accuracy = 0
+                running_support_rare_accuracy = 0
+                running_support_fewshot_accuracy = 0
