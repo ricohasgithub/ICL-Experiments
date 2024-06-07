@@ -32,7 +32,8 @@ class Attention(nn.Module):
         self.device = torch.device(
             "cuda"
             if torch.cuda.is_available()
-            else "mps" if torch.backends.mps.is_available() else "cpu"
+            else "cpu"
+            # else "mps" if torch.backends.mps.is_available() else "cpu"
         )
 
         self.n_heads = n_heads
@@ -148,7 +149,8 @@ class TransformerBlock(nn.Module):
         self.device = torch.device(
             "cuda"
             if torch.cuda.is_available()
-            else "mps" if torch.backends.mps.is_available() else "cpu"
+            else "cpu"
+            # else "mps" if torch.backends.mps.is_available() else "cpu"
         )
 
         self.causal = causal
@@ -196,7 +198,8 @@ class Transformer(nn.Module):
         self.device = torch.device(
             "cuda"
             if torch.cuda.is_available()
-            else "mps" if torch.backends.mps.is_available() else "cpu"
+            else "cpu"
+            # else "mps" if torch.backends.mps.is_available() else "cpu"
         )
         self.input_embedder = input_embedder.to(device=self.device)
         self.n_classes = n_classes
