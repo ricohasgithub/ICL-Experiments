@@ -1,0 +1,38 @@
+
+Files already downloaded and verified
+tensor([[0, 1, 1, 1, 0, 1, 0, 0, 0],
+        [0, 0, 1, 1, 0, 0, 1, 1, 1],
+        [1, 0, 1, 0, 0, 0, 1, 1, 1],
+        [1, 1, 0, 1, 0, 0, 0, 1, 1],
+        [0, 1, 1, 1, 0, 1, 0, 0, 1],
+        [0, 0, 1, 0, 1, 1, 0, 1, 1],
+        [0, 1, 0, 1, 0, 1, 1, 0, 0],
+        [0, 1, 0, 0, 0, 1, 1, 1, 1],
+        [1, 0, 0, 1, 1, 1, 0, 0, 0],
+        [0, 1, 0, 1, 0, 1, 1, 0, 1],
+        [0, 1, 0, 0, 1, 1, 1, 0, 0],
+        [0, 1, 1, 1, 0, 1, 0, 0, 1],
+        [0, 0, 0, 1, 1, 1, 1, 0, 0],
+        [0, 0, 1, 0, 0, 1, 1, 1, 1],
+        [1, 0, 0, 1, 0, 1, 0, 1, 0],
+        [1, 0, 0, 1, 0, 1, 0, 1, 1]], device='cuda:0', dtype=torch.int32)
+Traceback (most recent call last):
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 72, in <module>
+    experiment_base(dataset, p_bursty)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 61, in experiment_base
+    trainer.train()
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 251, in train
+    iclAccDict = self.compute_accuracy(
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 379, in compute_accuracy
+    from_fewshot = _apply_masks(from_fewshot_all)  # for query only
+NameError: name '_apply_masks' is not defined
+Traceback (most recent call last):
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 72, in <module>
+    experiment_base(dataset, p_bursty)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 61, in experiment_base
+    trainer.train()
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 251, in train
+    iclAccDict = self.compute_accuracy(
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 379, in compute_accuracy
+    from_fewshot = _apply_masks(from_fewshot_all)  # for query only
+NameError: name '_apply_masks' is not defined

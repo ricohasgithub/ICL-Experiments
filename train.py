@@ -43,7 +43,7 @@ class Trainer:
 
         # Data generator here refers to something like SeqGenerator().get_random_seq
         self.data_generator = data_generator
-        self.icl_seq_generator = lambda x: self.data_generator_factory.get_fewshot_seq(
+        self.icl_seq_generator = lambda : self.data_generator_factory.get_fewshot_seq(
             "holdout",
             4,  # fs_shots
             2,  # ways
@@ -52,10 +52,9 @@ class Trainer:
             False,  # grouped
         )
         self.iwl_seq_generator = (
-            lambda x: self.data_generator_factory.get_no_support_seq(
+            lambda : self.data_generator_factory.get_no_support_seq(
                 "zipfian",
                 9,  # seq_len
-                2,  # ways
                 False,  # all_unique
                 "ordered",  # labeling_common
                 False,  # randomly_generate_rare
@@ -110,6 +109,8 @@ class Trainer:
 
         for i, batch in enumerate(self.train_loader):
 
+            self.model.train()
+
             batch = _convert_dict(batch)
             examples, labels, target = (
                 batch["examples"].to(self.device),
@@ -151,6 +152,8 @@ class Trainer:
             # Compute accuracy
             with torch.no_grad():
 
+                self.model.eval()
+
                 predicted_labels = torch.argmax(preds, axis=1)
 
                 correct = predicted_labels == target
@@ -190,7 +193,7 @@ class Trainer:
                 from_fewshot_all = torch.isin(
                     predicted_labels, torch.arange(fewshot_ways).to(self.device)
                 )
-                from_fewshot = _apply_masks(from_fewshot_all)  # for query only
+                from_fewshot = _apply_masks(from_fewshot_all, losses_all)  # for query only
 
                 running_fewshot_accuracy += accuracy_query.item() * from_fewshot.item()
 
@@ -233,6 +236,8 @@ class Trainer:
                 )
 
             if i % eval_after == 0:
+
+                self.model.eval()
 
                 with torch.no_grad():
                     icl_batch = _convert_dict(next(iter(self.icl_eval_loader)))
@@ -294,7 +299,7 @@ class Trainer:
                             "icl_eval_fewshot_acc": iclAccDict["fewshot_acc"],
                             "icl_eval_support_acc": iclAccDict["support_acc"],
                             "icl_eval_support_common_acc": iclAccDict[
-                                "suppor_common_acc"
+                                "support_common_acc"
                             ],
                             "icl_eval_support_rare_acc": iclAccDict["support_rare_acc"],
                             "icl_eval_support_fewshot_acc": iclAccDict[
@@ -306,7 +311,7 @@ class Trainer:
                             "iwl_eval_fewshot_acc": iwlAccDict["fewshot_acc"],
                             "iwl_eval_support_acc": iwlAccDict["support_acc"],
                             "iwl_eval_support_common_acc": iwlAccDict[
-                                "suppor_common_acc"
+                                "support_common_acc"
                             ],
                             "iwl_eval_support_rare_acc": iwlAccDict["support_rare_acc"],
                             "iwl_eval_support_fewshot_acc": iwlAccDict[
@@ -345,17 +350,16 @@ class Trainer:
 
     def compute_accuracy(self, logits, target, query_mask):
 
-        def _apply_masks(values):
+        def apply_query_mask(values):
             values_query = torch.sum(query_mask * values) / torch.sum(query_mask)
             return values_query
 
         predicted_labels = torch.argmax(logits, axis=1)
 
         correct = predicted_labels == target
-
         correct = correct.to(torch.float32)
 
-        accuracy_query = _apply_masks(correct)
+        accuracy_query = apply_query_mask(correct)
 
         n_rare_classes = self.data_generator_factory.n_rare_classes
         n_holdout_classes = self.data_generator_factory.n_holdout_classes
@@ -373,15 +377,15 @@ class Trainer:
         from_rare_all = torch.isin(
             predicted_labels, torch.tensor(rare_labels).to(self.device)
         )
-        from_common = _apply_masks(from_common_all)  # average for query only
-        from_rare = _apply_masks(from_rare_all)
+        from_common = apply_query_mask(from_common_all)  # average for query only
+        from_rare = apply_query_mask(from_rare_all)
 
         # Compute whether query predictions were from the fewshot classes.
         fewshot_ways = 2
         from_fewshot_all = torch.isin(
             predicted_labels, torch.arange(fewshot_ways).to(self.device)
         )
-        from_fewshot = _apply_masks(from_fewshot_all)  # for query only
+        from_fewshot = apply_query_mask(from_fewshot_all)  # for query only
 
         # Compute whether query predictions were from common or rare classes.
         support_labels = target[:, :-2:2]
@@ -391,10 +395,10 @@ class Trainer:
         support_labels_reshaped = support_labels.reshape(batch_size, 1, support_len)
         from_support_all = predicted_labels_reshaped == support_labels_reshaped
         from_support_all = from_support_all.sum(-1).type(torch.bool).to(self.device)
-        from_support = _apply_masks(from_support_all)  # avg for query only
-        from_support_common = _apply_masks(from_support_all * from_common_all)
-        from_support_rare = _apply_masks(from_support_all * from_rare_all)
-        from_support_fewshot = _apply_masks(from_support_all * from_fewshot_all)
+        from_support = apply_query_mask(from_support_all)  # avg for query only
+        from_support_common = apply_query_mask(from_support_all * from_common_all)
+        from_support_rare = apply_query_mask(from_support_all * from_rare_all)
+        from_support_fewshot = apply_query_mask(from_support_all * from_fewshot_all)
 
         return {
             "acc": accuracy_query.item(),

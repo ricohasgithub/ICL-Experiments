@@ -1,0 +1,18 @@
+0.9
+Files already downloaded and verified
+Traceback (most recent call last):
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 73, in <module>
+    elif experiment_id == "mixed":
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 61, in experiment_base
+    trainer.train()
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 193, in train
+    from_fewshot = _apply_masks(from_fewshot_all)  # for query only
+TypeError: Trainer.train.<locals>._apply_masks() missing 1 required positional argument: 'losses_all'
+Traceback (most recent call last):
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 73, in <module>
+    elif experiment_id == "mixed":
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 61, in experiment_base
+    trainer.train()
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 193, in train
+    from_fewshot = _apply_masks(from_fewshot_all)  # for query only
+TypeError: Trainer.train.<locals>._apply_masks() missing 1 required positional argument: 'losses_all'
