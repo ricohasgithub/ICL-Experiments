@@ -28,7 +28,7 @@ class GaussianVectorDataset(Dataset):
             axis=0,
         )
         self.class_covariance = np.stack(
-            [np.identity(input_dim) for _ in range(num_classes)], axis=0
+            [(1 / 8**2) * np.identity(input_dim) for _ in range(num_classes)], axis=0
         )
         self.input_dim = input_dim
 
