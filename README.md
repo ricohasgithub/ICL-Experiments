@@ -19,17 +19,23 @@ for large enough $n$ (from [Garg et al. 2022](https://arxiv.org/pdf/2208.01066))
 To run experiments, use the following command line arguments
 
     chmod +x experiments.sh
-    experiments.sh EXPERIMENT DATASET
+    experiments.sh EXPERIMENT DATASET P_BURTSY
 
 where `EXPERIMENT` is one of the following:
  - `base`: ResNet embedder for the omniglot image dataset with bursty sequences.
  - `mixed`: TODO implement this and other experiments.
 
-and `DATASET` is one of the following:
+`DATASET` is one of the following:
  - `omniglot`: Omniglot character image dataset from PyTorch.
  - `synthetic`: Gaussian noise added random vectors.
 
+ and `P_BURSTY` is the bursty sequence probability from 0.0 to 1.0.
+
 To create a custom experiment, you can add an experiment under `./experiments/experiment.py` following the format of `base_experiment`.
+
+For submitting batch jobs to the duke cluster, modify `train.sh` to input the desired parameters to `experiments.sh`, and then use the following bash script to submit the job
+
+    sbatch train.sh
 
 ## TODO:
 

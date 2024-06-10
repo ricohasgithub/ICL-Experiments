@@ -11,7 +11,7 @@ from datasets.dataset import GaussianVectorDatasetForSampling
 import torch
 
 
-def experiment_base(dataset):
+def experiment_base(dataset, p_bursty):
 
     if dataset == "synthetic":
         input_embedding = InputEmbedder(linear_input_dim=64, example_encoding="linear")
@@ -46,7 +46,7 @@ def experiment_base(dataset):
         seq_len=9,
         shots=3,
         ways=2,
-        p_bursty=0.9,
+        p_bursty=p_bursty,
         p_bursty_common=0,
         p_bursty_zipfian=1,
         non_bursty_type="zipfian",
@@ -66,6 +66,7 @@ if __name__ == "__main__":
     # Read command line inputs to decide which experiment to run
     experiment_id = sys.argv[1]
     dataset = sys.argv[2]
+    p_bursty = float(sys.argv[3])
 
     if experiment_id == "base":
         experiment_base(dataset)

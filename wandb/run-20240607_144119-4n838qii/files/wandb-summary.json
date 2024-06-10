@@ -1,0 +1,1 @@
+{"global_step": 0, "loss": 0.07701059341430665, "acc": 0.0, "common_acc": 0.0, "rare_acc": 0.01, "fewshot_acc": 0.0, "support_acc": 0.0, "support_common_acc": 0.0, "support_rare_acc": 0.0, "support_fewshot_acc": 0.0, "_timestamp": 1717785737.248706, "_runtime": 57.811787128448486, "_step": 0, "_wandb": {"runtime": 69}}
