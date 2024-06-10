@@ -24,7 +24,8 @@ class GaussianVectorDataset(Dataset):
 
         # Generate ranodm c
         self.class_mean = np.stack(
-            [np.random.rand(1, input_dim) for _ in range(num_classes)], axis=0
+            [np.random.uniform(-1, 1, size=(1, input_dim)) for _ in range(num_classes)],
+            axis=0,
         )
         self.class_covariance = np.stack(
             [np.identity(input_dim) for _ in range(num_classes)], axis=0
