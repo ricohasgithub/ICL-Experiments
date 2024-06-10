@@ -131,9 +131,6 @@ class Trainer:
                 query_mask = torch.full_like(losses_all, False)
                 query_mask[:, -1] = True
 
-                print("Value * mask: ", torch.sum(query_mask * values))
-                print("Mask: ", torch.sum(query_mask))
-
                 values_query = torch.sum(query_mask * values) / torch.sum(query_mask)
                 return values_query
 
@@ -272,17 +269,6 @@ class Trainer:
                     avg_support_fewshot_accuracy = (
                         running_support_fewshot_accuracy / eval_after
                     )
-
-                    # {
-                    #     "acc": accuracy_query.item(),
-                    #     "common_acc": from_common.item(),
-                    #     "rare_acc": from_rare.item(),
-                    #     "fewshot_acc": from_fewshot.item(),
-                    #     "support_acc": from_support.item(),
-                    #     "support_common_acc": from_support_common.item(),
-                    #     "support_rare_acc": from_support_rare.item(),
-                    #     "support_fewshot_acc": from_support_fewshot.item(),
-                    # }
 
                     wandb.log(
                         {
