@@ -43,10 +43,39 @@ class Trainer:
 
         # Data generator here refers to something like SeqGenerator().get_random_seq
         self.data_generator = data_generator
+        self.icl_seq_generator = lambda x: self.data_generator_factory.get_fewshot_seq(
+            "holdout",
+            4,  # fs_shots
+            2,  # ways
+            "unfixed",
+            False,  # randomly_generate_rare
+            False,  # grouped
+        )
+        self.iwl_seq_generator = (
+            lambda x: self.data_generator_factory.get_no_support_seq(
+                "zipfian",
+                9,  # seq_len
+                2,  # ways
+                False,  # all_unique
+                "ordered",  # labeling_common
+                False,  # randomly_generate_rare
+            )
+        )
+
         self.data_generator_factory = data_generator_factory
         self.train_dataset = IterDataset(self.data_generator)
+        self.icl_eval_dataset = IterDataset(self.icl_seq_generator)
+        self.iwl_eval_dataset = IterDataset(self.iwl_seq_generator)
+
         self.train_loader = torch.utils.data.DataLoader(
             self.train_dataset, batch_size=self.batch_size
+        )
+
+        self.icl_eval_loader = torch.utils.data.DataLoader(
+            self.icl_eval_dataset, batch_size=self.batch_size
+        )
+        self.iwl_eval_loader = torch.utils.data.DataLoader(
+            self.iwl_eval_dataset, batch_size=self.batch_size
         )
 
         # Training loop parameters
@@ -201,62 +230,126 @@ class Trainer:
                 running_support_fewshot_accuracy += from_support_fewshot.item()
 
             if i % eval_after == 0:
-                avg_loss = running_loss / eval_after
-                avg_accuracy = running_accuracy / eval_after
-                avg_common_accuracy = running_common_accuracy / eval_after
-                avg_rare_accuracy = running_rare_accuracy / eval_after
-                avg_fewshot_accuracy = running_fewshot_accuracy / eval_after
-                avg_support_accuracy = running_support_accuracy / eval_after
-                avg_support_common_accuracy = (
-                    running_support_common_accuracy / eval_after
-                )
-                avg_support_rare_accuracy = running_support_rare_accuracy / eval_after
-                avg_support_fewshot_accuracy = (
-                    running_support_fewshot_accuracy / eval_after
-                )
 
-                wandb.log(
-                    {
-                        "global_step": i,
-                        "loss": avg_loss,
-                        "acc": avg_accuracy,
-                        "common_acc": avg_common_accuracy,
-                        "rare_acc": avg_rare_accuracy,
-                        "fewshot_acc": avg_fewshot_accuracy,
-                        "support_acc": avg_support_accuracy,
-                        "support_common_acc": avg_support_common_accuracy,
-                        "support_rare_acc": avg_support_rare_accuracy,
-                        "support_fewshot_acc": avg_support_fewshot_accuracy,
-                    }
-                )
+                with torch.no_grad():
+                    icl_batch = _convert_dict(next(iter(self.icl_eval_loader)))
+                    iwl_batch = _convert_dict(next(iter(self.iwl_eval_loader)))
 
-                if i % (eval_after * 20) == 0:
-                    print(
-                        f"Global batch {i}, avg loss after {eval_after} batches:",
-                        round(avg_loss, 3),
-                        f" | Global batch {i}, avg accuracy after {eval_after} batches:",
-                        round(avg_accuracy * 100, 2),
-                    )
-                else:
-                    print(
-                        f"Global batch {i}, avg loss after {eval_after} batches:",
-                        round(avg_loss, 3),
-                        f" | avg accuracy (total, from_support) after {eval_after} batches:",
-                        round(avg_accuracy * 100, 2),
-                        round(avg_support_accuracy * 100, 2),
-                        end="\r",
+                    icl_examples, icl_labels, icl_target = (
+                        icl_batch["examples"].to(self.device),
+                        icl_batch["labels"].to(self.device),
+                        icl_batch["target"].to(self.device),
                     )
 
-                running_loss = 0
-                running_accuracy = 0
-                running_common_accuracy = 0
-                running_rare_accuracy = 0
-                running_fewshot_accuracy = 0
+                    iwl_examples, iwl_labels, iwl_target = (
+                        iwl_batch["examples"].to(self.device),
+                        iwl_batch["labels"].to(self.device),
+                        iwl_batch["target"].to(self.device),
+                    )
 
-                running_support_accuracy = 0
-                running_support_common_accuracy = 0
-                running_support_rare_accuracy = 0
-                running_support_fewshot_accuracy = 0
+                    icl_preds = self.model(icl_examples, icl_labels).transpose(1, 2)
+                    iwl_preds = self.model(iwl_examples, iwl_labels).transpose(1, 2)
+
+                    iclAccDict = self.compute_accuracy(
+                        icl_preds, icl_target, query_mask
+                    )
+                    iwlAccDict = self.compute_accuracy(
+                        iwl_preds, iwl_target, query_mask
+                    )
+
+                    avg_loss = running_loss / eval_after
+                    avg_accuracy = running_accuracy / eval_after
+                    avg_common_accuracy = running_common_accuracy / eval_after
+                    avg_rare_accuracy = running_rare_accuracy / eval_after
+                    avg_fewshot_accuracy = running_fewshot_accuracy / eval_after
+                    avg_support_accuracy = running_support_accuracy / eval_after
+                    avg_support_common_accuracy = (
+                        running_support_common_accuracy / eval_after
+                    )
+                    avg_support_rare_accuracy = (
+                        running_support_rare_accuracy / eval_after
+                    )
+                    avg_support_fewshot_accuracy = (
+                        running_support_fewshot_accuracy / eval_after
+                    )
+
+                    # {
+                    #     "acc": accuracy_query.item(),
+                    #     "common_acc": from_common.item(),
+                    #     "rare_acc": from_rare.item(),
+                    #     "fewshot_acc": from_fewshot.item(),
+                    #     "support_acc": from_support.item(),
+                    #     "support_common_acc": from_support_common.item(),
+                    #     "support_rare_acc": from_support_rare.item(),
+                    #     "support_fewshot_acc": from_support_fewshot.item(),
+                    # }
+
+                    wandb.log(
+                        {
+                            "global_step": i,
+                            "loss": avg_loss,
+                            "train_acc": avg_accuracy,
+                            "train_common_acc": avg_common_accuracy,
+                            "train_rare_acc": avg_rare_accuracy,
+                            "train_fewshot_acc": avg_fewshot_accuracy,
+                            "train_support_acc": avg_support_accuracy,
+                            "train_support_common_acc": avg_support_common_accuracy,
+                            "train_support_rare_acc": avg_support_rare_accuracy,
+                            "train_support_fewshot_acc": avg_support_fewshot_accuracy,
+                            "icl_eval_acc": iclAccDict["acc"],
+                            "icl_eval_common_acc": iclAccDict["common_acc"],
+                            "icl_eval_rare_acc": iclAccDict["rare_acc"],
+                            "icl_eval_fewshot_acc": iclAccDict["fewshot_acc"],
+                            "icl_eval_support_acc": iclAccDict["support_acc"],
+                            "icl_eval_support_common_acc": iclAccDict[
+                                "suppor_common_acc"
+                            ],
+                            "icl_eval_support_rare_acc": iclAccDict["support_rare_acc"],
+                            "icl_eval_support_fewshot_acc": iclAccDict[
+                                "support_fewshot_acc"
+                            ],
+                            "iwl_eval_acc": iwlAccDict["acc"],
+                            "iwl_eval_common_acc": iwlAccDict["common_acc"],
+                            "iwl_eval_rare_acc": iwlAccDict["rare_acc"],
+                            "iwl_eval_fewshot_acc": iwlAccDict["fewshot_acc"],
+                            "iwl_eval_support_acc": iwlAccDict["support_acc"],
+                            "iwl_eval_support_common_acc": iwlAccDict[
+                                "suppor_common_acc"
+                            ],
+                            "iwl_eval_support_rare_acc": iwlAccDict["support_rare_acc"],
+                            "iwl_eval_support_fewshot_acc": iwlAccDict[
+                                "support_fewshot_acc"
+                            ],
+                        }
+                    )
+
+                    if i % (eval_after * 20) == 0:
+                        print(
+                            f"Global batch {i}, avg loss after {eval_after} batches:",
+                            round(avg_loss, 3),
+                            f" | Global batch {i}, avg accuracy after {eval_after} batches:",
+                            round(avg_accuracy * 100, 2),
+                        )
+                    else:
+                        print(
+                            f"Global batch {i}, avg loss after {eval_after} batches:",
+                            round(avg_loss, 3),
+                            f" | avg accuracy (total, from_support) after {eval_after} batches:",
+                            round(avg_accuracy * 100, 2),
+                            round(avg_support_accuracy * 100, 2),
+                            end="\r",
+                        )
+
+                    running_loss = 0
+                    running_accuracy = 0
+                    running_common_accuracy = 0
+                    running_rare_accuracy = 0
+                    running_fewshot_accuracy = 0
+
+                    running_support_accuracy = 0
+                    running_support_common_accuracy = 0
+                    running_support_rare_accuracy = 0
+                    running_support_fewshot_accuracy = 0
 
     def compute_accuracy(self, logits, target, query_mask):
 
@@ -321,29 +414,3 @@ class Trainer:
             "support_rare_acc": from_support_rare.item(),
             "support_fewshot_acc": from_support_fewshot.item(),
         }
-
-    def get_eval_seq(self, seq_type):
-
-        # seq_type = "icl" or "iwl"
-        # Corresponds to fewshot_holdout and no_support_zipfian
-
-        if seq_type == "icl":
-            seq_generator = lambda x: self.data_generator_factory.get_fewshot_seq(
-                "holdout",
-                4,  # fs_shots
-                2,  # ways
-                "unfixed",
-                False,  # randomly_generate_rare
-                False,  # grouped
-            )
-        else:
-            seq_generator = lambda x: self.data_generator_factory.get_no_support_seq(
-                "zipfian",
-                9,  # seq_len
-                2,  # ways
-                False,  # all_unique
-                "ordered",  # labeling_common
-                False,  # randomly_generate_rare
-            )
-
-        return seq_generator
