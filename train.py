@@ -62,16 +62,6 @@ class Trainer:
 
     def train(self, lr=1e-5, eval_after=100):
 
-        def _apply_masks(values):
-            query_mask = torch.full_like(losses_all, False)
-            query_mask[:, -1] = True
-
-            print("Value * mask: ", torch.sum(query_mask * values))
-            print("Mask: ", torch.sum(query_mask))
-
-            values_query = torch.sum(query_mask * values) / torch.sum(query_mask)
-            return values_query
-
         optim = self.optimizer(self.model.parameters(), lr=lr)
         criterion = self.loss_fn(reduction="none")
 
@@ -108,6 +98,16 @@ class Trainer:
             )
             losses_all = criterion(preds, target_one_hot)
 
+            def _apply_masks(values, losses_all):
+                query_mask = torch.full_like(losses_all, False)
+                query_mask[:, -1] = True
+
+                print("Value * mask: ", torch.sum(query_mask * values))
+                print("Mask: ", torch.sum(query_mask))
+
+                values_query = torch.sum(query_mask * values) / torch.sum(query_mask)
+                return values_query
+
             # Compute query mask on loss to only retain loss for the query entry (last column)
             query_mask = torch.full_like(losses_all, False)
             # print(preds.shape, target_one_hot.shape, losses_all.shape, query_mask.shape)
@@ -131,7 +131,7 @@ class Trainer:
 
                 correct = correct.to(torch.float32)
 
-                accuracy_query = _apply_masks(correct)
+                accuracy_query = _apply_masks(correct, losses_all)
 
                 running_accuracy += accuracy_query.item()
 
@@ -148,9 +148,13 @@ class Trainer:
                 from_common_all = torch.isin(
                     predicted_labels, torch.tensor(common_labels).to(self.device)
                 )
-                from_rare_all = torch.isin(predicted_labels, torch.tensor(rare_labels).to(self.device))
-                from_common = _apply_masks(from_common_all)  # average for query only
-                from_rare = _apply_masks(from_rare_all)
+                from_rare_all = torch.isin(
+                    predicted_labels, torch.tensor(rare_labels).to(self.device)
+                )
+                from_common = _apply_masks(
+                    from_common_all, losses_all
+                )  # average for query only
+                from_rare = _apply_masks(from_rare_all, losses_all)
 
                 running_common_accuracy += from_common.item()
                 running_rare_accuracy += from_rare.item()
@@ -175,11 +179,21 @@ class Trainer:
                     batch_size, 1, support_len
                 )
                 from_support_all = predicted_labels_reshaped == support_labels_reshaped
-                from_support_all = from_support_all.sum(-1).type(torch.bool).to(self.device)
-                from_support = _apply_masks(from_support_all)  # avg for query only
-                from_support_common = _apply_masks(from_support_all * from_common_all)
-                from_support_rare = _apply_masks(from_support_all * from_rare_all)
-                from_support_fewshot = _apply_masks(from_support_all * from_fewshot_all)
+                from_support_all = (
+                    from_support_all.sum(-1).type(torch.bool).to(self.device)
+                )
+                from_support = _apply_masks(
+                    from_support_all, losses_all
+                )  # avg for query only
+                from_support_common = _apply_masks(
+                    from_support_all * from_common_all, losses_all
+                )
+                from_support_rare = _apply_masks(
+                    from_support_all * from_rare_all, losses_all
+                )
+                from_support_fewshot = _apply_masks(
+                    from_support_all * from_fewshot_all, losses_all
+                )
 
                 running_support_accuracy += from_support.item()
                 running_support_common_accuracy += from_support_common.item()
@@ -244,6 +258,70 @@ class Trainer:
                 running_support_rare_accuracy = 0
                 running_support_fewshot_accuracy = 0
 
+    def compute_accuracy(self, logits, target, query_mask):
+
+        def _apply_masks(values):
+            values_query = torch.sum(query_mask * values) / torch.sum(query_mask)
+            return values_query
+
+        predicted_labels = torch.argmax(logits, axis=1)
+
+        correct = predicted_labels == target
+
+        correct = correct.to(torch.float32)
+
+        accuracy_query = _apply_masks(correct)
+
+        n_rare_classes = self.data_generator_factory.n_rare_classes
+        n_holdout_classes = self.data_generator_factory.n_holdout_classes
+        n_classes = self.data_generator_factory.n_classes
+
+        # For labeling_common = "ordered" and labeling_rare = "ordered"
+        common_start_idx = n_rare_classes
+        common_labels = range(common_start_idx, n_classes - n_holdout_classes)
+        rare_labels = range(n_rare_classes)
+
+        # Compute whether query predictions were from common or rare classes.
+        from_common_all = torch.isin(
+            predicted_labels, torch.tensor(common_labels).to(self.device)
+        )
+        from_rare_all = torch.isin(
+            predicted_labels, torch.tensor(rare_labels).to(self.device)
+        )
+        from_common = _apply_masks(from_common_all)  # average for query only
+        from_rare = _apply_masks(from_rare_all)
+
+        # Compute whether query predictions were from the fewshot classes.
+        fewshot_ways = 2
+        from_fewshot_all = torch.isin(
+            predicted_labels, torch.arange(fewshot_ways).to(self.device)
+        )
+        from_fewshot = _apply_masks(from_fewshot_all)  # for query only
+
+        # Compute whether query predictions were from common or rare classes.
+        support_labels = target[:, :-2:2]
+        batch_size, seq_len = predicted_labels.shape
+        support_len = support_labels.shape[1]
+        predicted_labels_reshaped = predicted_labels.reshape(batch_size, seq_len, 1)
+        support_labels_reshaped = support_labels.reshape(batch_size, 1, support_len)
+        from_support_all = predicted_labels_reshaped == support_labels_reshaped
+        from_support_all = from_support_all.sum(-1).type(torch.bool).to(self.device)
+        from_support = _apply_masks(from_support_all)  # avg for query only
+        from_support_common = _apply_masks(from_support_all * from_common_all)
+        from_support_rare = _apply_masks(from_support_all * from_rare_all)
+        from_support_fewshot = _apply_masks(from_support_all * from_fewshot_all)
+
+        return {
+            "acc": accuracy_query.item(),
+            "common_acc": from_common.item(),
+            "rare_acc": from_rare.item(),
+            "fewshot_acc": from_fewshot.item(),
+            "support_acc": from_support.item(),
+            "support_common_acc": from_support_common.item(),
+            "support_rare_acc": from_support_rare.item(),
+            "support_fewshot_acc": from_support_fewshot.item(),
+        }
+
     def get_eval_seq(self, seq_type):
 
         # seq_type = "icl" or "iwl"
@@ -258,6 +336,14 @@ class Trainer:
                 False,  # randomly_generate_rare
                 False,  # grouped
             )
+        else:
+            seq_generator = lambda x: self.data_generator_factory.get_no_support_seq(
+                "zipfian",
+                9,  # seq_len
+                2,  # ways
+                False,  # all_unique
+                "ordered",  # labeling_common
+                False,  # randomly_generate_rare
+            )
 
-        if seq_type == "iwl":
-            pass
+        return seq_generator
