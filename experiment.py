@@ -69,6 +69,6 @@ if __name__ == "__main__":
     p_bursty = float(sys.argv[3])
 
     if experiment_id == "base":
-        experiment_base(dataset)
+        experiment_base(dataset, p_bursty)
     elif experiment_id == "mixed":
         pass
