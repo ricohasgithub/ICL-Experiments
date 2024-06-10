@@ -1,0 +1,48 @@
+
+Global batch 0, avg loss after 100 batches: 0.077  | Global batch 0, avg accuracy after 100 batches: 0.0
+
+Global batch 200, avg loss after 100 batches: 7.801  | avg accuracy (total, from_support) after 100 batches: 0.12 0.01
+Traceback (most recent call last):
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 72, in <module>
+    experiment_base(dataset, p_bursty)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 61, in experiment_base
+    trainer.train()
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 123, in train
+    preds = self.model(examples, labels).transpose(1, 2)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/transformer.py", line 231, in forward
+    x = self.input_embedder(examples, labels, is_training).to(self.device)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/embedding.py", line 190, in forward
+    hh[:, 1::2] = h_label[:, :-1]
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/fx/traceback.py", line 62, in format_stack
+    @compatibility(is_backward_compatible=False)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 72, in <module>
+    experiment_base(dataset, p_bursty)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 61, in experiment_base
+    trainer.train()
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 123, in train
+    preds = self.model(examples, labels).transpose(1, 2)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/transformer.py", line 231, in forward
+    x = self.input_embedder(examples, labels, is_training).to(self.device)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/embedding.py", line 190, in forward
+    hh[:, 1::2] = h_label[:, :-1]
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/fx/traceback.py", line 62, in format_stack
+    @compatibility(is_backward_compatible=False)
+KeyboardInterrupt

@@ -85,7 +85,7 @@ class Trainer:
         wandb.init(
             # set the wandb project where this run will be logged
             project="icl-omniglot",
-            name=f"{dataset_name}, {p_bursty}"
+            name=f"{dataset_name}, p_bursty={p_bursty}"
         )
 
 
@@ -150,10 +150,10 @@ class Trainer:
 
             running_loss += loss.item()
 
+            self.model.eval()
+
             # Compute accuracy
             with torch.no_grad():
-
-                self.model.eval()
 
                 trainAccuracy = self.compute_accuracy(preds, target, query_mask)
 
@@ -171,8 +171,6 @@ class Trainer:
                 ]
 
             if i % eval_after == 0:
-
-                self.model.eval()
 
                 with torch.no_grad():
                     icl_batch = _convert_dict(next(iter(self.icl_eval_loader)))
@@ -193,11 +191,22 @@ class Trainer:
                     icl_preds = self.model(icl_examples, icl_labels).transpose(1, 2)
                     iwl_preds = self.model(iwl_examples, iwl_labels).transpose(1, 2)
 
+                    eval_target_one_hot = (
+                        nn.functional.one_hot(icl_target.to(torch.int64), self.num_classes)
+                        .transpose(1, 2)
+                        .to(torch.float32)
+                    )
+                    eval_losses_all = criterion(icl_preds, eval_target_one_hot)
+
+                    eval_query_mask = torch.full_like(eval_losses_all, False)
+                    # print(preds.shape, target_one_hot.shape, losses_all.shape, query_mask.shape)
+                    eval_query_mask[:, -1] = True
+
                     iclAccDict = self.compute_accuracy(
-                        icl_preds, icl_target, query_mask
+                        icl_preds, icl_target, eval_query_mask
                     )
                     iwlAccDict = self.compute_accuracy(
-                        iwl_preds, iwl_target, query_mask
+                        iwl_preds, iwl_target, eval_query_mask
                     )
 
                     avg_loss = running_loss / eval_after
