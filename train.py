@@ -243,3 +243,21 @@ class Trainer:
                 running_support_common_accuracy = 0
                 running_support_rare_accuracy = 0
                 running_support_fewshot_accuracy = 0
+
+    def get_eval_seq(self, seq_type):
+
+        # seq_type = "icl" or "iwl"
+        # Corresponds to fewshot_holdout and no_support_zipfian
+
+        if seq_type == "icl":
+            seq_generator = lambda x: self.data_generator_factory.get_fewshot_seq(
+                "holdout",
+                4,  # fs_shots
+                2,  # ways
+                "unfixed",
+                False,  # randomly_generate_rare
+                False,  # grouped
+            )
+
+        if seq_type == "iwl":
+            pass
