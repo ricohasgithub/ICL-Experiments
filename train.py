@@ -182,8 +182,8 @@ class Trainer:
                 )  # average for query only
                 from_rare = _apply_masks(from_rare_all, losses_all)
 
-                running_common_accuracy += from_common.item()
-                running_rare_accuracy += from_rare.item()
+                running_common_accuracy += accuracy_query.item() * from_common.item()
+                running_rare_accuracy += accuracy_query.item() * from_rare.item()
 
                 # Compute whether query predictions were from the fewshot classes.
                 fewshot_ways = 2
@@ -192,7 +192,7 @@ class Trainer:
                 )
                 from_fewshot = _apply_masks(from_fewshot_all)  # for query only
 
-                running_fewshot_accuracy += from_fewshot.item()
+                running_fewshot_accuracy += accuracy_query.item() * from_fewshot.item()
 
                 # Compute whether query predictions were from common or rare classes.
                 support_labels = target[:, :-2:2]
@@ -221,10 +221,16 @@ class Trainer:
                     from_support_all * from_fewshot_all, losses_all
                 )
 
-                running_support_accuracy += from_support.item()
-                running_support_common_accuracy += from_support_common.item()
-                running_support_rare_accuracy += from_support_rare.item()
-                running_support_fewshot_accuracy += from_support_fewshot.item()
+                running_support_accuracy += accuracy_query.item() * from_support.item()
+                running_support_common_accuracy += (
+                    accuracy_query.item() * from_support_common.item()
+                )
+                running_support_rare_accuracy += (
+                    accuracy_query.item() * from_support_rare.item()
+                )
+                running_support_fewshot_accuracy += (
+                    accuracy_query.item() * from_support_fewshot.item()
+                )
 
             if i % eval_after == 0:
 
@@ -392,11 +398,11 @@ class Trainer:
 
         return {
             "acc": accuracy_query.item(),
-            "common_acc": from_common.item(),
-            "rare_acc": from_rare.item(),
-            "fewshot_acc": from_fewshot.item(),
-            "support_acc": from_support.item(),
-            "support_common_acc": from_support_common.item(),
-            "support_rare_acc": from_support_rare.item(),
-            "support_fewshot_acc": from_support_fewshot.item(),
+            "common_acc": from_common.item() * accuracy_query.item(),
+            "rare_acc": from_rare.item() * accuracy_query.item(),
+            "fewshot_acc": from_fewshot.item() * accuracy_query.item(),
+            "support_acc": from_support.item() * accuracy_query.item(),
+            "support_common_acc": from_support_common.item() * accuracy_query.item(),
+            "support_rare_acc": from_support_rare.item() * accuracy_query.item(),
+            "support_fewshot_acc": from_support_fewshot.item() * accuracy_query.item(),
         }
