@@ -1,0 +1,1058 @@
+2024-06-06 13:31:54,572 INFO    StreamThr :2915966 [internal.py:wandb_internal():85] W&B internal server running at pid: 2915966, started at: 2024-06-06 13:31:54.565528
+2024-06-06 13:31:54,576 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status
+2024-06-06 13:31:54,580 INFO    WriterThread:2915966 [datastore.py:open_for_write():87] open: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/run-lpplxpzi.wandb
+2024-06-06 13:31:54,581 DEBUG   SenderThread:2915966 [sender.py:send():378] send: header
+2024-06-06 13:31:54,590 DEBUG   SenderThread:2915966 [sender.py:send():378] send: run
+2024-06-06 13:31:54,935 INFO    SenderThread:2915966 [dir_watcher.py:__init__():211] watching files in: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files
+2024-06-06 13:31:54,936 INFO    SenderThread:2915966 [sender.py:_start_run_threads():1123] run started: lpplxpzi with start time 1717695114.568183
+2024-06-06 13:31:54,943 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: check_version
+2024-06-06 13:31:54,944 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: check_version
+2024-06-06 13:31:55,121 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: run_start
+2024-06-06 13:31:55,156 DEBUG   HandlerThread:2915966 [system_info.py:__init__():26] System info init
+2024-06-06 13:31:55,156 DEBUG   HandlerThread:2915966 [system_info.py:__init__():41] System info init done
+2024-06-06 13:31:55,156 INFO    HandlerThread:2915966 [system_monitor.py:start():194] Starting system monitor
+2024-06-06 13:31:55,156 INFO    SystemMonitor:2915966 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-06-06 13:31:55,156 INFO    HandlerThread:2915966 [system_monitor.py:probe():214] Collecting system info
+2024-06-06 13:31:55,168 INFO    SystemMonitor:2915966 [interfaces.py:start():188] Started cpu monitoring
+2024-06-06 13:31:55,169 INFO    SystemMonitor:2915966 [interfaces.py:start():188] Started disk monitoring
+2024-06-06 13:31:55,170 INFO    SystemMonitor:2915966 [interfaces.py:start():188] Started gpu monitoring
+2024-06-06 13:31:55,171 INFO    SystemMonitor:2915966 [interfaces.py:start():188] Started memory monitoring
+2024-06-06 13:31:55,171 INFO    SystemMonitor:2915966 [interfaces.py:start():188] Started network monitoring
+2024-06-06 13:31:55,173 DEBUG   HandlerThread:2915966 [system_info.py:probe():150] Probing system
+2024-06-06 13:31:55,181 DEBUG   HandlerThread:2915966 [system_info.py:_probe_git():135] Probing git
+2024-06-06 13:31:55,201 DEBUG   HandlerThread:2915966 [system_info.py:_probe_git():143] Probing git done
+2024-06-06 13:31:55,201 DEBUG   HandlerThread:2915966 [system_info.py:probe():198] Probing system done
+2024-06-06 13:31:55,201 DEBUG   HandlerThread:2915966 [system_monitor.py:probe():223] {'os': 'Linux-5.15.0-86-generic-x86_64-with-glibc2.35', 'python': '3.10.12', 'heartbeatAt': '2024-06-06T17:31:55.173816', 'startedAt': '2024-06-06T17:31:54.551737', 'docker': None, 'cuda': None, 'args': ('base', 'omniglot'), 'state': 'running', 'program': '/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py', 'codePathLocal': 'experiment.py', 'codePath': 'experiment.py', 'git': {'remote': 'git@github.com:ricohasgithub/ICL-Experiments.git', 'commit': '34c67df3f3f231dc838a34c2ad9132d0db7210fd'}, 'email': 'ricozhu2003@gmail.com', 'root': '/usr/project/xtmp/yz705/ICL-Experiments', 'host': 'linux58', 'username': 'yz705', 'executable': '/bin/python3', 'cpu_count': 24, 'cpu_count_logical': 24, 'cpu_freq': {'current': 2.7751666666666677, 'min': 1200.0, 'max': 3700.0}, 'cpu_freq_per_core': [{'current': 2.7, 'min': 1200.0, 'max': 3700.0}, {'current': 3.5, 'min': 1200.0, 'max': 3700.0}, {'current': 3.5, 'min': 1200.0, 'max': 3700.0}, {'current': 3.5, 'min': 1200.0, 'max': 3700.0}, {'current': 2.7, 'min': 1200.0, 'max': 3700.0}, {'current': 3.5, 'min': 1200.0, 'max': 3700.0}, {'current': 2.7, 'min': 1200.0, 'max': 3700.0}, {'current': 2.7, 'min': 1200.0, 'max': 3700.0}, {'current': 2.7, 'min': 1200.0, 'max': 3700.0}, {'current': 2.7, 'min': 1200.0, 'max': 3700.0}, {'current': 2.7, 'min': 1200.0, 'max': 3700.0}, {'current': 2.7, 'min': 1200.0, 'max': 3700.0}, {'current': 2.7, 'min': 1200.0, 'max': 3700.0}, {'current': 2.7, 'min': 1200.0, 'max': 3700.0}, {'current': 2.7, 'min': 1200.0, 'max': 3700.0}, {'current': 2.7, 'min': 1200.0, 'max': 3700.0}, {'current': 2.7, 'min': 1200.0, 'max': 3700.0}, {'current': 2.7, 'min': 1200.0, 'max': 3700.0}, {'current': 2.7, 'min': 1200.0, 'max': 3700.0}, {'current': 2.7, 'min': 1200.0, 'max': 3700.0}, {'current': 2.7, 'min': 1200.0, 'max': 3700.0}, {'current': 2.7, 'min': 1200.0, 'max': 3700.0}, {'current': 2.7, 'min': 1200.0, 'max': 3700.0}, {'current': 1.304, 'min': 1200.0, 'max': 3700.0}], 'disk': {'/': {'total': 878.6589317321777, 'used': 70.99079132080078}}, 'gpu': 'NVIDIA GeForce RTX 2080 Ti', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 2080 Ti', 'memory_total': 11811160064}], 'memory': {'total': 754.5294952392578}}
+2024-06-06 13:31:55,202 INFO    HandlerThread:2915966 [system_monitor.py:probe():224] Finished collecting system info
+2024-06-06 13:31:55,202 INFO    HandlerThread:2915966 [system_monitor.py:probe():227] Publishing system info
+2024-06-06 13:31:55,204 INFO    HandlerThread:2915966 [system_monitor.py:probe():229] Finished publishing system info
+2024-06-06 13:31:55,210 DEBUG   SenderThread:2915966 [sender.py:send():378] send: files
+2024-06-06 13:31:55,210 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-metadata.json with policy now
+2024-06-06 13:31:55,624 INFO    wandb-upload_0:2915966 [upload_job.py:push():130] Uploaded file /tmp/tmpv0oyfaapwandb/p69hr44w-wandb-metadata.json
+2024-06-06 13:31:55,710 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: python_packages
+2024-06-06 13:31:55,710 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: python_packages
+2024-06-06 13:31:55,711 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:31:55,712 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:31:55,821 DEBUG   SenderThread:2915966 [sender.py:send():378] send: telemetry
+2024-06-06 13:31:55,937 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_created():271] file/dir created: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:31:55,937 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_created():271] file/dir created: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-metadata.json
+2024-06-06 13:31:55,937 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_created():271] file/dir created: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/requirements.txt
+2024-06-06 13:31:58,939 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:31:59,949 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:32:04,950 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:32:09,951 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:32:10,712 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:32:10,712 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:32:15,776 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:32:19,216 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:32:19,217 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:32:19,217 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:32:19,219 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:32:19,953 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_created():271] file/dir created: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:32:20,954 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:32:21,221 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:32:25,712 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:32:25,712 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:32:27,005 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:32:28,960 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/config.yaml
+2024-06-06 13:32:33,005 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:32:38,006 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:32:40,712 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:32:40,712 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:32:43,850 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:32:48,850 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:32:53,851 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:32:55,171 DEBUG   SystemMonitor:2915966 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-06-06 13:32:55,172 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:32:55,712 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:32:55,712 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:32:59,835 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:33:04,252 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:33:04,253 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:33:04,254 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:33:04,255 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:33:04,986 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:33:05,256 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:33:06,988 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:33:10,256 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:33:10,712 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:33:10,712 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:33:15,792 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:33:20,792 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:33:25,173 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:33:25,712 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:33:25,712 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:33:26,778 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:33:31,778 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:33:36,779 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:33:40,712 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:33:40,713 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:33:41,829 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:33:46,830 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:33:49,258 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:33:49,259 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:33:49,259 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:33:49,267 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:33:50,018 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:33:51,019 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:33:52,268 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:33:55,173 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:33:55,712 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:33:55,712 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:33:57,872 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:34:02,873 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:34:07,874 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:34:10,712 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:34:10,713 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:34:13,847 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:34:18,847 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:34:23,851 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:34:25,174 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:34:25,712 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:34:25,713 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:34:28,906 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:34:33,907 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:34:34,317 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:34:34,318 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:34:34,318 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:34:34,322 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:34:35,050 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:34:37,051 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:34:39,323 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:34:40,712 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:34:40,713 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:34:44,834 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:34:49,840 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:34:54,844 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:34:55,175 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:34:55,713 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:34:55,713 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:34:59,885 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:35:04,886 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:35:09,887 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:35:10,719 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:35:10,719 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:35:15,851 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:35:19,312 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:35:19,313 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:35:19,313 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:35:19,323 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:35:20,087 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:35:21,088 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:35:21,324 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:35:25,175 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:35:25,719 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:35:25,719 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:35:26,795 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:35:31,796 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:35:36,796 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:35:40,719 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:35:40,719 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:35:41,867 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:35:46,867 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:35:51,868 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:35:55,176 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:35:55,719 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:35:55,719 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:35:56,887 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:36:01,887 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:36:04,237 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:36:04,238 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:36:04,239 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:36:04,247 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:36:05,119 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:36:07,121 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:36:07,248 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:36:10,719 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:36:10,720 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:36:12,885 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:36:17,885 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:36:22,886 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:36:25,176 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:36:25,719 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:36:25,720 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:36:28,808 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:36:33,809 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:36:38,809 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:36:40,719 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:36:40,720 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:36:43,823 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:36:48,823 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:36:49,239 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:36:49,240 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:36:49,241 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:36:49,251 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:36:50,187 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:36:51,189 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:36:54,259 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:36:55,177 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:36:55,719 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:36:55,720 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:36:59,798 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:37:04,799 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:37:09,799 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:37:10,720 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:37:10,720 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:37:14,889 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:37:19,890 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:37:24,890 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:37:25,179 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:37:25,720 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:37:25,720 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:37:30,849 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:37:34,274 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:37:34,275 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:37:34,275 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:37:34,283 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:37:35,221 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:37:36,284 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:37:37,223 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:37:40,720 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:37:40,720 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:37:41,869 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:37:46,870 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:37:51,870 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:37:55,178 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:37:55,720 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:37:55,720 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:37:57,836 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:38:02,836 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:38:07,837 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:38:10,720 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:38:10,720 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:38:12,884 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:38:17,885 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:38:19,292 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:38:19,293 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:38:19,293 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:38:19,299 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:38:20,262 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:38:21,263 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:38:23,300 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:38:25,179 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:38:25,720 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:38:25,720 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:38:28,811 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:38:33,811 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:38:38,812 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:38:40,720 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:38:40,721 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:38:43,880 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:38:48,880 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:38:53,881 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:38:55,179 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:38:55,720 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:38:55,721 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:38:59,844 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:39:04,337 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:39:04,338 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:39:04,338 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:39:04,347 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:39:05,306 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:39:05,349 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:39:07,315 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:39:10,350 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:39:10,720 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:39:10,721 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:39:15,855 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:39:20,856 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:39:25,180 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:39:25,720 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:39:25,721 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:39:25,865 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:39:30,866 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:39:35,866 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:39:40,721 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:39:40,721 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:39:40,897 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:39:45,898 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:39:49,314 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:39:49,314 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:39:49,315 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:39:49,319 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:39:49,355 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:39:51,320 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:39:51,357 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:39:55,181 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:39:55,721 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:39:55,721 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:39:56,828 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:40:01,829 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:40:06,829 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:40:10,721 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:40:10,721 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:40:11,839 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:40:16,840 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:40:21,840 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:40:25,181 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:40:25,721 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:40:25,721 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:40:26,884 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:40:31,885 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:40:34,285 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:40:34,286 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:40:34,286 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:40:34,295 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:40:34,402 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:40:37,296 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:40:37,405 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:40:40,721 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:40:40,721 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:40:42,876 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:40:47,877 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:40:52,877 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:40:55,182 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:40:55,721 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:40:55,721 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:40:58,845 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:41:03,845 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:41:08,846 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:41:10,721 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:41:10,721 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:41:14,842 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:41:19,119 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:41:19,120 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:41:19,120 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:41:19,127 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:41:19,435 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:41:20,128 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:41:21,436 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:41:25,129 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:41:25,182 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:41:25,721 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:41:25,722 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:41:30,849 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:41:35,850 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:41:40,721 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:41:40,722 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:41:41,794 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:41:46,794 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:41:51,795 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:41:55,183 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:41:55,721 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:41:55,722 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:41:56,818 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:42:01,819 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:42:04,126 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:42:04,127 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:42:04,127 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:42:04,135 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:42:04,468 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:42:05,469 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:42:07,136 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:42:10,722 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:42:10,722 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:42:12,840 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:42:17,841 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:42:22,841 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:42:25,184 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:42:25,722 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:42:25,722 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:42:28,834 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:42:33,835 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:42:38,835 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:42:40,722 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:42:40,722 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:42:43,871 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:42:48,872 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:42:49,126 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:42:49,127 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:42:49,127 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:42:49,135 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:42:49,502 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:42:51,503 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:42:54,136 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:42:55,184 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:42:55,722 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:42:55,722 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:42:59,820 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:43:04,820 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:43:09,821 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:43:10,722 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:43:10,722 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:43:15,815 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:43:20,815 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:43:25,185 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:43:25,722 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:43:25,722 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:43:25,828 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:43:30,829 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:43:34,155 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:43:34,156 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:43:34,156 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:43:34,164 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:43:34,556 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:43:35,557 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:43:36,164 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:43:40,722 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:43:40,722 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:43:41,808 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:43:46,809 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:43:51,809 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:43:55,185 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:43:55,722 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:43:55,723 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:43:56,846 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:44:01,847 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:44:06,847 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:44:10,722 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:44:10,723 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:44:12,838 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:44:17,838 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:44:19,138 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:44:19,139 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:44:19,139 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:44:19,147 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:44:19,599 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:44:21,601 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:44:23,148 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:44:25,186 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:44:25,723 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:44:25,723 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:44:28,860 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:44:33,861 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:44:38,861 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:44:40,723 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:44:40,723 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:44:44,788 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:44:49,791 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:44:54,791 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:44:55,186 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:44:55,723 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:44:55,723 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:44:59,843 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:45:04,175 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:45:04,176 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:45:04,176 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:45:04,183 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:45:04,641 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:45:05,184 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:45:05,642 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:45:10,185 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:45:10,725 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:45:10,726 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:45:15,895 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:45:20,896 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:45:25,187 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:45:25,726 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:45:25,726 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:45:26,803 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:45:31,803 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:45:36,804 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:45:40,726 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:45:40,726 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:45:41,814 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:45:46,815 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:45:49,138 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:45:49,138 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:45:49,139 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:45:49,147 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:45:49,680 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:45:51,681 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:45:52,180 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:45:55,188 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:45:55,726 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:45:55,726 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:45:57,850 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:46:02,851 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:46:07,852 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:46:10,726 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:46:10,726 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:46:13,836 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:46:18,837 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:46:23,837 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:46:25,188 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:46:25,726 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:46:25,726 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:46:29,821 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:46:34,007 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:46:34,007 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:46:34,007 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:46:34,015 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:46:34,711 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:46:35,047 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:46:35,712 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:46:40,048 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:46:40,726 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:46:40,727 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:46:45,869 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:46:50,871 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:46:55,189 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:46:55,727 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:46:55,727 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:46:56,845 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:47:01,845 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:47:06,846 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:47:10,727 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:47:10,727 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:47:12,842 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:47:17,843 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:47:18,912 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:47:18,912 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:47:18,913 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:47:18,916 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:47:19,743 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:47:21,745 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:47:22,957 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:47:25,189 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:47:25,727 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:47:25,727 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:47:28,908 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:47:33,909 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:47:38,909 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:47:40,727 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:47:40,727 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:47:44,843 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:47:49,843 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:47:54,844 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:47:55,190 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:47:55,727 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:47:55,727 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:48:00,830 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:48:03,891 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:48:03,892 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:48:03,892 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:48:03,899 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:48:04,776 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:48:05,777 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:48:05,935 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:48:10,727 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:48:10,727 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:48:11,797 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:48:16,799 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:48:21,799 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:48:25,190 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:48:25,727 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:48:25,727 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:48:26,852 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:48:31,853 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:48:36,854 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:48:40,727 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:48:40,727 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:48:41,877 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:48:46,878 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:48:48,819 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:48:48,819 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:48:48,819 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:48:48,828 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:48:49,810 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:48:51,811 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:48:52,860 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:48:55,191 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:48:55,727 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:48:55,728 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:48:58,847 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:49:03,848 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:49:08,849 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:49:10,727 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:49:10,728 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:49:13,877 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:49:18,878 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:49:23,878 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:49:25,192 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:49:25,728 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:49:25,728 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:49:28,918 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:49:33,830 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:49:33,831 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:49:33,831 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:49:33,839 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:49:33,849 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:49:34,871 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:49:35,850 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:49:39,872 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:49:40,728 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:49:40,728 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:49:44,883 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:49:49,883 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:49:54,884 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:49:55,192 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:49:55,728 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:49:55,728 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:50:00,816 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:50:05,817 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:50:10,728 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:50:10,728 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:50:10,903 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:50:15,903 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:50:18,781 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:50:18,782 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:50:18,782 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:50:18,792 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:50:18,880 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:50:19,882 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:50:21,792 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:50:25,193 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:50:25,728 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:50:25,728 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:50:26,897 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:50:31,897 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:50:36,898 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:50:40,728 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:50:40,728 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:50:42,858 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:50:47,859 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:50:52,859 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:50:55,193 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:50:55,728 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:50:55,728 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:50:58,828 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:51:03,824 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:51:03,825 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:51:03,825 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:51:03,829 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:51:03,829 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:51:03,926 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:51:05,928 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:51:08,830 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:51:10,728 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:51:10,728 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:51:13,845 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:51:18,845 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:51:23,846 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:51:25,194 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:51:25,728 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:51:25,729 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:51:28,875 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:51:33,876 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:51:38,877 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:51:40,728 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:51:40,729 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:51:43,877 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:51:48,669 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:51:48,670 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:51:48,670 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:51:48,679 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:51:48,960 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:51:49,680 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:51:49,961 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:51:54,681 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:51:55,194 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:51:55,729 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:51:55,729 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:51:59,805 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:52:04,806 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:52:09,806 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:52:10,729 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:52:10,729 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:52:14,837 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:52:19,838 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:52:24,838 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:52:25,195 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:52:25,729 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:52:25,729 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:52:29,901 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:52:33,698 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:52:33,699 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:52:33,699 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:52:33,707 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:52:33,994 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:52:35,708 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:52:35,995 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:52:40,709 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:52:40,729 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:52:40,729 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:52:45,885 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:52:50,886 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:52:55,196 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:52:55,729 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:52:55,729 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:52:56,869 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:53:01,870 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:53:06,871 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:53:10,729 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:53:10,729 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:53:11,887 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:53:16,888 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:53:18,678 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:53:18,679 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:53:18,679 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:53:18,687 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:53:19,036 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:53:20,037 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:53:22,688 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:53:25,196 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:53:25,729 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:53:25,729 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:53:27,847 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:53:32,847 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:53:37,851 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:53:40,729 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:53:40,730 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:53:42,908 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:53:47,909 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:53:52,909 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:53:55,197 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:53:55,729 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:53:55,730 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:53:58,861 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:54:03,741 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:54:03,742 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:54:03,743 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:54:03,751 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:54:04,070 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:54:04,752 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:54:06,072 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:54:09,752 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:54:10,730 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:54:10,730 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:54:14,810 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:54:19,811 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:54:24,812 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:54:25,197 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:54:25,730 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:54:25,730 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:54:29,839 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:54:34,840 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:54:39,840 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:54:40,730 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:54:40,730 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:54:45,821 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:54:48,726 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:54:48,727 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:54:48,727 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:54:48,735 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:54:49,105 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:54:50,106 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:54:51,736 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:54:55,198 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:54:55,730 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:54:55,730 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:54:56,860 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:55:01,860 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:55:06,861 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:55:10,730 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:55:10,730 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:55:11,882 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:55:16,883 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:55:21,883 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:55:25,198 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:55:25,730 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:55:25,730 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:55:27,871 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:55:32,871 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:55:33,736 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:55:33,737 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:55:33,737 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:55:33,738 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:55:34,149 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:55:36,151 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:55:38,739 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:55:40,730 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:55:40,731 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:55:43,829 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:55:48,830 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:55:53,830 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:55:55,199 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:55:55,730 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:55:55,731 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:55:59,816 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:56:04,817 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:56:09,818 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:56:10,731 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:56:10,731 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:56:15,818 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:56:18,728 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:56:18,729 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:56:18,729 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:56:18,735 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:56:19,186 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:56:20,187 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:56:21,736 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:56:25,200 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:56:25,731 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:56:25,731 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:56:26,847 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:56:31,848 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:56:36,849 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:56:40,731 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:56:40,731 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:56:42,800 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:56:47,801 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:56:52,802 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:56:55,200 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:56:55,731 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:56:55,731 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:56:57,842 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:57:02,842 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:57:03,659 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:57:03,660 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:57:03,660 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:57:03,668 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:57:04,229 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:57:06,231 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:57:08,668 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:57:10,731 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:57:10,731 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:57:13,849 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:57:18,850 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:57:23,850 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:57:25,201 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:57:25,731 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:57:25,731 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:57:28,859 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:57:33,859 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:57:38,860 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:57:40,731 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:57:40,731 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:57:43,867 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:57:48,666 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:57:48,667 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:57:48,668 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:57:48,675 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:57:49,265 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:57:49,676 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:57:50,266 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:57:54,677 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:57:55,201 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:57:55,731 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:57:55,732 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:57:59,860 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:58:04,861 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:58:09,861 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:58:10,731 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:58:10,732 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:58:14,873 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:58:19,874 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:58:24,875 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:58:25,202 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:58:25,731 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:58:25,732 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:58:30,828 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:58:33,729 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:58:33,730 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:58:33,730 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:58:33,739 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:58:34,315 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:58:36,317 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:58:36,740 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:58:40,732 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:58:40,732 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:58:41,886 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:58:46,886 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:58:51,887 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:58:55,202 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:58:55,732 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:58:55,732 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:58:57,839 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:59:02,844 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:59:07,845 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:59:10,732 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:59:10,732 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:59:13,828 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:59:18,741 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 13:59:18,742 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 13:59:18,742 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 13:59:18,751 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 13:59:19,350 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 13:59:19,752 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:59:20,351 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 13:59:24,753 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:59:25,203 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:59:25,732 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:59:25,732 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:59:29,823 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:59:34,823 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:59:39,824 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:59:40,732 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:59:40,732 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 13:59:44,894 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:59:49,899 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:59:54,899 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 13:59:55,204 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 13:59:55,732 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 13:59:55,732 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 14:00:00,840 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:00:03,784 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 14:00:03,785 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 14:00:03,785 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 14:00:03,791 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 14:00:04,399 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 14:00:06,400 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 14:00:06,792 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:00:10,732 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 14:00:10,732 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 14:00:11,871 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:00:16,871 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:00:21,872 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:00:25,204 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 14:00:25,732 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 14:00:25,732 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 14:00:27,869 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:00:32,869 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:00:37,870 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:00:40,732 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 14:00:40,733 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 14:00:43,836 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:00:48,792 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 14:00:48,793 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 14:00:48,793 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 14:00:48,799 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 14:00:49,441 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 14:00:49,800 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:00:50,442 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 14:00:54,800 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:00:55,205 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 14:00:55,732 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 14:00:55,733 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 14:00:59,856 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:01:04,857 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:01:09,857 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:01:10,733 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 14:01:10,733 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 14:01:14,872 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:01:19,872 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:01:24,873 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:01:25,205 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 14:01:25,733 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 14:01:25,733 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 14:01:29,893 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:01:33,851 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 14:01:33,852 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 14:01:33,852 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 14:01:33,859 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 14:01:34,481 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 14:01:35,860 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:01:36,488 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 14:01:40,733 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 14:01:40,733 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 14:01:41,847 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:01:46,848 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:01:51,848 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:01:55,207 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 14:01:55,733 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 14:01:55,733 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 14:01:57,812 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:02:02,812 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:02:07,813 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:02:10,733 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 14:02:10,733 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 14:02:12,871 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:02:17,871 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:02:18,711 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 14:02:18,712 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 14:02:18,712 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 14:02:18,719 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 14:02:19,526 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 14:02:20,527 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 14:02:23,720 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:02:25,206 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 14:02:25,733 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 14:02:25,733 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 14:02:28,844 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:02:33,845 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:02:38,846 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:02:40,733 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 14:02:40,733 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 14:02:43,892 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:02:48,893 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:02:53,893 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:02:55,208 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 14:02:55,733 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 14:02:55,733 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 14:02:59,867 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:03:03,746 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 14:03:03,747 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 14:03:03,747 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 14:03:03,755 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 14:03:04,561 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 14:03:05,756 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:03:06,563 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 14:03:10,733 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 14:03:10,734 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 14:03:10,853 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:03:15,853 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:03:20,855 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:03:25,208 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 14:03:25,733 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 14:03:25,734 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 14:03:25,870 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:03:30,870 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:03:35,871 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:03:40,734 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 14:03:40,734 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 14:03:41,803 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:03:46,803 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:03:48,695 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 14:03:48,696 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 14:03:48,696 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 14:03:48,703 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 14:03:49,599 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 14:03:50,600 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 14:03:52,704 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:03:55,208 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 14:03:55,734 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 14:03:55,734 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 14:03:57,850 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:04:02,850 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:04:07,851 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:04:10,734 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 14:04:10,734 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 14:04:13,819 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:04:18,820 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:04:23,821 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:04:25,209 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 14:04:25,734 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 14:04:25,734 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 14:04:28,839 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:04:33,621 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 14:04:33,622 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 14:04:33,622 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 14:04:33,631 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 14:04:33,640 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 14:04:34,632 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:04:36,643 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 14:04:39,633 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:04:40,734 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 14:04:40,735 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 14:04:44,879 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:04:49,879 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:04:54,880 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:04:55,209 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 14:04:55,734 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 14:04:55,734 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 14:05:00,871 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:05:05,871 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:05:10,734 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 14:05:10,734 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 14:05:11,859 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:05:16,859 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:05:18,635 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 14:05:18,635 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 14:05:18,636 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 14:05:18,643 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 14:05:18,671 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 14:05:20,672 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 14:05:22,644 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:05:25,210 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 14:05:25,734 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 14:05:25,735 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 14:05:27,912 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:05:32,913 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:05:37,914 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:05:40,734 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 14:05:40,735 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 14:05:43,888 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:05:48,888 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:05:53,889 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:05:55,211 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 14:05:55,734 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 14:05:55,735 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 14:05:59,823 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:06:03,583 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-06 14:06:03,583 DEBUG   SenderThread:2915966 [sender.py:send():378] send: history
+2024-06-06 14:06:03,584 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: summary_record
+2024-06-06 14:06:03,591 INFO    SenderThread:2915966 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-06 14:06:03,712 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/wandb-summary.json
+2024-06-06 14:06:04,713 INFO    Thread-12 :2915966 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240606_133154-lpplxpzi/files/output.log
+2024-06-06 14:06:05,592 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:06:10,593 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:06:10,735 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 14:06:10,735 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 14:06:15,821 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:06:20,821 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:06:25,211 DEBUG   SenderThread:2915966 [sender.py:send():378] send: stats
+2024-06-06 14:06:25,735 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-06 14:06:25,735 DEBUG   SenderThread:2915966 [sender.py:send_request():405] send_request: stop_status
+2024-06-06 14:06:25,865 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
+2024-06-06 14:06:30,865 DEBUG   HandlerThread:2915966 [handler.py:handle_request():158] handle_request: status_report
