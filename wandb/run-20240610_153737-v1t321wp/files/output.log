@@ -1,0 +1,42 @@
+
+Global batch 0, avg loss after 100 batches: 0.081  | Global batch 0, avg accuracy after 100 batches: 0.0
+
+Global batch 200, avg loss after 100 batches: 7.854  | avg accuracy (total, from_support) after 100 batches: 0.12 0.01
+Traceback (most recent call last):
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 72, in <module>
+    experiment_base(dataset, p_bursty)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 61, in experiment_base
+    trainer.train()
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 243, in train
+    icl_batch = _convert_dict(next(iter(self.icl_eval_loader)))
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 32, in fetch
+    data.append(next(self.dataset_iter))
+  File "/usr/project/xtmp/yz705/ICL-Experiments/datasets/dataset.py", line 942, in get_fewshot_seq
+    seq_examples = self._create_noisy_image_seq(
+  File "/usr/project/xtmp/yz705/ICL-Experiments/datasets/dataset.py", line 369, in _create_noisy_image_seq
+    c_samples = np.random.choice(
+  File "numpy/random/mtrand.pyx", line 1001, in numpy.random.mtrand.RandomState.choice
+ValueError: Cannot take a larger sample than population when 'replace=False'
+Traceback (most recent call last):
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 72, in <module>
+    experiment_base(dataset, p_bursty)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 61, in experiment_base
+    trainer.train()
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 243, in train
+    icl_batch = _convert_dict(next(iter(self.icl_eval_loader)))
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 32, in fetch
+    data.append(next(self.dataset_iter))
+  File "/usr/project/xtmp/yz705/ICL-Experiments/datasets/dataset.py", line 942, in get_fewshot_seq
+    seq_examples = self._create_noisy_image_seq(
+  File "/usr/project/xtmp/yz705/ICL-Experiments/datasets/dataset.py", line 369, in _create_noisy_image_seq
+    c_samples = np.random.choice(
+  File "numpy/random/mtrand.pyx", line 1001, in numpy.random.mtrand.RandomState.choice
+ValueError: Cannot take a larger sample than population when 'replace=False'

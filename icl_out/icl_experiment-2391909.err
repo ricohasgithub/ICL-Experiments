@@ -13,3 +13,776 @@ wandb: Run `wandb offline` to turn off syncing.
 wandb: Syncing run unique-snowflake-10
 wandb: ⭐️ View project at https://wandb.ai/icl-learning/icl-omniglot
 wandb: 🚀 View run at https://wandb.ai/icl-learning/icl-omniglot/runs/iopcqf1z
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 278, in _process
+    self._hm.handle(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 150, in handle
+    handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 158, in handle_request
+    logger.debug(f"handle_request: {request_type}")
+Message: 'handle_request: status_report'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 278, in _process
+    self._hm.handle(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 150, in handle
+    handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 158, in handle_request
+    logger.debug(f"handle_request: {request_type}")
+Message: 'handle_request: partial_history'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 327, in _process
+    self._sm.send(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 378, in send
+    logger.debug(f"send: {record_type}")
+Message: 'send: history'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 327, in _process
+    self._sm.send(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 385, in send
+    send_handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 405, in send_request
+    logger.debug(f"send_request: {request_type}")
+Message: 'send_request: summary_record'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 327, in _process
+    self._sm.send(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 385, in send
+    send_handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 407, in send_request
+    send_handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 1147, in send_request_summary_record
+    self._update_summary_record(record.request.summary_record.summary)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 1141, in _update_summary_record
+    self._update_summary()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 1163, in _update_summary
+    self._save_file(interface.GlobStr(filenames.SUMMARY_FNAME))
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 1389, in _save_file
+    logger.info("saving file %s with policy %s", fname, policy)
+Message: 'saving file %s with policy %s'
+Arguments: ('wandb-summary.json', 'end')
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/vendor/watchdog_0_9_0/wandb_watchdog/observers/api.py", line 199, in run
+    self.dispatch_events(self.event_queue, self.timeout)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/vendor/watchdog_0_9_0/wandb_watchdog/observers/api.py", line 368, in dispatch_events
+    handler.dispatch(event)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/vendor/watchdog_0_9_0/wandb_watchdog/events.py", line 454, in dispatch
+    _method_map[event_type](event)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/filesync/dir_watcher.py", line 288, in _on_file_modified
+    logger.info(f"file/dir modified: { event.src_path}")
+Message: 'file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240609_160551-iopcqf1z/files/wandb-summary.json'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 278, in _process
+    self._hm.handle(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 150, in handle
+    handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 158, in handle_request
+    logger.debug(f"handle_request: {request_type}")
+Message: 'handle_request: status_report'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 327, in _process
+    self._sm.send(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 378, in send
+    logger.debug(f"send: {record_type}")
+Message: 'send: stats'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 278, in _process
+    self._hm.handle(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 150, in handle
+    handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 158, in handle_request
+    logger.debug(f"handle_request: {request_type}")
+Message: 'handle_request: stop_status'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 327, in _process
+    self._sm.send(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 385, in send
+    send_handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 405, in send_request
+    logger.debug(f"send_request: {request_type}")
+Message: 'send_request: stop_status'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 278, in _process
+    self._hm.handle(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 150, in handle
+    handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 158, in handle_request
+    logger.debug(f"handle_request: {request_type}")
+Message: 'handle_request: status_report'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 278, in _process
+    self._hm.handle(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 150, in handle
+    handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 158, in handle_request
+    logger.debug(f"handle_request: {request_type}")
+Message: 'handle_request: status_report'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 278, in _process
+    self._hm.handle(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 150, in handle
+    handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 158, in handle_request
+    logger.debug(f"handle_request: {request_type}")
+Message: 'handle_request: status_report'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 278, in _process
+    self._hm.handle(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 150, in handle
+    handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 158, in handle_request
+    logger.debug(f"handle_request: {request_type}")
+Message: 'handle_request: stop_status'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 327, in _process
+    self._sm.send(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 385, in send
+    send_handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 405, in send_request
+    logger.debug(f"send_request: {request_type}")
+Message: 'send_request: stop_status'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 278, in _process
+    self._hm.handle(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 150, in handle
+    handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 158, in handle_request
+    logger.debug(f"handle_request: {request_type}")
+Message: 'handle_request: status_report'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 278, in _process
+    self._hm.handle(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 150, in handle
+    handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 158, in handle_request
+    logger.debug(f"handle_request: {request_type}")
+Message: 'handle_request: status_report'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 327, in _process
+    self._sm.send(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 378, in send
+    logger.debug(f"send: {record_type}")
+Message: 'send: stats'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 278, in _process
+    self._hm.handle(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 150, in handle
+    handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 158, in handle_request
+    logger.debug(f"handle_request: {request_type}")
+Message: 'handle_request: status_report'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 278, in _process
+    self._hm.handle(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 150, in handle
+    handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 158, in handle_request
+    logger.debug(f"handle_request: {request_type}")
+Message: 'handle_request: stop_status'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 327, in _process
+    self._sm.send(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 385, in send
+    send_handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 405, in send_request
+    logger.debug(f"send_request: {request_type}")
+Message: 'send_request: stop_status'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 278, in _process
+    self._hm.handle(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 150, in handle
+    handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 158, in handle_request
+    logger.debug(f"handle_request: {request_type}")
+Message: 'handle_request: status_report'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 278, in _process
+    self._hm.handle(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 150, in handle
+    handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 158, in handle_request
+    logger.debug(f"handle_request: {request_type}")
+Message: 'handle_request: status_report'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 278, in _process
+    self._hm.handle(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 150, in handle
+    handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 158, in handle_request
+    logger.debug(f"handle_request: {request_type}")
+Message: 'handle_request: partial_history'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 327, in _process
+    self._sm.send(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 378, in send
+    logger.debug(f"send: {record_type}")
+Message: 'send: history'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 327, in _process
+    self._sm.send(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 385, in send
+    send_handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 405, in send_request
+    logger.debug(f"send_request: {request_type}")
+Message: 'send_request: summary_record'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 327, in _process
+    self._sm.send(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 385, in send
+    send_handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 407, in send_request
+    send_handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 1147, in send_request_summary_record
+    self._update_summary_record(record.request.summary_record.summary)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 1141, in _update_summary_record
+    self._update_summary()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 1163, in _update_summary
+    self._save_file(interface.GlobStr(filenames.SUMMARY_FNAME))
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 1389, in _save_file
+    logger.info("saving file %s with policy %s", fname, policy)
+Message: 'saving file %s with policy %s'
+Arguments: ('wandb-summary.json', 'end')
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/vendor/watchdog_0_9_0/wandb_watchdog/observers/api.py", line 199, in run
+    self.dispatch_events(self.event_queue, self.timeout)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/vendor/watchdog_0_9_0/wandb_watchdog/observers/api.py", line 368, in dispatch_events
+    handler.dispatch(event)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/vendor/watchdog_0_9_0/wandb_watchdog/events.py", line 454, in dispatch
+    _method_map[event_type](event)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/filesync/dir_watcher.py", line 288, in _on_file_modified
+    logger.info(f"file/dir modified: { event.src_path}")
+Message: 'file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240609_160551-iopcqf1z/files/wandb-summary.json'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 278, in _process
+    self._hm.handle(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 150, in handle
+    handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 158, in handle_request
+    logger.debug(f"handle_request: {request_type}")
+Message: 'handle_request: status_report'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 278, in _process
+    self._hm.handle(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 150, in handle
+    handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 158, in handle_request
+    logger.debug(f"handle_request: {request_type}")
+Message: 'handle_request: stop_status'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 327, in _process
+    self._sm.send(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 385, in send
+    send_handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 405, in send_request
+    logger.debug(f"send_request: {request_type}")
+Message: 'send_request: stop_status'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 116] Stale file handle
+Call stack:
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 278, in _process
+    self._hm.handle(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 150, in handle
+    handler(record)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 158, in handle_request
+    logger.debug(f"handle_request: {request_type}")
+Message: 'handle_request: status_report'
+Arguments: ()
+slurmstepd: error: *** JOB 2391909 ON linux57 CANCELLED AT 2024-06-10T16:11:48 ***

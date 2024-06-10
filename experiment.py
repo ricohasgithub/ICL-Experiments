@@ -56,7 +56,7 @@ def experiment_base(dataset, p_bursty):
         grouped=False,
     )
 
-    trainer = Trainer(model, data_generator, seq_generator_factory)
+    trainer = Trainer(model, data_generator, seq_generator_factory, p_bursty=p_bursty, dataset_name=dataset)
     torch.autograd.set_detect_anomaly(True)
     trainer.train()
 

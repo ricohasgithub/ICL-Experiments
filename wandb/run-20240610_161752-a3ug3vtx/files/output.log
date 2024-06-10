@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 72, in <module>
+    experiment_base(dataset, p_bursty)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 61, in experiment_base
+    trainer.train()
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 196, in train
+    iclAccDict = self.compute_accuracy(
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 297, in compute_accuracy
+    accuracy_query = apply_query_mask(correct)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 289, in apply_query_mask
+    values_query = torch.sum(query_mask * values) / torch.sum(query_mask)
+RuntimeError: The size of tensor a (16) must match the size of tensor b (128) at non-singleton dimension 0
+Traceback (most recent call last):
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 72, in <module>
+    experiment_base(dataset, p_bursty)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 61, in experiment_base
+    trainer.train()
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 196, in train
+    iclAccDict = self.compute_accuracy(
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 297, in compute_accuracy
+    accuracy_query = apply_query_mask(correct)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 289, in apply_query_mask
+    values_query = torch.sum(query_mask * values) / torch.sum(query_mask)
+RuntimeError: The size of tensor a (16) must match the size of tensor b (128) at non-singleton dimension 0

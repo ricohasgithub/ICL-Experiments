@@ -6,13 +6,6 @@ import torch.optim as optim
 
 from datasets.dataset import SeqGenerator, _convert_dict
 
-# start a new wandb run to track this script
-wandb.init(
-    # set the wandb project where this run will be logged
-    project="icl-omniglot"
-)
-
-
 class IterDataset(torch.utils.data.IterableDataset):
 
     def __init__(self, generator):
@@ -34,6 +27,8 @@ class Trainer:
         optimizer=optim.Adam,
         num_classes=1623,
         batch_size=16,
+        p_bursty=0.9,
+        dataset_name="omniglot",
     ):
 
         # Instance of model
@@ -85,6 +80,14 @@ class Trainer:
             else "cpu"
             # else "mps" if torch.backends.mps.is_available() else "cpu"
         )
+
+        # Start a new wandb run to track this script
+        wandb.init(
+            # set the wandb project where this run will be logged
+            project="icl-omniglot",
+            name=f"{dataset_name}, {p_bursty}"
+        )
+
 
     def train(self, lr=1e-5, eval_after=100):
 
