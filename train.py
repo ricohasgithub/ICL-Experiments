@@ -66,8 +66,8 @@ class Trainer:
             query_mask = torch.full_like(losses_all, False)
             query_mask[:, -1] = True
 
-            print("Value * mask: ", torch.sum(query_mask * values))
-            print("Mask: ", torch.sum(query_mask))
+            # print("Value * mask: ", torch.sum(query_mask * values))
+            # print("Mask: ", torch.sum(query_mask))
 
             values_query = torch.sum(query_mask * values) / torch.sum(query_mask)
             return values_query
