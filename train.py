@@ -6,6 +6,7 @@ import torch.optim as optim
 
 from datasets.dataset import SeqGenerator, _convert_dict
 
+
 class IterDataset(torch.utils.data.IterableDataset):
 
     def __init__(self, generator):
@@ -82,12 +83,11 @@ class Trainer:
         )
 
         # Start a new wandb run to track this script
-        wandb.init(
-            # set the wandb project where this run will be logged
-            project="icl-omniglot",
-            name=f"{dataset_name}, p_bursty={p_bursty}"
-        )
-
+        # wandb.init(
+        #     # set the wandb project where this run will be logged
+        #     project="icl-omniglot",
+        #     name=f"{dataset_name}, p_bursty={p_bursty}"
+        # )
 
     def train(self, lr=1e-5, eval_after=100):
 
@@ -192,7 +192,9 @@ class Trainer:
                     iwl_preds = self.model(iwl_examples, iwl_labels).transpose(1, 2)
 
                     eval_target_one_hot = (
-                        nn.functional.one_hot(icl_target.to(torch.int64), self.num_classes)
+                        nn.functional.one_hot(
+                            icl_target.to(torch.int64), self.num_classes
+                        )
                         .transpose(1, 2)
                         .to(torch.float32)
                     )
@@ -225,44 +227,44 @@ class Trainer:
                         running_train_support_fewshot_accuracy / eval_after
                     )
 
-                    wandb.log(
-                        {
-                            "global_step": i,
-                            "loss": avg_loss,
-                            "train_acc": avg_accuracy,
-                            "train_common_acc": avg_common_accuracy,
-                            "train_rare_acc": avg_rare_accuracy,
-                            "train_fewshot_acc": avg_fewshot_accuracy,
-                            "train_support_acc": avg_support_accuracy,
-                            "train_support_common_acc": avg_support_common_accuracy,
-                            "train_support_rare_acc": avg_support_rare_accuracy,
-                            "train_support_fewshot_acc": avg_support_fewshot_accuracy,
-                            "icl_eval_acc": iclAccDict["acc"],
-                            "icl_eval_common_acc": iclAccDict["common_acc"],
-                            "icl_eval_rare_acc": iclAccDict["rare_acc"],
-                            "icl_eval_fewshot_acc": iclAccDict["fewshot_acc"],
-                            "icl_eval_support_acc": iclAccDict["support_acc"],
-                            "icl_eval_support_common_acc": iclAccDict[
-                                "support_common_acc"
-                            ],
-                            "icl_eval_support_rare_acc": iclAccDict["support_rare_acc"],
-                            "icl_eval_support_fewshot_acc": iclAccDict[
-                                "support_fewshot_acc"
-                            ],
-                            "iwl_eval_acc": iwlAccDict["acc"],
-                            "iwl_eval_common_acc": iwlAccDict["common_acc"],
-                            "iwl_eval_rare_acc": iwlAccDict["rare_acc"],
-                            "iwl_eval_fewshot_acc": iwlAccDict["fewshot_acc"],
-                            "iwl_eval_support_acc": iwlAccDict["support_acc"],
-                            "iwl_eval_support_common_acc": iwlAccDict[
-                                "support_common_acc"
-                            ],
-                            "iwl_eval_support_rare_acc": iwlAccDict["support_rare_acc"],
-                            "iwl_eval_support_fewshot_acc": iwlAccDict[
-                                "support_fewshot_acc"
-                            ],
-                        }
-                    )
+                    # wandb.log(
+                    #     {
+                    #         "global_step": i,
+                    #         "loss": avg_loss,
+                    #         "train_acc": avg_accuracy,
+                    #         "train_common_acc": avg_common_accuracy,
+                    #         "train_rare_acc": avg_rare_accuracy,
+                    #         "train_fewshot_acc": avg_fewshot_accuracy,
+                    #         "train_support_acc": avg_support_accuracy,
+                    #         "train_support_common_acc": avg_support_common_accuracy,
+                    #         "train_support_rare_acc": avg_support_rare_accuracy,
+                    #         "train_support_fewshot_acc": avg_support_fewshot_accuracy,
+                    #         "icl_eval_acc": iclAccDict["acc"],
+                    #         "icl_eval_common_acc": iclAccDict["common_acc"],
+                    #         "icl_eval_rare_acc": iclAccDict["rare_acc"],
+                    #         "icl_eval_fewshot_acc": iclAccDict["fewshot_acc"],
+                    #         "icl_eval_support_acc": iclAccDict["support_acc"],
+                    #         "icl_eval_support_common_acc": iclAccDict[
+                    #             "support_common_acc"
+                    #         ],
+                    #         "icl_eval_support_rare_acc": iclAccDict["support_rare_acc"],
+                    #         "icl_eval_support_fewshot_acc": iclAccDict[
+                    #             "support_fewshot_acc"
+                    #         ],
+                    #         "iwl_eval_acc": iwlAccDict["acc"],
+                    #         "iwl_eval_common_acc": iwlAccDict["common_acc"],
+                    #         "iwl_eval_rare_acc": iwlAccDict["rare_acc"],
+                    #         "iwl_eval_fewshot_acc": iwlAccDict["fewshot_acc"],
+                    #         "iwl_eval_support_acc": iwlAccDict["support_acc"],
+                    #         "iwl_eval_support_common_acc": iwlAccDict[
+                    #             "support_common_acc"
+                    #         ],
+                    #         "iwl_eval_support_rare_acc": iwlAccDict["support_rare_acc"],
+                    #         "iwl_eval_support_fewshot_acc": iwlAccDict[
+                    #             "support_fewshot_acc"
+                    #         ],
+                    #     }
+                    # )
 
                     if i % (eval_after * 20) == 0:
                         print(

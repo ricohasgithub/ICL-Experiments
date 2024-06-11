@@ -144,9 +144,9 @@ class OmniglotDatasetForSampling:
             data = {}
 
             for image, label in dataloader:
-                image = image.squeeze(
-                    0
-                ).numpy()  # Remove batch dimension and convert to numpy array
+                image = np.transpose(
+                    image.squeeze(0).numpy(), axes=[1, 2, 0]
+                )  # Remove batch dimension and convert to numpy array
                 label = label.item()  # Convert label tensor to int
 
                 if exemplars == "single":
