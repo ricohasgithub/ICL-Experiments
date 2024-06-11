@@ -1,0 +1,89 @@
+
+Files already downloaded and verified
+params: <generator object Trainer.train.<locals>.<genexpr> at 0x1289ac0b0>
+predicted labels: tensor([ 614,  614, 1235,  195, 1374,  614, 1235, 1235, 1235])
+target labels: tensor([661, 661,  19, 602,  30, 661,  19,  19,  19])
+avg_accuracy: 0.0
+Global batch 0, avg loss after 100 batches: 3.164  | Global batch 0, avg accuracy after 100 batches: 0.0
+predicted labels: tensor([ 772, 1408,  425, 1235,  425, 1235, 1235,  425, 1235])
+target labels: tensor([643, 640, 599, 830, 599, 830, 830, 599, 830])
+predicted labels: tensor([425, 425,   7, 425,   7,   7,  51, 425,   7])
+target labels: tensor([847, 847, 945, 365, 945, 945, 302, 847, 945])
+predicted labels: tensor([425, 438, 313, 425, 425, 425, 313, 313, 425])
+target labels: tensor([ 78, 922, 383,  78,  78, 430, 383, 383,  78])
+predicted labels: tensor([313, 313, 438, 438, 313, 438, 438, 313, 438])
+target labels: tensor([960, 960, 229, 229, 110, 229, 229, 960, 229])
+predicted labels: tensor([438, 438, 313, 438, 313, 313, 438, 313, 313])
+target labels: tensor([957, 579,  34, 957,  34, 840, 957,  34,  34])
+predicted labels: tensor([313, 640, 313, 313, 640, 313, 313, 640, 640])
+target labels: tensor([892, 673, 892, 218, 673, 581, 892, 673, 673])
+predicted labels: tensor([640, 313, 640, 313, 313, 640, 313, 313, 640])
+target labels: tensor([254, 469, 254,  46,  46, 254, 509,  46, 254])
+predicted labels: tensor([313, 640, 313, 640, 640, 640, 313, 313, 640])
+target labels: tensor([702, 308, 319, 308, 390, 308, 319, 319, 308])
+predicted labels: tensor([313, 897, 313, 897, 897, 897, 897, 897, 897])
+target labels: tensor([ 67,  95, 461, 324,  95, 324,  95, 324,  95])
+predicted labels: tensor([640, 640, 313, 313, 313, 313, 313, 313, 313])
+target labels: tensor([188, 663, 866, 176, 866, 866, 176, 176, 176])
+predicted labels: tensor([313, 313, 313, 640, 640, 640, 640, 313, 313])
+target labels: tensor([ 84, 803,  84, 702, 702, 702, 316,  84,  84])
+predicted labels: tensor([640, 313, 640, 640, 313, 313, 640, 313, 640])
+target labels: tensor([305, 581, 706, 427, 865,   2, 483,  98,  57])
+predicted labels: tensor([640, 211, 313, 640, 211, 640, 211, 640, 211])
+target labels: tensor([412, 230, 198, 702, 230, 412, 230, 412, 230])
+predicted labels: tensor([640, 211, 211, 640, 640, 640, 640, 640, 640])
+target labels: tensor([ 19, 846,  45,  19, 727, 727, 727,  19, 727])
+predicted labels: tensor([211, 211, 211, 640, 640, 211, 640, 211, 211])
+target labels: tensor([744, 157, 932, 660, 660, 744, 660, 744, 744])
+predicted labels: tensor([211, 211, 211, 211, 211, 640, 211, 211, 640])
+target labels: tensor([ 75, 837, 631, 166,  85, 250, 648, 928, 448])
+predicted labels: tensor([211, 640, 640, 211, 211, 640, 211, 211, 211])
+target labels: tensor([ 98, 963, 230, 942, 679, 655, 932, 835, 456])
+predicted labels: tensor([211, 640, 211, 640, 211, 211, 640, 211, 211])
+target labels: tensor([716, 134, 698, 134, 716,   0, 134, 716, 716])
+predicted labels: tensor([211, 640, 211, 211, 640, 640, 211, 211, 211])
+target labels: tensor([873, 588,  87, 115, 519,  63, 723, 311, 943])
+predicted labels: tensor([211, 211, 211, 211, 211, 640, 211, 640, 211])
+target labels: tensor([149, 339, 355, 961, 548, 466, 505, 332, 581])
+predicted labels: tensor([640, 640, 211, 211, 211, 211, 211, 640, 211])
+target labels: tensor([ 88,  88, 608, 608, 608, 873, 138,  88, 608])
+predicted labels: tensor([211, 640, 211, 640, 211, 640, 211, 211, 211])
+target labels: tensor([434, 278, 194, 278,  14, 278,  14,  14,  14])
+predicted labels: tensor([640, 640, 211, 640, 640, 211, 640, 211, 640])
+target labels: tensor([361, 869, 353, 361, 743, 353, 361, 353, 361])
+predicted labels: tensor([211, 211, 211, 211, 211, 640, 211, 640, 211])
+target labels: tensor([808, 349,  83,  90,  70, 409, 572, 845, 557])
+predicted labels: tensor([211, 211, 211, 211, 640, 211, 211, 211, 211])
+target labels: tensor([573, 607, 955, 607,  81, 573, 607, 573, 573])
+predicted labels: tensor([211, 640, 640, 640, 211, 211, 211, 211, 640])
+target labels: tensor([198, 492, 492, 492, 482, 902, 902, 902, 492])
+predicted labels: tensor([211, 640, 640, 211, 640, 211, 640, 211, 211])
+target labels: tensor([446, 937, 937, 446, 284, 763, 937, 446, 446])
+predicted labels: tensor([211, 640, 211, 640, 640, 211, 211, 640, 211])
+target labels: tensor([745, 929, 874, 364, 929, 745, 745, 929, 745])
+predicted labels: tensor([640, 640, 640, 528, 640, 640, 640, 528, 640])
+target labels: tensor([ 10,  10, 155, 400, 155, 155,  10, 810, 155])
+Traceback (most recent call last):
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py", line 71, in <module>
+    experiment_base(dataset)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py", line 61, in experiment_base
+    trainer.train()
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/train_resnet.py", line 95, in train
+    preds = self.model(torch.permute(examples, (0, 1, 4, 2, 3)))
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 24, in forward
+    return torch.stack([self.sequence_pass(x[i]) for i in range(batch_size)])
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 24, in <listcomp>
+    return torch.stack([self.sequence_pass(x[i]) for i in range(batch_size)])
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 16, in sequence_pass
+    x = super(ProjectionResNet, self).forward(x)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet.py", line 58, in forward
+    z = self.conv1(x)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 457, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 453, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+KeyboardInterrupt

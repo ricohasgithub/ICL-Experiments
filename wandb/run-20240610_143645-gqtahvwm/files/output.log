@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py", line 6, in <module>
+    from models.resnet_with_projection import ProjectionResNet
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 4, in <module>
+    from resnet import CustomResNet
+ModuleNotFoundError: No module named 'resnet'

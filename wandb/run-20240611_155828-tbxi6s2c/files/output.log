@@ -1,0 +1,508 @@
+
+Files already downloaded and verified
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392026901245117
+avg_accuracy: 0.0
+Global batch 0, avg loss after 100 batches: 0.074  | Global batch 0, avg accuracy after 100 batches: 0.0
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392037391662598
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392049312591553
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392054080963135
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392024517059326
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392036437988281
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392018795013428
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39204216003418
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392016887664795
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392001628875732
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392054080963135
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392043113708496
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39203405380249
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.3920111656188965
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392038345336914
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392058372497559
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392049312591553
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39203405380249
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392008304595947
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39200496673584
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392066955566406
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39202880859375
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.3920416831970215
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392024517059326
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392035484313965
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392067909240723
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392021179199219
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392033100128174
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39201021194458
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392024517059326
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392001628875732
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392022132873535
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392050743103027
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392006874084473
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392062664031982
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392019271850586
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.391996383666992
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.3920416831970215
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392035484313965
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392055988311768
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392014503479004
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392040729522705
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392023086547852
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39200496673584
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392016887664795
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392008304595947
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392006874084473
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392040729522705
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392055988311768
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392011642456055
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39201545715332
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39204216003418
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392025470733643
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39202880859375
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392054080963135
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392026901245117
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392020225524902
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392035484313965
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.391998291015625
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392020225524902
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392006874084473
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392038345336914
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392036437988281
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.391990661621094
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392005920410156
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39201021194458
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392006874084473
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392003536224365
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392016887664795
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392055988311768
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392016887664795
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392045021057129
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392000675201416
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392054080963135
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392020225524902
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392025470733643
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.391960144042969
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392017841339111
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39204740524292
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392022132873535
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392006874084473
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39201021194458
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.3920745849609375
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392038345336914
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.3920416831970215
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392008304595947
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392039775848389
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392060279846191
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.391997337341309
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392003536224365
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39202356338501
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.391997337341309
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392032146453857
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392014503479004
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.3919806480407715
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.391994953155518
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392006874084473
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392002582550049
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392016887664795
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.3919854164123535
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392045021057129
+avg_accuracy: 0.001111111119389534
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623]) from_support) after 100 batches: 0.11
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392004013061523
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39204216003418
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392045021057129
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.3920440673828125
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392003536224365
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392007827758789
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392012596130371
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392029762268066
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39201021194458
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392038345336914
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.391999244689941
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39201021194458
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392036437988281
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392007827758789
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.391982078552246
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.391989707946777
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.391994953155518
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392033100128174
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.3919830322265625
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.391989707946777
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392033100128174
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.391990661621094
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39206600189209
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39203405380249
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392014503479004
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392054080963135
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392007827758789
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.391965866088867
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.3920159339904785
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392020225524902
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392019271850586
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392050743103027
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39204216003418
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392001628875732
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39204740524292
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392063617706299
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39201545715332
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.391970157623291
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.391998291015625
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392040729522705
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392003536224365
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392011642456055
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392019271850586
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392024517059326
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.3919830322265625
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392002582550049
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.391987323760986
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392026901245117
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.391994953155518
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392003536224365
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.3920111656188965
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392039775848389
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.391998291015625
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.3920159339904785
+Traceback (most recent call last):
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py", line 71, in <module>
+    experiment_base(dataset)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py", line 61, in experiment_base
+    trainer.train()
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/train_resnet.py", line 95, in train
+    preds = self.model(torch.permute(examples, (0, 1, 4, 2, 3)))
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 41, in forward
+    return torch.stack([self.sequence_pass(x[i]) for i in range(batch_size)])
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 41, in <listcomp>
+    return torch.stack([self.sequence_pass(x[i]) for i in range(batch_size)])
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 33, in sequence_pass
+    x = super(ProjectionResNet, self).forward(x)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet.py", line 63, in forward
+    z = self.layer1(z)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/container.py", line 139, in forward
+    input = module(input)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torchvision/models/resnet.py", line 94, in forward
+    out = self.relu(out)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/activation.py", line 98, in forward
+    return F.relu(input, inplace=self.inplace)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/functional.py", line 1455, in relu
+    result = torch.relu_(input)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/traceback.py", line 197, in format_stack
+    return format_list(extract_stack(f, limit=limit))
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/traceback.py", line 211, in extract_stack
+    stack = StackSummary.extract(walk_stack(f), limit=limit)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/traceback.py", line 359, in extract
+    result.append(FrameSummary(
+KeyboardInterrupt

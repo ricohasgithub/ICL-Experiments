@@ -1,0 +1,324 @@
+2024-06-11 15:58:28,511 INFO    StreamThr :26391 [internal.py:wandb_internal():86] W&B internal server running at pid: 26391, started at: 2024-06-11 15:58:28.510654
+2024-06-11 15:58:28,512 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status
+2024-06-11 15:58:28,515 INFO    WriterThread:26391 [datastore.py:open_for_write():85] open: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/run-tbxi6s2c.wandb
+2024-06-11 15:58:28,516 DEBUG   SenderThread:26391 [sender.py:send():379] send: header
+2024-06-11 15:58:28,533 DEBUG   SenderThread:26391 [sender.py:send():379] send: run
+2024-06-11 15:58:28,817 INFO    SenderThread:26391 [dir_watcher.py:__init__():211] watching files in: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files
+2024-06-11 15:58:28,817 INFO    SenderThread:26391 [sender.py:_start_run_threads():1121] run started: tbxi6s2c with start time 1718135908.512026
+2024-06-11 15:58:28,829 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: check_version
+2024-06-11 15:58:28,830 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: check_version
+2024-06-11 15:58:28,929 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: run_start
+2024-06-11 15:58:28,938 DEBUG   HandlerThread:26391 [system_info.py:__init__():32] System info init
+2024-06-11 15:58:28,938 DEBUG   HandlerThread:26391 [system_info.py:__init__():47] System info init done
+2024-06-11 15:58:28,938 INFO    HandlerThread:26391 [system_monitor.py:start():181] Starting system monitor
+2024-06-11 15:58:28,938 INFO    SystemMonitor:26391 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2024-06-11 15:58:28,939 INFO    HandlerThread:26391 [system_monitor.py:probe():201] Collecting system info
+2024-06-11 15:58:28,939 INFO    SystemMonitor:26391 [interfaces.py:start():190] Started cpu monitoring
+2024-06-11 15:58:28,940 DEBUG   HandlerThread:26391 [system_info.py:probe():196] Probing system
+2024-06-11 15:58:28,942 INFO    SystemMonitor:26391 [interfaces.py:start():190] Started disk monitoring
+2024-06-11 15:58:28,944 INFO    SystemMonitor:26391 [interfaces.py:start():190] Started gpuapple monitoring
+2024-06-11 15:58:28,947 INFO    SystemMonitor:26391 [interfaces.py:start():190] Started memory monitoring
+2024-06-11 15:58:28,948 INFO    SystemMonitor:26391 [interfaces.py:start():190] Started network monitoring
+2024-06-11 15:58:28,953 DEBUG   HandlerThread:26391 [system_info.py:_probe_git():181] Probing git
+2024-06-11 15:58:28,972 DEBUG   HandlerThread:26391 [system_info.py:_probe_git():189] Probing git done
+2024-06-11 15:58:28,972 DEBUG   HandlerThread:26391 [system_info.py:probe():244] Probing system done
+2024-06-11 15:58:28,973 DEBUG   HandlerThread:26391 [system_monitor.py:probe():210] {'os': 'macOS-13.1-arm64-arm-64bit', 'python': '3.9.12', 'heartbeatAt': '2024-06-11T19:58:28.941963', 'startedAt': '2024-06-11T19:58:28.502276', 'docker': None, 'cuda': None, 'args': ('base', 'omniglot'), 'state': 'running', 'program': '/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py', 'codePathLocal': 'experiment_resnet.py', 'codePath': 'experiment_resnet.py', 'git': {'remote': 'git@github.com:ricohasgithub/ICL-Experiments.git', 'commit': '84b77d3a3f88014d6dc545854ad00a06b3cd8269'}, 'email': 'wh169@duke.edu', 'root': '/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments', 'host': 'Starfarmer2mb-2.local', 'username': 'starfarmer2', 'executable': '/usr/local/bin/python3', 'cpu_count': 8, 'cpu_count_logical': 8, 'disk': {'/': {'total': 460.4317207336426, 'used': 443.1928901672363}}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 16.0}}
+2024-06-11 15:58:28,973 INFO    HandlerThread:26391 [system_monitor.py:probe():211] Finished collecting system info
+2024-06-11 15:58:28,973 INFO    HandlerThread:26391 [system_monitor.py:probe():214] Publishing system info
+2024-06-11 15:58:28,973 DEBUG   HandlerThread:26391 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2024-06-11 15:58:28,973 DEBUG   HandlerThread:26391 [system_info.py:_save_pip():68] Saving pip packages done
+2024-06-11 15:58:28,974 INFO    HandlerThread:26391 [system_monitor.py:probe():216] Finished publishing system info
+2024-06-11 15:58:28,980 DEBUG   SenderThread:26391 [sender.py:send():379] send: files
+2024-06-11 15:58:28,980 INFO    SenderThread:26391 [sender.py:_save_file():1375] saving file wandb-metadata.json with policy now
+2024-06-11 15:58:28,985 DEBUG   SenderThread:26391 [sender.py:send():379] send: telemetry
+2024-06-11 15:58:28,986 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-11 15:58:28,986 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: internal_messages
+2024-06-11 15:58:28,986 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: stop_status
+2024-06-11 15:58:29,328 INFO    wandb-upload_0:26391 [upload_job.py:push():131] Uploaded file /var/folders/4c/z8zyjh415_s24ch63vqd34z80000gn/T/tmpktqbmhvawandb/q5z13ad2-wandb-metadata.json
+2024-06-11 15:58:29,823 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/requirements.txt
+2024-06-11 15:58:29,823 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:58:29,823 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/wandb-metadata.json
+2024-06-11 15:58:31,829 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:58:33,177 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-11 15:58:33,177 DEBUG   SenderThread:26391 [sender.py:send():379] send: history
+2024-06-11 15:58:33,177 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: summary_record
+2024-06-11 15:58:33,178 INFO    SenderThread:26391 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-06-11 15:58:33,587 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 15:58:33,834 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/wandb-summary.json
+2024-06-11 15:58:35,843 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:58:37,849 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:58:39,297 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 15:58:39,856 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:58:41,862 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:58:43,871 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:58:43,988 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: internal_messages
+2024-06-11 15:58:43,991 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-11 15:58:43,992 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: stop_status
+2024-06-11 15:58:45,195 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 15:58:45,876 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:58:47,881 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:58:49,890 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:58:50,392 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 15:58:51,897 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:58:53,907 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:58:55,741 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 15:58:55,915 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:58:57,919 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:58:58,994 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: internal_messages
+2024-06-11 15:58:58,994 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-11 15:58:58,995 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: stop_status
+2024-06-11 15:58:59,940 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:01,523 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 15:59:01,939 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/config.yaml
+2024-06-11 15:59:01,939 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:03,948 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:05,952 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:06,655 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 15:59:07,956 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:09,965 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:11,881 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 15:59:11,969 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:13,972 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:13,998 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: internal_messages
+2024-06-11 15:59:14,001 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-11 15:59:14,001 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: stop_status
+2024-06-11 15:59:15,981 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:16,950 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 15:59:17,990 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:19,997 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:22,007 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:22,042 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 15:59:24,016 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:26,024 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:27,773 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 15:59:28,031 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:28,956 DEBUG   SystemMonitor:26391 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2024-06-11 15:59:28,957 DEBUG   SenderThread:26391 [sender.py:send():379] send: telemetry
+2024-06-11 15:59:28,957 DEBUG   SenderThread:26391 [sender.py:send():379] send: stats
+2024-06-11 15:59:29,003 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: internal_messages
+2024-06-11 15:59:29,005 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-11 15:59:29,005 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: stop_status
+2024-06-11 15:59:30,041 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:32,047 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:32,860 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 15:59:34,053 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/config.yaml
+2024-06-11 15:59:34,054 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:36,060 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:38,068 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:38,143 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 15:59:40,075 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:42,081 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:43,884 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 15:59:44,008 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: internal_messages
+2024-06-11 15:59:44,011 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-11 15:59:44,011 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: stop_status
+2024-06-11 15:59:44,088 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:46,098 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:48,107 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:49,258 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 15:59:50,113 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:52,122 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:54,130 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:54,300 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 15:59:56,139 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:58,149 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 15:59:58,960 DEBUG   SenderThread:26391 [sender.py:send():379] send: stats
+2024-06-11 15:59:59,011 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: internal_messages
+2024-06-11 15:59:59,016 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-11 15:59:59,016 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: stop_status
+2024-06-11 15:59:59,599 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 16:00:00,152 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:02,160 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:04,168 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:04,950 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 16:00:06,175 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:08,179 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:08,345 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-11 16:00:08,346 DEBUG   SenderThread:26391 [sender.py:send():379] send: history
+2024-06-11 16:00:08,346 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: summary_record
+2024-06-11 16:00:08,346 INFO    SenderThread:26391 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-06-11 16:00:09,180 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/wandb-summary.json
+2024-06-11 16:00:10,185 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:10,734 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 16:00:12,192 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:14,015 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: internal_messages
+2024-06-11 16:00:14,021 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-11 16:00:14,021 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: stop_status
+2024-06-11 16:00:14,198 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:16,205 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:16,524 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 16:00:18,211 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:20,216 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:22,224 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:22,389 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 16:00:24,235 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:26,244 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:28,021 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 16:00:28,253 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:28,967 DEBUG   SenderThread:26391 [sender.py:send():379] send: stats
+2024-06-11 16:00:29,019 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: internal_messages
+2024-06-11 16:00:29,026 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-11 16:00:29,026 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: stop_status
+2024-06-11 16:00:30,258 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:32,265 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:33,591 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 16:00:34,270 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:36,277 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:38,286 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:38,889 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 16:00:40,293 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:42,300 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:44,019 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 16:00:44,023 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: internal_messages
+2024-06-11 16:00:44,031 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-11 16:00:44,031 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: stop_status
+2024-06-11 16:00:44,306 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:46,313 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:48,321 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:49,803 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 16:00:50,330 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:52,333 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:54,341 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:55,574 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 16:00:56,349 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:58,356 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:00:58,973 DEBUG   SenderThread:26391 [sender.py:send():379] send: stats
+2024-06-11 16:00:59,024 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: internal_messages
+2024-06-11 16:00:59,035 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-11 16:00:59,035 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: stop_status
+2024-06-11 16:00:59,762 DEBUG   SenderThread:26391 [sender.py:send():379] send: exit
+2024-06-11 16:00:59,762 INFO    SenderThread:26391 [sender.py:send_exit():584] handling exit code: 255
+2024-06-11 16:00:59,762 INFO    SenderThread:26391 [sender.py:send_exit():586] handling runtime: 150
+2024-06-11 16:00:59,762 INFO    SenderThread:26391 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-06-11 16:00:59,762 INFO    SenderThread:26391 [sender.py:send_exit():592] send defer
+2024-06-11 16:00:59,763 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: defer
+2024-06-11 16:00:59,763 INFO    HandlerThread:26391 [handler.py:handle_request_defer():170] handle defer: 0
+2024-06-11 16:00:59,763 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: defer
+2024-06-11 16:00:59,763 INFO    SenderThread:26391 [sender.py:send_request_defer():608] handle sender defer: 0
+2024-06-11 16:00:59,763 INFO    SenderThread:26391 [sender.py:transition_state():612] send defer: 1
+2024-06-11 16:00:59,763 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: defer
+2024-06-11 16:00:59,763 INFO    HandlerThread:26391 [handler.py:handle_request_defer():170] handle defer: 1
+2024-06-11 16:00:59,763 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: defer
+2024-06-11 16:00:59,763 INFO    SenderThread:26391 [sender.py:send_request_defer():608] handle sender defer: 1
+2024-06-11 16:00:59,763 INFO    SenderThread:26391 [sender.py:transition_state():612] send defer: 2
+2024-06-11 16:00:59,763 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: defer
+2024-06-11 16:00:59,763 INFO    HandlerThread:26391 [handler.py:handle_request_defer():170] handle defer: 2
+2024-06-11 16:00:59,763 INFO    HandlerThread:26391 [system_monitor.py:finish():190] Stopping system monitor
+2024-06-11 16:00:59,763 DEBUG   SystemMonitor:26391 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2024-06-11 16:00:59,763 INFO    HandlerThread:26391 [interfaces.py:finish():202] Joined cpu monitor
+2024-06-11 16:00:59,763 DEBUG   SystemMonitor:26391 [system_monitor.py:_start():170] Publishing last batch of metrics
+2024-06-11 16:00:59,763 INFO    HandlerThread:26391 [interfaces.py:finish():202] Joined disk monitor
+2024-06-11 16:00:59,764 INFO    HandlerThread:26391 [interfaces.py:finish():202] Joined gpuapple monitor
+2024-06-11 16:00:59,764 INFO    HandlerThread:26391 [interfaces.py:finish():202] Joined memory monitor
+2024-06-11 16:00:59,764 INFO    HandlerThread:26391 [interfaces.py:finish():202] Joined network monitor
+2024-06-11 16:00:59,764 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: defer
+2024-06-11 16:00:59,764 INFO    SenderThread:26391 [sender.py:send_request_defer():608] handle sender defer: 2
+2024-06-11 16:00:59,764 INFO    SenderThread:26391 [sender.py:transition_state():612] send defer: 3
+2024-06-11 16:00:59,764 DEBUG   SenderThread:26391 [sender.py:send():379] send: stats
+2024-06-11 16:00:59,764 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: defer
+2024-06-11 16:00:59,764 INFO    HandlerThread:26391 [handler.py:handle_request_defer():170] handle defer: 3
+2024-06-11 16:00:59,764 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: defer
+2024-06-11 16:00:59,764 INFO    SenderThread:26391 [sender.py:send_request_defer():608] handle sender defer: 3
+2024-06-11 16:00:59,764 INFO    SenderThread:26391 [sender.py:transition_state():612] send defer: 4
+2024-06-11 16:00:59,764 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: defer
+2024-06-11 16:00:59,764 INFO    HandlerThread:26391 [handler.py:handle_request_defer():170] handle defer: 4
+2024-06-11 16:00:59,764 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: defer
+2024-06-11 16:00:59,764 INFO    SenderThread:26391 [sender.py:send_request_defer():608] handle sender defer: 4
+2024-06-11 16:00:59,764 INFO    SenderThread:26391 [sender.py:transition_state():612] send defer: 5
+2024-06-11 16:00:59,764 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: defer
+2024-06-11 16:00:59,764 INFO    HandlerThread:26391 [handler.py:handle_request_defer():170] handle defer: 5
+2024-06-11 16:00:59,765 DEBUG   SenderThread:26391 [sender.py:send():379] send: summary
+2024-06-11 16:00:59,765 INFO    SenderThread:26391 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-06-11 16:00:59,765 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: defer
+2024-06-11 16:00:59,765 INFO    SenderThread:26391 [sender.py:send_request_defer():608] handle sender defer: 5
+2024-06-11 16:00:59,765 INFO    SenderThread:26391 [sender.py:transition_state():612] send defer: 6
+2024-06-11 16:00:59,765 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: defer
+2024-06-11 16:00:59,765 INFO    HandlerThread:26391 [handler.py:handle_request_defer():170] handle defer: 6
+2024-06-11 16:00:59,765 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: defer
+2024-06-11 16:00:59,765 INFO    SenderThread:26391 [sender.py:send_request_defer():608] handle sender defer: 6
+2024-06-11 16:00:59,765 INFO    SenderThread:26391 [sender.py:transition_state():612] send defer: 7
+2024-06-11 16:00:59,765 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: status_report
+2024-06-11 16:00:59,765 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: defer
+2024-06-11 16:00:59,765 INFO    HandlerThread:26391 [handler.py:handle_request_defer():170] handle defer: 7
+2024-06-11 16:00:59,766 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: defer
+2024-06-11 16:00:59,766 INFO    SenderThread:26391 [sender.py:send_request_defer():608] handle sender defer: 7
+2024-06-11 16:01:00,363 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/wandb-summary.json
+2024-06-11 16:01:00,364 INFO    Thread-12 :26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:01:00,767 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: poll_exit
+2024-06-11 16:01:01,793 INFO    SenderThread:26391 [sender.py:transition_state():612] send defer: 8
+2024-06-11 16:01:01,793 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: poll_exit
+2024-06-11 16:01:01,793 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: defer
+2024-06-11 16:01:01,793 INFO    HandlerThread:26391 [handler.py:handle_request_defer():170] handle defer: 8
+2024-06-11 16:01:01,793 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: defer
+2024-06-11 16:01:01,794 INFO    SenderThread:26391 [sender.py:send_request_defer():608] handle sender defer: 8
+2024-06-11 16:01:01,794 INFO    SenderThread:26391 [job_builder.py:build():281] Attempting to build job artifact
+2024-06-11 16:01:01,794 INFO    SenderThread:26391 [job_builder.py:_get_source_type():393] is repo sourced job
+2024-06-11 16:01:01,796 INFO    SenderThread:26391 [job_builder.py:build():369] adding wandb-job metadata file
+2024-06-11 16:01:01,799 INFO    SenderThread:26391 [sender.py:transition_state():612] send defer: 9
+2024-06-11 16:01:01,799 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: defer
+2024-06-11 16:01:01,799 INFO    HandlerThread:26391 [handler.py:handle_request_defer():170] handle defer: 9
+2024-06-11 16:01:01,799 DEBUG   SenderThread:26391 [sender.py:send():379] send: artifact
+2024-06-11 16:01:02,163 INFO    SenderThread:26391 [sender.py:send_artifact():1453] sent artifact job-git_github.com_ricohasgithub_ICL-Experiments.git_experiment_resnet.py - {'id': 'QXJ0aWZhY3Q6ODY2NzcxMzEx', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE4NDQzNTU2MA==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6ODY2NzcxMzEx', 'versionIndex': 1}}}
+2024-06-11 16:01:02,163 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: defer
+2024-06-11 16:01:02,163 INFO    SenderThread:26391 [sender.py:send_request_defer():608] handle sender defer: 9
+2024-06-11 16:01:02,163 INFO    SenderThread:26391 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-06-11 16:01:02,370 INFO    SenderThread:26391 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:01:02,371 INFO    SenderThread:26391 [dir_watcher.py:finish():388] scan: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files
+2024-06-11 16:01:02,371 INFO    SenderThread:26391 [dir_watcher.py:finish():402] scan save: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/requirements.txt requirements.txt
+2024-06-11 16:01:02,371 INFO    SenderThread:26391 [dir_watcher.py:finish():402] scan save: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log output.log
+2024-06-11 16:01:02,375 INFO    SenderThread:26391 [dir_watcher.py:finish():402] scan save: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/config.yaml config.yaml
+2024-06-11 16:01:02,375 INFO    SenderThread:26391 [dir_watcher.py:finish():402] scan save: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/wandb-summary.json wandb-summary.json
+2024-06-11 16:01:02,376 INFO    SenderThread:26391 [dir_watcher.py:finish():402] scan save: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/wandb-metadata.json wandb-metadata.json
+2024-06-11 16:01:02,379 INFO    SenderThread:26391 [sender.py:transition_state():612] send defer: 10
+2024-06-11 16:01:02,381 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: defer
+2024-06-11 16:01:02,381 INFO    HandlerThread:26391 [handler.py:handle_request_defer():170] handle defer: 10
+2024-06-11 16:01:02,383 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: defer
+2024-06-11 16:01:02,384 INFO    SenderThread:26391 [sender.py:send_request_defer():608] handle sender defer: 10
+2024-06-11 16:01:02,384 INFO    SenderThread:26391 [file_pusher.py:finish():175] shutting down file pusher
+2024-06-11 16:01:02,662 INFO    wandb-upload_1:26391 [upload_job.py:push():131] Uploaded file /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/output.log
+2024-06-11 16:01:02,680 INFO    wandb-upload_0:26391 [upload_job.py:push():131] Uploaded file /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/requirements.txt
+2024-06-11 16:01:02,705 INFO    wandb-upload_2:26391 [upload_job.py:push():131] Uploaded file /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/config.yaml
+2024-06-11 16:01:02,717 INFO    wandb-upload_3:26391 [upload_job.py:push():131] Uploaded file /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/files/wandb-summary.json
+2024-06-11 16:01:02,919 INFO    Thread-11 :26391 [sender.py:transition_state():612] send defer: 11
+2024-06-11 16:01:02,920 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: defer
+2024-06-11 16:01:02,920 INFO    HandlerThread:26391 [handler.py:handle_request_defer():170] handle defer: 11
+2024-06-11 16:01:02,921 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: defer
+2024-06-11 16:01:02,921 INFO    SenderThread:26391 [sender.py:send_request_defer():608] handle sender defer: 11
+2024-06-11 16:01:02,921 INFO    SenderThread:26391 [file_pusher.py:join():181] waiting for file pusher
+2024-06-11 16:01:02,921 INFO    SenderThread:26391 [sender.py:transition_state():612] send defer: 12
+2024-06-11 16:01:02,922 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: defer
+2024-06-11 16:01:02,922 INFO    HandlerThread:26391 [handler.py:handle_request_defer():170] handle defer: 12
+2024-06-11 16:01:02,923 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: defer
+2024-06-11 16:01:02,923 INFO    SenderThread:26391 [sender.py:send_request_defer():608] handle sender defer: 12
+2024-06-11 16:01:02,923 INFO    SenderThread:26391 [file_stream.py:finish():594] file stream finish called
+2024-06-11 16:01:03,192 INFO    SenderThread:26391 [file_stream.py:finish():598] file stream finish is done
+2024-06-11 16:01:03,192 INFO    SenderThread:26391 [sender.py:transition_state():612] send defer: 13
+2024-06-11 16:01:03,192 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: defer
+2024-06-11 16:01:03,192 INFO    HandlerThread:26391 [handler.py:handle_request_defer():170] handle defer: 13
+2024-06-11 16:01:03,193 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: defer
+2024-06-11 16:01:03,193 INFO    SenderThread:26391 [sender.py:send_request_defer():608] handle sender defer: 13
+2024-06-11 16:01:03,193 INFO    SenderThread:26391 [sender.py:transition_state():612] send defer: 14
+2024-06-11 16:01:03,193 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: defer
+2024-06-11 16:01:03,194 DEBUG   SenderThread:26391 [sender.py:send():379] send: final
+2024-06-11 16:01:03,194 INFO    HandlerThread:26391 [handler.py:handle_request_defer():170] handle defer: 14
+2024-06-11 16:01:03,194 DEBUG   SenderThread:26391 [sender.py:send():379] send: footer
+2024-06-11 16:01:03,194 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: defer
+2024-06-11 16:01:03,194 INFO    SenderThread:26391 [sender.py:send_request_defer():608] handle sender defer: 14
+2024-06-11 16:01:03,195 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: poll_exit
+2024-06-11 16:01:03,195 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: server_info
+2024-06-11 16:01:03,196 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: get_summary
+2024-06-11 16:01:03,196 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: sampled_history
+2024-06-11 16:01:03,197 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: poll_exit
+2024-06-11 16:01:03,197 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: server_info
+2024-06-11 16:01:03,200 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: internal_messages
+2024-06-11 16:01:03,201 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: job_info
+2024-06-11 16:01:03,281 DEBUG   SenderThread:26391 [sender.py:send_request():406] send_request: job_info
+2024-06-11 16:01:03,282 INFO    MainThread:26391 [wandb_run.py:_footer_history_summary_info():3557] rendering history
+2024-06-11 16:01:03,282 INFO    MainThread:26391 [wandb_run.py:_footer_history_summary_info():3589] rendering summary
+2024-06-11 16:01:03,282 INFO    MainThread:26391 [wandb_run.py:_footer_sync_info():3516] logging synced files
+2024-06-11 16:01:03,283 DEBUG   HandlerThread:26391 [handler.py:handle_request():144] handle_request: shutdown
+2024-06-11 16:01:03,284 INFO    HandlerThread:26391 [handler.py:finish():840] shutting down handler
+2024-06-11 16:01:04,204 INFO    WriterThread:26391 [datastore.py:close():294] close: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240611_155828-tbxi6s2c/run-tbxi6s2c.wandb
+2024-06-11 16:01:04,284 INFO    SenderThread:26391 [sender.py:finish():1531] shutting down sender
+2024-06-11 16:01:04,284 INFO    SenderThread:26391 [file_pusher.py:finish():175] shutting down file pusher
+2024-06-11 16:01:04,285 INFO    SenderThread:26391 [file_pusher.py:join():181] waiting for file pusher

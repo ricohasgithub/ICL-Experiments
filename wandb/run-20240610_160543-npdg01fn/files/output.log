@@ -1,0 +1,240 @@
+
+Files already downloaded and verified
+predicted labels: tensor([1514,  233, 1514,  233, 1514,  233,  233,  233, 1514])
+target labels: tensor([888, 924, 888, 125, 888, 694, 125, 125, 888])
+losses_all: tensor([[-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        ...,
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.]], grad_fn=<NegBackward0>)
+loss: 316.4010314941406
+avg_accuracy: 0.0
+Global batch 0, avg loss after 100 batches: 3.164  | Global batch 0, avg accuracy after 100 batches: 0.0
+predicted labels: tensor([ 233, 1514,  233,  233,  233,  233,  233,  233,  233])
+target labels: tensor([254, 903, 943, 943, 943, 254,   0, 254, 254])
+losses_all: tensor([[2.1972, -0.0000, -0.0000,  ..., -0.0000, -0.0000, -0.0000],
+        [-0.0000, -0.0000, -0.0000,  ..., -0.0000, -0.0000, -0.0000],
+        [-0.0000, -0.0000, -0.0000,  ..., -0.0000, -0.0000, -0.0000],
+        ...,
+        [-0.0000, -0.0000, -0.0000,  ..., -0.0000, -0.0000, -0.0000],
+        [-0.0000, -0.0000, -0.0000,  ..., -0.0000, -0.0000, -0.0000],
+        [-0.0000, -0.0000, -0.0000,  ..., -0.0000, -0.0000, -0.0000]],
+       grad_fn=<NegBackward0>)
+loss: 316.4002990722656
+predicted labels: tensor([ 233, 1514,  233,  233,  233,  233,  233,  233,  233])
+target labels: tensor([780, 603, 906, 522, 906, 522, 522, 906, 906])
+losses_all: tensor([[-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        ...,
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.]], grad_fn=<NegBackward0>)
+loss: 316.40057373046875
+predicted labels: tensor([ 233,  233,  233,  233,  233,  233, 1381,  233,  233])
+target labels: tensor([313, 591, 591, 783, 313, 591, 879, 313, 313])
+losses_all: tensor([[-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        ...,
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.]], grad_fn=<NegBackward0>)
+loss: 316.40045166015625
+predicted labels: tensor([1514,  233, 1514,  233,  233, 1514,  233, 1514, 1514])
+target labels: tensor([523, 531, 553, 531, 418, 523, 531, 523, 523])
+losses_all: tensor([[-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        ...,
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.]], grad_fn=<NegBackward0>)
+loss: 316.39990234375
+predicted labels: tensor([ 233,  233,  233, 1381,  233, 1514,  233,  233,  233])
+target labels: tensor([703, 866, 866, 722, 866, 551, 703, 703, 866])
+losses_all: tensor([[-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        ...,
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.]], grad_fn=<NegBackward0>)
+loss: 316.400146484375
+predicted labels: tensor([233, 233, 233, 233, 233, 233, 233, 233, 233])
+target labels: tensor([167, 167, 550, 550, 204, 472, 167, 550, 550])
+losses_all: tensor([[-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        ...,
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.]], grad_fn=<NegBackward0>)
+loss: 316.4000244140625
+predicted labels: tensor([ 233, 1514,  233, 1569, 1514, 1514, 1514,  233,  233])
+target labels: tensor([606, 602, 606, 238, 602, 602, 157, 606, 606])
+losses_all: tensor([[-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        ...,
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.]], grad_fn=<NegBackward0>)
+loss: 316.4002685546875
+predicted labels: tensor([ 233,  233,  233, 1514, 1514, 1514, 1514,  233,  233])
+target labels: tensor([695,  58,  58, 847, 847, 337, 847,  58,  58])
+losses_all: tensor([[-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        ...,
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.]], grad_fn=<NegBackward0>)
+loss: 316.3999938964844
+predicted labels: tensor([ 233,  233, 1514,  233,  233,  233,  233,  233,  233])
+target labels: tensor([464, 464,  60, 869, 464, 945, 869, 869, 869])
+losses_all: tensor([[-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        ...,
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.]], grad_fn=<NegBackward0>)
+loss: 316.3987731933594
+predicted labels: tensor([233, 233, 233, 233, 233, 233, 233, 233, 233])
+target labels: tensor([254, 254, 684, 179, 684, 741, 254, 684, 254])
+losses_all: tensor([[-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        ...,
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.]], grad_fn=<NegBackward0>)
+loss: 316.39971923828125
+predicted labels: tensor([ 233, 1514,  233,  233,  233,  233,  233,  233,  233])
+target labels: tensor([453, 356, 453, 453, 211, 211, 211, 922, 453])
+losses_all: tensor([[-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        ...,
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.]], grad_fn=<NegBackward0>)
+loss: 316.3997497558594
+predicted labels: tensor([1514,  233, 1514,  233,  233,  233, 1514, 1514, 1514])
+target labels: tensor([532, 206, 532,  81,  81,  81, 659, 532, 532])
+losses_all: tensor([[-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        ...,
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.]], grad_fn=<NegBackward0>)
+loss: 316.4007568359375
+predicted labels: tensor([1514, 1514,  233,  233,  233, 1514,  233, 1514, 1514])
+target labels: tensor([824, 824, 895, 895, 108, 824, 895, 588, 824])
+losses_all: tensor([[-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        ...,
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.]], grad_fn=<NegBackward0>)
+loss: 316.3992614746094
+predicted labels: tensor([ 233,  233,  233,  233,  233, 1514,  233,  233,  233])
+target labels: tensor([ 45, 315, 578, 640, 336, 426,   6, 628, 688])
+losses_all: tensor([[-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        ...,
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.]], grad_fn=<NegBackward0>)
+loss: 316.3993835449219
+predicted labels: tensor([ 233,  233,  233,  233,  233, 1514,  233,  233, 1514])
+target labels: tensor([486, 146, 596, 197, 203, 750, 236, 531, 587])
+losses_all: tensor([[-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        ...,
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.]], grad_fn=<NegBackward0>)
+loss: 316.3997497558594
+predicted labels: tensor([233, 233, 233, 233, 233, 233, 233, 233, 233])
+target labels: tensor([498,  78, 498, 421, 424,  78, 498,  78,  78])
+losses_all: tensor([[-0.0000, -0.0000, -0.0000,  ..., -0.0000, -0.0000, -0.0000],
+        [-0.0000, -0.0000, -0.0000,  ..., -0.0000, -0.0000, -0.0000],
+        [-0.0000, 2.1971, -0.0000,  ..., -0.0000, -0.0000, -0.0000],
+        ...,
+        [-0.0000, -0.0000, -0.0000,  ..., -0.0000, -0.0000, -0.0000],
+        [-0.0000, -0.0000, -0.0000,  ..., -0.0000, -0.0000, -0.0000],
+        [-0.0000, -0.0000, -0.0000,  ..., -0.0000, -0.0000, -0.0000]],
+       grad_fn=<NegBackward0>)
+loss: 316.39892578125
+predicted labels: tensor([1514,  233, 1514,  233,  233,  233, 1514,  233,  233])
+target labels: tensor([371, 210, 371, 846, 846, 458, 371, 846, 846])
+losses_all: tensor([[-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        ...,
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.]], grad_fn=<NegBackward0>)
+loss: 316.3994140625
+predicted labels: tensor([233, 233, 233, 233, 233, 233, 233, 233, 233])
+target labels: tensor([944, 944, 719, 808, 944, 434, 434, 434, 434])
+losses_all: tensor([[-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        ...,
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.]], grad_fn=<NegBackward0>)
+loss: 316.399658203125
+predicted labels: tensor([ 233,  233,  233,  233, 1514,  233,  233,  233,  233])
+target labels: tensor([340, 638, 638, 340, 328, 638, 133, 340, 638])
+losses_all: tensor([[-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        ...,
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.]], grad_fn=<NegBackward0>)
+loss: 316.3995361328125
+predicted labels: tensor([ 233,  233,  233,  233, 1563,  233,  233,  233,  233])
+target labels: tensor([582, 582, 582, 520, 382, 520, 520, 768, 582])
+losses_all: tensor([[-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        ...,
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.],
+        [-0., -0., -0.,  ..., -0., -0., -0.]], grad_fn=<NegBackward0>)
+loss: 316.3996276855469
+Traceback (most recent call last):
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py", line 71, in <module>
+    experiment_base(dataset)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py", line 61, in experiment_base
+    trainer.train()
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/train_resnet.py", line 95, in train
+    preds = self.model(torch.permute(examples, (0, 1, 4, 2, 3)))
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 41, in forward
+    return torch.stack([self.sequence_pass(x[i]) for i in range(batch_size)])
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 41, in <listcomp>
+    return torch.stack([self.sequence_pass(x[i]) for i in range(batch_size)])
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 33, in sequence_pass
+    x = super(ProjectionResNet, self).forward(x)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet.py", line 58, in forward
+    z = self.conv1(x)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 457, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 453, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+KeyboardInterrupt
