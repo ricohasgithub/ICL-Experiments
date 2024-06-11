@@ -11,7 +11,7 @@ from datasets.dataset import GaussianVectorDatasetForSampling
 import torch
 
 
-def experiment_base(dataset):
+def experiment_base(dataset, p_bursty):
 
     if dataset == "synthetic":
         input_embedding = InputEmbedder(linear_input_dim=64, example_encoding="linear")
@@ -30,7 +30,11 @@ def experiment_base(dataset):
             linear_input_dim=11025, example_encoding="resnet"
         )
         seq_generator_factory = SeqGenerator(
-            dataset_for_sampling=OmniglotDatasetForSampling("train"),
+            dataset_for_sampling=OmniglotDatasetForSampling(
+                omniglot_split="all",  # 1623 total classes
+                exemplars="all",  # 'single' / 'separated' / 'all'
+                augment_images=False,
+            ),
             n_rare_classes=1603,  # 1623 - 20
             n_common_classes=10,
             n_holdout_classes=10,
@@ -46,7 +50,7 @@ def experiment_base(dataset):
         seq_len=9,
         shots=3,
         ways=2,
-        p_bursty=0.9,
+        p_bursty=p_bursty,
         p_bursty_common=0,
         p_bursty_zipfian=1,
         non_bursty_type="zipfian",
@@ -56,7 +60,13 @@ def experiment_base(dataset):
         grouped=False,
     )
 
-    trainer = Trainer(model, data_generator, seq_generator_factory)
+    trainer = Trainer(
+        model,
+        data_generator,
+        seq_generator_factory,
+        p_bursty=p_bursty,
+        dataset_name=dataset,
+    )
     torch.autograd.set_detect_anomaly(True)
     trainer.train()
 
@@ -66,8 +76,9 @@ if __name__ == "__main__":
     # Read command line inputs to decide which experiment to run
     experiment_id = sys.argv[1]
     dataset = sys.argv[2]
+    p_bursty = float(sys.argv[3])
 
     if experiment_id == "base":
-        experiment_base(dataset)
+        experiment_base(dataset, p_bursty)
     elif experiment_id == "mixed":
         pass

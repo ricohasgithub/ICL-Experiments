@@ -24,10 +24,11 @@ class GaussianVectorDataset(Dataset):
 
         # Generate ranodm c
         self.class_mean = np.stack(
-            [np.random.rand(1, input_dim) for _ in range(num_classes)], axis=0
+            [np.random.uniform(-1, 1, size=(1, input_dim)) for _ in range(num_classes)],
+            axis=0,
         )
         self.class_covariance = np.stack(
-            [np.identity(input_dim) for _ in range(num_classes)], axis=0
+            [(1 / 8**2) * np.identity(input_dim) for _ in range(num_classes)], axis=0
         )
         self.input_dim = input_dim
 
@@ -143,9 +144,9 @@ class OmniglotDatasetForSampling:
             data = {}
 
             for image, label in dataloader:
-                image = image.squeeze(
-                    0
-                ).numpy()  # Remove batch dimension and convert to numpy array
+                image = np.transpose(
+                    image.squeeze(0).numpy(), axes=[1, 2, 0]
+                )  # Remove batch dimension and convert to numpy array
                 label = label.item()  # Convert label tensor to int
 
                 if exemplars == "single":

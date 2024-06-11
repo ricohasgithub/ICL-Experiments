@@ -1,0 +1,304 @@
+{
+    "os": "Linux-5.15.0-105-generic-x86_64-with-glibc2.35",
+    "python": "3.10.12",
+    "heartbeatAt": "2024-06-10T20:17:34.806992",
+    "startedAt": "2024-06-10T20:17:34.122052",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "base",
+        "omniglot",
+        "0.0"
+    ],
+    "state": "running",
+    "program": "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py",
+    "codePathLocal": "experiment.py",
+    "codePath": "experiment.py",
+    "git": {
+        "remote": "git@github.com:ricohasgithub/ICL-Experiments.git",
+        "commit": "bf0a43cc04bb45ab2fed66f5f3876ceb73f2461b"
+    },
+    "email": "ricozhu2003@gmail.com",
+    "root": "/usr/project/xtmp/yz705/ICL-Experiments",
+    "host": "compsci-cluster-fitz-11",
+    "username": "yz705",
+    "executable": "/bin/python3",
+    "cpu_count": 24,
+    "cpu_count_logical": 48,
+    "cpu_freq": {
+        "current": 3.044708333333333,
+        "min": 800.0,
+        "max": 3600.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.5,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.5,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.53,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.53,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.53,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 1.073,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.5,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.5,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.5,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.515,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.51,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.51,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 3.0,
+            "min": 800.0,
+            "max": 3600.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 3519.267463684082,
+            "used": 160.06536483764648
+        }
+    },
+    "gpu": "NVIDIA RTX A5000",
+    "gpu_count": 4,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA RTX A5000",
+            "memory_total": 25757220864
+        },
+        {
+            "name": "NVIDIA RTX A5000",
+            "memory_total": 25757220864
+        },
+        {
+            "name": "NVIDIA RTX A5000",
+            "memory_total": 25757220864
+        },
+        {
+            "name": "NVIDIA RTX A5000",
+            "memory_total": 25757220864
+        }
+    ],
+    "memory": {
+        "total": 755.2760353088379
+    }
+}

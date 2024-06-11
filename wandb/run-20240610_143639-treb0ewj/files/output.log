@@ -1,0 +1,34 @@
+
+Files already downloaded and verified
+tensor([[1, 1, 0, 0, 0, 0, 1, 1, 0],
+        [1, 0, 0, 1, 1, 0, 0, 1, 0],
+        [0, 0, 1, 0, 1, 0, 1, 1, 1],
+        [1, 0, 0, 0, 1, 1, 1, 0, 0],
+        [1, 0, 1, 0, 1, 1, 0, 0, 1],
+        [0, 0, 1, 0, 1, 0, 1, 1, 1],
+        [0, 1, 0, 1, 1, 0, 1, 0, 1],
+        [0, 1, 0, 0, 0, 1, 1, 1, 1],
+        [1, 1, 0, 0, 1, 1, 0, 0, 0],
+        [1, 1, 0, 0, 1, 0, 1, 0, 0],
+        [0, 0, 1, 1, 1, 1, 0, 0, 0],
+        [1, 0, 1, 0, 0, 1, 1, 0, 0],
+        [0, 0, 0, 1, 1, 1, 1, 0, 1],
+        [1, 1, 0, 0, 1, 0, 1, 0, 0],
+        [0, 1, 1, 0, 1, 1, 0, 0, 1],
+        [1, 1, 0, 0, 1, 1, 0, 0, 0]], device='cuda:0', dtype=torch.int32)
+Traceback (most recent call last):
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 72, in <module>
+    experiment_base(dataset, p_bursty)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 61, in experiment_base
+    trainer.train()
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 291, in train
+    "icl_eval_support_common_acc": iclAccDict[
+KeyError: 'suppor_common_acc'
+Traceback (most recent call last):
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 72, in <module>
+    experiment_base(dataset, p_bursty)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 61, in experiment_base
+    trainer.train()
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 291, in train
+    "icl_eval_support_common_acc": iclAccDict[
+KeyError: 'suppor_common_acc'
