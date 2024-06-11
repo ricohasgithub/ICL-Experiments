@@ -30,7 +30,11 @@ def experiment_base(dataset, p_bursty):
             linear_input_dim=11025, example_encoding="resnet"
         )
         seq_generator_factory = SeqGenerator(
-            dataset_for_sampling=OmniglotDatasetForSampling("train"),
+            dataset_for_sampling=OmniglotDatasetForSampling(
+                omniglot_split="all",  # 1623 total classes
+                exemplars="all",  # 'single' / 'separated' / 'all'
+                augment_images=False,
+            ),
             n_rare_classes=1603,  # 1623 - 20
             n_common_classes=10,
             n_holdout_classes=10,
@@ -56,7 +60,13 @@ def experiment_base(dataset, p_bursty):
         grouped=False,
     )
 
-    trainer = Trainer(model, data_generator, seq_generator_factory, p_bursty=p_bursty, dataset_name=dataset)
+    trainer = Trainer(
+        model,
+        data_generator,
+        seq_generator_factory,
+        p_bursty=p_bursty,
+        dataset_name=dataset,
+    )
     torch.autograd.set_detect_anomaly(True)
     trainer.train()
 
