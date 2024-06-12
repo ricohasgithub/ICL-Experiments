@@ -1,0 +1,111 @@
+
+Global batch 0, avg loss after 100 batches: 0.079  | Global batch 0, avg accuracy after 100 batches: 0.0
+Global batch 100, avg loss after 100 batches: 7.925  | avg accuracy (total, from_support) after 100 batches: 0.0 0.0
+Traceback (most recent call last):
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 82, in <module>
+    experiment_base(dataset, p_bursty)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 71, in experiment_base
+    trainer.train()
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 123, in train
+    preds = self.model(examples, labels).transpose(1, 2)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/transformer.py", line 231, in forward
+    x = self.input_embedder(examples, labels, is_training).to(self.device)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/embedding.py", line 153, in forward
+    h_example = self.resnet(examples)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/embedding.py", line 16, in forward
+    return torch.stack([self.function(x[i]) for i in range(batch_size)])
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/embedding.py", line 16, in <listcomp>
+    return torch.stack([self.function(x[i]) for i in range(batch_size)])
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/resnet.py", line 63, in forward
+    z = self.layer1(z)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torchvision/models/resnet.py", line 96, in forward
+    out = self.conv2(out)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 460, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 456, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 82, in <module>
+    experiment_base(dataset, p_bursty)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 71, in experiment_base
+    trainer.train()
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 123, in train
+    preds = self.model(examples, labels).transpose(1, 2)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/transformer.py", line 231, in forward
+    x = self.input_embedder(examples, labels, is_training).to(self.device)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/embedding.py", line 153, in forward
+    h_example = self.resnet(examples)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/embedding.py", line 16, in forward
+    return torch.stack([self.function(x[i]) for i in range(batch_size)])
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/embedding.py", line 16, in <listcomp>
+    return torch.stack([self.function(x[i]) for i in range(batch_size)])
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/resnet.py", line 63, in forward
+    z = self.layer1(z)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torchvision/models/resnet.py", line 96, in forward
+    out = self.conv2(out)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 460, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 456, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+KeyboardInterrupt
