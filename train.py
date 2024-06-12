@@ -99,7 +99,7 @@ class Trainer:
 
     def train(self, lr=1e-5, eval_after=100):
         
-        optim = self.optimizer(self.model.parameters(), lr=lr)
+        optim = self.optimizer(self.model.parameters())
         scheduler = self.scheduler(optim, lr_lambda=lambda step: self._linear_warmup_and_sqrt_decay(step))
 
         criterion = self.loss_fn(reduction="none")
