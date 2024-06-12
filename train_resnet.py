@@ -4,7 +4,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 from datasets.dataset import SeqGenerator, _convert_dict
 
@@ -104,14 +104,14 @@ class Trainer:
             )
             optim.zero_grad()
 
-            for i in range(9):
-                print(f'labels: {labels[0][i]}')
-                print(examples[0][i].shape)
-                plt.imshow(examples[0][i])
-                plt.show()
+            # for i in range(9):
+            #     print(f'labels: {labels[0][i]}')
+            #     print(examples[0][i].shape)
+            #     plt.imshow(examples[0][i])
+            #     plt.show()
                 
             
-                input()
+            #     input()
 
 
             print(f'examples: {examples.shape}, labels: {labels.shape}, target: {target.shape}')
