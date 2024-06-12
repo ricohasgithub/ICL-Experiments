@@ -64,7 +64,7 @@ class Trainer:
             # else "mps" if torch.backends.mps.is_available() else "cpu"
         )
 
-    def _linear_warmup_and_sqrt_decay(self, step, warmup_steps=1000, lr_max=5e-6):
+    def _linear_warmup_and_sqrt_decay(self, step, warmup_steps=200, lr_max=5e-6):
         if step < warmup_steps:
             return lr_max * step / warmup_steps
         else:
