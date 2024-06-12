@@ -750,3 +750,15 @@
 2024-06-12 13:42:15,466 INFO    Thread-12 :8106 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240612_131628-9ukxe8wm/files/output.log
 2024-06-12 13:42:20,490 DEBUG   HandlerThread:8106 [handler.py:handle_request():158] handle_request: status_report
 2024-06-12 13:42:25,491 DEBUG   HandlerThread:8106 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:42:28,858 DEBUG   SenderThread:8106 [sender.py:send():378] send: stats
+2024-06-12 13:42:30,426 DEBUG   HandlerThread:8106 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-12 13:42:30,426 DEBUG   SenderThread:8106 [sender.py:send_request():405] send_request: stop_status
+2024-06-12 13:42:31,485 DEBUG   HandlerThread:8106 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:42:36,486 DEBUG   HandlerThread:8106 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:42:41,486 DEBUG   HandlerThread:8106 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:42:45,426 DEBUG   HandlerThread:8106 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-12 13:42:45,427 DEBUG   SenderThread:8106 [sender.py:send_request():405] send_request: stop_status
+2024-06-12 13:42:46,579 DEBUG   HandlerThread:8106 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:42:51,579 DEBUG   HandlerThread:8106 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:42:56,580 DEBUG   HandlerThread:8106 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:42:58,860 DEBUG   SenderThread:8106 [sender.py:send():378] send: stats

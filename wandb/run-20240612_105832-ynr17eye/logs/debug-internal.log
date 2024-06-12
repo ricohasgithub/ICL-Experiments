@@ -4767,3 +4767,22 @@
 2024-06-12 13:42:20,953 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: keepalive
 2024-06-12 13:42:23,271 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: status_report
 2024-06-12 13:42:25,955 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-12 13:42:28,272 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:42:30,956 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-12 13:42:33,268 DEBUG   SenderThread:4178583 [sender.py:send():378] send: stats
+2024-06-12 13:42:34,269 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:42:35,957 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-12 13:42:39,270 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:42:40,958 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-12 13:42:42,351 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-12 13:42:42,352 DEBUG   SenderThread:4178583 [sender.py:send():378] send: history
+2024-06-12 13:42:42,353 DEBUG   SenderThread:4178583 [sender.py:send_request():405] send_request: summary_record
+2024-06-12 13:42:42,355 INFO    SenderThread:4178583 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-12 13:42:42,490 INFO    Thread-12 :4178583 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240612_105832-ynr17eye/files/wandb-summary.json
+2024-06-12 13:42:44,356 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:42:44,492 INFO    Thread-12 :4178583 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240612_105832-ynr17eye/files/output.log
+2024-06-12 13:42:45,960 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-12 13:42:49,357 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:42:50,961 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-12 13:42:54,358 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:42:55,970 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: keepalive
