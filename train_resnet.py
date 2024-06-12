@@ -60,7 +60,7 @@ class Trainer:
             # else "mps" if torch.backends.mps.is_available() else "cpu"
         )
 
-    def train(self, lr=1e-5, eval_after=100):
+    def train(self, lr=1e-1, eval_after=100):
 
         def _apply_masks(values):
             # query_mask = torch.full_like(losses_all, False)

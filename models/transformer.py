@@ -191,7 +191,7 @@ class Transformer(nn.Module):
         n_classes=1623,
         n_layers=8,
         n_heads=8,
-        p_dropout=0.1,
+        p_dropout=0.0,
         d_hidden=64,
     ):
         super(Transformer, self).__init__()

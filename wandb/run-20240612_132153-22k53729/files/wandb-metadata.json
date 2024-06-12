@@ -1,0 +1,40 @@
+{
+    "os": "macOS-13.1-arm64-arm-64bit",
+    "python": "3.9.12",
+    "heartbeatAt": "2024-06-12T17:21:54.125954",
+    "startedAt": "2024-06-12T17:21:53.588496",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "base",
+        "omniglot"
+    ],
+    "state": "running",
+    "program": "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py",
+    "codePathLocal": "experiment_resnet.py",
+    "codePath": "experiment_resnet.py",
+    "git": {
+        "remote": "git@github.com:ricohasgithub/ICL-Experiments.git",
+        "commit": "d46a83eb50b9f2e618d86bf05beb151f6cbc22b4"
+    },
+    "email": "wh169@duke.edu",
+    "root": "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments",
+    "host": "Starfarmer2mb-2.local",
+    "username": "starfarmer2",
+    "executable": "/usr/local/bin/python3",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "disk": {
+        "/": {
+            "total": 460.4317207336426,
+            "used": 438.2905693054199
+        }
+    },
+    "gpuapple": {
+        "type": "arm",
+        "vendor": "Apple"
+    },
+    "memory": {
+        "total": 16.0
+    }
+}

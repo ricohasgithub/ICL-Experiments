@@ -11,7 +11,7 @@ class ProjectionResNet(CustomResNet):
         self.num_classes = num_classes
         self.projection_layer = nn.Linear(channels_per_group[3], self.num_classes)
         self.softmax = nn.Softmax(dim=1)
-        self._initialize_weights()
+        # self._initialize_weights()
 
 
     def _initialize_weights(self):
