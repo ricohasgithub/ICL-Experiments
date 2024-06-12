@@ -1559,3 +1559,5 @@ Global batch 154000, avg loss after 100 batches: 3.922  | Global batch 154000, a
 
 
 
+Global batch 156000, avg loss after 100 batches: 3.871  | Global batch 156000, avg accuracy after 100 batches: 17.388 1.71
+

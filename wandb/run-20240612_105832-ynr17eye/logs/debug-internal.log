@@ -4724,3 +4724,46 @@
 2024-06-12 13:40:58,089 INFO    Thread-12 :4178583 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240612_105832-ynr17eye/files/wandb-summary.json
 2024-06-12 13:40:58,089 INFO    Thread-12 :4178583 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240612_105832-ynr17eye/files/output.log
 2024-06-12 13:41:00,526 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:41:00,835 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-12 13:41:03,264 DEBUG   SenderThread:4178583 [sender.py:send():378] send: stats
+2024-06-12 13:41:05,837 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-12 13:41:06,265 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:41:10,838 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-12 13:41:11,266 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:41:15,839 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-12 13:41:16,267 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:41:20,840 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-12 13:41:21,268 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:41:25,842 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-12 13:41:26,269 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:41:30,843 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-12 13:41:31,270 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:41:33,265 DEBUG   SenderThread:4178583 [sender.py:send():378] send: stats
+2024-06-12 13:41:35,844 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-12 13:41:37,267 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:41:40,845 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-12 13:41:42,268 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:41:45,845 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-12 13:41:47,269 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:41:50,069 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-12 13:41:50,071 DEBUG   SenderThread:4178583 [sender.py:send():378] send: history
+2024-06-12 13:41:50,072 DEBUG   SenderThread:4178583 [sender.py:send_request():405] send_request: summary_record
+2024-06-12 13:41:50,074 INFO    SenderThread:4178583 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-12 13:41:50,443 INFO    Thread-12 :4178583 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240612_105832-ynr17eye/files/wandb-summary.json
+2024-06-12 13:41:50,847 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-12 13:41:52,444 INFO    Thread-12 :4178583 [dir_watcher.py:_on_file_modified():288] file/dir modified: /usr/project/xtmp/yz705/ICL-Experiments/wandb/run-20240612_105832-ynr17eye/files/output.log
+2024-06-12 13:41:53,076 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:41:55,848 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-12 13:41:58,077 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:42:00,854 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-12 13:42:03,077 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:42:03,267 DEBUG   SenderThread:4178583 [sender.py:send():378] send: stats
+2024-06-12 13:42:05,862 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-12 13:42:08,269 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:42:10,863 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-12 13:42:13,278 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:42:15,864 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-12 13:42:18,270 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:42:20,953 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-12 13:42:23,271 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: status_report
+2024-06-12 13:42:25,955 DEBUG   HandlerThread:4178583 [handler.py:handle_request():158] handle_request: keepalive

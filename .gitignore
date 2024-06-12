@@ -5,3 +5,4 @@
 /models/__pycache__/*
 /datasets/__pycache__/*
 /icl_out
+/wandb
