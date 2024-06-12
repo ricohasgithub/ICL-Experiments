@@ -26,6 +26,7 @@ class Trainer:
         data_generator_factory,
         loss_fn=nn.CrossEntropyLoss,
         optimizer=optim.Adam,
+        scheduler=optim.lr_scheduler.LambdaLR,
         num_classes=1623,
         batch_size=16,
         p_bursty=0.9,
@@ -74,6 +75,7 @@ class Trainer:
         # Training loop parameters
         self.loss_fn = loss_fn
         self.optimizer = optimizer
+        self.scheduler = scheduler
 
         self.device = torch.device(
             "cuda"
@@ -89,9 +91,17 @@ class Trainer:
             name=f"{dataset_name}, p_bursty={p_bursty}",
         )
 
-    def train(self, lr=1e-5, eval_after=100):
+    def _linear_warmup_and_sqrt_decay(self, step, warmup_steps=1000, lr_max=3e-4):
+        if step < warmup_steps:
+            return lr_max * step / warmup_steps
+        else:
+            return lr_max * (warmup_steps ** 0.5) / (step ** 0.5)
 
+    def train(self, lr=1e-5, eval_after=100):
+        
         optim = self.optimizer(self.model.parameters(), lr=lr)
+        scheduler = self.scheduler(optim, lr_lambda=lambda step: self._linear_warmup_and_sqrt_decay(step))
+
         criterion = self.loss_fn(reduction="none")
 
         self.model.to(self.device)
@@ -140,6 +150,7 @@ class Trainer:
             loss.backward()
 
             optim.step()
+            scheduler.step()
 
             running_loss += loss.item()
 

@@ -109,12 +109,14 @@ class CausalAttention(Attention):
 
 
 class Dense(nn.Module):
-    def __init__(self, in_features, widening_factor=4, p_dropout=0.1, init_scale=1.0):
+    def __init__(self, in_features, widening_factor=4, p_dropout=0.0, init_scale=1.0):
         super(Dense, self).__init__()
         out_features = widening_factor * in_features
         self.linear1 = nn.Linear(in_features, out_features)
         self.linear2 = nn.Linear(out_features, in_features)
         self.p_dropout = p_dropout
+
+        self.dropout = nn.dropout(p=p_dropout)
 
         # Initialize weights
         nn.init.kaiming_uniform_(
@@ -129,7 +131,7 @@ class Dense(nn.Module):
     def forward(self, x):
         x = F.gelu(self.linear1(x))
         x = self.linear2(x)
-        x = F.dropout(x, p=self.p_dropout, training=self.training)
+        x = self.dropout(x)
         return x
 
 
@@ -140,7 +142,7 @@ class TransformerBlock(nn.Module):
         widening_factor=4,
         n_heads=8,
         d_hidden=64,
-        p_dropout=0.1,
+        p_dropout=0.0,
         scaling=1.0,
         bias=True,
     ):

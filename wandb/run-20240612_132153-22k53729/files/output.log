@@ -9,3 +9,43 @@ avg_accuracy: 0.01222222238779068100 batches: 7.392  | avg accuracy (total, from
 avg_accuracy: 0.02777777805924415400 batches: 7.392  | avg accuracy (total, from_support) after 100 batches: 1.22
 avg_accuracy: 0.01555555574595928300 batches: 7.391  | avg accuracy (total, from_support) after 100 batches: 2.78
 avg_accuracy: 0.01666666708886623300 batches: 7.392  | avg accuracy (total, from_support) after 100 batches: 1.56
+avg_accuracy: 0.02000000022351741700 batches: 7.392  | avg accuracy (total, from_support) after 100 batches: 1.67
+avg_accuracy: 0.00777777783572673800 batches: 7.392  | avg accuracy (total, from_support) after 100 batches: 2.0
+avg_accuracy: 0.01444444455206394200 batches: 7.393  | avg accuracy (total, from_support) after 100 batches: 0.78
+avg_accuracy: 0.022222222685813905100 batches: 7.392  | avg accuracy (total, from_support) after 100 batches: 1.44
+avg_accuracy: 0.006666666716337204100 batches: 7.392  | avg accuracy (total, from_support) after 100 batches: 2.22
+avg_accuracy: 0.00666666679084301 100 batches: 7.393  | avg accuracy (total, from_support) after 100 batches: 0.67
+avg_accuracy: 0.013333333507180214100 batches: 7.393  | avg accuracy (total, from_support) after 100 batches: 0.67
+avg_accuracy: 0.022222222462296486100 batches: 7.392  | avg accuracy (total, from_support) after 100 batches: 1.33
+avg_accuracy: 0.008888888955116272100 batches: 7.392  | avg accuracy (total, from_support) after 100 batches: 2.22
+avg_accuracy: 0.021111111268401147100 batches: 7.393  | avg accuracy (total, from_support) after 100 batches: 0.89
+avg_accuracy: 0.0288888893276453r 100 batches: 7.392  | avg accuracy (total, from_support) after 100 batches: 2.11
+avg_accuracy: 0.012222222313284873100 batches: 7.391  | avg accuracy (total, from_support) after 100 batches: 2.89
+avg_accuracy: 0.02111111141741276 100 batches: 7.392  | avg accuracy (total, from_support) after 100 batches: 1.22
+Global batch 2000, avg loss after 100 batches: 7.392  | Global batch 2000, avg accuracy after 100 batches: 2.11
+avg_accuracy: 0.017777778059244156
+Global batch 2100, avg loss after 100 batches: 7.392  | avg accuracy (total, from_support) after 100 batches: 1.78
+Traceback (most recent call last):
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py", line 71, in <module>
+    experiment_base(dataset)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py", line 61, in experiment_base
+    trainer.train()
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/train_resnet.py", line 95, in train
+    preds = self.model(torch.permute(examples, (0, 1, 4, 2, 3)))
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 41, in forward
+    return torch.stack([self.sequence_pass(x[i]) for i in range(batch_size)])
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 41, in <listcomp>
+    return torch.stack([self.sequence_pass(x[i]) for i in range(batch_size)])
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 33, in sequence_pass
+    x = super(ProjectionResNet, self).forward(x)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet.py", line 59, in forward
+    z = self.bn1(z)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/batchnorm.py", line 168, in forward
+    return F.batch_norm(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/functional.py", line 2438, in batch_norm
+    return torch.batch_norm(
+KeyboardInterrupt
