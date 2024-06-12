@@ -178,6 +178,7 @@ class Trainer:
                         "global_step": i,
                         "loss": avg_loss,
                         "acc": avg_accuracy,
+                        "lr": scheduler.get_last_lr()[0],
                     }
                 )
 
