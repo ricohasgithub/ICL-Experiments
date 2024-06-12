@@ -1,0 +1,761 @@
+
+Files already downloaded and verified
+tensor([256,   0, 256,   0, 447,   0, 416,   0, 416,   0, 256,   0, 773,   0,
+        416,   0, 416], dtype=torch.int32)
+tensor([256, 256, 447, 416, 416, 256, 773, 416, 416], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.39201545715332
+avg_accuracy: 0.0
+Global batch 0, avg loss after 100 batches: 0.074  | Global batch 0, avg accuracy after 100 batches: 0.0
+tensor([349,   0, 731,   0, 694,   0, 349,   0, 349,   0, 694,   0, 694,   0,
+        383,   0, 349], dtype=torch.int32)
+tensor([349, 731, 694, 349, 349, 694, 694, 383, 349], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392845153808594
+tensor([417,   0, 131,   0, 831,   0, 305,   0, 752,   0, 319,   0, 661,   0,
+        867,   0, 403], dtype=torch.int32)
+tensor([417, 131, 831, 305, 752, 319, 661, 867, 403], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392461776733398
+tensor([610,   0, 397,   0, 918,   0, 918,   0, 918,   0, 610,   0, 194,   0,
+        610,   0, 918], dtype=torch.int32)
+tensor([610, 397, 918, 918, 918, 610, 194, 610, 918], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.385672569274902
+tensor([  8,   0, 772,   0,   8,   0, 727,   0, 772,   0, 772,   0, 647,   0,
+          8,   0,   8], dtype=torch.int32)
+tensor([  8, 772,   8, 727, 772, 772, 647,   8,   8], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.385416030883789
+tensor([ 36,   0,  36,   0, 283,   0,  36,   0, 403,   0, 649,   0, 649,   0,
+        649,   0, 649], dtype=torch.int32)
+tensor([ 36,  36, 283,  36, 403, 649, 649, 649, 649], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392298221588135
+tensor([303,   0, 815,   0, 303,   0, 303,   0, 361,   0, 361,   0, 340,   0,
+        361,   0, 361], dtype=torch.int32)
+tensor([303, 815, 303, 303, 361, 361, 340, 361, 361], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392269611358643
+tensor([896,   0,  93,   0, 139,   0, 694,   0, 694,   0, 896,   0, 896,   0,
+        694,   0, 694], dtype=torch.int32)
+tensor([896,  93, 139, 694, 694, 896, 896, 694, 694], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392107009887695
+tensor([435,   0, 173,   0, 466,   0, 466,   0, 466,   0, 435,   0, 435,   0,
+        889,   0, 435], dtype=torch.int32)
+tensor([435, 173, 466, 466, 466, 435, 435, 889, 435], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392160415649414
+tensor([  0,   0, 503,   0, 503,   0,   0,   0, 744,   0, 503,   0, 108,   0,
+          0,   0,   0], dtype=torch.int32)
+tensor([  0, 503, 503,   0, 744, 503, 108,   0,   0], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392477035522461
+tensor([224,   0, 307,   0, 307,   0, 766,   0, 766,   0, 307,   0, 294,   0,
+        766,   0, 766], dtype=torch.int32)
+tensor([224, 307, 307, 766, 766, 307, 294, 766, 766], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.3923773765563965
+tensor([253,   0, 735,   0, 794,   0, 794,   0, 735,   0, 794,   0, 735,   0,
+        195,   0, 735], dtype=torch.int32)
+tensor([253, 735, 794, 794, 735, 794, 735, 195, 735], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.388144493103027
+tensor([920,   0, 920,   0, 712,   0, 920,   0, 712,   0, 712,   0, 505,   0,
+        754,   0, 712], dtype=torch.int32)
+tensor([920, 920, 712, 920, 712, 712, 505, 754, 712], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392454147338867
+tensor([452,   0, 932,   0, 932,   0, 932,   0, 835,   0, 324,   0, 835,   0,
+        835,   0, 835], dtype=torch.int32)
+tensor([452, 932, 932, 932, 835, 324, 835, 835, 835], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392983436584473
+tensor([919,   0, 129,   0, 919,   0, 299,   0, 525,   0, 525,   0, 919,   0,
+        525,   0, 919], dtype=torch.int32)
+tensor([919, 129, 919, 299, 525, 525, 919, 525, 919], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.393013000488281
+tensor([613,   0, 805,   0, 805,   0, 376,   0, 376,   0, 954,   0, 376,   0,
+        805,   0, 805], dtype=torch.int32)
+tensor([613, 805, 805, 376, 376, 954, 376, 805, 805], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.393034934997559
+tensor([751,   0, 224,   0, 596,   0, 224,   0, 224,   0, 286,   0, 286,   0,
+        286,   0, 286], dtype=torch.int32)
+tensor([751, 224, 596, 224, 224, 286, 286, 286, 286], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392997741699219
+tensor([445,   0, 468,   0, 468,   0, 476,   0, 445,   0, 468,   0, 445,   0,
+         76,   0, 445], dtype=torch.int32)
+tensor([445, 468, 468, 476, 445, 468, 445,  76, 445], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392919063568115
+tensor([533,   0, 533,   0, 583,   0, 944,   0, 232,   0, 944,   0, 533,   0,
+        944,   0, 944], dtype=torch.int32)
+tensor([533, 533, 583, 944, 232, 944, 533, 944, 944], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.3929266929626465
+tensor([743,   0, 743,   0, 457,   0, 369,   0, 743,   0, 461,   0, 369,   0,
+        369,   0, 369], dtype=torch.int32)
+tensor([743, 743, 457, 369, 743, 461, 369, 369, 369], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392979145050049
+tensor([682,   0, 352,   0,  81,   0, 682,   0,  81,   0,  81,   0, 364,   0,
+        682,   0, 682], dtype=torch.int32)
+tensor([682, 352,  81, 682,  81,  81, 364, 682, 682], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392993450164795
+tensor([399,   0, 295,   0, 675,   0, 295,   0, 399,   0, 295,   0, 399,   0,
+         89,   0, 295], dtype=torch.int32)
+tensor([399, 295, 675, 295, 399, 295, 399,  89, 295], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392972946166992
+tensor([161,   0, 161,   0, 609,   0, 594,   0, 767,   0, 767,   0, 767,   0,
+        161,   0, 161], dtype=torch.int32)
+tensor([161, 161, 609, 594, 767, 767, 767, 161, 161], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.3929009437561035
+tensor([370,   0, 853,   0,   5,   0, 853,   0, 370,   0, 370,   0, 853,   0,
+        836,   0, 853], dtype=torch.int32)
+tensor([370, 853,   5, 853, 370, 370, 853, 836, 853], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.3929290771484375
+tensor([473,   0, 542,   0, 459,   0, 473,   0, 473,   0, 542,   0, 446,   0,
+        542,   0, 473], dtype=torch.int32)
+tensor([473, 542, 459, 473, 473, 542, 446, 542, 473], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392935752868652
+tensor([269,   0, 149,   0, 112,   0, 112,   0, 112,   0, 149,   0, 149,   0,
+        168,   0, 112], dtype=torch.int32)
+tensor([269, 149, 112, 112, 112, 149, 149, 168, 112], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392941951751709
+tensor([950,   0, 235,   0, 235,   0, 652,   0, 741,   0, 235,   0, 652,   0,
+        652,   0, 235], dtype=torch.int32)
+tensor([950, 235, 235, 652, 741, 235, 652, 652, 235], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392903804779053
+tensor([439,   0, 439,   0, 137,   0, 137,   0, 439,   0, 911,   0, 137,   0,
+         36,   0, 439], dtype=torch.int32)
+tensor([439, 439, 137, 137, 439, 911, 137,  36, 439], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392915725708008
+tensor([823,   0, 608,   0, 867,   0, 548,   0, 580,   0, 567,   0, 283,   0,
+        333,   0, 276], dtype=torch.int32)
+tensor([823, 608, 867, 548, 580, 567, 283, 333, 276], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392941951751709
+tensor([863,   0, 863,   0, 677,   0, 677,   0, 241,   0, 863,   0,  50,   0,
+        677,   0, 863], dtype=torch.int32)
+tensor([863, 863, 677, 677, 241, 863,  50, 677, 863], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392937660217285
+tensor([ 21,   0, 251,   0, 303,   0, 251,   0, 303,   0, 251,   0, 401,   0,
+        303,   0, 303], dtype=torch.int32)
+tensor([ 21, 251, 303, 251, 303, 251, 401, 303, 303], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392890930175781
+tensor([297,   0,  99,   0, 797,   0, 565,   0, 297,   0, 565,   0, 297,   0,
+        565,   0, 297], dtype=torch.int32)
+tensor([297,  99, 797, 565, 297, 565, 297, 565, 297], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392922401428223
+tensor([376,   0,  11,   0, 376,   0, 425,   0, 425,   0, 376,   0, 205,   0,
+        425,   0, 376], dtype=torch.int32)
+tensor([376,  11, 376, 425, 425, 376, 205, 425, 376], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392927169799805
+tensor([788,   0, 788,   0, 218,   0, 195,   0, 195,   0, 195,   0, 788,   0,
+        758,   0, 788], dtype=torch.int32)
+tensor([788, 788, 218, 195, 195, 195, 788, 758, 788], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392903804779053
+tensor([784,   0, 879,   0, 680,   0, 784,   0, 312,   0, 312,   0, 312,   0,
+        784,   0, 784], dtype=torch.int32)
+tensor([784, 879, 680, 784, 312, 312, 312, 784, 784], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.39289665222168
+tensor([354,   0, 192,   0, 503,   0, 503,   0, 503,   0, 192,   0, 874,   0,
+        192,   0, 192], dtype=torch.int32)
+tensor([354, 192, 503, 503, 503, 192, 874, 192, 192], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392928123474121
+tensor([396,   0,  60,   0,  60,   0, 716,   0, 616,   0, 716,   0, 716,   0,
+         60,   0,  60], dtype=torch.int32)
+tensor([396,  60,  60, 716, 616, 716, 716,  60,  60], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.39274787902832
+tensor([401,   0, 359,   0, 401,   0, 519,   0, 359,   0, 925,   0, 359,   0,
+        401,   0, 359], dtype=torch.int32)
+tensor([401, 359, 401, 519, 359, 925, 359, 401, 359], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392858505249023
+tensor([ 83,   0, 756,   0, 339,   0,  83,   0,  83,   0, 615,   0, 756,   0,
+        756,   0,  83], dtype=torch.int32)
+tensor([ 83, 756, 339,  83,  83, 615, 756, 756,  83], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392905235290527
+tensor([133,   0, 447,   0, 133,   0, 694,   0, 535,   0, 694,   0, 133,   0,
+        694,   0, 694], dtype=torch.int32)
+tensor([133, 447, 133, 694, 535, 694, 133, 694, 694], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392984867095947
+tensor([179,   0,  26,   0, 776,   0,  26,   0, 299,   0, 776,   0, 776,   0,
+         26,   0,  26], dtype=torch.int32)
+tensor([179,  26, 776,  26, 299, 776, 776,  26,  26], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392988204956055
+tensor([675,   0, 675,   0, 752,   0, 319,   0, 752,   0, 752,   0, 336,   0,
+        675,   0, 752], dtype=torch.int32)
+tensor([675, 675, 752, 319, 752, 752, 336, 675, 752], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392934799194336
+tensor([573,   0, 573,   0, 388,   0, 388,   0, 573,   0, 709,   0, 778,   0,
+        388,   0, 573], dtype=torch.int32)
+tensor([573, 573, 388, 388, 573, 709, 778, 388, 573], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392885208129883
+tensor([940,   0, 428,   0, 940,   0, 515,   0, 510,   0, 940,   0, 515,   0,
+        515,   0, 515], dtype=torch.int32)
+tensor([940, 428, 940, 515, 510, 940, 515, 515, 515], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392918109893799
+tensor([265,   0, 343,   0, 265,   0, 102,   0,  37,   0, 265,   0, 343,   0,
+        343,   0, 343], dtype=torch.int32)
+tensor([265, 343, 265, 102,  37, 265, 343, 343, 343], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392886638641357
+tensor([596,   0, 203,   0, 203,   0, 938,   0, 938,   0, 938,   0, 460,   0,
+        203,   0, 203], dtype=torch.int32)
+tensor([596, 203, 203, 938, 938, 938, 460, 203, 203], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392868995666504
+tensor([224,   0,  28,   0, 721,   0, 224,   0, 128,   0, 224,   0,  28,   0,
+         28,   0,  28], dtype=torch.int32)
+tensor([224,  28, 721, 224, 128, 224,  28,  28,  28], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.391300678253174
+tensor([412,   0, 430,   0, 412,   0,  46,   0, 114,   0, 412,   0, 430,   0,
+        430,   0, 412], dtype=torch.int32)
+tensor([412, 430, 412,  46, 114, 412, 430, 430, 412], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.393017292022705
+tensor([766,   0, 937,   0, 626,   0, 766,   0, 926,   0, 937,   0, 937,   0,
+        766,   0, 766], dtype=torch.int32)
+tensor([766, 937, 626, 766, 926, 937, 937, 766, 766], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.39307975769043
+tensor([725,   0, 725,   0, 896,   0,  61,   0, 725,   0, 896,   0, 896,   0,
+        342,   0, 896], dtype=torch.int32)
+tensor([725, 725, 896,  61, 725, 896, 896, 342, 896], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.39309024810791
+tensor([199,   0, 538,   0, 538,   0, 439,   0, 439,   0, 439,   0, 776,   0,
+        538,   0, 439], dtype=torch.int32)
+tensor([199, 538, 538, 439, 439, 439, 776, 538, 439], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.393087387084961
+tensor([629,   0, 133,   0, 788,   0, 613,   0, 133,   0, 629,   0, 133,   0,
+        629,   0, 629], dtype=torch.int32)
+tensor([629, 133, 788, 613, 133, 629, 133, 629, 629], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.393087387084961
+tensor([369,   0, 369,   0, 780,   0, 918,   0, 880,   0, 780,   0, 780,   0,
+        369,   0, 369], dtype=torch.int32)
+tensor([369, 369, 780, 918, 880, 780, 780, 369, 369], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.393087387084961
+tensor([333,   0, 466,   0, 925,   0, 294,   0, 713,   0, 837,   0,   4,   0,
+        274,   0, 310], dtype=torch.int32)
+tensor([333, 466, 925, 294, 713, 837,   4, 274, 310], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.386149883270264
+tensor([ 69,   0,  69,   0, 887,   0, 175,   0,  69,   0, 157,   0, 175,   0,
+        175,   0, 175], dtype=torch.int32)
+tensor([ 69,  69, 887, 175,  69, 157, 175, 175, 175], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.393085956573486
+tensor([131,   0, 598,   0, 131,   0, 202,   0, 672,   0, 131,   0, 598,   0,
+        598,   0, 598], dtype=torch.int32)
+tensor([131, 598, 131, 202, 672, 131, 598, 598, 598], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.393087387084961
+tensor([123,   0,  74,   0, 331,   0, 155,   0,  74,   0, 331,   0,  74,   0,
+        331,   0, 331], dtype=torch.int32)
+tensor([123,  74, 331, 155,  74, 331,  74, 331, 331], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.393085956573486
+tensor([676,   0, 481,   0, 676,   0, 766,   0, 384,   0, 384,   0, 384,   0,
+        676,   0, 384], dtype=torch.int32)
+tensor([676, 481, 676, 766, 384, 384, 384, 676, 384], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.393089294433594
+tensor([663,   0, 762,   0, 741,   0, 751,   0, 741,   0, 741,   0, 762,   0,
+        762,   0, 741], dtype=torch.int32)
+tensor([663, 762, 741, 751, 741, 741, 762, 762, 741], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.393086910247803
+tensor([307,   0, 267,   0,  36,   0, 267,   0, 410,   0, 307,   0, 267,   0,
+        307,   0, 267], dtype=torch.int32)
+tensor([307, 267,  36, 267, 410, 307, 267, 307, 267], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.393088340759277
+tensor([ 76,   0, 651,   0, 391,   0, 651,   0, 707,   0,  76,   0, 651,   0,
+         76,   0,  76], dtype=torch.int32)
+tensor([ 76, 651, 391, 651, 707,  76, 651,  76,  76], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.393088340759277
+tensor([ 89,   0, 856,   0, 406,   0, 690,   0, 690,   0,  89,   0, 690,   0,
+         89,   0, 690], dtype=torch.int32)
+tensor([ 89, 856, 406, 690, 690,  89, 690,  89, 690], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.39309024810791
+tensor([679,   0, 940,   0, 529,   0, 940,   0,  71,   0, 940,   0,  71,   0,
+         71,   0, 940], dtype=torch.int32)
+tensor([679, 940, 529, 940,  71, 940,  71,  71, 940], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.393085956573486
+tensor([485,   0, 898,   0, 485,   0, 116,   0, 485,   0, 817,   0, 817,   0,
+        817,   0, 485], dtype=torch.int32)
+tensor([485, 898, 485, 116, 485, 817, 817, 817, 485], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.393078327178955
+tensor([936,   0, 245,   0, 543,   0, 359,   0, 107,   0, 853,   0,  35,   0,
+        522,   0, 418], dtype=torch.int32)
+tensor([936, 245, 543, 359, 107, 853,  35, 522, 418], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.393087387084961
+tensor([257,   0, 257,   0,  39,   0, 727,   0, 378,   0, 378,   0, 257,   0,
+        378,   0, 378], dtype=torch.int32)
+tensor([257, 257,  39, 727, 378, 378, 257, 378, 378], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.3930816650390625
+tensor([763,   0,  16,   0, 779,   0, 763,   0,  16,   0, 763,   0, 190,   0,
+         16,   0, 763], dtype=torch.int32)
+tensor([763,  16, 779, 763,  16, 763, 190,  16, 763], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.393080711364746
+tensor([536,   0, 536,   0, 953,   0, 953,   0, 536,   0, 935,   0, 721,   0,
+        953,   0, 953], dtype=torch.int32)
+tensor([536, 536, 953, 953, 536, 935, 721, 953, 953], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.393083572387695
+tensor([367,   0, 367,   0, 367,   0, 126,   0, 923,   0, 923,   0, 923,   0,
+        763,   0, 923], dtype=torch.int32)
+tensor([367, 367, 367, 126, 923, 923, 923, 763, 923], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.393073081970215
+tensor([685,   0, 731,   0, 731,   0, 859,   0, 604,   0, 731,   0, 604,   0,
+        604,   0, 604], dtype=torch.int32)
+tensor([685, 731, 731, 859, 604, 731, 604, 604, 604], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.393076419830322
+tensor([894,   0, 174,   0, 474,   0, 843,   0, 474,   0, 474,   0, 174,   0,
+        174,   0, 174], dtype=torch.int32)
+tensor([894, 174, 474, 843, 474, 474, 174, 174, 174], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.393068313598633
+tensor([401,   0,  36,   0,  36,   0, 144,   0, 144,   0, 196,   0, 144,   0,
+         36,   0,  36], dtype=torch.int32)
+tensor([401,  36,  36, 144, 144, 196, 144,  36,  36], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.393058776855469
+tensor([262,   0, 262,   0, 121,   0, 262,   0,  95,   0, 121,   0, 121,   0,
+        603,   0, 262], dtype=torch.int32)
+tensor([262, 262, 121, 262,  95, 121, 121, 603, 262], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.393057823181152
+tensor([ 83,   0, 337,   0,  83,   0, 506,   0,  83,   0, 252,   0, 337,   0,
+        337,   0, 337], dtype=torch.int32)
+tensor([ 83, 337,  83, 506,  83, 252, 337, 337, 337], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.39302396774292
+tensor([ 43,   0, 132,   0, 132,   0, 132,   0,  43,   0,  63,   0,  43,   0,
+        929,   0,  43], dtype=torch.int32)
+tensor([ 43, 132, 132, 132,  43,  63,  43, 929,  43], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392983436584473
+tensor([677,   0, 591,   0,   7,   0, 591,   0, 677,   0, 339,   0, 677,   0,
+        591,   0, 591], dtype=torch.int32)
+tensor([677, 591,   7, 591, 677, 339, 677, 591, 591], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.393012046813965
+tensor([799,   0, 651,   0, 159,   0, 651,   0, 425,   0, 799,   0, 799,   0,
+        651,   0, 799], dtype=torch.int32)
+tensor([799, 651, 159, 651, 425, 799, 799, 651, 799], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.39299201965332
+tensor([491,   0, 144,   0,  30,   0, 144,   0,  30,   0,  30,   0, 794,   0,
+        144,   0, 144], dtype=torch.int32)
+tensor([491, 144,  30, 144,  30,  30, 794, 144, 144], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392934799194336
+tensor([ 38,   0, 619,   0, 435,   0, 435,   0, 313,   0, 435,   0, 619,   0,
+        619,   0, 619], dtype=torch.int32)
+tensor([ 38, 619, 435, 435, 313, 435, 619, 619, 619], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.3929266929626465
+tensor([725,   0, 725,   0, 176,   0, 884,   0, 884,   0, 778,   0, 884,   0,
+        725,   0, 884], dtype=torch.int32)
+tensor([725, 725, 176, 884, 884, 778, 884, 725, 884], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.39288854598999
+tensor([655,   0, 203,   0, 601,   0, 203,   0, 775,   0, 203,   0, 601,   0,
+        601,   0, 601], dtype=torch.int32)
+tensor([655, 203, 601, 203, 775, 203, 601, 601, 601], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392915725708008
+tensor([508,   0, 508,   0, 895,   0, 508,   0, 353,   0, 895,   0, 895,   0,
+        289,   0, 508], dtype=torch.int32)
+tensor([508, 508, 895, 508, 353, 895, 895, 289, 508], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392936706542969
+tensor([501,   0, 854,   0, 191,   0, 854,   0, 854,   0, 191,   0, 191,   0,
+        922,   0, 191], dtype=torch.int32)
+tensor([501, 854, 191, 854, 854, 191, 191, 922, 191], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.3929009437561035
+tensor([953,   0, 277,   0, 277,   0, 950,   0, 358,   0, 953,   0, 953,   0,
+        277,   0, 277], dtype=torch.int32)
+tensor([953, 277, 277, 950, 358, 953, 953, 277, 277], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.39293098449707
+tensor([274,   0, 495,   0, 272,   0, 852,   0, 852,   0, 852,   0, 272,   0,
+        272,   0, 852], dtype=torch.int32)
+tensor([274, 495, 272, 852, 852, 852, 272, 272, 852], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392908096313477
+tensor([312,   0, 927,   0, 312,   0, 927,   0, 312,   0, 273,   0, 741,   0,
+        927,   0, 927], dtype=torch.int32)
+tensor([312, 927, 312, 927, 312, 273, 741, 927, 927], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392919063568115
+tensor([927,   0, 652,   0, 132,   0, 132,   0, 927,   0, 927,   0, 347,   0,
+        132,   0, 927], dtype=torch.int32)
+tensor([927, 652, 132, 132, 927, 927, 347, 132, 927], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.39290189743042
+tensor([806,   0, 927,   0, 443,   0, 647,   0, 868,   0, 526,   0, 888,   0,
+        239,   0, 897], dtype=torch.int32)
+tensor([806, 927, 443, 647, 868, 526, 888, 239, 897], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392902851104736
+tensor([481,   0,  30,   0,  30,   0, 481,   0,  30,   0, 481,   0, 952,   0,
+        104,   0,  30], dtype=torch.int32)
+tensor([481,  30,  30, 481,  30, 481, 952, 104,  30], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392909526824951
+tensor([942,   0, 411,   0, 873,   0, 873,   0, 873,   0, 505,   0, 411,   0,
+        411,   0, 873], dtype=torch.int32)
+tensor([942, 411, 873, 873, 873, 505, 411, 411, 873], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392911434173584
+tensor([854,   0, 854,   0,  45,   0, 490,   0,  45,   0, 216,   0,  45,   0,
+        854,   0,  45], dtype=torch.int32)
+tensor([854, 854,  45, 490,  45, 216,  45, 854,  45], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392911434173584
+tensor([366,   0, 421,   0, 438,   0, 509,   0, 421,   0, 509,   0, 509,   0,
+        421,   0, 509], dtype=torch.int32)
+tensor([366, 421, 438, 509, 421, 509, 509, 421, 509], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392900466918945
+tensor([823,   0, 597,   0, 271,   0, 597,   0, 953,   0, 823,   0, 823,   0,
+        597,   0, 823], dtype=torch.int32)
+tensor([823, 597, 271, 597, 953, 823, 823, 597, 823], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392914772033691
+tensor([613,   0, 528,   0, 107,   0,   5,   0, 179,   0, 251,   0, 898,   0,
+        677,   0, 587], dtype=torch.int32)
+tensor([613, 528, 107,   5, 179, 251, 898, 677, 587], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392889976501465
+tensor([490,   0, 490,   0, 707,   0, 725,   0, 490,   0,  38,   0, 707,   0,
+        707,   0, 707], dtype=torch.int32)
+tensor([490, 490, 707, 725, 490,  38, 707, 707, 707], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.39289665222168
+tensor([288,   0, 712,   0, 271,   0, 271,   0, 506,   0, 271,   0, 288,   0,
+        288,   0, 288], dtype=torch.int32)
+tensor([288, 712, 271, 271, 506, 271, 288, 288, 288], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392880916595459
+tensor([589,   0, 612,   0, 589,   0, 589,   0, 602,   0, 602,   0, 779,   0,
+        602,   0, 589], dtype=torch.int32)
+tensor([589, 612, 589, 589, 602, 602, 779, 602, 589], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392885684967041
+tensor([395,   0,  16,   0, 689,   0, 689,   0, 367,   0, 689,   0, 395,   0,
+        395,   0, 689], dtype=torch.int32)
+tensor([395,  16, 689, 689, 367, 689, 395, 395, 689], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392889022827148
+tensor([855,   0, 881,   0, 411,   0,  20,   0,  20,   0, 411,   0,  20,   0,
+        411,   0,  20], dtype=torch.int32)
+tensor([855, 881, 411,  20,  20, 411,  20, 411,  20], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.39290189743042
+tensor([727,   0, 519,   0, 523,   0, 181,   0, 523,   0, 523,   0, 519,   0,
+        519,   0, 519], dtype=torch.int32)
+tensor([727, 519, 523, 181, 523, 523, 519, 519, 519], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392910480499268
+tensor([449,   0, 888,   0, 787,   0,  60,   0, 888,   0,  60,   0,  60,   0,
+        888,   0, 888], dtype=torch.int32)
+tensor([449, 888, 787,  60, 888,  60,  60, 888, 888], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392893314361572
+avg_accuracy: 0.007777777777777778
+tensor([428,   0, 236,   0, 428,   0,  43,   0,  43,   0, 428,   0, 297,   0,rom_support) after 100 batches: 0.78
+         43,   0,  43], dtype=torch.int32)
+tensor([428, 236, 428,  43,  43, 428, 297,  43,  43], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.3928985595703125
+tensor([669,   0, 240,   0,  38,   0,  38,   0, 140,   0,  38,   0, 669,   0,
+        669,   0,  38], dtype=torch.int32)
+tensor([669, 240,  38,  38, 140,  38, 669, 669,  38], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.392908096313477
+tensor([835,   0, 356,   0, 358,   0, 356,   0, 106,   0, 358,   0, 358,   0,
+        356,   0, 356], dtype=torch.int32)
+tensor([835, 356, 358, 356, 106, 358, 358, 356, 356], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.382845401763916
+tensor([663, 120,  42, 120,  50, 663, 120, 663, 663], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.393088340759277
+tensor([134,   0, 658,   0, 134,   0, 134,   0, 680,   0, 680,   0, 680,   0,
+        316,   0, 680], dtype=torch.int32)
+tensor([134, 658, 134, 134, 680, 680, 680, 316, 680], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.39309024810791
+tensor([724,   0, 208,   0, 208,   0, 208,   0, 724,   0, 666,   0, 635,   0,
+        724,   0, 208], dtype=torch.int32)
+tensor([724, 208, 208, 208, 724, 666, 635, 724, 208], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.365311622619629
+losses_all: torch.Size([]),  50, 663, 120, 663, 663], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+loss: 7.393089294433594
+tensor([595,   0, 887,   0, 211,   0, 180,   0, 528,   0, 412,   0, 118,   0,
+        830,   0, 748], dtype=torch.int32)
+tensor([595, 887, 211, 180, 528, 412, 118, 830, 748], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.393089294433594
+tensor([880,   0, 283,   0, 286,   0, 880,   0, 271,   0, 880,   0, 271,   0,rom_support) after 100 batches: 0.78
+        271,   0, 880], dtype=torch.int32)
+tensor([880, 283, 286, 880, 271, 880, 271, 271, 880], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.39309024810791
+tensor([626, 626, 154, 626, 154, 136, 613, 154, 154], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([])
+loss: 7.39309024810791
+tensor([626, 626, 154, 626, 154, 136, 613, 154, 154], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 154, 136, 613, 154, 154], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+tensor([569,   0,  47,   0, 354,   0,  72,   0, 325,   0, 441,   0,  40,   0,rom_support) after 100 batches: 0.78
+tensor([404, 501, 404, 404, 389, 501, 501, 684, 404], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 389, 501, 501, 684, 404], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 389, 501, 501, 684, 404], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+tensor([344,   0,  26,   0, 933,   0, 344,   0, 575,   0, 344,   0, 933,   0,rom_support) after 100 batches: 0.78
+tensor([568, 409, 409, 526, 220, 220, 409, 220, 220], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 220, 220, 409, 220, 220], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+tensor([474,   0, 711,   0, 711,   0,  10,   0,  10,   0, 239,   0,  10,   0,rom_support) after 100 batches: 0.78
+tensor([474,   0, 711,   0, 711,   0,  10,   0,  10,   0, 239,   0,  10,   0,rom_support) after 100 batches: 0.78
+tensor([521, 666, 507, 521, 521, 293, 293, 293, 521], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 521, 293, 293, 293, 521], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+tensor([816,   0, 898,   0, 816,   0, 486,   0, 905,   0, 816,   0, 486,   0,rom_support) after 100 batches: 0.78
+tensor([839, 902, 916, 916, 911, 916, 902, 902, 916], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 911, 916, 902, 902, 916], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 911, 916, 902, 902, 916], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+tensor([952,   0, 921,   0, 711,   0, 952,   0, 332,   0, 711,   0, 952,   0,rom_support) after 100 batches: 0.78
+tensor([535, 358, 877, 569, 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+losses_all: torch.Size([]), 358, 535, 535, 358, 535], dtype=torch.int32)   0,rom_support) after 100 batches: 0.78
+Traceback (most recent call last):
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py", line 71, in <module>
+    experiment_base(dataset)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py", line 61, in experiment_base
+    trainer.train()
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/train_resnet.py", line 95, in train
+    preds = self.model(torch.permute(examples, (0, 1, 4, 2, 3)))
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 41, in forward
+    return torch.stack([self.sequence_pass(x[i]) for i in range(batch_size)])
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 41, in <listcomp>
+    return torch.stack([self.sequence_pass(x[i]) for i in range(batch_size)])
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 33, in sequence_pass
+    x = super(ProjectionResNet, self).forward(x)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet.py", line 63, in forward
+    z = self.layer1(z)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/container.py", line 139, in forward
+    input = module(input)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torchvision/models/resnet.py", line 92, in forward
+    out = self.conv1(x)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 457, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 453, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+KeyboardInterrupt

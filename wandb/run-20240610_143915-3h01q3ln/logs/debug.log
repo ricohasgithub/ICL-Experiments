@@ -1,0 +1,28 @@
+2024-06-10 14:39:15,046 INFO    MainThread:13439 [wandb_setup.py:_flush():76] Current SDK version is 0.15.10
+2024-06-10 14:39:15,047 INFO    MainThread:13439 [wandb_setup.py:_flush():76] Configure stats pid to 13439
+2024-06-10 14:39:15,047 INFO    MainThread:13439 [wandb_setup.py:_flush():76] Loading settings from /Users/starfarmer2/.config/wandb/settings
+2024-06-10 14:39:15,047 INFO    MainThread:13439 [wandb_setup.py:_flush():76] Loading settings from /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/settings
+2024-06-10 14:39:15,047 INFO    MainThread:13439 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-06-10 14:39:15,047 INFO    MainThread:13439 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-06-10 14:39:15,047 INFO    MainThread:13439 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'experiment_resnet.py', 'program': '/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py'}
+2024-06-10 14:39:15,047 INFO    MainThread:13439 [wandb_init.py:_log_setup():524] Logging user logs to /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_143915-3h01q3ln/logs/debug.log
+2024-06-10 14:39:15,047 INFO    MainThread:13439 [wandb_init.py:_log_setup():525] Logging internal logs to /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_143915-3h01q3ln/logs/debug-internal.log
+2024-06-10 14:39:15,047 INFO    MainThread:13439 [wandb_init.py:init():564] calling init triggers
+2024-06-10 14:39:15,047 INFO    MainThread:13439 [wandb_init.py:init():571] wandb.init called with sweep_config: {}
+config: {}
+2024-06-10 14:39:15,047 INFO    MainThread:13439 [wandb_init.py:init():614] starting backend
+2024-06-10 14:39:15,047 INFO    MainThread:13439 [wandb_init.py:init():618] setting up manager
+2024-06-10 14:39:15,049 INFO    MainThread:13439 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2024-06-10 14:39:15,050 INFO    MainThread:13439 [wandb_init.py:init():624] backend started and connected
+2024-06-10 14:39:15,054 INFO    MainThread:13439 [wandb_init.py:init():715] updated telemetry
+2024-06-10 14:39:15,061 INFO    MainThread:13439 [wandb_init.py:init():748] communicating run to backend with 90.0 second timeout
+2024-06-10 14:39:15,302 INFO    MainThread:13439 [wandb_run.py:_on_init():2220] communicating current version
+2024-06-10 14:39:15,402 INFO    MainThread:13439 [wandb_run.py:_on_init():2229] got version response upgrade_message: "wandb version 0.17.1 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-06-10 14:39:15,402 INFO    MainThread:13439 [wandb_init.py:init():799] starting run threads in backend
+2024-06-10 14:39:15,453 INFO    MainThread:13439 [wandb_run.py:_console_start():2199] atexit reg
+2024-06-10 14:39:15,453 INFO    MainThread:13439 [wandb_run.py:_redirect():2054] redirect: wrap_raw
+2024-06-10 14:39:15,453 INFO    MainThread:13439 [wandb_run.py:_redirect():2119] Wrapping output streams.
+2024-06-10 14:39:15,453 INFO    MainThread:13439 [wandb_run.py:_redirect():2144] Redirects installed.
+2024-06-10 14:39:15,454 INFO    MainThread:13439 [wandb_init.py:init():840] run started, returning control to user process
+2024-06-10 14:39:24,111 WARNING MsgRouterThr:13439 [router.py:message_loop():77] message_loop has been closed

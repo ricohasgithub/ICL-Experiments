@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py", line 71, in <module>
+    experiment_base(dataset)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py", line 59, in experiment_base
+    trainer = Trainer(model, data_generator, seq_generator_factory)
+UnboundLocalError: local variable 'seq_generator_factory' referenced before assignment

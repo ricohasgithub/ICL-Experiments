@@ -129,13 +129,6 @@ class Trainer:
             )
             losses_all = criterion(preds, target_one_hot)
 
-            def _apply_masks(values, losses_all):
-                query_mask = torch.full_like(losses_all, False)
-                query_mask[:, -1] = True
-
-                values_query = torch.sum(query_mask * values) / torch.sum(query_mask)
-                return values_query
-
             # Compute query mask on loss to only retain loss for the query entry (last column)
             query_mask = torch.full_like(losses_all, False)
             # print(preds.shape, target_one_hot.shape, losses_all.shape, query_mask.shape)
@@ -191,18 +184,37 @@ class Trainer:
                     icl_preds = self.model(icl_examples, icl_labels).transpose(1, 2)
                     iwl_preds = self.model(iwl_examples, iwl_labels).transpose(1, 2)
 
-                    eval_target_one_hot = (
+                    eval_icl_target_one_hot = (
                         nn.functional.one_hot(
                             icl_target.to(torch.int64), self.num_classes
                         )
                         .transpose(1, 2)
                         .to(torch.float32)
                     )
-                    eval_losses_all = criterion(icl_preds, eval_target_one_hot)
+                    eval_iwl_target_one_hot = (
+                        nn.functional.one_hot(
+                            iwl_target.to(torch.int64), self.num_classes
+                        )
+                        .transpose(1, 2)
+                        .to(torch.float32)
+                    )
 
-                    eval_query_mask = torch.full_like(eval_losses_all, False)
+                    eval_icl_losses_all = criterion(icl_preds, eval_icl_target_one_hot)
+                    eval_iwl_losses_all = criterion(iwl_preds, eval_iwl_target_one_hot)
+
+                    eval_query_mask = torch.full_like(eval_icl_losses_all, False)
                     # print(preds.shape, target_one_hot.shape, losses_all.shape, query_mask.shape)
                     eval_query_mask[:, -1] = True
+
+                    icl_loss = torch.sum(
+                        eval_icl_losses_all * eval_query_mask
+                    ) / torch.sum(eval_query_mask)
+                    iwl_loss = torch.sum(
+                        eval_iwl_losses_all * eval_query_mask
+                    ) / torch.sum(eval_query_mask)
+
+                    icl_loss = icl_loss.item()
+                    iwl_loss = iwl_loss.item()
 
                     iclAccDict = self.compute_accuracy(
                         icl_preds, icl_target, eval_query_mask
@@ -231,6 +243,8 @@ class Trainer:
                         {
                             "global_step": i,
                             "loss": avg_loss,
+                            "eval_icl_loss": icl_loss,
+                            "eval_iwl_loss": iwl_loss,
                             "train_acc": avg_accuracy,
                             "train_common_acc": avg_common_accuracy,
                             "train_rare_acc": avg_rare_accuracy,

@@ -1,0 +1,27 @@
+
+Files already downloaded and verified
+Examples shape: torch.Size([16, 9, 105, 105, 1]), Labels shape: torch.Size([16, 9]), Target shape: torch.Size([16, 17])
+Traceback (most recent call last):
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py", line 71, in <module>
+    experiment_base(dataset)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py", line 61, in experiment_base
+    trainer.train()
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/train_resnet.py", line 95, in train
+    preds = self.model(examples).transpose(1, 2)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 24, in forward
+    return torch.stack([self.sequence_pass(x[i]) for i in range(batch_size)])
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 24, in <listcomp>
+    return torch.stack([self.sequence_pass(x[i]) for i in range(batch_size)])
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 16, in sequence_pass
+    x = super(ProjectionResNet, self).forward(x)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet.py", line 58, in forward
+    z = self.conv1(x)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 457, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 453, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: Given groups=1, weight of size [64, 1, 7, 7], expected input[9, 105, 105, 1] to have 1 channels, but got 105 channels instead

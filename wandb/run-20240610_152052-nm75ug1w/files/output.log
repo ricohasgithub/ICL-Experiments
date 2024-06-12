@@ -1,0 +1,73 @@
+
+Files already downloaded and verified
+params: <generator object Module.parameters at 0x126bb3040>
+predicted labels: tensor([1480, 1480, 1480, 1480, 1480, 1480, 1480, 1480, 1480])
+target labels: tensor([191, 527, 820, 400, 400, 820, 400, 820, 400])
+avg_accuracy: 0.0
+Global batch 0, avg loss after 100 batches: 3.164  | Global batch 0, avg accuracy after 100 batches: 0.0
+predicted labels: tensor([ 191,  191, 1480,  817,  191,  817,  191,  817,  191])
+target labels: tensor([304, 304,  54, 893, 717, 893, 304, 893, 304])
+predicted labels: tensor([327, 327, 327, 327, 303, 303, 178, 303, 327])
+target labels: tensor([766, 766, 766, 537, 134, 134, 920, 134, 766])
+predicted labels: tensor([579, 303, 303, 579, 579,  54, 303, 303, 303])
+target labels: tensor([590, 373, 744, 590, 590, 499, 744, 744, 744])
+predicted labels: tensor([579,  54, 579,  54,  54, 579,  54,  54, 579])
+target labels: tensor([463, 796, 463, 796, 481, 463, 796, 481, 463])
+predicted labels: tensor([579, 178, 579, 178, 178, 579, 579, 178, 178])
+target labels: tensor([ 28, 685,  28, 346, 685, 404,  28, 685, 685])
+predicted labels: tensor([ 54, 579, 178, 579, 579, 579, 579, 579, 579])
+target labels: tensor([712, 423,  62, 423, 224, 224, 224, 423, 423])
+predicted labels: tensor([579, 579, 579, 481, 481, 579, 579, 579, 579])
+target labels: tensor([909, 129, 129, 176, 763, 129, 909, 909, 909])
+predicted labels: tensor([481, 481, 157, 579, 481, 157, 157, 481, 481])
+target labels: tensor([481, 373, 135, 213, 200, 494, 816, 940, 742])
+predicted labels: tensor([157, 481, 157, 481, 481, 481, 157, 481, 481])
+target labels: tensor([452,  73, 452, 471,  73, 275, 452,  73,  73])
+predicted labels: tensor([157, 157, 481, 481, 157, 481, 481, 481, 481])
+target labels: tensor([743, 743, 101, 192, 743, 101, 438, 101, 101])
+predicted labels: tensor([157, 157, 481, 481, 481, 157, 157, 157, 481])
+target labels: tensor([ 81, 580, 429,  83, 424, 336, 486, 867, 914])
+predicted labels: tensor([481, 481, 157, 481, 157, 157, 157, 157, 481])
+target labels: tensor([726, 726, 567, 726, 927, 567, 367, 567, 726])
+predicted labels: tensor([157, 157, 157, 481, 481, 481, 157, 157, 481])
+target labels: tensor([608, 901, 136, 217, 424, 461, 891, 822, 920])
+predicted labels: tensor([157, 157, 157, 157, 481, 481, 157, 481, 481])
+target labels: tensor([  1,   1,  37,   1, 152, 152, 547, 152, 152])
+Traceback (most recent call last):
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py", line 71, in <module>
+    experiment_base(dataset)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py", line 61, in experiment_base
+    trainer.train()
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/train_resnet.py", line 95, in train
+    preds = self.model(torch.permute(examples, (0, 1, 4, 2, 3)))
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 24, in forward
+    return torch.stack([self.sequence_pass(x[i]) for i in range(batch_size)])
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 24, in <listcomp>
+    return torch.stack([self.sequence_pass(x[i]) for i in range(batch_size)])
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 16, in sequence_pass
+    x = super(ProjectionResNet, self).forward(x)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet.py", line 65, in forward
+    z = self.layer3(z)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/container.py", line 139, in forward
+    input = module(input)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torchvision/models/resnet.py", line 94, in forward
+    out = self.relu(out)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/activation.py", line 98, in forward
+    return F.relu(input, inplace=self.inplace)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/functional.py", line 1455, in relu
+    result = torch.relu_(input)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/traceback.py", line 197, in format_stack
+    return format_list(extract_stack(f, limit=limit))
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/traceback.py", line 39, in format_list
+    return StackSummary.from_list(extracted_list).format()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/traceback.py", line 380, in from_list
+    for frame in a_list:
+KeyboardInterrupt

@@ -1,0 +1,9 @@
+Downloading https://raw.githubusercontent.com/brendenlake/omniglot/master/python/images_background.zip to ./data/omniglot-py/images_background.zip
+Extracting ./data/omniglot-py/images_background.zip to ./data/omniglot-py
+100%|███████████████████████████████████████████████████████████| 9464212/9464212 [00:00<00:00, 33741116.30it/s]
+Traceback (most recent call last):
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py", line 71, in <module>
+    experiment_base(dataset)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py", line 43, in experiment_base
+    model = ProjectionResNet(input_embedder=input_embedding)
+TypeError: __init__() got an unexpected keyword argument 'input_embedder'

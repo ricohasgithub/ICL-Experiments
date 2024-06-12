@@ -1,0 +1,15 @@
+
+Files already downloaded and verified
+Examples shape: torch.Size([16, 9, 105, 105, 1]), Labels shape: torch.Size([16, 9]), Target shape: torch.Size([16, 17])
+x.shape: torch.Size([16, 9, 1, 105, 105])
+Preds shape: torch.Size([16, 9, 1623])
+Target one hot shape: torch.Size([16, 9, 1623])
+Target one hot symmetric: True
+Traceback (most recent call last):
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py", line 71, in <module>
+    experiment_base(dataset)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py", line 61, in experiment_base
+    trainer.train()
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/train_resnet.py", line 125, in train
+    correct = predicted_labels == target
+RuntimeError: The size of tensor a (1623) must match the size of tensor b (17) at non-singleton dimension 1

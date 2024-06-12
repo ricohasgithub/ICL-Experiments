@@ -3526,3 +3526,5 @@ Global batch 352400, avg loss after 100 batches: 0.001  | avg accuracy (total, f
 Global batch 352500, avg loss after 100 batches: 0.001  | avg accuracy (total, from_support) after 100 batches: 100.0 0.69
 Global batch 352600, avg loss after 100 batches: 0.0  | avg accuracy (total, from_support) after 100 batches: 100.0 0.9469
 Global batch 352700, avg loss after 100 batches: 0.001  | avg accuracy (total, from_support) after 100 batches: 100.0 0.56
+Global batch 352800, avg loss after 100 batches: 0.0  | avg accuracy (total, from_support) after 100 batches: 100.0 1.0.56
+Global batch 352900, avg loss after 100 batches: 0.003  | avg accuracy (total, from_support) after 100 batches: 99.94 0.56

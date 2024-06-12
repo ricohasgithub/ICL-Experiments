@@ -1,0 +1,48 @@
+
+Files already downloaded and verified
+avg_accuracy: 0.0
+Global batch 0, avg loss after 100 batches: 3.164  | Global batch 0, avg accuracy after 100 batches: 0.0
+avg_accuracy: 0.11
+avg_accuracy: 0.33avg loss after 100 batches: 316.4  | avg accuracy (total, from_support) after 100 batches: 11.0
+avg_accuracy: 0.33avg loss after 100 batches: 316.398  | avg accuracy (total, from_support) after 100 batches: 33.0
+avg_accuracy: 0.27avg loss after 100 batches: 316.397  | avg accuracy (total, from_support) after 100 batches: 33.0
+avg_accuracy: 0.11avg loss after 100 batches: 316.395  | avg accuracy (total, from_support) after 100 batches: 27.0
+Global batch 500, avg loss after 100 batches: 316.393  | avg accuracy (total, from_support) after 100 batches: 11.0
+Traceback (most recent call last):
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py", line 71, in <module>
+    experiment_base(dataset)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py", line 61, in experiment_base
+    trainer.train()
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/train_resnet.py", line 94, in train
+    preds = self.model(torch.permute(examples, (0, 1, 4, 2, 3)))
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 24, in forward
+    return torch.stack([self.sequence_pass(x[i]) for i in range(batch_size)])
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 24, in <listcomp>
+    return torch.stack([self.sequence_pass(x[i]) for i in range(batch_size)])
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 16, in sequence_pass
+    x = super(ProjectionResNet, self).forward(x)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet.py", line 64, in forward
+    z = self.layer2(z)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/container.py", line 139, in forward
+    input = module(input)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torchvision/models/resnet.py", line 97, in forward
+    out = self.bn2(out)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/batchnorm.py", line 168, in forward
+    return F.batch_norm(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/functional.py", line 2438, in batch_norm
+    return torch.batch_norm(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/traceback.py", line 197, in format_stack
+    return format_list(extract_stack(f, limit=limit))
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/traceback.py", line 211, in extract_stack
+    stack = StackSummary.extract(walk_stack(f), limit=limit)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/traceback.py", line 348, in extract
+    co = f.f_code
+KeyboardInterrupt

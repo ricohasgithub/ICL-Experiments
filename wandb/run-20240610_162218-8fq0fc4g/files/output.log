@@ -1,0 +1,38 @@
+
+Files already downloaded and verified
+Traceback (most recent call last):
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py", line 71, in <module>
+    experiment_base(dataset)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py", line 61, in experiment_base
+    trainer.train()
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/train_resnet.py", line 122, in train
+    loss.backward()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/_tensor.py", line 396, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/autograd/__init__.py", line 166, in backward
+    grad_tensors_ = _make_grads(tensors, grad_tensors_, is_grads_batched=False)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/autograd/__init__.py", line 67, in _make_grads
+    raise RuntimeError("grad can be implicitly created only for scalar outputs")
+RuntimeError: grad can be implicitly created only for scalar outputs
+tensor([200,   0, 887,   0, 854,   0, 426,   0, 854,   0, 426,   0, 854,   0,
+        426,   0, 426], dtype=torch.int32)
+tensor([200, 887, 854, 426, 854, 426, 854, 426, 426], dtype=torch.int32)
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: torch.Size([144])
+loss: tensor([7.3922, 7.3920, 7.3921, 7.3920, 7.3921, 7.3920, 7.3921, 7.3920, 7.3920,
+        7.3921, 7.3921, 7.3920, 7.3922, 7.3920, 7.3919, 7.3920, 7.3921, 7.3920,
+        7.3920, 7.3920, 7.3920, 7.3920, 7.3919, 7.3920, 7.3921, 7.3920, 7.3920,
+        7.3920, 7.3921, 7.3918, 7.3921, 7.3921, 7.3921, 7.3920, 7.3920, 7.3920,
+        7.3922, 7.3922, 7.3916, 7.3918, 7.3922, 7.3918, 7.3918, 7.3921, 7.3922,
+        7.3923, 7.3922, 7.3922, 7.3922, 7.3920, 7.3920, 7.3920, 7.3920, 7.3922,
+        7.3922, 7.3922, 7.3914, 7.3922, 7.3922, 7.3922, 7.3919, 7.3922, 7.3922,
+        7.3921, 7.3922, 7.3919, 7.3922, 7.3920, 7.3921, 7.3920, 7.3920, 7.3921,
+        7.3922, 7.3921, 7.3921, 7.3922, 7.3920, 7.3921, 7.3922, 7.3921, 7.3922,
+        7.3921, 7.3919, 7.3919, 7.3920, 7.3920, 7.3919, 7.3920, 7.3920, 7.3920,
+        7.3921, 7.3921, 7.3920, 7.3921, 7.3920, 7.3920, 7.3922, 7.3921, 7.3921,
+        7.3921, 7.3918, 7.3921, 7.3921, 7.3921, 7.3921, 7.3921, 7.3923, 7.3921,
+        7.3920, 7.3921, 7.3914, 7.3921, 7.3921, 7.3920, 7.3920, 7.3920, 7.3921,
+        7.3921, 7.3920, 7.3919, 7.3920, 7.3923, 7.3919, 7.3920, 7.3919, 7.3919,
+        7.3921, 7.3920, 7.3920, 7.3922, 7.3922, 7.3920, 7.3922, 7.3920, 7.3920,
+        7.3918, 7.3923, 7.3922, 7.3918, 7.3922, 7.3922, 7.3916, 7.3918, 7.3918],
+       grad_fn=<NegBackward0>)

@@ -1,0 +1,205 @@
+2024-06-10 15:05:30,132 INFO    StreamThr :25201 [internal.py:wandb_internal():86] W&B internal server running at pid: 25201, started at: 2024-06-10 15:05:30.132421
+2024-06-10 15:05:30,133 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: status
+2024-06-10 15:05:30,136 INFO    WriterThread:25201 [datastore.py:open_for_write():85] open: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/run-hzxw3q99.wandb
+2024-06-10 15:05:30,136 DEBUG   SenderThread:25201 [sender.py:send():379] send: header
+2024-06-10 15:05:30,145 DEBUG   SenderThread:25201 [sender.py:send():379] send: run
+2024-06-10 15:05:30,626 INFO    SenderThread:25201 [dir_watcher.py:__init__():211] watching files in: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files
+2024-06-10 15:05:30,626 INFO    SenderThread:25201 [sender.py:_start_run_threads():1121] run started: hzxw3q99 with start time 1718046330.132805
+2024-06-10 15:05:30,643 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: check_version
+2024-06-10 15:05:30,643 DEBUG   SenderThread:25201 [sender.py:send_request():406] send_request: check_version
+2024-06-10 15:05:31,148 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: run_start
+2024-06-10 15:05:31,156 DEBUG   HandlerThread:25201 [system_info.py:__init__():32] System info init
+2024-06-10 15:05:31,157 DEBUG   HandlerThread:25201 [system_info.py:__init__():47] System info init done
+2024-06-10 15:05:31,157 INFO    HandlerThread:25201 [system_monitor.py:start():181] Starting system monitor
+2024-06-10 15:05:31,157 INFO    SystemMonitor:25201 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2024-06-10 15:05:31,157 INFO    HandlerThread:25201 [system_monitor.py:probe():201] Collecting system info
+2024-06-10 15:05:31,158 DEBUG   HandlerThread:25201 [system_info.py:probe():196] Probing system
+2024-06-10 15:05:31,158 INFO    SystemMonitor:25201 [interfaces.py:start():190] Started cpu monitoring
+2024-06-10 15:05:31,160 INFO    SystemMonitor:25201 [interfaces.py:start():190] Started disk monitoring
+2024-06-10 15:05:31,162 INFO    SystemMonitor:25201 [interfaces.py:start():190] Started gpuapple monitoring
+2024-06-10 15:05:31,164 INFO    SystemMonitor:25201 [interfaces.py:start():190] Started memory monitoring
+2024-06-10 15:05:31,165 INFO    SystemMonitor:25201 [interfaces.py:start():190] Started network monitoring
+2024-06-10 15:05:31,169 DEBUG   HandlerThread:25201 [system_info.py:_probe_git():181] Probing git
+2024-06-10 15:05:31,186 DEBUG   HandlerThread:25201 [system_info.py:_probe_git():189] Probing git done
+2024-06-10 15:05:31,186 DEBUG   HandlerThread:25201 [system_info.py:probe():244] Probing system done
+2024-06-10 15:05:31,186 DEBUG   HandlerThread:25201 [system_monitor.py:probe():210] {'os': 'macOS-13.1-arm64-arm-64bit', 'python': '3.9.12', 'heartbeatAt': '2024-06-10T19:05:31.158664', 'startedAt': '2024-06-10T19:05:30.126715', 'docker': None, 'cuda': None, 'args': ('base', 'omniglot'), 'state': 'running', 'program': '/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py', 'codePathLocal': 'experiment_resnet.py', 'codePath': 'experiment_resnet.py', 'git': {'remote': 'git@github.com:ricohasgithub/ICL-Experiments.git', 'commit': '84b77d3a3f88014d6dc545854ad00a06b3cd8269'}, 'email': 'wh169@duke.edu', 'root': '/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments', 'host': 'Starfarmer2mb-2.local', 'username': 'starfarmer2', 'executable': '/usr/local/bin/python3', 'cpu_count': 8, 'cpu_count_logical': 8, 'disk': {'/': {'total': 460.4317207336426, 'used': 446.5409049987793}}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 16.0}}
+2024-06-10 15:05:31,186 INFO    HandlerThread:25201 [system_monitor.py:probe():211] Finished collecting system info
+2024-06-10 15:05:31,186 INFO    HandlerThread:25201 [system_monitor.py:probe():214] Publishing system info
+2024-06-10 15:05:31,186 DEBUG   HandlerThread:25201 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2024-06-10 15:05:31,187 DEBUG   HandlerThread:25201 [system_info.py:_save_pip():68] Saving pip packages done
+2024-06-10 15:05:31,187 INFO    HandlerThread:25201 [system_monitor.py:probe():216] Finished publishing system info
+2024-06-10 15:05:31,191 DEBUG   SenderThread:25201 [sender.py:send():379] send: files
+2024-06-10 15:05:31,191 INFO    SenderThread:25201 [sender.py:_save_file():1375] saving file wandb-metadata.json with policy now
+2024-06-10 15:05:31,195 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-10 15:05:31,195 DEBUG   SenderThread:25201 [sender.py:send_request():406] send_request: stop_status
+2024-06-10 15:05:31,196 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: internal_messages
+2024-06-10 15:05:31,632 INFO    Thread-12 :25201 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/requirements.txt
+2024-06-10 15:05:31,632 INFO    Thread-12 :25201 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/wandb-metadata.json
+2024-06-10 15:05:31,815 DEBUG   SenderThread:25201 [sender.py:send():379] send: telemetry
+2024-06-10 15:05:31,978 INFO    wandb-upload_0:25201 [upload_job.py:push():131] Uploaded file /var/folders/4c/z8zyjh415_s24ch63vqd34z80000gn/T/tmpd1843g8ewandb/mx6ad9yj-wandb-metadata.json
+2024-06-10 15:05:32,636 INFO    Thread-12 :25201 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/output.log
+2024-06-10 15:05:34,351 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-10 15:05:34,352 DEBUG   SenderThread:25201 [sender.py:send():379] send: history
+2024-06-10 15:05:34,352 DEBUG   SenderThread:25201 [sender.py:send_request():406] send_request: summary_record
+2024-06-10 15:05:34,352 INFO    SenderThread:25201 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-06-10 15:05:34,646 INFO    Thread-12 :25201 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/output.log
+2024-06-10 15:05:34,646 INFO    Thread-12 :25201 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/wandb-summary.json
+2024-06-10 15:05:35,412 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: status_report
+2024-06-10 15:05:36,656 INFO    Thread-12 :25201 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/output.log
+2024-06-10 15:05:38,663 INFO    Thread-12 :25201 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/output.log
+2024-06-10 15:05:40,543 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: status_report
+2024-06-10 15:05:40,673 INFO    Thread-12 :25201 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/output.log
+2024-06-10 15:05:42,684 INFO    Thread-12 :25201 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/output.log
+2024-06-10 15:05:44,691 INFO    Thread-12 :25201 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/output.log
+2024-06-10 15:05:45,667 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: status_report
+2024-06-10 15:05:46,200 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-10 15:05:46,200 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: internal_messages
+2024-06-10 15:05:46,200 DEBUG   SenderThread:25201 [sender.py:send_request():406] send_request: stop_status
+2024-06-10 15:05:46,701 INFO    Thread-12 :25201 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/output.log
+2024-06-10 15:05:48,712 INFO    Thread-12 :25201 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/output.log
+2024-06-10 15:05:50,722 INFO    Thread-12 :25201 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/output.log
+2024-06-10 15:05:50,775 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: status_report
+2024-06-10 15:05:52,727 INFO    Thread-12 :25201 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/output.log
+2024-06-10 15:05:54,734 INFO    Thread-12 :25201 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/output.log
+2024-06-10 15:05:55,787 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: status_report
+2024-06-10 15:05:56,743 INFO    Thread-12 :25201 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/output.log
+2024-06-10 15:05:58,752 INFO    Thread-12 :25201 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/output.log
+2024-06-10 15:06:00,282 DEBUG   SenderThread:25201 [sender.py:send():379] send: exit
+2024-06-10 15:06:00,282 INFO    SenderThread:25201 [sender.py:send_exit():584] handling exit code: 255
+2024-06-10 15:06:00,282 INFO    SenderThread:25201 [sender.py:send_exit():586] handling runtime: 29
+2024-06-10 15:06:00,283 INFO    SenderThread:25201 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-06-10 15:06:00,283 INFO    SenderThread:25201 [sender.py:send_exit():592] send defer
+2024-06-10 15:06:00,283 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: defer
+2024-06-10 15:06:00,283 INFO    HandlerThread:25201 [handler.py:handle_request_defer():170] handle defer: 0
+2024-06-10 15:06:00,283 DEBUG   SenderThread:25201 [sender.py:send_request():406] send_request: defer
+2024-06-10 15:06:00,283 INFO    SenderThread:25201 [sender.py:send_request_defer():608] handle sender defer: 0
+2024-06-10 15:06:00,283 INFO    SenderThread:25201 [sender.py:transition_state():612] send defer: 1
+2024-06-10 15:06:00,283 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: defer
+2024-06-10 15:06:00,283 INFO    HandlerThread:25201 [handler.py:handle_request_defer():170] handle defer: 1
+2024-06-10 15:06:00,283 DEBUG   SenderThread:25201 [sender.py:send_request():406] send_request: defer
+2024-06-10 15:06:00,283 INFO    SenderThread:25201 [sender.py:send_request_defer():608] handle sender defer: 1
+2024-06-10 15:06:00,283 INFO    SenderThread:25201 [sender.py:transition_state():612] send defer: 2
+2024-06-10 15:06:00,283 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: defer
+2024-06-10 15:06:00,283 INFO    HandlerThread:25201 [handler.py:handle_request_defer():170] handle defer: 2
+2024-06-10 15:06:00,283 INFO    HandlerThread:25201 [system_monitor.py:finish():190] Stopping system monitor
+2024-06-10 15:06:00,283 DEBUG   SystemMonitor:25201 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2024-06-10 15:06:00,283 INFO    HandlerThread:25201 [interfaces.py:finish():202] Joined cpu monitor
+2024-06-10 15:06:00,284 DEBUG   SystemMonitor:25201 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2024-06-10 15:06:00,284 INFO    HandlerThread:25201 [interfaces.py:finish():202] Joined disk monitor
+2024-06-10 15:06:00,284 DEBUG   SystemMonitor:25201 [system_monitor.py:_start():170] Publishing last batch of metrics
+2024-06-10 15:06:00,284 INFO    HandlerThread:25201 [interfaces.py:finish():202] Joined gpuapple monitor
+2024-06-10 15:06:00,284 INFO    HandlerThread:25201 [interfaces.py:finish():202] Joined memory monitor
+2024-06-10 15:06:00,284 INFO    HandlerThread:25201 [interfaces.py:finish():202] Joined network monitor
+2024-06-10 15:06:00,284 DEBUG   SenderThread:25201 [sender.py:send_request():406] send_request: defer
+2024-06-10 15:06:00,284 INFO    SenderThread:25201 [sender.py:send_request_defer():608] handle sender defer: 2
+2024-06-10 15:06:00,284 INFO    SenderThread:25201 [sender.py:transition_state():612] send defer: 3
+2024-06-10 15:06:00,284 DEBUG   SenderThread:25201 [sender.py:send():379] send: telemetry
+2024-06-10 15:06:00,284 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: defer
+2024-06-10 15:06:00,284 DEBUG   SenderThread:25201 [sender.py:send():379] send: stats
+2024-06-10 15:06:00,284 INFO    HandlerThread:25201 [handler.py:handle_request_defer():170] handle defer: 3
+2024-06-10 15:06:00,285 DEBUG   SenderThread:25201 [sender.py:send_request():406] send_request: defer
+2024-06-10 15:06:00,285 INFO    SenderThread:25201 [sender.py:send_request_defer():608] handle sender defer: 3
+2024-06-10 15:06:00,285 INFO    SenderThread:25201 [sender.py:transition_state():612] send defer: 4
+2024-06-10 15:06:00,285 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: defer
+2024-06-10 15:06:00,285 INFO    HandlerThread:25201 [handler.py:handle_request_defer():170] handle defer: 4
+2024-06-10 15:06:00,285 DEBUG   SenderThread:25201 [sender.py:send_request():406] send_request: defer
+2024-06-10 15:06:00,285 INFO    SenderThread:25201 [sender.py:send_request_defer():608] handle sender defer: 4
+2024-06-10 15:06:00,285 INFO    SenderThread:25201 [sender.py:transition_state():612] send defer: 5
+2024-06-10 15:06:00,285 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: defer
+2024-06-10 15:06:00,285 INFO    HandlerThread:25201 [handler.py:handle_request_defer():170] handle defer: 5
+2024-06-10 15:06:00,285 DEBUG   SenderThread:25201 [sender.py:send():379] send: summary
+2024-06-10 15:06:00,285 INFO    SenderThread:25201 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-06-10 15:06:00,285 DEBUG   SenderThread:25201 [sender.py:send_request():406] send_request: defer
+2024-06-10 15:06:00,285 INFO    SenderThread:25201 [sender.py:send_request_defer():608] handle sender defer: 5
+2024-06-10 15:06:00,285 INFO    SenderThread:25201 [sender.py:transition_state():612] send defer: 6
+2024-06-10 15:06:00,285 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: defer
+2024-06-10 15:06:00,285 INFO    HandlerThread:25201 [handler.py:handle_request_defer():170] handle defer: 6
+2024-06-10 15:06:00,285 DEBUG   SenderThread:25201 [sender.py:send_request():406] send_request: defer
+2024-06-10 15:06:00,285 INFO    SenderThread:25201 [sender.py:send_request_defer():608] handle sender defer: 6
+2024-06-10 15:06:00,288 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: status_report
+2024-06-10 15:06:00,365 INFO    SenderThread:25201 [sender.py:transition_state():612] send defer: 7
+2024-06-10 15:06:00,366 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: defer
+2024-06-10 15:06:00,366 INFO    HandlerThread:25201 [handler.py:handle_request_defer():170] handle defer: 7
+2024-06-10 15:06:00,366 DEBUG   SenderThread:25201 [sender.py:send_request():406] send_request: defer
+2024-06-10 15:06:00,366 INFO    SenderThread:25201 [sender.py:send_request_defer():608] handle sender defer: 7
+2024-06-10 15:06:00,764 INFO    Thread-12 :25201 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/config.yaml
+2024-06-10 15:06:00,765 INFO    Thread-12 :25201 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/output.log
+2024-06-10 15:06:00,766 INFO    Thread-12 :25201 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/wandb-summary.json
+2024-06-10 15:06:01,283 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: poll_exit
+2024-06-10 15:06:02,324 INFO    SenderThread:25201 [sender.py:transition_state():612] send defer: 8
+2024-06-10 15:06:02,324 DEBUG   SenderThread:25201 [sender.py:send_request():406] send_request: poll_exit
+2024-06-10 15:06:02,324 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: defer
+2024-06-10 15:06:02,325 INFO    HandlerThread:25201 [handler.py:handle_request_defer():170] handle defer: 8
+2024-06-10 15:06:02,325 DEBUG   SenderThread:25201 [sender.py:send_request():406] send_request: defer
+2024-06-10 15:06:02,325 INFO    SenderThread:25201 [sender.py:send_request_defer():608] handle sender defer: 8
+2024-06-10 15:06:02,325 INFO    SenderThread:25201 [job_builder.py:build():281] Attempting to build job artifact
+2024-06-10 15:06:02,325 INFO    SenderThread:25201 [job_builder.py:_get_source_type():393] is repo sourced job
+2024-06-10 15:06:02,327 INFO    SenderThread:25201 [job_builder.py:build():369] adding wandb-job metadata file
+2024-06-10 15:06:02,329 INFO    SenderThread:25201 [sender.py:transition_state():612] send defer: 9
+2024-06-10 15:06:02,329 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: defer
+2024-06-10 15:06:02,329 DEBUG   SenderThread:25201 [sender.py:send():379] send: artifact
+2024-06-10 15:06:02,329 INFO    HandlerThread:25201 [handler.py:handle_request_defer():170] handle defer: 9
+2024-06-10 15:06:02,673 INFO    SenderThread:25201 [sender.py:send_artifact():1453] sent artifact job-git_github.com_ricohasgithub_ICL-Experiments.git_experiment_resnet.py - {'id': 'QXJ0aWZhY3Q6ODY2NzcxMzEx', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE4NDQzNTU2MA==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6ODY2NzcxMzEx', 'versionIndex': 1}}}
+2024-06-10 15:06:02,673 DEBUG   SenderThread:25201 [sender.py:send_request():406] send_request: defer
+2024-06-10 15:06:02,673 INFO    SenderThread:25201 [sender.py:send_request_defer():608] handle sender defer: 9
+2024-06-10 15:06:02,673 INFO    SenderThread:25201 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-06-10 15:06:02,770 INFO    SenderThread:25201 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/output.log
+2024-06-10 15:06:02,771 INFO    SenderThread:25201 [dir_watcher.py:finish():388] scan: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files
+2024-06-10 15:06:02,771 INFO    SenderThread:25201 [dir_watcher.py:finish():402] scan save: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/requirements.txt requirements.txt
+2024-06-10 15:06:02,771 INFO    SenderThread:25201 [dir_watcher.py:finish():402] scan save: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/output.log output.log
+2024-06-10 15:06:02,772 INFO    SenderThread:25201 [dir_watcher.py:finish():402] scan save: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/config.yaml config.yaml
+2024-06-10 15:06:02,772 INFO    SenderThread:25201 [dir_watcher.py:finish():402] scan save: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/wandb-summary.json wandb-summary.json
+2024-06-10 15:06:02,775 INFO    SenderThread:25201 [dir_watcher.py:finish():402] scan save: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/wandb-metadata.json wandb-metadata.json
+2024-06-10 15:06:02,775 INFO    SenderThread:25201 [sender.py:transition_state():612] send defer: 10
+2024-06-10 15:06:02,776 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: defer
+2024-06-10 15:06:02,777 INFO    HandlerThread:25201 [handler.py:handle_request_defer():170] handle defer: 10
+2024-06-10 15:06:02,777 DEBUG   SenderThread:25201 [sender.py:send_request():406] send_request: defer
+2024-06-10 15:06:02,777 INFO    SenderThread:25201 [sender.py:send_request_defer():608] handle sender defer: 10
+2024-06-10 15:06:02,777 INFO    SenderThread:25201 [file_pusher.py:finish():175] shutting down file pusher
+2024-06-10 15:06:03,020 INFO    wandb-upload_1:25201 [upload_job.py:push():131] Uploaded file /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/output.log
+2024-06-10 15:06:03,052 INFO    wandb-upload_2:25201 [upload_job.py:push():131] Uploaded file /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/config.yaml
+2024-06-10 15:06:03,087 INFO    wandb-upload_0:25201 [upload_job.py:push():131] Uploaded file /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/requirements.txt
+2024-06-10 15:06:03,091 INFO    wandb-upload_3:25201 [upload_job.py:push():131] Uploaded file /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/files/wandb-summary.json
+2024-06-10 15:06:03,297 INFO    Thread-11 :25201 [sender.py:transition_state():612] send defer: 11
+2024-06-10 15:06:03,297 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: defer
+2024-06-10 15:06:03,297 INFO    HandlerThread:25201 [handler.py:handle_request_defer():170] handle defer: 11
+2024-06-10 15:06:03,298 DEBUG   SenderThread:25201 [sender.py:send_request():406] send_request: defer
+2024-06-10 15:06:03,298 INFO    SenderThread:25201 [sender.py:send_request_defer():608] handle sender defer: 11
+2024-06-10 15:06:03,298 INFO    SenderThread:25201 [file_pusher.py:join():181] waiting for file pusher
+2024-06-10 15:06:03,298 INFO    SenderThread:25201 [sender.py:transition_state():612] send defer: 12
+2024-06-10 15:06:03,298 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: defer
+2024-06-10 15:06:03,298 INFO    HandlerThread:25201 [handler.py:handle_request_defer():170] handle defer: 12
+2024-06-10 15:06:03,298 DEBUG   SenderThread:25201 [sender.py:send_request():406] send_request: defer
+2024-06-10 15:06:03,298 INFO    SenderThread:25201 [sender.py:send_request_defer():608] handle sender defer: 12
+2024-06-10 15:06:03,299 INFO    SenderThread:25201 [file_stream.py:finish():594] file stream finish called
+2024-06-10 15:06:03,605 INFO    SenderThread:25201 [file_stream.py:finish():598] file stream finish is done
+2024-06-10 15:06:03,605 INFO    SenderThread:25201 [sender.py:transition_state():612] send defer: 13
+2024-06-10 15:06:03,605 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: defer
+2024-06-10 15:06:03,605 INFO    HandlerThread:25201 [handler.py:handle_request_defer():170] handle defer: 13
+2024-06-10 15:06:03,605 DEBUG   SenderThread:25201 [sender.py:send_request():406] send_request: defer
+2024-06-10 15:06:03,605 INFO    SenderThread:25201 [sender.py:send_request_defer():608] handle sender defer: 13
+2024-06-10 15:06:03,605 INFO    SenderThread:25201 [sender.py:transition_state():612] send defer: 14
+2024-06-10 15:06:03,605 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: defer
+2024-06-10 15:06:03,606 INFO    HandlerThread:25201 [handler.py:handle_request_defer():170] handle defer: 14
+2024-06-10 15:06:03,606 DEBUG   SenderThread:25201 [sender.py:send():379] send: final
+2024-06-10 15:06:03,606 DEBUG   SenderThread:25201 [sender.py:send():379] send: footer
+2024-06-10 15:06:03,606 DEBUG   SenderThread:25201 [sender.py:send_request():406] send_request: defer
+2024-06-10 15:06:03,606 INFO    SenderThread:25201 [sender.py:send_request_defer():608] handle sender defer: 14
+2024-06-10 15:06:03,606 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: poll_exit
+2024-06-10 15:06:03,607 DEBUG   SenderThread:25201 [sender.py:send_request():406] send_request: poll_exit
+2024-06-10 15:06:03,607 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: server_info
+2024-06-10 15:06:03,607 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: get_summary
+2024-06-10 15:06:03,607 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: sampled_history
+2024-06-10 15:06:03,607 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: internal_messages
+2024-06-10 15:06:03,607 DEBUG   SenderThread:25201 [sender.py:send_request():406] send_request: server_info
+2024-06-10 15:06:03,609 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: job_info
+2024-06-10 15:06:03,669 DEBUG   SenderThread:25201 [sender.py:send_request():406] send_request: job_info
+2024-06-10 15:06:03,669 INFO    MainThread:25201 [wandb_run.py:_footer_history_summary_info():3557] rendering history
+2024-06-10 15:06:03,669 INFO    MainThread:25201 [wandb_run.py:_footer_history_summary_info():3589] rendering summary
+2024-06-10 15:06:03,669 INFO    MainThread:25201 [wandb_run.py:_footer_sync_info():3516] logging synced files
+2024-06-10 15:06:03,669 DEBUG   HandlerThread:25201 [handler.py:handle_request():144] handle_request: shutdown
+2024-06-10 15:06:03,670 INFO    HandlerThread:25201 [handler.py:finish():840] shutting down handler
+2024-06-10 15:06:04,614 INFO    WriterThread:25201 [datastore.py:close():294] close: /Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/wandb/run-20240610_150530-hzxw3q99/run-hzxw3q99.wandb
+2024-06-10 15:06:04,674 INFO    SenderThread:25201 [sender.py:finish():1531] shutting down sender
+2024-06-10 15:06:04,674 INFO    SenderThread:25201 [file_pusher.py:finish():175] shutting down file pusher
+2024-06-10 15:06:04,674 INFO    SenderThread:25201 [file_pusher.py:join():181] waiting for file pusher

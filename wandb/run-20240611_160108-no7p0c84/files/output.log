@@ -1,0 +1,75 @@
+
+Files already downloaded and verified
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392009258270264
+avg_accuracy: 0.0
+Global batch 0, avg loss after 100 batches: 0.074  | Global batch 0, avg accuracy after 100 batches: 0.0
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392475605010986
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.392917156219482
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39309024810791
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39309024810791
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39309024810791
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39309024810791
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39309024810791
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39309024810791
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39309024810791
+preds: torch.Size([16, 9, 1623]), target_one_hot: torch.Size([16, 9, 1623])
+input 1: torch.Size([144, 1623]), input 2: torch.Size([144, 1623])
+losses_all: 7.39309024810791
+Traceback (most recent call last):
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py", line 71, in <module>
+    experiment_base(dataset)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/./experiment_resnet.py", line 61, in experiment_base
+    trainer.train()
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/train_resnet.py", line 95, in train
+    preds = self.model(torch.permute(examples, (0, 1, 4, 2, 3)))
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 41, in forward
+    return torch.stack([self.sequence_pass(x[i]) for i in range(batch_size)])
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 41, in <listcomp>
+    return torch.stack([self.sequence_pass(x[i]) for i in range(batch_size)])
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet_with_projection.py", line 33, in sequence_pass
+    x = super(ProjectionResNet, self).forward(x)
+  File "/Users/starfarmer2/Desktop/Jasper/Coding Files/CSPlus/ICL-Experiments/models/resnet.py", line 63, in forward
+    z = self.layer1(z)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/container.py", line 139, in forward
+    input = module(input)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torchvision/models/resnet.py", line 94, in forward
+    out = self.relu(out)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/modules/activation.py", line 98, in forward
+    return F.relu(input, inplace=self.inplace)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/torch/nn/functional.py", line 1455, in relu
+    result = torch.relu_(input)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/traceback.py", line 197, in format_stack
+    return format_list(extract_stack(f, limit=limit))
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/traceback.py", line 211, in extract_stack
+    stack = StackSummary.extract(walk_stack(f), limit=limit)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/traceback.py", line 362, in extract
+    linecache.checkcache(filename)
+KeyboardInterrupt
