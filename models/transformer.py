@@ -116,7 +116,7 @@ class Dense(nn.Module):
         self.linear2 = nn.Linear(out_features, in_features)
         self.p_dropout = p_dropout
 
-        self.dropout = nn.dropout(p=p_dropout)
+        self.dropout = nn.Dropout(p=p_dropout)
 
         # Initialize weights
         nn.init.kaiming_uniform_(
