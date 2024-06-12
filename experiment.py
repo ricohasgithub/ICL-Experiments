@@ -20,7 +20,7 @@ def experiment_base(dataset, p_bursty):
             n_rare_classes=1603,  # 1623 - 20
             n_common_classes=10,
             n_holdout_classes=10,
-            zipf_exponent=0,
+            zipf_exponent=1,
             use_zipf_for_common_rare=False,
             noise_scale=0.0,
             preserve_ordering_every_n=None,
@@ -38,7 +38,7 @@ def experiment_base(dataset, p_bursty):
             n_rare_classes=1603,  # 1623 - 20
             n_common_classes=10,
             n_holdout_classes=10,
-            zipf_exponent=0,
+            zipf_exponent=1,
             use_zipf_for_common_rare=False,
             noise_scale=0.0,
             preserve_ordering_every_n=None,
