@@ -4,6 +4,8 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
+# import matplotlib.pyplot as plt
+
 from datasets.dataset import SeqGenerator, _convert_dict
 
 # start a new wandb run to track this script
@@ -32,8 +34,9 @@ class Trainer:
         data_generator_factory,
         loss_fn=nn.CrossEntropyLoss,
         optimizer=optim.Adam,
+        scheduler=optim.lr_scheduler.LambdaLR,
         num_classes=1623,
-        batch_size=16,
+        batch_size=32,
     ):
 
         # Instance of model
@@ -52,6 +55,7 @@ class Trainer:
         # Training loop parameters
         self.loss_fn = loss_fn
         self.optimizer = optimizer
+        self.scheduler = scheduler
 
         self.device = torch.device(
             "cuda"
@@ -60,7 +64,14 @@ class Trainer:
             # else "mps" if torch.backends.mps.is_available() else "cpu"
         )
 
-    def train(self, lr=1e-1, eval_after=100):
+    def _linear_warmup_and_sqrt_decay(self, step, warmup_steps=200, lr_max=5e-6):
+        if step < warmup_steps:
+            return lr_max * step / warmup_steps
+        else:
+            return lr_max * (warmup_steps ** 0.5) / (step ** 0.5)
+        
+
+    def train(self, lr=1e-2, eval_after=100):
 
         def _apply_masks(values):
             # query_mask = torch.full_like(losses_all, False)
@@ -73,6 +84,7 @@ class Trainer:
             return values_query
 
         optim = self.optimizer(self.model.parameters(), lr=lr)
+        scheduler = self.scheduler(optim, lr_lambda=self._linear_warmup_and_sqrt_decay)
 
         criterion = self.loss_fn()
 
@@ -91,6 +103,18 @@ class Trainer:
                 batch["target"].to(self.device),
             )
             optim.zero_grad()
+
+            # for i in range(9):
+            #     print(f'labels: {labels[0][i]}')
+            #     print(examples[0][i].shape)
+            #     plt.imshow(examples[0][i])
+            #     plt.show()
+                
+            
+            #     input()
+
+
+            print(f'examples: {examples.shape}, labels: {labels.shape}, target: {target.shape}')
 
             preds = self.model(torch.permute(examples, (0, 1, 4, 2, 3)))
 
@@ -124,6 +148,7 @@ class Trainer:
             loss.backward()
 
             optim.step()
+            scheduler.step()
 
             running_loss += loss.item()
 
@@ -153,6 +178,7 @@ class Trainer:
                         "global_step": i,
                         "loss": avg_loss,
                         "acc": avg_accuracy,
+                        "lr": scheduler.get_last_lr()[0],
                     }
                 )
 
