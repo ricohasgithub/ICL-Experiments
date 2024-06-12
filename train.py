@@ -41,19 +41,19 @@ class Trainer:
         # Data generator here refers to something like SeqGenerator().get_random_seq
         self.data_generator = data_generator
         self.icl_seq_generator = lambda: self.data_generator_factory.get_fewshot_seq(
-            "holdout",
-            4,  # fs_shots
-            2,  # ways
-            "unfixed",
-            False,  # randomly_generate_rare
-            False,  # grouped
+            class_type="holdout",
+            shots=4,  # fs_shots
+            ways=2,  # ways
+            labeling="unfixed",
+            randomly_generate_rare=False,  # randomly_generate_rare
+            grouped=False,  # grouped
         )
         self.iwl_seq_generator = lambda: self.data_generator_factory.get_no_support_seq(
-            "zipfian",
-            9,  # seq_len
-            False,  # all_unique
-            "ordered",  # labeling_common
-            False,  # randomly_generate_rare
+            class_type="zipfian",
+            seq_len=9,  # seq_len
+            all_unique=False,  # all_unique
+            labeling="ordered",  # labeling_common
+            randomly_generate_rare=False,  # randomly_generate_rare
         )
 
         self.data_generator_factory = data_generator_factory
