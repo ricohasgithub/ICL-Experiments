@@ -176,10 +176,10 @@ class TransformerBlock(nn.Module):
 
     def forward(self, x, y=None, mask=None):
         if self.causal:
-            x = x + self.causal_block(x, y, mask)
+            x = x + self.causal_block(self.layer_norm(x), y, mask)
         else:
-            x = x + self.attention_block(x, y, mask)
-        x = x + self.dense_block(x)
+            x = x + self.attention_block(self.layer_norm(x), y, mask)
+        x = x + self.dense_block(self.layer_norm(x))
         return x
 
 
@@ -189,7 +189,7 @@ class Transformer(nn.Module):
         self,
         input_embedder,
         n_classes=1623,
-        n_layers=8,
+        n_layers=12,
         n_heads=8,
         p_dropout=0.0,
         d_hidden=64,

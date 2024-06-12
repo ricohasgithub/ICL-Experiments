@@ -1,0 +1,1359 @@
+
+Global batch 0, avg loss after 100 batches: 0.083  | Global batch 0, avg accuracy after 100 batches: 0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 2000, avg loss after 100 batches: 7.292  | Global batch 2000, avg accuracy after 100 batches: 0.31.25 0.01
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 4000, avg loss after 100 batches: 6.64  | Global batch 4000, avg accuracy after 100 batches: 0.810.88 0.02
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 6000, avg loss after 100 batches: 6.2  | Global batch 6000, avg accuracy after 100 batches: 2.44 3.12 0.07
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 8000, avg loss after 100 batches: 5.82  | Global batch 8000, avg accuracy after 100 batches: 4.81.06 0.393
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 10000, avg loss after 100 batches: 5.529  | Global batch 10000, avg accuracy after 100 batches: 8.195 0.43
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 12000, avg loss after 100 batches: 5.23  | Global batch 12000, avg accuracy after 100 batches: 13.25.06 0.66
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 14000, avg loss after 100 batches: 5.042  | Global batch 14000, avg accuracy after 100 batches: 16.3862 1.73
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 16000, avg loss after 100 batches: 4.814  | Global batch 16000, avg accuracy after 100 batches: 20.0619 1.94
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 18000, avg loss after 100 batches: 4.589  | Global batch 18000, avg accuracy after 100 batches: 28.0644 2.61
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 20000, avg loss after 100 batches: 4.394  | Global batch 20000, avg accuracy after 100 batches: 31.3775 4.01
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 22000, avg loss after 100 batches: 4.255  | Global batch 22000, avg accuracy after 100 batches: 34.5631 5.73
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 24000, avg loss after 100 batches: 4.037  | Global batch 24000, avg accuracy after 100 batches: 42.940 7.244
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 26000, avg loss after 100 batches: 3.833  | Global batch 26000, avg accuracy after 100 batches: 47.6944 9.18
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 28000, avg loss after 100 batches: 3.705  | Global batch 28000, avg accuracy after 100 batches: 51.4456 11.05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 30000, avg loss after 100 batches: 3.563  | Global batch 30000, avg accuracy after 100 batches: 54.5.19 12.61
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 32000, avg loss after 100 batches: 3.403  | Global batch 32000, avg accuracy after 100 batches: 57.440 15.858
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 34000, avg loss after 100 batches: 3.222  | Global batch 34000, avg accuracy after 100 batches: 63.6938 17.85
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 36000, avg loss after 100 batches: 3.118  | Global batch 36000, avg accuracy after 100 batches: 65.9438 20.14
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 38000, avg loss after 100 batches: 2.919  | Global batch 38000, avg accuracy after 100 batches: 70.065 23.166
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 40000, avg loss after 100 batches: 2.785  | Global batch 40000, avg accuracy after 100 batches: 72.4469 24.04
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 42000, avg loss after 100 batches: 2.599  | Global batch 42000, avg accuracy after 100 batches: 76.0638 26.08
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 44000, avg loss after 100 batches: 2.438  | Global batch 44000, avg accuracy after 100 batches: 79.8125 28.53
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 46000, avg loss after 100 batches: 2.315  | Global batch 46000, avg accuracy after 100 batches: 81.3131 29.11
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 48000, avg loss after 100 batches: 2.167  | Global batch 48000, avg accuracy after 100 batches: 83.4494 33.34
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 50000, avg loss after 100 batches: 2.046  | Global batch 50000, avg accuracy after 100 batches: 86.5638 33.56
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 52000, avg loss after 100 batches: 1.903  | Global batch 52000, avg accuracy after 100 batches: 87.5.06 36.16
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 54000, avg loss after 100 batches: 1.792  | Global batch 54000, avg accuracy after 100 batches: 89.440 38.019
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 56000, avg loss after 100 batches: 1.654  | Global batch 56000, avg accuracy after 100 batches: 90.8881 38.87
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 58000, avg loss after 100 batches: 1.527  | Global batch 58000, avg accuracy after 100 batches: 92.810 37.492
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 60000, avg loss after 100 batches: 1.421  | Global batch 60000, avg accuracy after 100 batches: 92.8169 41.72
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 62000, avg loss after 100 batches: 1.298  | Global batch 62000, avg accuracy after 100 batches: 94.8875 46.47
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 64000, avg loss after 100 batches: 1.197  | Global batch 64000, avg accuracy after 100 batches: 95.31 42.6847
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 66000, avg loss after 100 batches: 1.092  | Global batch 66000, avg accuracy after 100 batches: 96.382 45.929
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 68000, avg loss after 100 batches: 0.981  | Global batch 68000, avg accuracy after 100 batches: 96.8806 44.32
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 70000, avg loss after 100 batches: 0.926  | Global batch 70000, avg accuracy after 100 batches: 97.0.75 45.43
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 72000, avg loss after 100 batches: 0.844  | Global batch 72000, avg accuracy after 100 batches: 96.6962 46.75
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 74000, avg loss after 100 batches: 0.761  | Global batch 74000, avg accuracy after 100 batches: 98.4412 48.32
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 76000, avg loss after 100 batches: 0.689  | Global batch 76000, avg accuracy after 100 batches: 98.2569 50.04
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 78000, avg loss after 100 batches: 0.608  | Global batch 78000, avg accuracy after 100 batches: 98.2525 47.64
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 80000, avg loss after 100 batches: 0.525  | Global batch 80000, avg accuracy after 100 batches: 98.9412 49.39
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 82000, avg loss after 100 batches: 0.516  | Global batch 82000, avg accuracy after 100 batches: 98.8112 47.41
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 84000, avg loss after 100 batches: 0.451  | Global batch 84000, avg accuracy after 100 batches: 99.1206 48.83
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 86000, avg loss after 100 batches: 0.383  | Global batch 86000, avg accuracy after 100 batches: 99.3106 49.59
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 88000, avg loss after 100 batches: 0.359  | Global batch 88000, avg accuracy after 100 batches: 99.2512 49.14
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 90000, avg loss after 100 batches: 0.343  | Global batch 90000, avg accuracy after 100 batches: 99.4438 51.02
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 92000, avg loss after 100 batches: 0.288  | Global batch 92000, avg accuracy after 100 batches: 99.5.69 49.38
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 94000, avg loss after 100 batches: 0.27  | Global batch 94000, avg accuracy after 100 batches: 99.38.62 49.01
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 96000, avg loss after 100 batches: 0.246  | Global batch 96000, avg accuracy after 100 batches: 99.758 50.559
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 98000, avg loss after 100 batches: 0.206  | Global batch 98000, avg accuracy after 100 batches: 99.5.5 48.829
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 100000, avg loss after 100 batches: 0.193  | Global batch 100000, avg accuracy after 100 batches: 99.75 51.05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 102000, avg loss after 100 batches: 0.167  | Global batch 102000, avg accuracy after 100 batches: 99.819 52.09
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 104000, avg loss after 100 batches: 0.155  | Global batch 104000, avg accuracy after 100 batches: 99.754 48.95
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 106000, avg loss after 100 batches: 0.148  | Global batch 106000, avg accuracy after 100 batches: 99.698 50.88
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 108000, avg loss after 100 batches: 0.137  | Global batch 108000, avg accuracy after 100 batches: 99.818 51.54
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 110000, avg loss after 100 batches: 0.12  | Global batch 110000, avg accuracy after 100 batches: 99.6275 50.25
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 112000, avg loss after 100 batches: 0.098  | Global batch 112000, avg accuracy after 100 batches: 100.08 51.18
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 114000, avg loss after 100 batches: 0.096  | Global batch 114000, avg accuracy after 100 batches: 99.888 50.63
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 116000, avg loss after 100 batches: 0.089  | Global batch 116000, avg accuracy after 100 batches: 99.946 48.18
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 118000, avg loss after 100 batches: 0.086  | Global batch 118000, avg accuracy after 100 batches: 99.758 50.42
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 120000, avg loss after 100 batches: 0.07  | Global batch 120000, avg accuracy after 100 batches: 100.081 48.23
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 122000, avg loss after 100 batches: 0.063  | Global batch 122000, avg accuracy after 100 batches: 99.944 50.78
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 124000, avg loss after 100 batches: 0.059  | Global batch 124000, avg accuracy after 100 batches: 99.940 51.44
+
+
+
+
+
+
+Global batch 124700, avg loss after 100 batches: 0.058  | avg accuracy (total, from_support) after 100 batches: 99.88 50.34
+Traceback (most recent call last):
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 72, in <module>
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 61, in experiment_base
+    )
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 123, in train
+    preds = self.model(examples, labels).transpose(1, 2)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/transformer.py", line 231, in forward
+    x = self.input_embedder(examples, labels, is_training).to(self.device)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/embedding.py", line 153, in forward
+    h_example = self.resnet(examples)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/embedding.py", line 16, in forward
+    return torch.stack([self.function(x[i]) for i in range(batch_size)])
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/embedding.py", line 16, in <listcomp>
+    return torch.stack([self.function(x[i]) for i in range(batch_size)])
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/resnet.py", line 63, in forward
+    z = self.layer1(z)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torchvision/models/resnet.py", line 97, in forward
+    out = self.bn2(out)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 175, in forward
+    return F.batch_norm(
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/functional.py", line 2482, in batch_norm
+    return torch.batch_norm(
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/fx/traceback.py", line 62, in format_stack
+    @compatibility(is_backward_compatible=False)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 72, in <module>
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 61, in experiment_base
+    )
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 123, in train
+    preds = self.model(examples, labels).transpose(1, 2)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/transformer.py", line 231, in forward
+    x = self.input_embedder(examples, labels, is_training).to(self.device)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/embedding.py", line 153, in forward
+    h_example = self.resnet(examples)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/embedding.py", line 16, in forward
+    return torch.stack([self.function(x[i]) for i in range(batch_size)])
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/embedding.py", line 16, in <listcomp>
+    return torch.stack([self.function(x[i]) for i in range(batch_size)])
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/models/resnet.py", line 63, in forward
+    z = self.layer1(z)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torchvision/models/resnet.py", line 97, in forward
+    out = self.bn2(out)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 175, in forward
+    return F.batch_norm(
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/nn/functional.py", line 2482, in batch_norm
+    return torch.batch_norm(
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/fx/traceback.py", line 62, in format_stack
+    @compatibility(is_backward_compatible=False)
+KeyboardInterrupt

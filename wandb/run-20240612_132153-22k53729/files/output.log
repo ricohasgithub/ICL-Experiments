@@ -8,3 +8,4 @@ avg_accuracy: 0.01000000014901161200 batches: 7.392  | avg accuracy (total, from
 avg_accuracy: 0.01222222238779068100 batches: 7.392  | avg accuracy (total, from_support) after 100 batches: 1.0
 avg_accuracy: 0.02777777805924415400 batches: 7.392  | avg accuracy (total, from_support) after 100 batches: 1.22
 avg_accuracy: 0.01555555574595928300 batches: 7.391  | avg accuracy (total, from_support) after 100 batches: 2.78
+avg_accuracy: 0.01666666708886623300 batches: 7.392  | avg accuracy (total, from_support) after 100 batches: 1.56

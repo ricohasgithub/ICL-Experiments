@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 82, in <module>
+    experiment_base(dataset, p_bursty)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 71, in experiment_base
+    trainer.train()
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 111, in train
+    for i, batch in enumerate(self.train_loader):
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 32, in fetch
+    data.append(next(self.dataset_iter))
+  File "/usr/project/xtmp/yz705/ICL-Experiments/datasets/dataset.py", line 568, in get_bursty_seq
+    bursty_record = next(bursty_zipfian_generator)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/datasets/dataset.py", line 942, in get_fewshot_seq
+    seq_examples = self._create_noisy_image_seq(
+  File "/usr/project/xtmp/yz705/ICL-Experiments/datasets/dataset.py", line 372, in _create_noisy_image_seq
+    images[classes == c] = np.array(self.data[c])[c_samples]
+ValueError: shape mismatch: value array of shape (3,1,105,105) could not be broadcast to indexing result of shape (3,105,105,1)
+Traceback (most recent call last):
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 82, in <module>
+    experiment_base(dataset, p_bursty)
+  File "/usr/project/xtmp/yz705/ICL-Experiments/./experiment.py", line 71, in experiment_base
+    trainer.train()
+  File "/usr/project/xtmp/yz705/ICL-Experiments/train.py", line 111, in train
+    for i, batch in enumerate(self.train_loader):
+  File "/home/users/yz705/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
