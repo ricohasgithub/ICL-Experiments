@@ -12,14 +12,15 @@ from torch.utils.data import Dataset
 IMAGE_SIZE = 105
 N_CHARACTER_CLASSES = 1623
 N_EXEMPLARS_PER_CLASS = 20
+N_GAUSSIAN_CLASSES = 100
 
 
 class GaussianVectorDataset(Dataset):
     def __init__(
         self,
-        num_classes=1623,
+        num_classes=N_GAUSSIAN_CLASSES,
         input_dim=64,
-        dsize=N_CHARACTER_CLASSES * N_EXEMPLARS_PER_CLASS,
+        dsize=N_GAUSSIAN_CLASSES * N_EXEMPLARS_PER_CLASS,
     ):
 
         # Generate ranodm c
