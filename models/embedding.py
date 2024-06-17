@@ -103,6 +103,10 @@ class InputEmbedder(nn.Module):
         # self._linear_input_dim = examples.shape[2] * examples.shape[3] * examples.shape[4]
         self._linear_input_dim = linear_input_dim
 
+        self.embs = torch.nn.init.normal_(
+            torch.empty(self._n_classes, self._emb_dim), std=0.02
+        ).to(self.device)
+
         self.linear = nn.Linear(self._linear_input_dim, self._emb_dim).to(self.device)
         self.embedding_layer = nn.Embedding(self._n_classes, self._emb_dim).to(
             self.device
@@ -149,6 +153,7 @@ class InputEmbedder(nn.Module):
         elif self._example_encoding == "embedding":
             h_example = self.embedding_layer(examples)
         elif self._example_encoding == "resnet":
+            print(examples.shape)
             examples = torch.permute(examples, (0, 1, 4, 2, 3))
             h_example = self.resnet(examples)
         else:
@@ -162,6 +167,9 @@ class InputEmbedder(nn.Module):
 
         # Embed the labels.
         n_emb_classes = self._n_classes
+        print(f'embedding labels shape: {labels.shape}')
+        
+
         labels_to_embed = labels
         if self._concatenate_labels:
             # Dummy label for final position, where we don't want the label
@@ -169,14 +177,13 @@ class InputEmbedder(nn.Module):
             n_emb_classes += 1
             labels_to_embed[:, -1] = n_emb_classes - 1
 
-        embs = torch.nn.init.normal_(
-            torch.empty(n_emb_classes, self._emb_dim), std=0.02
-        ).to(self.device)
+        embs = self.embs
         # embs = hk.get_parameter(
         #     'embs', [n_emb_classes, self._emb_dim],
         #     init=init.TruncatedNormal(stddev=0.02))
+        labels_to_embed = labels_to_embed.long()
         h_label = embs[labels_to_embed]  # (B, SS, E)
-
+        print(f'embedding labels shape: {h_label.shape}')
         if self._concatenate_labels:
             # Concatenate example and label embeddings
             hh = torch.cat((h_example, h_label), axis=2)  # (B,SS,E*2)

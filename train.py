@@ -3,6 +3,7 @@ import wandb
 import torch
 import torch.nn as nn
 import torch.optim as optim
+import matplotlib.pyplot as plt
 
 from datasets.dataset import SeqGenerator, _convert_dict
 
@@ -133,6 +134,8 @@ class Trainer:
             )
             optim.zero_grad()
 
+            print(f'examples shape: {examples.shape}'
+                  f'labels: {labels}, target: {target}')
             preds = self.model(examples, labels).transpose(1, 2)
 
             target_one_hot = (
@@ -197,6 +200,20 @@ class Trainer:
                     )
 
                     icl_preds = self.model(icl_examples, icl_labels).transpose(1, 2)
+
+
+                    # Display icl_examples using matplotlib and wait for key press
+                    print(f'icl_examples shape: {icl_examples.shape}')
+                    print(f'icl_labels: {icl_labels[0]}, icl_target: {icl_target[0]}, icl_preds: {icl_preds[0]}')
+                    for i in range(icl_examples.shape[1]):
+                        # Show the image at a smaller resolution
+
+
+                        plt.imshow(icl_examples[0][i])
+                        plt.show()
+                    input()
+
+
                     iwl_preds = self.model(iwl_examples, iwl_labels).transpose(1, 2)
 
                     eval_icl_target_one_hot = (
@@ -234,6 +251,8 @@ class Trainer:
                     iclAccDict = self.compute_accuracy(
                         icl_preds, icl_target, eval_query_mask
                     )
+
+                    
 
                     iwlAccDict = self.compute_accuracy(
                         iwl_preds, iwl_target, eval_query_mask
