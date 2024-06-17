@@ -135,9 +135,14 @@ class OmniglotDatasetForSampling:
                 [transforms.Grayscale(num_output_channels=1), transforms.ToTensor()]
             )
 
-            dataset = Omniglot(
-                root="./data", background=True, transform=transform, download=True
-            )
+            if split == "train":
+                dataset = Omniglot(
+                    root="./data", background=True, transform=transform, download=True
+                )
+            else:
+                dataset = Omniglot(
+                    root="./data", background=False, transform=transform, download=True
+                )
 
             dataloader = DataLoader(dataset, batch_size=1, shuffle=False)
 

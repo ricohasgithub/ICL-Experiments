@@ -31,6 +31,7 @@ class Trainer:
         batch_size=16,
         p_bursty=0.9,
         dataset_name="omniglot",
+        zipf_exponent=1,
     ):
 
         # Instance of model
@@ -88,19 +89,21 @@ class Trainer:
         wandb.init(
             # set the wandb project where this run will be logged
             project="icl-omniglot",
-            name=f"{dataset_name}, p_bursty={p_bursty}",
+            name=f"{dataset_name}, p_bursty={p_bursty}, zipf_exp={zipf_exponent}",
         )
 
     def _linear_warmup_and_sqrt_decay(self, step, warmup_steps=1000, lr_max=3e-4):
         if step < warmup_steps:
             return lr_max * step / warmup_steps
         else:
-            return lr_max * (warmup_steps ** 0.5) / (step ** 0.5)
+            return lr_max * (warmup_steps**0.5) / (step**0.5)
 
     def train(self, lr=1e-5, eval_after=100):
-        
+
         optim = self.optimizer(self.model.parameters())
-        scheduler = self.scheduler(optim, lr_lambda=lambda step: self._linear_warmup_and_sqrt_decay(step))
+        scheduler = self.scheduler(
+            optim, lr_lambda=lambda step: self._linear_warmup_and_sqrt_decay(step)
+        )
 
         criterion = self.loss_fn(reduction="none")
 
@@ -144,6 +147,8 @@ class Trainer:
             # print(preds.shape, target_one_hot.shape, losses_all.shape, query_mask.shape)
             query_mask[:, -1] = True
 
+            # print(query_mask)
+
             losses_weighted = losses_all * query_mask
             # print(losses_weighted.shape, target_one_hot.shape, preds.shape)
             loss = torch.sum(losses_weighted) / torch.sum(query_mask)
@@ -158,7 +163,6 @@ class Trainer:
 
             # Compute accuracy
             with torch.no_grad():
-
                 trainAccuracy = self.compute_accuracy(preds, target, query_mask)
 
                 running_train_accuracy += trainAccuracy["acc"]
@@ -230,6 +234,7 @@ class Trainer:
                     iclAccDict = self.compute_accuracy(
                         icl_preds, icl_target, eval_query_mask
                     )
+
                     iwlAccDict = self.compute_accuracy(
                         iwl_preds, iwl_target, eval_query_mask
                     )
