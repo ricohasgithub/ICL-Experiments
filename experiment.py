@@ -11,7 +11,7 @@ from datasets.dataset import GaussianVectorDatasetForSampling
 import torch
 
 
-def experiment_base(dataset, p_bursty):
+def experiment_base(dataset, p_bursty, zipf_exp):
 
     if dataset == "synthetic":
         input_embedding = InputEmbedder(linear_input_dim=64, example_encoding="linear")
@@ -20,7 +20,7 @@ def experiment_base(dataset, p_bursty):
             n_rare_classes=1603,  # 1623 - 20
             n_common_classes=10,
             n_holdout_classes=10,
-            zipf_exponent=1,
+            zipf_exponent=zipf_exp,
             use_zipf_for_common_rare=False,
             noise_scale=0.0,
             preserve_ordering_every_n=None,
@@ -46,6 +46,12 @@ def experiment_base(dataset, p_bursty):
 
     model = Transformer(input_embedder=input_embedding)
 
+    """ (cfg.seq_len, cfg.bursty_shots, cfg.ways, cfg.p_bursty,
+                        cfg.p_bursty_common, cfg.p_bursty_zipfian,
+                        cfg.non_bursty_type, cfg.labeling_common,
+                        cfg.labeling_rare, cfg.randomly_generate_rare,
+                        cfg.grouped"""
+
     data_generator = lambda: seq_generator_factory.get_bursty_seq(
         seq_len=9,
         shots=3,
@@ -66,6 +72,7 @@ def experiment_base(dataset, p_bursty):
         seq_generator_factory,
         p_bursty=p_bursty,
         dataset_name=dataset,
+        zipf_exponent=zipf_exp,
     )
     torch.autograd.set_detect_anomaly(True)
     trainer.train()
@@ -77,8 +84,9 @@ if __name__ == "__main__":
     experiment_id = sys.argv[1]
     dataset = sys.argv[2]
     p_bursty = float(sys.argv[3])
+    zipf_exp = float(sys.argv[4])
 
     if experiment_id == "base":
-        experiment_base(dataset, p_bursty)
+        experiment_base(dataset, p_bursty, zipf_exp)
     elif experiment_id == "mixed":
         pass
