@@ -153,7 +153,7 @@ class InputEmbedder(nn.Module):
         elif self._example_encoding == "embedding":
             h_example = self.embedding_layer(examples)
         elif self._example_encoding == "resnet":
-            print(examples.shape)
+            # print(examples.shape)
             examples = torch.permute(examples, (0, 1, 4, 2, 3))
             h_example = self.resnet(examples)
         else:
@@ -167,6 +167,7 @@ class InputEmbedder(nn.Module):
 
         # Embed the labels.
         n_emb_classes = self._n_classes
+        # print(f'embedding labels shape: {labels.shape}')
 
         labels_to_embed = labels
         if self._concatenate_labels:
@@ -181,6 +182,7 @@ class InputEmbedder(nn.Module):
         #     init=init.TruncatedNormal(stddev=0.02))
         labels_to_embed = labels_to_embed.long()
         h_label = embs[labels_to_embed]  # (B, SS, E)
+        # print(f'embedding labels shape: {h_label.shape}')
         if self._concatenate_labels:
             # Concatenate example and label embeddings
             hh = torch.cat((h_example, h_label), axis=2)  # (B,SS,E*2)
