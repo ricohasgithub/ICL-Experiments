@@ -1723,3 +1723,683 @@ Global batch 172000, avg loss after 100 batches: 3.551  | Global batch 172000, a
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 174000, avg loss after 100 batches: 3.54  | Global batch 174000, avg accuracy after 100 batches: 22.25 3.5608
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 176000, avg loss after 100 batches: 3.488  | Global batch 176000, avg accuracy after 100 batches: 21.812 2.97
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 178000, avg loss after 100 batches: 3.425  | Global batch 178000, avg accuracy after 100 batches: 24.575 2.59
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 180000, avg loss after 100 batches: 3.402  | Global batch 180000, avg accuracy after 100 batches: 25.056 3.06
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 182000, avg loss after 100 batches: 3.362  | Global batch 182000, avg accuracy after 100 batches: 24.561 3.07
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 184000, avg loss after 100 batches: 3.347  | Global batch 184000, avg accuracy after 100 batches: 23.38 3.853
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 186000, avg loss after 100 batches: 3.267  | Global batch 186000, avg accuracy after 100 batches: 26.699 3.56
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 188000, avg loss after 100 batches: 3.278  | Global batch 188000, avg accuracy after 100 batches: 26.068 4.66
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 190000, avg loss after 100 batches: 3.192  | Global batch 190000, avg accuracy after 100 batches: 28.626 4.71
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 192000, avg loss after 100 batches: 3.098  | Global batch 192000, avg accuracy after 100 batches: 29.81 3.849
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 194000, avg loss after 100 batches: 3.098  | Global batch 194000, avg accuracy after 100 batches: 29.562 5.07
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 196000, avg loss after 100 batches: 3.067  | Global batch 196000, avg accuracy after 100 batches: 29.941 4.78
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global batch 198000, avg loss after 100 batches: 3.047  | Global batch 198000, avg accuracy after 100 batches: 28.752 4.27
+Global batch 198200, avg loss after 100 batches: 3.063  | avg accuracy (total, from_support) after 100 batches: 30.56 5.23
+Global batch 198300, avg loss after 100 batches: 3.038  | avg accuracy (total, from_support) after 100 batches: 29.12 4.56
+Global batch 198400, avg loss after 100 batches: 3.075  | avg accuracy (total, from_support) after 100 batches: 29.94 5.23
+Global batch 198500, avg loss after 100 batches: 3.057  | avg accuracy (total, from_support) after 100 batches: 30.25 5.09
+Global batch 198600, avg loss after 100 batches: 3.019  | avg accuracy (total, from_support) after 100 batches: 30.44 5.14
+Global batch 198700, avg loss after 100 batches: 3.052  | avg accuracy (total, from_support) after 100 batches: 28.56 4.84
+Global batch 198800, avg loss after 100 batches: 3.026  | avg accuracy (total, from_support) after 100 batches: 31.06 5.11
+Global batch 198900, avg loss after 100 batches: 3.03  | avg accuracy (total, from_support) after 100 batches: 28.81 4.611
+Global batch 199000, avg loss after 100 batches: 3.029  | avg accuracy (total, from_support) after 100 batches: 30.63 5.21
+Global batch 199100, avg loss after 100 batches: 3.056  | avg accuracy (total, from_support) after 100 batches: 29.19 4.46
+Global batch 199200, avg loss after 100 batches: 3.018  | avg accuracy (total, from_support) after 100 batches: 30.25 4.83
+Global batch 199300, avg loss after 100 batches: 3.064  | avg accuracy (total, from_support) after 100 batches: 29.0 4.543
+Global batch 199400, avg loss after 100 batches: 3.02  | avg accuracy (total, from_support) after 100 batches: 30.44 4.893
+Global batch 199500, avg loss after 100 batches: 2.998  | avg accuracy (total, from_support) after 100 batches: 30.44 4.87
+Global batch 199600, avg loss after 100 batches: 2.999  | avg accuracy (total, from_support) after 100 batches: 31.0 5.337
+Global batch 199700, avg loss after 100 batches: 3.053  | avg accuracy (total, from_support) after 100 batches: 30.12 4.92
+Global batch 199800, avg loss after 100 batches: 2.951  | avg accuracy (total, from_support) after 100 batches: 32.94 5.66
+Global batch 199900, avg loss after 100 batches: 3.023  | avg accuracy (total, from_support) after 100 batches: 29.81 5.07
+Global batch 200000, avg loss after 100 batches: 3.039  | Global batch 200000, avg accuracy after 100 batches: 28.811 5.07
+Global batch 200100, avg loss after 100 batches: 2.991  | avg accuracy (total, from_support) after 100 batches: 29.25 4.33
+Global batch 200200, avg loss after 100 batches: 3.047  | avg accuracy (total, from_support) after 100 batches: 27.75 4.29
+Global batch 200300, avg loss after 100 batches: 3.034  | avg accuracy (total, from_support) after 100 batches: 29.62 4.29
+Global batch 200400, avg loss after 100 batches: 2.975  | avg accuracy (total, from_support) after 100 batches: 31.62 5.58
+Global batch 200500, avg loss after 100 batches: 2.995  | avg accuracy (total, from_support) after 100 batches: 29.31 4.82
+Global batch 200600, avg loss after 100 batches: 3.032  | avg accuracy (total, from_support) after 100 batches: 28.38 4.44
+Global batch 200700, avg loss after 100 batches: 2.937  | avg accuracy (total, from_support) after 100 batches: 31.5 5.184
+Global batch 200800, avg loss after 100 batches: 2.951  | avg accuracy (total, from_support) after 100 batches: 29.75 4.57
+Global batch 200900, avg loss after 100 batches: 2.94  | avg accuracy (total, from_support) after 100 batches: 33.06 5.467
+Global batch 201000, avg loss after 100 batches: 3.027  | avg accuracy (total, from_support) after 100 batches: 32.19 5.77
+Global batch 201100, avg loss after 100 batches: 3.028  | avg accuracy (total, from_support) after 100 batches: 29.12 4.55
+Global batch 201200, avg loss after 100 batches: 2.994  | avg accuracy (total, from_support) after 100 batches: 30.94 5.43
+Global batch 201300, avg loss after 100 batches: 2.95  | avg accuracy (total, from_support) after 100 batches: 31.62 4.963
+Global batch 201400, avg loss after 100 batches: 2.964  | avg accuracy (total, from_support) after 100 batches: 31.94 5.42
+Global batch 201500, avg loss after 100 batches: 2.961  | avg accuracy (total, from_support) after 100 batches: 31.13 5.11
+Global batch 201600, avg loss after 100 batches: 2.995  | avg accuracy (total, from_support) after 100 batches: 31.13 5.61
+Global batch 201700, avg loss after 100 batches: 2.952  | avg accuracy (total, from_support) after 100 batches: 31.5 5.861
+Global batch 201800, avg loss after 100 batches: 3.007  | avg accuracy (total, from_support) after 100 batches: 28.81 3.88
+Global batch 201900, avg loss after 100 batches: 2.984  | avg accuracy (total, from_support) after 100 batches: 30.44 5.04
+Global batch 202000, avg loss after 100 batches: 3.004  | Global batch 202000, avg accuracy after 100 batches: 30.444 5.04
+Global batch 202100, avg loss after 100 batches: 2.947  | avg accuracy (total, from_support) after 100 batches: 31.87 5.54
+Global batch 202200, avg loss after 100 batches: 2.981  | avg accuracy (total, from_support) after 100 batches: 30.69 5.04
+Global batch 202300, avg loss after 100 batches: 2.979  | avg accuracy (total, from_support) after 100 batches: 30.12 4.96
+Global batch 202400, avg loss after 100 batches: 2.989  | avg accuracy (total, from_support) after 100 batches: 30.88 4.75
+Global batch 202500, avg loss after 100 batches: 2.976  | avg accuracy (total, from_support) after 100 batches: 30.69 4.91
+Global batch 202600, avg loss after 100 batches: 2.948  | avg accuracy (total, from_support) after 100 batches: 31.81 5.56
+Global batch 202700, avg loss after 100 batches: 2.994  | avg accuracy (total, from_support) after 100 batches: 30.75 5.19
+Global batch 202800, avg loss after 100 batches: 2.957  | avg accuracy (total, from_support) after 100 batches: 31.69 5.62
+Global batch 202900, avg loss after 100 batches: 2.942  | avg accuracy (total, from_support) after 100 batches: 30.63 5.34
+Global batch 203000, avg loss after 100 batches: 2.992  | avg accuracy (total, from_support) after 100 batches: 29.12 4.59
+Global batch 203100, avg loss after 100 batches: 2.966  | avg accuracy (total, from_support) after 100 batches: 30.75 5.39
+Global batch 203200, avg loss after 100 batches: 2.906  | avg accuracy (total, from_support) after 100 batches: 32.0 5.829
+Global batch 203300, avg loss after 100 batches: 2.934  | avg accuracy (total, from_support) after 100 batches: 30.81 4.96
+Global batch 203400, avg loss after 100 batches: 2.985  | avg accuracy (total, from_support) after 100 batches: 31.81 5.34
+Global batch 203500, avg loss after 100 batches: 3.014  | avg accuracy (total, from_support) after 100 batches: 30.94 4.77
+Global batch 203600, avg loss after 100 batches: 2.972  | avg accuracy (total, from_support) after 100 batches: 31.69 5.29
+Global batch 203700, avg loss after 100 batches: 2.872  | avg accuracy (total, from_support) after 100 batches: 33.06 5.99
+Global batch 203800, avg loss after 100 batches: 2.908  | avg accuracy (total, from_support) after 100 batches: 32.25 5.95
+Global batch 203900, avg loss after 100 batches: 2.966  | avg accuracy (total, from_support) after 100 batches: 31.25 5.39
+Global batch 204000, avg loss after 100 batches: 2.926  | Global batch 204000, avg accuracy after 100 batches: 32.945 5.39
+Global batch 204100, avg loss after 100 batches: 2.989  | avg accuracy (total, from_support) after 100 batches: 30.19 4.85
+Global batch 204200, avg loss after 100 batches: 2.857  | avg accuracy (total, from_support) after 100 batches: 33.69 5.89
+Global batch 204300, avg loss after 100 batches: 2.969  | avg accuracy (total, from_support) after 100 batches: 31.13 5.05
+Global batch 204400, avg loss after 100 batches: 2.952  | avg accuracy (total, from_support) after 100 batches: 30.44 5.19
+Global batch 204500, avg loss after 100 batches: 2.932  | avg accuracy (total, from_support) after 100 batches: 31.69 5.55
+Global batch 204600, avg loss after 100 batches: 2.926  | avg accuracy (total, from_support) after 100 batches: 31.69 5.52
+Global batch 204700, avg loss after 100 batches: 2.986  | avg accuracy (total, from_support) after 100 batches: 30.19 4.93
+Global batch 204800, avg loss after 100 batches: 2.972  | avg accuracy (total, from_support) after 100 batches: 31.25 5.57
+Global batch 204900, avg loss after 100 batches: 2.85  | avg accuracy (total, from_support) after 100 batches: 34.56 6.797
+Global batch 205000, avg loss after 100 batches: 2.982  | avg accuracy (total, from_support) after 100 batches: 30.12 5.04
+Global batch 205100, avg loss after 100 batches: 2.939  | avg accuracy (total, from_support) after 100 batches: 31.87 5.59
+Global batch 205200, avg loss after 100 batches: 2.921  | avg accuracy (total, from_support) after 100 batches: 30.06 4.87
+Global batch 205300, avg loss after 100 batches: 2.936  | avg accuracy (total, from_support) after 100 batches: 32.38 5.77
+Global batch 205400, avg loss after 100 batches: 2.901  | avg accuracy (total, from_support) after 100 batches: 31.31 5.62
+Global batch 205500, avg loss after 100 batches: 2.917  | avg accuracy (total, from_support) after 100 batches: 32.06 5.29
+Global batch 205600, avg loss after 100 batches: 2.881  | avg accuracy (total, from_support) after 100 batches: 31.62 5.51
+Global batch 205700, avg loss after 100 batches: 2.894  | avg accuracy (total, from_support) after 100 batches: 34.88 6.46
+Global batch 205800, avg loss after 100 batches: 2.891  | avg accuracy (total, from_support) after 100 batches: 32.5 5.556
+Global batch 205900, avg loss after 100 batches: 2.872  | avg accuracy (total, from_support) after 100 batches: 32.5 5.736
+Global batch 206000, avg loss after 100 batches: 2.856  | Global batch 206000, avg accuracy after 100 batches: 32.75 5.736
+Global batch 206100, avg loss after 100 batches: 2.912  | avg accuracy (total, from_support) after 100 batches: 31.94 5.65
+Global batch 206200, avg loss after 100 batches: 2.935  | avg accuracy (total, from_support) after 100 batches: 31.62 5.39
+Global batch 206300, avg loss after 100 batches: 2.877  | avg accuracy (total, from_support) after 100 batches: 31.75 5.79
+Global batch 206400, avg loss after 100 batches: 2.913  | avg accuracy (total, from_support) after 100 batches: 33.19 5.55
+Global batch 206500, avg loss after 100 batches: 2.876  | avg accuracy (total, from_support) after 100 batches: 31.69 4.61
+Global batch 206600, avg loss after 100 batches: 2.911  | avg accuracy (total, from_support) after 100 batches: 32.12 5.44
+Global batch 206700, avg loss after 100 batches: 2.87  | avg accuracy (total, from_support) after 100 batches: 32.5 5.9244
+Global batch 206800, avg loss after 100 batches: 2.964  | avg accuracy (total, from_support) after 100 batches: 30.31 5.34
+Global batch 206900, avg loss after 100 batches: 2.888  | avg accuracy (total, from_support) after 100 batches: 31.75 6.04
+Global batch 207000, avg loss after 100 batches: 2.891  | avg accuracy (total, from_support) after 100 batches: 33.31 5.86
+Global batch 207100, avg loss after 100 batches: 2.846  | avg accuracy (total, from_support) after 100 batches: 33.62 6.03
+Global batch 207200, avg loss after 100 batches: 2.863  | avg accuracy (total, from_support) after 100 batches: 34.19 6.62
+Global batch 207300, avg loss after 100 batches: 2.888  | avg accuracy (total, from_support) after 100 batches: 32.88 6.09
+Global batch 207400, avg loss after 100 batches: 2.912  | avg accuracy (total, from_support) after 100 batches: 32.81 5.79
+Global batch 207500, avg loss after 100 batches: 2.886  | avg accuracy (total, from_support) after 100 batches: 33.81 6.12
+Global batch 207600, avg loss after 100 batches: 2.904  | avg accuracy (total, from_support) after 100 batches: 31.13 4.96
+Global batch 207700, avg loss after 100 batches: 2.92  | avg accuracy (total, from_support) after 100 batches: 33.12 5.986
+Global batch 207800, avg loss after 100 batches: 2.922  | avg accuracy (total, from_support) after 100 batches: 31.75 5.42
+Global batch 207900, avg loss after 100 batches: 2.844  | avg accuracy (total, from_support) after 100 batches: 34.5 6.232
+Global batch 208000, avg loss after 100 batches: 2.879  | Global batch 208000, avg accuracy after 100 batches: 33.69 6.232
+Global batch 208100, avg loss after 100 batches: 2.905  | avg accuracy (total, from_support) after 100 batches: 30.5 4.842
+Global batch 208200, avg loss after 100 batches: 2.853  | avg accuracy (total, from_support) after 100 batches: 33.81 6.01
+Global batch 208300, avg loss after 100 batches: 2.853  | avg accuracy (total, from_support) after 100 batches: 30.94 4.79
+Global batch 208400, avg loss after 100 batches: 2.898  | avg accuracy (total, from_support) after 100 batches: 31.87 5.51
+Global batch 208500, avg loss after 100 batches: 2.811  | avg accuracy (total, from_support) after 100 batches: 34.62 6.48
+Global batch 208600, avg loss after 100 batches: 2.854  | avg accuracy (total, from_support) after 100 batches: 32.69 5.78
+Global batch 208700, avg loss after 100 batches: 2.913  | avg accuracy (total, from_support) after 100 batches: 30.0 5.298
+Global batch 208800, avg loss after 100 batches: 2.881  | avg accuracy (total, from_support) after 100 batches: 31.81 5.78
+Global batch 208900, avg loss after 100 batches: 2.922  | avg accuracy (total, from_support) after 100 batches: 32.81 5.89
+Global batch 209000, avg loss after 100 batches: 2.893  | avg accuracy (total, from_support) after 100 batches: 31.5 5.789
+Global batch 209100, avg loss after 100 batches: 2.826  | avg accuracy (total, from_support) after 100 batches: 33.44 5.83
+Global batch 209200, avg loss after 100 batches: 2.897  | avg accuracy (total, from_support) after 100 batches: 32.88 5.59
+Global batch 209300, avg loss after 100 batches: 2.805  | avg accuracy (total, from_support) after 100 batches: 34.12 5.58
+Global batch 209400, avg loss after 100 batches: 2.861  | avg accuracy (total, from_support) after 100 batches: 30.44 4.56
+Global batch 209500, avg loss after 100 batches: 2.863  | avg accuracy (total, from_support) after 100 batches: 33.06 6.36
+Global batch 209600, avg loss after 100 batches: 2.863  | avg accuracy (total, from_support) after 100 batches: 33.0 5.976
+Global batch 209700, avg loss after 100 batches: 2.875  | avg accuracy (total, from_support) after 100 batches: 31.94 5.45
+Global batch 209800, avg loss after 100 batches: 2.807  | avg accuracy (total, from_support) after 100 batches: 33.62 6.03
+Global batch 209900, avg loss after 100 batches: 2.852  | avg accuracy (total, from_support) after 100 batches: 31.25 5.58
+Global batch 210000, avg loss after 100 batches: 2.836  | Global batch 210000, avg accuracy after 100 batches: 32.625 5.58
+Global batch 210100, avg loss after 100 batches: 2.85  | avg accuracy (total, from_support) after 100 batches: 31.81 5.528
+Global batch 210200, avg loss after 100 batches: 2.801  | avg accuracy (total, from_support) after 100 batches: 34.0 6.798
+Global batch 210300, avg loss after 100 batches: 2.839  | avg accuracy (total, from_support) after 100 batches: 31.56 5.67
+Global batch 210400, avg loss after 100 batches: 2.865  | avg accuracy (total, from_support) after 100 batches: 31.81 5.09
+Global batch 210500, avg loss after 100 batches: 2.804  | avg accuracy (total, from_support) after 100 batches: 33.75 6.23
+Global batch 210600, avg loss after 100 batches: 2.858  | avg accuracy (total, from_support) after 100 batches: 32.69 5.86
+Global batch 210700, avg loss after 100 batches: 2.835  | avg accuracy (total, from_support) after 100 batches: 32.56 6.26
+Global batch 210800, avg loss after 100 batches: 2.832  | avg accuracy (total, from_support) after 100 batches: 32.44 5.16
+Global batch 210900, avg loss after 100 batches: 2.865  | avg accuracy (total, from_support) after 100 batches: 32.56 6.22
+Global batch 211000, avg loss after 100 batches: 2.843  | avg accuracy (total, from_support) after 100 batches: 32.81 6.06
+Global batch 211100, avg loss after 100 batches: 2.854  | avg accuracy (total, from_support) after 100 batches: 33.19 6.01
+Global batch 211200, avg loss after 100 batches: 2.8  | avg accuracy (total, from_support) after 100 batches: 33.31 5.2501
+Global batch 211300, avg loss after 100 batches: 2.777  | avg accuracy (total, from_support) after 100 batches: 34.19 6.39
+Global batch 211400, avg loss after 100 batches: 2.794  | avg accuracy (total, from_support) after 100 batches: 32.62 5.61
+Global batch 211500, avg loss after 100 batches: 2.85  | avg accuracy (total, from_support) after 100 batches: 33.81 6.331
+Global batch 211600, avg loss after 100 batches: 2.851  | avg accuracy (total, from_support) after 100 batches: 33.25 6.01
+Global batch 211700, avg loss after 100 batches: 2.842  | avg accuracy (total, from_support) after 100 batches: 32.19 5.21
+Global batch 211800, avg loss after 100 batches: 2.857  | avg accuracy (total, from_support) after 100 batches: 33.44 6.18
+Global batch 211900, avg loss after 100 batches: 2.769  | avg accuracy (total, from_support) after 100 batches: 34.31 6.26
+Global batch 212000, avg loss after 100 batches: 2.807  | Global batch 212000, avg accuracy after 100 batches: 33.751 6.26
+Global batch 212100, avg loss after 100 batches: 2.765  | avg accuracy (total, from_support) after 100 batches: 34.81 6.39
+Global batch 212200, avg loss after 100 batches: 2.769  | avg accuracy (total, from_support) after 100 batches: 36.12 7.29
+Global batch 212300, avg loss after 100 batches: 2.829  | avg accuracy (total, from_support) after 100 batches: 32.69 5.89
+Global batch 212400, avg loss after 100 batches: 2.857  | avg accuracy (total, from_support) after 100 batches: 32.69 5.56
+Global batch 212500, avg loss after 100 batches: 2.751  | avg accuracy (total, from_support) after 100 batches: 34.5 6.886
+Global batch 212600, avg loss after 100 batches: 2.822  | avg accuracy (total, from_support) after 100 batches: 33.94 6.04
+Global batch 212700, avg loss after 100 batches: 2.82  | avg accuracy (total, from_support) after 100 batches: 35.19 6.954
+Global batch 212800, avg loss after 100 batches: 2.823  | avg accuracy (total, from_support) after 100 batches: 33.19 6.06
+Global batch 212900, avg loss after 100 batches: 2.814  | avg accuracy (total, from_support) after 100 batches: 32.69 5.71
+Global batch 213000, avg loss after 100 batches: 2.752  | avg accuracy (total, from_support) after 100 batches: 34.56 6.36
+Global batch 213100, avg loss after 100 batches: 2.786  | avg accuracy (total, from_support) after 100 batches: 34.62 6.53
+Global batch 213200, avg loss after 100 batches: 2.817  | avg accuracy (total, from_support) after 100 batches: 32.69 5.51
+Global batch 213300, avg loss after 100 batches: 2.806  | avg accuracy (total, from_support) after 100 batches: 35.94 6.74
+Global batch 213400, avg loss after 100 batches: 2.773  | avg accuracy (total, from_support) after 100 batches: 33.94 6.12
+Global batch 213500, avg loss after 100 batches: 2.763  | avg accuracy (total, from_support) after 100 batches: 34.31 7.01
+Global batch 213600, avg loss after 100 batches: 2.731  | avg accuracy (total, from_support) after 100 batches: 36.12 6.76
+Global batch 213700, avg loss after 100 batches: 2.844  | avg accuracy (total, from_support) after 100 batches: 30.81 5.71
+Global batch 213800, avg loss after 100 batches: 2.739  | avg accuracy (total, from_support) after 100 batches: 34.31 5.65
+Global batch 213900, avg loss after 100 batches: 2.777  | avg accuracy (total, from_support) after 100 batches: 33.06 5.98
+Global batch 214000, avg loss after 100 batches: 2.763  | Global batch 214000, avg accuracy after 100 batches: 35.696 5.98
+Global batch 214100, avg loss after 100 batches: 2.768  | avg accuracy (total, from_support) after 100 batches: 34.81 6.53
+Global batch 214200, avg loss after 100 batches: 2.77  | avg accuracy (total, from_support) after 100 batches: 34.62 6.753
+Global batch 214300, avg loss after 100 batches: 2.755  | avg accuracy (total, from_support) after 100 batches: 33.44 6.44
+Global batch 214400, avg loss after 100 batches: 2.783  | avg accuracy (total, from_support) after 100 batches: 34.94 6.39
+Global batch 214500, avg loss after 100 batches: 2.782  | avg accuracy (total, from_support) after 100 batches: 33.81 6.32
+Global batch 214600, avg loss after 100 batches: 2.716  | avg accuracy (total, from_support) after 100 batches: 36.5 7.242
+Global batch 214700, avg loss after 100 batches: 2.732  | avg accuracy (total, from_support) after 100 batches: 35.81 7.59
+Global batch 214800, avg loss after 100 batches: 2.785  | avg accuracy (total, from_support) after 100 batches: 34.81 6.39
+Global batch 214900, avg loss after 100 batches: 2.737  | avg accuracy (total, from_support) after 100 batches: 35.44 7.09
+Global batch 215000, avg loss after 100 batches: 2.681  | avg accuracy (total, from_support) after 100 batches: 35.0 6.349
+Global batch 215100, avg loss after 100 batches: 2.739  | avg accuracy (total, from_support) after 100 batches: 33.19 5.76
+Global batch 215200, avg loss after 100 batches: 2.765  | avg accuracy (total, from_support) after 100 batches: 35.69 6.11
+Global batch 215300, avg loss after 100 batches: 2.797  | avg accuracy (total, from_support) after 100 batches: 33.44 6.29
+Global batch 215400, avg loss after 100 batches: 2.789  | avg accuracy (total, from_support) after 100 batches: 33.0 6.069
+Global batch 215500, avg loss after 100 batches: 2.725  | avg accuracy (total, from_support) after 100 batches: 35.38 6.83
+Global batch 215600, avg loss after 100 batches: 2.736  | avg accuracy (total, from_support) after 100 batches: 36.12 6.43
+Global batch 215700, avg loss after 100 batches: 2.687  | avg accuracy (total, from_support) after 100 batches: 35.94 7.01
+Global batch 215800, avg loss after 100 batches: 2.775  | avg accuracy (total, from_support) after 100 batches: 33.31 6.01
+Global batch 215900, avg loss after 100 batches: 2.717  | avg accuracy (total, from_support) after 100 batches: 35.81 7.13
+Global batch 216000, avg loss after 100 batches: 2.764  | Global batch 216000, avg accuracy after 100 batches: 35.061 7.13
+Global batch 216100, avg loss after 100 batches: 2.722  | avg accuracy (total, from_support) after 100 batches: 35.81 6.83
+Global batch 216200, avg loss after 100 batches: 2.82  | avg accuracy (total, from_support) after 100 batches: 32.38 5.653
+Global batch 216300, avg loss after 100 batches: 2.675  | avg accuracy (total, from_support) after 100 batches: 35.94 7.11
+Global batch 216400, avg loss after 100 batches: 2.757  | avg accuracy (total, from_support) after 100 batches: 34.56 6.39
+Global batch 216500, avg loss after 100 batches: 2.73  | avg accuracy (total, from_support) after 100 batches: 36.38 7.159
+Global batch 216600, avg loss after 100 batches: 2.705  | avg accuracy (total, from_support) after 100 batches: 35.88 6.86
+Global batch 216700, avg loss after 100 batches: 2.69  | avg accuracy (total, from_support) after 100 batches: 35.38 6.046
+Global batch 216800, avg loss after 100 batches: 2.751  | avg accuracy (total, from_support) after 100 batches: 32.56 5.76
+Global batch 216900, avg loss after 100 batches: 2.728  | avg accuracy (total, from_support) after 100 batches: 35.62 6.29
+Global batch 217000, avg loss after 100 batches: 2.707  | avg accuracy (total, from_support) after 100 batches: 36.25 7.39
+Global batch 217100, avg loss after 100 batches: 2.69  | avg accuracy (total, from_support) after 100 batches: 37.25 7.239
+Global batch 217200, avg loss after 100 batches: 2.669  | avg accuracy (total, from_support) after 100 batches: 34.0 6.719
+Global batch 217300, avg loss after 100 batches: 2.716  | avg accuracy (total, from_support) after 100 batches: 35.69 6.92
+Global batch 217400, avg loss after 100 batches: 2.696  | avg accuracy (total, from_support) after 100 batches: 35.69 6.76
+Global batch 217500, avg loss after 100 batches: 2.664  | avg accuracy (total, from_support) after 100 batches: 35.88 6.43
+Global batch 217600, avg loss after 100 batches: 2.728  | avg accuracy (total, from_support) after 100 batches: 35.06 6.73
+Global batch 217700, avg loss after 100 batches: 2.691  | avg accuracy (total, from_support) after 100 batches: 36.88 6.63
+Global batch 217800, avg loss after 100 batches: 2.756  | avg accuracy (total, from_support) after 100 batches: 33.69 6.62
+Global batch 217900, avg loss after 100 batches: 2.744  | avg accuracy (total, from_support) after 100 batches: 34.88 6.38
+Global batch 218000, avg loss after 100 batches: 2.69  | Global batch 218000, avg accuracy after 100 batches: 35.8888 6.38
+Global batch 218100, avg loss after 100 batches: 2.734  | avg accuracy (total, from_support) after 100 batches: 34.62 6.57
+Global batch 218200, avg loss after 100 batches: 2.724  | avg accuracy (total, from_support) after 100 batches: 35.62 6.59
+Global batch 218300, avg loss after 100 batches: 2.7  | avg accuracy (total, from_support) after 100 batches: 36.94 8.3.59
+Global batch 218400, avg loss after 100 batches: 2.782  | avg accuracy (total, from_support) after 100 batches: 34.56 6.73
+Global batch 218500, avg loss after 100 batches: 2.628  | avg accuracy (total, from_support) after 100 batches: 36.88 7.41
+Global batch 218600, avg loss after 100 batches: 2.689  | avg accuracy (total, from_support) after 100 batches: 36.81 7.19
+Global batch 218700, avg loss after 100 batches: 2.66  | avg accuracy (total, from_support) after 100 batches: 36.5 6.9419
+Global batch 218800, avg loss after 100 batches: 2.625  | avg accuracy (total, from_support) after 100 batches: 38.88 8.07
+Global batch 218900, avg loss after 100 batches: 2.706  | avg accuracy (total, from_support) after 100 batches: 35.0 5.997
+Global batch 219000, avg loss after 100 batches: 2.702  | avg accuracy (total, from_support) after 100 batches: 34.88 6.77
+Global batch 219100, avg loss after 100 batches: 2.67  | avg accuracy (total, from_support) after 100 batches: 37.25 6.817
+Global batch 219200, avg loss after 100 batches: 2.672  | avg accuracy (total, from_support) after 100 batches: 36.06 6.73
+Global batch 219300, avg loss after 100 batches: 2.72  | avg accuracy (total, from_support) after 100 batches: 34.69 6.733
+Global batch 219400, avg loss after 100 batches: 2.66  | avg accuracy (total, from_support) after 100 batches: 36.38 7.163
+Global batch 219500, avg loss after 100 batches: 2.64  | avg accuracy (total, from_support) after 100 batches: 37.38 7.153
+Global batch 219600, avg loss after 100 batches: 2.677  | avg accuracy (total, from_support) after 100 batches: 37.0 6.823
+Global batch 219700, avg loss after 100 batches: 2.622  | avg accuracy (total, from_support) after 100 batches: 37.88 7.88
+Global batch 219800, avg loss after 100 batches: 2.708  | avg accuracy (total, from_support) after 100 batches: 35.69 6.76
+Global batch 219900, avg loss after 100 batches: 2.654  | avg accuracy (total, from_support) after 100 batches: 35.69 7.06
+Global batch 220000, avg loss after 100 batches: 2.646  | Global batch 220000, avg accuracy after 100 batches: 35.199 7.06
+Global batch 220100, avg loss after 100 batches: 2.657  | avg accuracy (total, from_support) after 100 batches: 37.25 7.57
+Global batch 220200, avg loss after 100 batches: 2.624  | avg accuracy (total, from_support) after 100 batches: 37.5 7.947
+Global batch 220300, avg loss after 100 batches: 2.7  | avg accuracy (total, from_support) after 100 batches: 34.81 7.0947
+Global batch 220400, avg loss after 100 batches: 2.637  | avg accuracy (total, from_support) after 100 batches: 38.38 7.71
+Global batch 220500, avg loss after 100 batches: 2.735  | avg accuracy (total, from_support) after 100 batches: 35.19 7.01
+Global batch 220600, avg loss after 100 batches: 2.699  | avg accuracy (total, from_support) after 100 batches: 34.81 6.57
+Global batch 220700, avg loss after 100 batches: 2.692  | avg accuracy (total, from_support) after 100 batches: 33.56 5.93
+Global batch 220800, avg loss after 100 batches: 2.599  | avg accuracy (total, from_support) after 100 batches: 37.5 7.553
+Global batch 220900, avg loss after 100 batches: 2.694  | avg accuracy (total, from_support) after 100 batches: 34.69 6.53
+Global batch 221000, avg loss after 100 batches: 2.663  | avg accuracy (total, from_support) after 100 batches: 36.12 6.67
+Global batch 221100, avg loss after 100 batches: 2.679  | avg accuracy (total, from_support) after 100 batches: 36.06 6.64
+Global batch 221200, avg loss after 100 batches: 2.609  | avg accuracy (total, from_support) after 100 batches: 36.44 7.24
+Global batch 221300, avg loss after 100 batches: 2.591  | avg accuracy (total, from_support) after 100 batches: 38.81 7.91
+Global batch 221400, avg loss after 100 batches: 2.648  | avg accuracy (total, from_support) after 100 batches: 37.81 7.36
+Global batch 221500, avg loss after 100 batches: 2.622  | avg accuracy (total, from_support) after 100 batches: 36.31 7.78
+Global batch 221600, avg loss after 100 batches: 2.62  | avg accuracy (total, from_support) after 100 batches: 35.69 6.548
+Global batch 221700, avg loss after 100 batches: 2.66  | avg accuracy (total, from_support) after 100 batches: 35.75 7.038
+Global batch 221800, avg loss after 100 batches: 2.644  | avg accuracy (total, from_support) after 100 batches: 36.12 6.83
+Global batch 221900, avg loss after 100 batches: 2.629  | avg accuracy (total, from_support) after 100 batches: 36.62 7.73
+Global batch 222000, avg loss after 100 batches: 2.658  | Global batch 222000, avg accuracy after 100 batches: 36.622 7.73
+Global batch 222100, avg loss after 100 batches: 2.666  | avg accuracy (total, from_support) after 100 batches: 35.5 7.373
+Global batch 222200, avg loss after 100 batches: 2.66  | avg accuracy (total, from_support) after 100 batches: 34.62 6.833
+Global batch 222300, avg loss after 100 batches: 2.581  | avg accuracy (total, from_support) after 100 batches: 36.94 7.53
+Global batch 222400, avg loss after 100 batches: 2.639  | avg accuracy (total, from_support) after 100 batches: 35.19 7.07
+Global batch 222500, avg loss after 100 batches: 2.641  | avg accuracy (total, from_support) after 100 batches: 37.0 7.047
+Global batch 222600, avg loss after 100 batches: 2.613  | avg accuracy (total, from_support) after 100 batches: 37.25 7.23
+Global batch 222700, avg loss after 100 batches: 2.656  | avg accuracy (total, from_support) after 100 batches: 37.31 6.87
+Global batch 222800, avg loss after 100 batches: 2.608  | avg accuracy (total, from_support) after 100 batches: 37.56 7.41
+Global batch 222900, avg loss after 100 batches: 2.607  | avg accuracy (total, from_support) after 100 batches: 35.31 7.07
+Global batch 223000, avg loss after 100 batches: 2.624  | avg accuracy (total, from_support) after 100 batches: 34.88 6.88
+Global batch 223100, avg loss after 100 batches: 2.573  | avg accuracy (total, from_support) after 100 batches: 37.88 7.83
+Global batch 223200, avg loss after 100 batches: 2.609  | avg accuracy (total, from_support) after 100 batches: 36.69 6.98
+Global batch 223300, avg loss after 100 batches: 2.635  | avg accuracy (total, from_support) after 100 batches: 35.19 6.76
+Global batch 223400, avg loss after 100 batches: 2.657  | avg accuracy (total, from_support) after 100 batches: 36.88 7.36
+Global batch 223500, avg loss after 100 batches: 2.6  | avg accuracy (total, from_support) after 100 batches: 39.19 7.9.36
+Global batch 223600, avg loss after 100 batches: 2.591  | avg accuracy (total, from_support) after 100 batches: 36.69 7.39
+Global batch 223700, avg loss after 100 batches: 2.59  | avg accuracy (total, from_support) after 100 batches: 39.25 7.719
+Global batch 223800, avg loss after 100 batches: 2.66  | avg accuracy (total, from_support) after 100 batches: 35.0 6.4319
+Global batch 223900, avg loss after 100 batches: 2.596  | avg accuracy (total, from_support) after 100 batches: 36.94 7.92
+Global batch 224000, avg loss after 100 batches: 2.631  | Global batch 224000, avg accuracy after 100 batches: 35.564 7.92
+Global batch 224100, avg loss after 100 batches: 2.556  | avg accuracy (total, from_support) after 100 batches: 38.38 7.78
+Global batch 224200, avg loss after 100 batches: 2.575  | avg accuracy (total, from_support) after 100 batches: 38.31 7.44
+Global batch 224300, avg loss after 100 batches: 2.618  | avg accuracy (total, from_support) after 100 batches: 37.88 7.86
+Global batch 224400, avg loss after 100 batches: 2.59  | avg accuracy (total, from_support) after 100 batches: 37.69 7.796
+Global batch 224500, avg loss after 100 batches: 2.64  | avg accuracy (total, from_support) after 100 batches: 34.19 5.656
+Global batch 224600, avg loss after 100 batches: 2.572  | avg accuracy (total, from_support) after 100 batches: 39.06 8.01
+Global batch 224700, avg loss after 100 batches: 2.6  | avg accuracy (total, from_support) after 100 batches: 37.0 7.68.01
+Global batch 224800, avg loss after 100 batches: 2.582  | avg accuracy (total, from_support) after 100 batches: 37.25 8.13
+Global batch 224900, avg loss after 100 batches: 2.563  | avg accuracy (total, from_support) after 100 batches: 37.5 7.223
+Global batch 225000, avg loss after 100 batches: 2.551  | avg accuracy (total, from_support) after 100 batches: 39.25 7.91
+Global batch 225100, avg loss after 100 batches: 2.588  | avg accuracy (total, from_support) after 100 batches: 37.5 7.411
+Global batch 225200, avg loss after 100 batches: 2.597  | avg accuracy (total, from_support) after 100 batches: 37.81 7.59
+Global batch 225300, avg loss after 100 batches: 2.624  | avg accuracy (total, from_support) after 100 batches: 36.5 7.999
+Global batch 225400, avg loss after 100 batches: 2.592  | avg accuracy (total, from_support) after 100 batches: 36.19 7.09
+Global batch 225500, avg loss after 100 batches: 2.578  | avg accuracy (total, from_support) after 100 batches: 36.38 6.99
+Global batch 225600, avg loss after 100 batches: 2.585  | avg accuracy (total, from_support) after 100 batches: 38.62 8.12
+Global batch 225700, avg loss after 100 batches: 2.581  | avg accuracy (total, from_support) after 100 batches: 38.19 7.64
+Global batch 225800, avg loss after 100 batches: 2.564  | avg accuracy (total, from_support) after 100 batches: 36.38 7.03
+Global batch 225900, avg loss after 100 batches: 2.632  | avg accuracy (total, from_support) after 100 batches: 37.0 8.073
+Global batch 226000, avg loss after 100 batches: 2.617  | Global batch 226000, avg accuracy after 100 batches: 36.94 8.073
+Global batch 226100, avg loss after 100 batches: 2.525  | avg accuracy (total, from_support) after 100 batches: 37.5 6.973
+Global batch 226200, avg loss after 100 batches: 2.564  | avg accuracy (total, from_support) after 100 batches: 37.44 7.05
+Global batch 226300, avg loss after 100 batches: 2.541  | avg accuracy (total, from_support) after 100 batches: 37.44 7.44
+Global batch 226400, avg loss after 100 batches: 2.553  | avg accuracy (total, from_support) after 100 batches: 39.88 8.06
+Global batch 226500, avg loss after 100 batches: 2.61  | avg accuracy (total, from_support) after 100 batches: 35.94 6.766
+Global batch 226600, avg loss after 100 batches: 2.565  | avg accuracy (total, from_support) after 100 batches: 37.88 7.73
+Global batch 226700, avg loss after 100 batches: 2.544  | avg accuracy (total, from_support) after 100 batches: 37.56 6.83
+Global batch 226800, avg loss after 100 batches: 2.535  | avg accuracy (total, from_support) after 100 batches: 39.62 8.09
+Global batch 226900, avg loss after 100 batches: 2.575  | avg accuracy (total, from_support) after 100 batches: 38.19 7.59
+Global batch 227000, avg loss after 100 batches: 2.552  | avg accuracy (total, from_support) after 100 batches: 38.0 8.089
+Global batch 227100, avg loss after 100 batches: 2.539  | avg accuracy (total, from_support) after 100 batches: 38.56 7.69
+Global batch 227200, avg loss after 100 batches: 2.551  | avg accuracy (total, from_support) after 100 batches: 36.94 6.93
+Global batch 227300, avg loss after 100 batches: 2.547  | avg accuracy (total, from_support) after 100 batches: 39.62 8.23
+Global batch 227400, avg loss after 100 batches: 2.513  | avg accuracy (total, from_support) after 100 batches: 38.88 7.78
+Global batch 227500, avg loss after 100 batches: 2.538  | avg accuracy (total, from_support) after 100 batches: 38.19 7.99
+Global batch 227600, avg loss after 100 batches: 2.55  | avg accuracy (total, from_support) after 100 batches: 39.06 8.359
+Global batch 227700, avg loss after 100 batches: 2.564  | avg accuracy (total, from_support) after 100 batches: 38.44 7.91
+Global batch 227800, avg loss after 100 batches: 2.558  | avg accuracy (total, from_support) after 100 batches: 40.19 8.51
+Global batch 227900, avg loss after 100 batches: 2.492  | avg accuracy (total, from_support) after 100 batches: 39.81 8.51
+Global batch 228000, avg loss after 100 batches: 2.585  | Global batch 228000, avg accuracy after 100 batches: 38.081 8.51
+Global batch 228100, avg loss after 100 batches: 2.514  | avg accuracy (total, from_support) after 100 batches: 39.31 7.98
+Global batch 228200, avg loss after 100 batches: 2.488  | avg accuracy (total, from_support) after 100 batches: 39.94 8.45
+Global batch 228300, avg loss after 100 batches: 2.47  | avg accuracy (total, from_support) after 100 batches: 40.0 9.1145
+Global batch 228400, avg loss after 100 batches: 2.534  | avg accuracy (total, from_support) after 100 batches: 40.06 8.56
+Global batch 228500, avg loss after 100 batches: 2.578  | avg accuracy (total, from_support) after 100 batches: 40.19 8.76
+Global batch 228600, avg loss after 100 batches: 2.526  | avg accuracy (total, from_support) after 100 batches: 36.88 8.09
+Global batch 228700, avg loss after 100 batches: 2.537  | avg accuracy (total, from_support) after 100 batches: 37.25 7.23
+Global batch 228800, avg loss after 100 batches: 2.561  | avg accuracy (total, from_support) after 100 batches: 37.69 7.05
+Global batch 228900, avg loss after 100 batches: 2.486  | avg accuracy (total, from_support) after 100 batches: 39.44 8.54
+Global batch 229000, avg loss after 100 batches: 2.535  | avg accuracy (total, from_support) after 100 batches: 38.88 8.06
+Global batch 229100, avg loss after 100 batches: 2.553  | avg accuracy (total, from_support) after 100 batches: 39.44 8.17
+Global batch 229200, avg loss after 100 batches: 2.493  | avg accuracy (total, from_support) after 100 batches: 39.81 8.09
+Global batch 229300, avg loss after 100 batches: 2.492  | avg accuracy (total, from_support) after 100 batches: 40.06 7.88
+Global batch 229400, avg loss after 100 batches: 2.574  | avg accuracy (total, from_support) after 100 batches: 36.94 7.21
+Global batch 229500, avg loss after 100 batches: 2.505  | avg accuracy (total, from_support) after 100 batches: 38.19 8.11
+Global batch 229600, avg loss after 100 batches: 2.504  | avg accuracy (total, from_support) after 100 batches: 40.0 8.471
+Global batch 229700, avg loss after 100 batches: 2.522  | avg accuracy (total, from_support) after 100 batches: 37.31 7.19
+Global batch 229800, avg loss after 100 batches: 2.47  | avg accuracy (total, from_support) after 100 batches: 38.69 7.849
+Global batch 229900, avg loss after 100 batches: 2.512  | avg accuracy (total, from_support) after 100 batches: 38.38 8.32
+Global batch 230000, avg loss after 100 batches: 2.502  | Global batch 230000, avg accuracy after 100 batches: 38.038 8.32
+Global batch 230100, avg loss after 100 batches: 2.569  | avg accuracy (total, from_support) after 100 batches: 38.56 7.92
+Global batch 230200, avg loss after 100 batches: 2.44  | avg accuracy (total, from_support) after 100 batches: 41.94 9.472
+Global batch 230300, avg loss after 100 batches: 2.494  | avg accuracy (total, from_support) after 100 batches: 38.44 7.61
+Global batch 230400, avg loss after 100 batches: 2.49  | avg accuracy (total, from_support) after 100 batches: 39.38 7.771
+Global batch 230500, avg loss after 100 batches: 2.52  | avg accuracy (total, from_support) after 100 batches: 40.38 8.071
+Global batch 230600, avg loss after 100 batches: 2.492  | avg accuracy (total, from_support) after 100 batches: 39.56 8.27
+Global batch 230700, avg loss after 100 batches: 2.513  | avg accuracy (total, from_support) after 100 batches: 40.44 7.99
+Global batch 230800, avg loss after 100 batches: 2.498  | avg accuracy (total, from_support) after 100 batches: 40.44 8.46
+Global batch 230900, avg loss after 100 batches: 2.481  | avg accuracy (total, from_support) after 100 batches: 38.81 8.48
+Global batch 231000, avg loss after 100 batches: 2.533  | avg accuracy (total, from_support) after 100 batches: 37.44 7.82
+Global batch 231100, avg loss after 100 batches: 2.442  | avg accuracy (total, from_support) after 100 batches: 40.94 8.98
+Global batch 231200, avg loss after 100 batches: 2.421  | avg accuracy (total, from_support) after 100 batches: 41.75 9.05
+Global batch 231300, avg loss after 100 batches: 2.471  | avg accuracy (total, from_support) after 100 batches: 38.81 8.32
+Global batch 231400, avg loss after 100 batches: 2.475  | avg accuracy (total, from_support) after 100 batches: 37.75 7.18
+Global batch 231500, avg loss after 100 batches: 2.501  | avg accuracy (total, from_support) after 100 batches: 38.94 7.93
+Global batch 231600, avg loss after 100 batches: 2.486  | avg accuracy (total, from_support) after 100 batches: 40.25 8.75
+Global batch 231700, avg loss after 100 batches: 2.475  | avg accuracy (total, from_support) after 100 batches: 40.12 8.71
+Global batch 231800, avg loss after 100 batches: 2.436  | avg accuracy (total, from_support) after 100 batches: 41.19 8.97
+Global batch 231900, avg loss after 100 batches: 2.478  | avg accuracy (total, from_support) after 100 batches: 40.38 9.01
+Global batch 232000, avg loss after 100 batches: 2.449  | Global batch 232000, avg accuracy after 100 batches: 40.198 9.01
+Global batch 232100, avg loss after 100 batches: 2.483  | avg accuracy (total, from_support) after 100 batches: 40.0 8.571
+Global batch 232200, avg loss after 100 batches: 2.518  | avg accuracy (total, from_support) after 100 batches: 39.38 8.39
+Global batch 232300, avg loss after 100 batches: 2.44  | avg accuracy (total, from_support) after 100 batches: 40.38 8.539
+Global batch 232400, avg loss after 100 batches: 2.436  | avg accuracy (total, from_support) after 100 batches: 40.25 8.82
+Global batch 232500, avg loss after 100 batches: 2.467  | avg accuracy (total, from_support) after 100 batches: 38.94 7.61
+Global batch 232600, avg loss after 100 batches: 2.479  | avg accuracy (total, from_support) after 100 batches: 39.31 8.33
+Global batch 232700, avg loss after 100 batches: 2.475  | avg accuracy (total, from_support) after 100 batches: 38.75 8.29
+Global batch 232800, avg loss after 100 batches: 2.478  | avg accuracy (total, from_support) after 100 batches: 38.12 8.04
+Global batch 232900, avg loss after 100 batches: 2.469  | avg accuracy (total, from_support) after 100 batches: 41.06 8.75
+Global batch 233000, avg loss after 100 batches: 2.453  | avg accuracy (total, from_support) after 100 batches: 39.75 8.51
+Global batch 233100, avg loss after 100 batches: 2.443  | avg accuracy (total, from_support) after 100 batches: 40.25 8.45
+Global batch 233200, avg loss after 100 batches: 2.454  | avg accuracy (total, from_support) after 100 batches: 39.88 8.81
+Global batch 233300, avg loss after 100 batches: 2.466  | avg accuracy (total, from_support) after 100 batches: 39.0 8.361
+Global batch 233400, avg loss after 100 batches: 2.467  | avg accuracy (total, from_support) after 100 batches: 39.25 8.84
+Global batch 233500, avg loss after 100 batches: 2.434  | avg accuracy (total, from_support) after 100 batches: 38.94 7.87
+Global batch 233600, avg loss after 100 batches: 2.464  | avg accuracy (total, from_support) after 100 batches: 39.12 7.63
+Global batch 233700, avg loss after 100 batches: 2.479  | avg accuracy (total, from_support) after 100 batches: 39.62 8.18
+Global batch 233800, avg loss after 100 batches: 2.483  | avg accuracy (total, from_support) after 100 batches: 40.44 8.64
+Global batch 233900, avg loss after 100 batches: 2.46  | avg accuracy (total, from_support) after 100 batches: 38.81 8.674
+Global batch 234000, avg loss after 100 batches: 2.433  | Global batch 234000, avg accuracy after 100 batches: 39.69 8.674
+Global batch 234100, avg loss after 100 batches: 2.497  | avg accuracy (total, from_support) after 100 batches: 37.75 7.81
+Global batch 234200, avg loss after 100 batches: 2.448  | avg accuracy (total, from_support) after 100 batches: 41.0 9.651
+Global batch 234300, avg loss after 100 batches: 2.455  | avg accuracy (total, from_support) after 100 batches: 38.5 7.751
+Global batch 234400, avg loss after 100 batches: 2.442  | avg accuracy (total, from_support) after 100 batches: 39.75 7.94
+Global batch 234500, avg loss after 100 batches: 2.443  | avg accuracy (total, from_support) after 100 batches: 38.75 8.27
+Global batch 234600, avg loss after 100 batches: 2.457  | avg accuracy (total, from_support) after 100 batches: 39.06 8.24
+Global batch 234700, avg loss after 100 batches: 2.446  | avg accuracy (total, from_support) after 100 batches: 40.06 8.97
+Global batch 234800, avg loss after 100 batches: 2.401  | avg accuracy (total, from_support) after 100 batches: 41.12 9.01
+Global batch 234900, avg loss after 100 batches: 2.389  | avg accuracy (total, from_support) after 100 batches: 41.5 8.781
+Global batch 235000, avg loss after 100 batches: 2.442  | avg accuracy (total, from_support) after 100 batches: 39.88 8.37
+Global batch 235100, avg loss after 100 batches: 2.438  | avg accuracy (total, from_support) after 100 batches: 40.19 8.36
+Global batch 235200, avg loss after 100 batches: 2.415  | avg accuracy (total, from_support) after 100 batches: 41.62 8.41
+Global batch 235300, avg loss after 100 batches: 2.398  | avg accuracy (total, from_support) after 100 batches: 40.56 8.38
+Global batch 235400, avg loss after 100 batches: 2.401  | avg accuracy (total, from_support) after 100 batches: 40.25 9.09
+Global batch 235500, avg loss after 100 batches: 2.451  | avg accuracy (total, from_support) after 100 batches: 42.81 9.62
+Global batch 235600, avg loss after 100 batches: 2.445  | avg accuracy (total, from_support) after 100 batches: 40.25 8.76
+Global batch 235700, avg loss after 100 batches: 2.399  | avg accuracy (total, from_support) after 100 batches: 39.81 7.98
+Global batch 235800, avg loss after 100 batches: 2.428  | avg accuracy (total, from_support) after 100 batches: 40.31 8.74
+Global batch 235900, avg loss after 100 batches: 2.418  | avg accuracy (total, from_support) after 100 batches: 40.94 9.46
+Global batch 236000, avg loss after 100 batches: 2.463  | Global batch 236000, avg accuracy after 100 batches: 38.754 9.46
+Global batch 236100, avg loss after 100 batches: 2.458  | avg accuracy (total, from_support) after 100 batches: 40.38 9.76
+Global batch 236200, avg loss after 100 batches: 2.416  | avg accuracy (total, from_support) after 100 batches: 40.38 8.13
+Global batch 236300, avg loss after 100 batches: 2.426  | avg accuracy (total, from_support) after 100 batches: 40.38 8.91
+Global batch 236400, avg loss after 100 batches: 2.392  | avg accuracy (total, from_support) after 100 batches: 41.38 9.28
+Global batch 236500, avg loss after 100 batches: 2.398  | avg accuracy (total, from_support) after 100 batches: 40.38 8.78
+Global batch 236600, avg loss after 100 batches: 2.376  | avg accuracy (total, from_support) after 100 batches: 40.44 9.02
+Global batch 236700, avg loss after 100 batches: 2.438  | avg accuracy (total, from_support) after 100 batches: 40.12 8.89
+Global batch 236800, avg loss after 100 batches: 2.421  | avg accuracy (total, from_support) after 100 batches: 41.88 9.39
+Global batch 236900, avg loss after 100 batches: 2.374  | avg accuracy (total, from_support) after 100 batches: 42.88 10.11
+Global batch 237000, avg loss after 100 batches: 2.444  | avg accuracy (total, from_support) after 100 batches: 40.12 8.661
+Global batch 237100, avg loss after 100 batches: 2.455  | avg accuracy (total, from_support) after 100 batches: 38.38 7.711
+Global batch 237200, avg loss after 100 batches: 2.411  | avg accuracy (total, from_support) after 100 batches: 41.62 9.051
+Global batch 237300, avg loss after 100 batches: 2.402  | avg accuracy (total, from_support) after 100 batches: 39.88 9.071
+Global batch 237400, avg loss after 100 batches: 2.417  | avg accuracy (total, from_support) after 100 batches: 40.5 8.8871
+Global batch 237500, avg loss after 100 batches: 2.398  | avg accuracy (total, from_support) after 100 batches: 40.31 9.571
+Global batch 237600, avg loss after 100 batches: 2.409  | avg accuracy (total, from_support) after 100 batches: 40.31 9.321
+Global batch 237700, avg loss after 100 batches: 2.371  | avg accuracy (total, from_support) after 100 batches: 42.94 9.171
+Global batch 237800, avg loss after 100 batches: 2.39  | avg accuracy (total, from_support) after 100 batches: 40.62 9.4371
+Global batch 237900, avg loss after 100 batches: 2.428  | avg accuracy (total, from_support) after 100 batches: 40.38 9.291
+Global batch 238000, avg loss after 100 batches: 2.398  | Global batch 238000, avg accuracy after 100 batches: 42.198 9.291
+Global batch 238100, avg loss after 100 batches: 2.349  | avg accuracy (total, from_support) after 100 batches: 43.06 10.49
+Global batch 238200, avg loss after 100 batches: 2.372  | avg accuracy (total, from_support) after 100 batches: 43.06 10.17
+Global batch 238300, avg loss after 100 batches: 2.433  | avg accuracy (total, from_support) after 100 batches: 40.44 9.267
+Global batch 238400, avg loss after 100 batches: 2.387  | avg accuracy (total, from_support) after 100 batches: 40.81 9.447
+Global batch 238500, avg loss after 100 batches: 2.343  | avg accuracy (total, from_support) after 100 batches: 43.31 10.16
+Global batch 238600, avg loss after 100 batches: 2.382  | avg accuracy (total, from_support) after 100 batches: 41.0 8.8816
+Global batch 238700, avg loss after 100 batches: 2.339  | avg accuracy (total, from_support) after 100 batches: 42.44 9.156
+Global batch 238800, avg loss after 100 batches: 2.399  | avg accuracy (total, from_support) after 100 batches: 40.75 9.456
+Global batch 238900, avg loss after 100 batches: 2.369  | avg accuracy (total, from_support) after 100 batches: 41.69 9.346
+Global batch 239000, avg loss after 100 batches: 2.416  | avg accuracy (total, from_support) after 100 batches: 40.25 8.956
+Global batch 239100, avg loss after 100 batches: 2.37  | avg accuracy (total, from_support) after 100 batches: 40.88 9.5156
+Global batch 239200, avg loss after 100 batches: 2.362  | avg accuracy (total, from_support) after 100 batches: 41.75 9.466
+Global batch 239300, avg loss after 100 batches: 2.388  | avg accuracy (total, from_support) after 100 batches: 41.19 9.326
+Global batch 239400, avg loss after 100 batches: 2.348  | avg accuracy (total, from_support) after 100 batches: 43.0 9.8326
+Global batch 239500, avg loss after 100 batches: 2.363  | avg accuracy (total, from_support) after 100 batches: 41.62 8.766
+Global batch 239600, avg loss after 100 batches: 2.317  | avg accuracy (total, from_support) after 100 batches: 42.44 8.636
+Global batch 239700, avg loss after 100 batches: 2.326  | avg accuracy (total, from_support) after 100 batches: 43.12 10.36
+Global batch 239800, avg loss after 100 batches: 2.328  | avg accuracy (total, from_support) after 100 batches: 42.81 10.05
+Global batch 239900, avg loss after 100 batches: 2.339  | avg accuracy (total, from_support) after 100 batches: 42.56 9.825
+Global batch 240000, avg loss after 100 batches: 2.313  | Global batch 240000, avg accuracy after 100 batches: 42.566 9.825
+Global batch 240100, avg loss after 100 batches: 2.335  | avg accuracy (total, from_support) after 100 batches: 42.81 10.49
+Global batch 240200, avg loss after 100 batches: 2.421  | avg accuracy (total, from_support) after 100 batches: 39.31 8.219
+Global batch 240300, avg loss after 100 batches: 2.31  | avg accuracy (total, from_support) after 100 batches: 44.88 11.119
+Global batch 240400, avg loss after 100 batches: 2.327  | avg accuracy (total, from_support) after 100 batches: 44.19 11.12

@@ -91,7 +91,7 @@ class Trainer:
             name=f"{dataset_name}, p_bursty={p_bursty}",
         )
 
-    def _linear_warmup_and_sqrt_decay(self, step, warmup_steps=1000, lr_max=3e-4):
+    def _linear_warmup_and_sqrt_decay(self, step, warmup_steps=4000, lr_max=3e-4):
         if step < warmup_steps:
             return lr_max * step / warmup_steps
         else:
@@ -99,7 +99,7 @@ class Trainer:
 
     def train(self, lr=1e-5, eval_after=100):
         
-        optim = self.optimizer(self.model.parameters(), lr=lr)
+        optim = self.optimizer(self.model.parameters())
         scheduler = self.scheduler(optim, lr_lambda=lambda step: self._linear_warmup_and_sqrt_decay(step))
 
         criterion = self.loss_fn(reduction="none")
