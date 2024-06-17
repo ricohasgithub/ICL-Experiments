@@ -60,7 +60,7 @@ class InputEmbedder(nn.Module):
         example_dropout_prob=0.0,
         concatenate_labels=False,
         use_positional_encodings=True,
-        positional_dropout_prob=0.1,
+        positional_dropout_prob=0.0,
         name=None,
     ):
         """Initialize the input embedder.

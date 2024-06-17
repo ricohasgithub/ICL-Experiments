@@ -28,7 +28,7 @@ class Trainer:
         optimizer=optim.Adam,
         scheduler=optim.lr_scheduler.LambdaLR,
         num_classes=1623,
-        batch_size=16,
+        batch_size=32,
         p_bursty=0.9,
         dataset_name="omniglot",
         zipf_exponent=1,
