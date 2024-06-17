@@ -10,7 +10,6 @@ output.backward()
 # Example of target with class probabilities
 input = torch.randn(3, 5, requires_grad=True)
 target = torch.randn(3, 5).softmax(dim=1)
-print(f'input shape: {input.shape}, target shape: {target.shape}')
 # Add across the second dimension to get 1
 input_sum = torch.sum(input, dim=1)
 target_sum = torch.sum(target, dim=1)
@@ -24,4 +23,3 @@ input = input.view(-1, 5)
 output = loss(input, target)
 print(output)
 # output.backward()
-

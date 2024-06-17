@@ -28,7 +28,7 @@ seq_generator_factory = SeqGenerator(
 )
 
 data_generator = lambda: seq_generator_factory.get_fewshot_seq(
-    class_type="holdout",
+    class_type="rare",
     shots=4,  # fs_shots
     ways=2,  # ways
     labeling="unfixed",
