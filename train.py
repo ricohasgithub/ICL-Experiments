@@ -208,7 +208,7 @@ class Trainer:
                     # icl_preds = nn.functional.softmax(icl_preds, dim=2)
 
 
-                    icl_preds = self.model(icl_examples, icl_labels).transpose(1, 2)
+                    icl_preds = icl_preds.transpose(1, 2)
                     
                     # print(f'icl_preds: {icl_preds.shape}')
                     # print(f'icl_target: {icl_target[0]}')
