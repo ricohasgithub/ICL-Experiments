@@ -196,7 +196,23 @@ class Trainer:
                         iwl_batch["target"].to(self.device),
                     )
 
+                    icl_preds = self.model(icl_examples, icl_labels)
+
+                    # print(f'icl_preds: {icl_preds[0][-1]}')
+
+                    # Zero out all the classes except the first 2 classes for icl_preds
+                    icl_preds[:, :, 2:] = 0
+
+
+                    # Normalize the predictions
+                    # icl_preds = nn.functional.softmax(icl_preds, dim=2)
+
+
                     icl_preds = self.model(icl_examples, icl_labels).transpose(1, 2)
+                    
+                    # print(f'icl_preds: {icl_preds.shape}')
+                    # print(f'icl_target: {icl_target[0]}')
+                    # print(f'icl_labels: {icl_labels[0]}')
 
 
                     iwl_preds = self.model(iwl_examples, iwl_labels).transpose(1, 2)

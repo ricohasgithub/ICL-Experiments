@@ -118,15 +118,15 @@ class Dense(nn.Module):
 
         self.dropout = nn.Dropout(p=p_dropout)
 
-        # Initialize weights
-        nn.init.kaiming_uniform_(
-            self.linear1.weight, a=0, mode="fan_in", nonlinearity="linear"
-        )
-        nn.init.zeros_(self.linear1.bias)
-        nn.init.kaiming_uniform_(
-            self.linear2.weight, a=0, mode="fan_in", nonlinearity="linear"
-        )
-        nn.init.zeros_(self.linear2.bias)
+        # # Initialize weights
+        # nn.init.kaiming_uniform_(
+        #     self.linear1.weight, a=0, mode="fan_in", nonlinearity="linear"
+        # )
+        # nn.init.zeros_(self.linear1.bias)
+        # nn.init.kaiming_uniform_(
+        #     self.linear2.weight, a=0, mode="fan_in", nonlinearity="linear"
+        # )
+        # nn.init.zeros_(self.linear2.bias)
 
     def forward(self, x):
         x = F.gelu(self.linear1(x))
