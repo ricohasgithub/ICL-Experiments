@@ -7,4 +7,4 @@
 #SBATCH --output=icl_out/%x-%j.out  # Save stdout to sout directory
 #SBATCH --error=icl_out/%x-%j.err   # Save stderr to sout directory
 
-python3 ./experiment.py base omniglot 0.0 1.0
+python3 ./experiment.py base omniglot 0.9 1.0

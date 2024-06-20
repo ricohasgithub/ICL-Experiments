@@ -167,6 +167,9 @@ class TransformerBlock(nn.Module):
         self.causal_block = CausalAttention(
             self.n_heads, self.d_hidden, self.p_dropout, self.scaling, self.bias
         ).to(self.device)
+        self.causal_block2 = CausalAttention(
+            self.n_heads, self.d_hidden, self.p_dropout, self.scaling, self.bias
+        ).to(self.device)
         self.attention_block = Attention(
             self.n_heads, self.d_hidden, self.p_dropout, self.scaling, self.bias
         ).to(self.device)
@@ -179,6 +182,7 @@ class TransformerBlock(nn.Module):
     def forward(self, x, y=None, mask=None):
         if self.causal:
             x = x + self.causal_block(self.layer_norm(x), y, mask)
+            x = x + self.causal_block2(self.layer_norm(x), y, mask)
         else:
             x = x + self.attention_block(self.layer_norm(x), y, mask)
         x = x + self.dense_block(self.layer_norm(x))
