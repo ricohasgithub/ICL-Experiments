@@ -93,7 +93,7 @@ class Trainer:
             name=f"{dataset_name}, p_bursty={p_bursty}, zipf_exp={zipf_exponent}",
         )
 
-    def _linear_warmup_and_sqrt_decay(self, step, warmup_steps=4000, lr_max=3e-4):
+    def _linear_warmup_and_sqrt_decay(self, step, warmup_steps=4000, lr_max=1e-4):
         if step < warmup_steps:
             return lr_max * step / warmup_steps
         else:
